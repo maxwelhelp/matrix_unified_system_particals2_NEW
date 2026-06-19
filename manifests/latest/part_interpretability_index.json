@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-06-19T23:27:40",
+  "created_at": "2026-06-19T23:56:32",
   "priority": [
     "reports/latest/PART_SANITY_CONTRACT.md",
     "reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md",
@@ -27,6 +27,11 @@
       "path": "commands/part_03_report_index.sh",
       "size": 2984,
       "size_h": "2.9KB"
+    },
+    {
+      "path": "commands/part_99_commit_lightweight_outputs.sh",
+      "size": 1426,
+      "size_h": "1.4KB"
     },
     {
       "path": "commands/run_part_interpretability_all.sh",
@@ -349,6 +354,11 @@
       "path": "reports/latest/PART_INFERENCE_V1.md",
       "size": 1523,
       "size_h": "1.5KB"
+    },
+    {
+      "path": "reports/latest/PART_INTERPRETABILITY_INDEX.md",
+      "size": 25024,
+      "size_h": "24.4KB"
     },
     {
       "path": "reports/latest/PART_MODEL_LOAD_REPORT.md",
@@ -791,6 +801,11 @@
       "path": "manifests/latest/part_inference_v1.json",
       "size": 1480,
       "size_h": "1.4KB"
+    },
+    {
+      "path": "manifests/latest/part_interpretability_index.json",
+      "size": 48008,
+      "size_h": "46.9KB"
     },
     {
       "path": "manifests/latest/part_model_load_report.json",

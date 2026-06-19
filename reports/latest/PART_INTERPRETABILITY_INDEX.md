@@ -1,12 +1,12 @@
 # PART_INTERPRETABILITY_INDEX
 
-- created_at: `2026-06-19T23:27:40`
+- created_at: `2026-06-19T23:56:32`
 
 ## First files to inspect
 
 - `OK` `reports/latest/PART_SANITY_CONTRACT.md`
 - `OK` `reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md`
-- `MISSING` `reports/latest/PART_INTERPRETABILITY_INDEX.md`
+- `OK` `reports/latest/PART_INTERPRETABILITY_INDEX.md`
 - `OK` `reports/latest/PART_ATTENTION_SUPERTRACE_V1_RERUN_CLEAN_GROUPS.md`
 - `OK` `reports/latest/PART_HQQL_TBL_GROUP_BUILDER_V1.md`
 
@@ -22,6 +22,7 @@
 | `commands/part_01_sanity_contract.sh` | 6.0KB |
 | `commands/part_02_analyze_weaver_outputs.sh` | 1.4KB |
 | `commands/part_03_report_index.sh` | 2.9KB |
+| `commands/part_99_commit_lightweight_outputs.sh` | 1.4KB |
 | `commands/run_part_interpretability_all.sh` | 902B |
 
 ## reports
@@ -91,6 +92,7 @@
 | `reports/latest/PART_HQQL_TBL_GROUP_BUILDER_V1.md` | 4.2KB |
 | `reports/latest/PART_INFERENCE_DIAGNOSTICS_V1.md` | 885B |
 | `reports/latest/PART_INFERENCE_V1.md` | 1.5KB |
+| `reports/latest/PART_INTERPRETABILITY_INDEX.md` | 24.4KB |
 | `reports/latest/PART_MODEL_LOAD_REPORT.md` | 10.1KB |
 | `reports/latest/PART_MODEL_LOAD_REPORT_ParT_full_V2.md` | 410B |
 | `reports/latest/PART_MODEL_LOAD_REPORT_ParT_kin_V2.md` | 407B |
@@ -184,6 +186,7 @@
 | `manifests/latest/part_hqql_tbl_group_builder_v1.json` | 241B |
 | `manifests/latest/part_inference_diagnostics_v1.json` | 3.1KB |
 | `manifests/latest/part_inference_v1.json` | 1.4KB |
+| `manifests/latest/part_interpretability_index.json` | 46.9KB |
 | `manifests/latest/part_model_load_report.json` | 11.0KB |
 | `manifests/latest/part_model_load_report_ParT_full_v2.json` | 980B |
 | `manifests/latest/part_model_load_report_ParT_kin_v2.json` | 978B |
