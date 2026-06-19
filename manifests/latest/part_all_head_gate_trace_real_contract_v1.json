@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "events": 256,
+  "group_counts": {
+    "A_Hqql_correct": 64,
+    "B_Hqql_to_Tbl": 64,
+    "C_Tbl_correct": 64,
+    "D_Tbl_to_Hqql": 64
+  },
+  "gate_rows": 80,
+  "joined_rules": 48,
+  "checkpoint": "external/particle_transformer/models/ParT_kinpid.pt",
+  "data_config": "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
+  "note": "ParT all-head differentiable output-gate trace. Gates are applied to attention module output head/channel slices; next version should patch exact pre-out-proj head routes."
+}
