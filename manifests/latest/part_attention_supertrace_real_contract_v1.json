@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "events": 1024,
+  "counts": {
+    "A_Hqql_correct": 94536,
+    "B_Hqql_to_Tbl": 3400,
+    "C_Tbl_correct": 95654,
+    "D_Tbl_to_Hqql": 3776
+  },
+  "pair_rows": 327680,
+  "summary_rows": 1891,
+  "data_config": "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
+  "checkpoint": "external/particle_transformer/models/ParT_kinpid.pt"
+}
