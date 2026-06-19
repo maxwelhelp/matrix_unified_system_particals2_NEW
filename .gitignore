@@ -75,3 +75,6 @@ reports/latest/tables/*trace*.csv
 !external/particle_transformer/utils/*.py
 !external/particle_transformer/dataloader.py
 !external/particle_transformer/README.md
+
+# Local ChatGPT run logs
+reports/latest/CHATGPT_*.txt
