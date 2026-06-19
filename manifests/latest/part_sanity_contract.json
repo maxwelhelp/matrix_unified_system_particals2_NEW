@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-06-19T23:27:40",
+  "network_file": "external/particle_transformer/networks/example_ParticleTransformer.py",
+  "modes": [
+    {
+      "mode": "full",
+      "yaml": "external/particle_transformer/data/JetClass/JetClass_full.yaml",
+      "checkpoint": "external/particle_transformer/models/ParT_full.pt",
+      "network": "external/particle_transformer/networks/example_ParticleTransformer.py",
+      "ok": true,
+      "errors": [],
+      "input_names": [
+        "pf_points",
+        "pf_features",
+        "pf_vectors",
+        "pf_mask"
+      ],
+      "pf_features_n": 17,
+      "pf_features": [
+        "part_pt_log",
+        "part_e_log",
+        "part_logptrel",
+        "part_logerel",
+        "part_deltaR",
+        "part_charge",
+        "part_isChargedHadron",
+        "part_isNeutralHadron",
+        "part_isPhoton",
+        "part_isElectron",
+        "part_isMuon",
+        "part_d0",
+        "part_d0err",
+        "part_dz",
+        "part_dzerr",
+        "part_deta",
+        "part_dphi"
+      ],
+      "labels": [
+        "label_QCD",
+        "label_Hbb",
+        "label_Hcc",
+        "label_Hgg",
+        "label_H4q",
+        "label_Hqql",
+        "label_Zqq",
+        "label_Wqq",
+        "label_Tbqq",
+        "label_Tbl"
+      ],
+      "missing_n": 0,
+      "unexpected_n": 0,
+      "missing_sample": [],
+      "unexpected_sample": [],
+      "strict_load": true
+    },
+    {
+      "mode": "kinpid",
+      "yaml": "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
+      "checkpoint": "external/particle_transformer/models/ParT_kinpid.pt",
+      "network": "external/particle_transformer/networks/example_ParticleTransformer.py",
+      "ok": true,
+      "errors": [],
+      "input_names": [
+        "pf_points",
+        "pf_features",
+        "pf_vectors",
+        "pf_mask"
+      ],
+      "pf_features_n": 13,
+      "pf_features": [
+        "part_pt_log",
+        "part_e_log",
+        "part_logptrel",
+        "part_logerel",
+        "part_deltaR",
+        "part_charge",
+        "part_isChargedHadron",
+        "part_isNeutralHadron",
+        "part_isPhoton",
+        "part_isElectron",
+        "part_isMuon",
+        "part_deta",
+        "part_dphi"
+      ],
+      "labels": [
+        "label_QCD",
+        "label_Hbb",
+        "label_Hcc",
+        "label_Hgg",
+        "label_H4q",
+        "label_Hqql",
+        "label_Zqq",
+        "label_Wqq",
+        "label_Tbqq",
+        "label_Tbl"
+      ],
+      "missing_n": 0,
+      "unexpected_n": 0,
+      "missing_sample": [],
+      "unexpected_sample": [],
+      "strict_load": true
+    }
+  ],
+  "supertrace_notes": [
+    "WARNING: supertrace appears to contain a fake hardcoded 17-feature DataConfig. Use it for attention hooks only until it is migrated to real YAML/DataConfig input construction.",
+    "event_to_arrays exists; verify it uses the same mode/YAML/checkpoint contract before trusting direct-gate predictions."
+  ]
+}

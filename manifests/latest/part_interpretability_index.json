@@ -1,0 +1,1952 @@
+{
+  "created_at": "2026-06-19T23:27:40",
+  "priority": [
+    "reports/latest/PART_SANITY_CONTRACT.md",
+    "reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md",
+    "reports/latest/PART_INTERPRETABILITY_INDEX.md",
+    "reports/latest/PART_ATTENTION_SUPERTRACE_V1_RERUN_CLEAN_GROUPS.md",
+    "reports/latest/PART_HQQL_TBL_GROUP_BUILDER_V1.md"
+  ],
+  "commands": [
+    {
+      "path": "commands/part_00_sync_repo.sh",
+      "size": 300,
+      "size_h": "300B"
+    },
+    {
+      "path": "commands/part_01_sanity_contract.sh",
+      "size": 6126,
+      "size_h": "6.0KB"
+    },
+    {
+      "path": "commands/part_02_analyze_weaver_outputs.sh",
+      "size": 1433,
+      "size_h": "1.4KB"
+    },
+    {
+      "path": "commands/part_03_report_index.sh",
+      "size": 2984,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "commands/run_part_interpretability_all.sh",
+      "size": 902,
+      "size_h": "902B"
+    }
+  ],
+  "reports": [
+    {
+      "path": "reports/latest/ALL_HEAD_QUESTIONS_AND_ANALYSIS.md",
+      "size": 12207,
+      "size_h": "11.9KB"
+    },
+    {
+      "path": "reports/latest/AUTOMATIC_COMPARISON_ENGINE_V1.md",
+      "size": 3218,
+      "size_h": "3.1KB"
+    },
+    {
+      "path": "reports/latest/AUTOMATIC_COMPARISON_ENGINE_V2.md",
+      "size": 8151,
+      "size_h": "8.0KB"
+    },
+    {
+      "path": "reports/latest/CLASS_SPECIFIC_ALL_HEAD_GRADIENTS_V1.md",
+      "size": 3227,
+      "size_h": "3.2KB"
+    },
+    {
+      "path": "reports/latest/CONFUSION_MONITOR_V1.md",
+      "size": 5857,
+      "size_h": "5.7KB"
+    },
+    {
+      "path": "reports/latest/CONTROL_CONFUSION_ATLAS_V1.md",
+      "size": 10565,
+      "size_h": "10.3KB"
+    },
+    {
+      "path": "reports/latest/DEEP_V8_FINAL_REPORT.md",
+      "size": 5485,
+      "size_h": "5.4KB"
+    },
+    {
+      "path": "reports/latest/DUMMY_PARTICLE_PATCH_REPORT.md",
+      "size": 668,
+      "size_h": "668B"
+    },
+    {
+      "path": "reports/latest/DUMMY_PARTICLE_PROBE_REPORT.md",
+      "size": 1051,
+      "size_h": "1.0KB"
+    },
+    {
+      "path": "reports/latest/EDGE_CONV_INNER_TRACE_V1.md",
+      "size": 8197,
+      "size_h": "8.0KB"
+    },
+    {
+      "path": "reports/latest/EDGE_CONV_INNER_TRACE_V2.md",
+      "size": 9200,
+      "size_h": "9.0KB"
+    },
+    {
+      "path": "reports/latest/ENHANCED_PRODUCT_SUMMARY.md",
+      "size": 920,
+      "size_h": "920B"
+    },
+    {
+      "path": "reports/latest/EVENT_FORECAST_EXPLAINER_V1.md",
+      "size": 18275,
+      "size_h": "17.8KB"
+    },
+    {
+      "path": "reports/latest/FEATURE_RANKER_V1.md",
+      "size": 10978,
+      "size_h": "10.7KB"
+    },
+    {
+      "path": "reports/latest/FINAL_MATRIX_PSEUDOCODE_REPORT.md",
+      "size": 21718,
+      "size_h": "21.2KB"
+    },
+    {
+      "path": "reports/latest/FULL_HEAD_QUESTION_CATALOG.md",
+      "size": 125345,
+      "size_h": "122.4KB"
+    },
+    {
+      "path": "reports/latest/FULL_NEURON_SCAN_REPORT.md",
+      "size": 7239,
+      "size_h": "7.1KB"
+    },
+    {
+      "path": "reports/latest/GEOMETRY_VETO_PATCH_V1.md",
+      "size": 6221,
+      "size_h": "6.1KB"
+    },
+    {
+      "path": "reports/latest/HARD_HADRON_GEOMETRY_PROBE_V1.md",
+      "size": 1692,
+      "size_h": "1.7KB"
+    },
+    {
+      "path": "reports/latest/HEAD_OUTPUT_TRACE_V1.md",
+      "size": 2678,
+      "size_h": "2.6KB"
+    },
+    {
+      "path": "reports/latest/HQQL_TBL_CONFUSION_PHYSICS_REGIME_V1.md",
+      "size": 11932,
+      "size_h": "11.7KB"
+    },
+    {
+      "path": "reports/latest/INTERNAL_ACTIVATION_CONTRAST_V2.md",
+      "size": 4595,
+      "size_h": "4.5KB"
+    },
+    {
+      "path": "reports/latest/INTERNAL_ACTIVATION_CONTRAST_V2_1.md",
+      "size": 2821,
+      "size_h": "2.8KB"
+    },
+    {
+      "path": "reports/latest/JETCLASS_ROOT_PROBE_REPORT.md",
+      "size": 6226,
+      "size_h": "6.1KB"
+    },
+    {
+      "path": "reports/latest/KNOWN_OBSERVABLE_RESIDUAL_V1.md",
+      "size": 4617,
+      "size_h": "4.5KB"
+    },
+    {
+      "path": "reports/latest/KNOWN_OBSERVABLE_RESIDUAL_V2.md",
+      "size": 2706,
+      "size_h": "2.6KB"
+    },
+    {
+      "path": "reports/latest/KNOWN_OBSERVABLE_RESIDUAL_V2_1_BEHAVIOR.md",
+      "size": 1939,
+      "size_h": "1.9KB"
+    },
+    {
+      "path": "reports/latest/LAYER_CODE_ALIGNMENT_V1.md",
+      "size": 4821,
+      "size_h": "4.7KB"
+    },
+    {
+      "path": "reports/latest/LAYER_CODE_ALIGNMENT_V2.md",
+      "size": 3674,
+      "size_h": "3.6KB"
+    },
+    {
+      "path": "reports/latest/MATRIX_PROGRAM_FULL_TRACE_V1.md",
+      "size": 13133,
+      "size_h": "12.8KB"
+    },
+    {
+      "path": "reports/latest/MATRIX_PROGRAM_FULL_TRACE_V2.md",
+      "size": 15008,
+      "size_h": "14.7KB"
+    },
+    {
+      "path": "reports/latest/MLP_GROUP_PATCH_REPORT_math.md",
+      "size": 8737,
+      "size_h": "8.5KB"
+    },
+    {
+      "path": "reports/latest/MLP_GROUP_PATCH_REPORT_python.md",
+      "size": 8758,
+      "size_h": "8.6KB"
+    },
+    {
+      "path": "reports/latest/MLP_GROUP_PATCH_REPORT_text.md",
+      "size": 8721,
+      "size_h": "8.5KB"
+    },
+    {
+      "path": "reports/latest/MLP_OPERATOR_DICTIONARY_v1.md",
+      "size": 7179,
+      "size_h": "7.0KB"
+    },
+    {
+      "path": "reports/latest/MLP_OPERATOR_DICTIONARY_v2.md",
+      "size": 7741,
+      "size_h": "7.6KB"
+    },
+    {
+      "path": "reports/latest/OFFICIAL_PART_WRAPPED_CKPT_V9_REPORT.md",
+      "size": 3685,
+      "size_h": "3.6KB"
+    },
+    {
+      "path": "reports/latest/OFFICIAL_WEAVER_PREDICT_V5.md",
+      "size": 229,
+      "size_h": "229B"
+    },
+    {
+      "path": "reports/latest/OFFICIAL_WEAVER_PRED_PROBE_V6.md",
+      "size": 3986,
+      "size_h": "3.9KB"
+    },
+    {
+      "path": "reports/latest/OFFICIAL_WEAVER_PRED_PROBE_V7_LABEL_BRANCH.md",
+      "size": 3663,
+      "size_h": "3.6KB"
+    },
+    {
+      "path": "reports/latest/OPERATION_LOGIC_ATLAS_V1.md",
+      "size": 27343,
+      "size_h": "26.7KB"
+    },
+    {
+      "path": "reports/latest/PARTICLE0_TOPK_CONTROLS_V1.md",
+      "size": 3590,
+      "size_h": "3.5KB"
+    },
+    {
+      "path": "reports/latest/PARTICLE0_TOPK_CONTROLS_V2.md",
+      "size": 3590,
+      "size_h": "3.5KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_ALL_HEAD_SUPERTRACE_V1.md",
+      "size": 31966,
+      "size_h": "31.2KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_DISCOVERY_ATLAS_V4.md",
+      "size": 4372,
+      "size_h": "4.3KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_HEAD_PROJECTION_COMPOSER_V2.md",
+      "size": 12377,
+      "size_h": "12.1KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_HYPOTHESIS_ATLAS_V3.md",
+      "size": 10031,
+      "size_h": "9.8KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_REAL_PATCH_REPORT.md",
+      "size": 1652,
+      "size_h": "1.6KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_RESEARCH_COMPASS_V5.md",
+      "size": 7099,
+      "size_h": "6.9KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_RESEARCH_SYNTHESIS_V6.md",
+      "size": 4691,
+      "size_h": "4.6KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_SINGLE_HEAD_PARTICLE_TRACE_V1.md",
+      "size": 12372,
+      "size_h": "12.1KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_WEIGHT_PROJECTION_QUESTIONS_V1.md",
+      "size": 26940,
+      "size_h": "26.3KB"
+    },
+    {
+      "path": "reports/latest/PARTICLENET_WHY_CLASS_REPORT.md",
+      "size": 5680,
+      "size_h": "5.5KB"
+    },
+    {
+      "path": "reports/latest/PARTICLE_ACCURACY_DIAGNOSTIC_V4.md",
+      "size": 2091,
+      "size_h": "2.0KB"
+    },
+    {
+      "path": "reports/latest/PARTICLE_ORDER_CONTROL_V1.md",
+      "size": 1500,
+      "size_h": "1.5KB"
+    },
+    {
+      "path": "reports/latest/PART_ATTENTION_CLEAN_RANK_V2.md",
+      "size": 11530,
+      "size_h": "11.3KB"
+    },
+    {
+      "path": "reports/latest/PART_ATTENTION_SUPERTRACE_V1.md",
+      "size": 5612,
+      "size_h": "5.5KB"
+    },
+    {
+      "path": "reports/latest/PART_ATTENTION_SUPERTRACE_V1_RERUN_CLEAN_GROUPS.md",
+      "size": 5614,
+      "size_h": "5.5KB"
+    },
+    {
+      "path": "reports/latest/PART_BOOTSTRAP_PROBE_V1.md",
+      "size": 1720,
+      "size_h": "1.7KB"
+    },
+    {
+      "path": "reports/latest/PART_DATASET_CONTRACT_AUDIT_V1.md",
+      "size": 406,
+      "size_h": "406B"
+    },
+    {
+      "path": "reports/latest/PART_HQQL_TBL_GROUP_BUILDER_V1.md",
+      "size": 4351,
+      "size_h": "4.2KB"
+    },
+    {
+      "path": "reports/latest/PART_INFERENCE_DIAGNOSTICS_V1.md",
+      "size": 885,
+      "size_h": "885B"
+    },
+    {
+      "path": "reports/latest/PART_INFERENCE_V1.md",
+      "size": 1523,
+      "size_h": "1.5KB"
+    },
+    {
+      "path": "reports/latest/PART_MODEL_LOAD_REPORT.md",
+      "size": 10300,
+      "size_h": "10.1KB"
+    },
+    {
+      "path": "reports/latest/PART_MODEL_LOAD_REPORT_ParT_full_V2.md",
+      "size": 410,
+      "size_h": "410B"
+    },
+    {
+      "path": "reports/latest/PART_MODEL_LOAD_REPORT_ParT_kin_V2.md",
+      "size": 407,
+      "size_h": "407B"
+    },
+    {
+      "path": "reports/latest/PART_MODEL_LOAD_REPORT_ParT_kinpid_V2.md",
+      "size": 414,
+      "size_h": "414B"
+    },
+    {
+      "path": "reports/latest/PART_MODEL_LOAD_V2_ALL_SUMMARY.md",
+      "size": 322,
+      "size_h": "322B"
+    },
+    {
+      "path": "reports/latest/PART_SANITY_CONTRACT.md",
+      "size": 1770,
+      "size_h": "1.7KB"
+    },
+    {
+      "path": "reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md",
+      "size": 186,
+      "size_h": "186B"
+    },
+    {
+      "path": "reports/latest/PART_WEAVER_PREDICT_GROUPED_V1.md",
+      "size": 463,
+      "size_h": "463B"
+    },
+    {
+      "path": "reports/latest/PART_WEAVER_PREDICT_SMOKE_V3.md",
+      "size": 437,
+      "size_h": "437B"
+    },
+    {
+      "path": "reports/latest/PHASE1_HQQL_TBL_STATS_GATE_V1.md",
+      "size": 397,
+      "size_h": "397B"
+    },
+    {
+      "path": "reports/latest/PHASE2_HQQL_TBL_PHYSICAL_SWAPS_V1.md",
+      "size": 19383,
+      "size_h": "18.9KB"
+    },
+    {
+      "path": "reports/latest/PHASE3_HQQL_TBL_ISOLATION_CONTROLS_V1.md",
+      "size": 1296,
+      "size_h": "1.3KB"
+    },
+    {
+      "path": "reports/latest/PRODUCT_READINESS_CHECKLIST.md",
+      "size": 971,
+      "size_h": "971B"
+    },
+    {
+      "path": "reports/latest/PSEUDOCODE_OPERATION_DATABASE_V1.md",
+      "size": 25834,
+      "size_h": "25.2KB"
+    },
+    {
+      "path": "reports/latest/PSEUDOCODE_OPERATION_DATABASE_V2.md",
+      "size": 26717,
+      "size_h": "26.1KB"
+    },
+    {
+      "path": "reports/latest/PSEUDOCODE_OPERATION_DATABASE_V3.md",
+      "size": 24097,
+      "size_h": "23.5KB"
+    },
+    {
+      "path": "reports/latest/QUESTION_DRIVEN_STAGE_ANALYZER_V1.md",
+      "size": 9817,
+      "size_h": "9.6KB"
+    },
+    {
+      "path": "reports/latest/REAL_PARTICLE_PATCH_BALANCED_REPORT.md",
+      "size": 2149,
+      "size_h": "2.1KB"
+    },
+    {
+      "path": "reports/latest/REAL_PARTICLE_PATCH_REPORT.md",
+      "size": 2000,
+      "size_h": "2.0KB"
+    },
+    {
+      "path": "reports/latest/REAL_PARTICLE_PATCH_V3_OFFICIAL_REPORT.md",
+      "size": 2183,
+      "size_h": "2.1KB"
+    },
+    {
+      "path": "reports/latest/RELATION_SIGNAL_GRAPH_V1.md",
+      "size": 6798,
+      "size_h": "6.6KB"
+    },
+    {
+      "path": "reports/latest/RESEARCH_DASHBOARD_LATEST.md",
+      "size": 11661,
+      "size_h": "11.4KB"
+    },
+    {
+      "path": "reports/latest/RESEARCH_DYNAMICS_V1.md",
+      "size": 3365,
+      "size_h": "3.3KB"
+    },
+    {
+      "path": "reports/latest/RESEARCH_EVIDENCE_GRAPH_V1.md",
+      "size": 871,
+      "size_h": "871B"
+    },
+    {
+      "path": "reports/latest/RESEARCH_STREAM_INDEX_V1.md",
+      "size": 6279,
+      "size_h": "6.1KB"
+    },
+    {
+      "path": "reports/latest/ROUTE_SPECIFIC_PATCH_V1.md",
+      "size": 8669,
+      "size_h": "8.5KB"
+    },
+    {
+      "path": "reports/latest/SCOPE_COMPARABILITY_GUARD_V1.md",
+      "size": 2941,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "reports/latest/STREAM_FEATURE_EMBEDDINGS_V1.md",
+      "size": 702,
+      "size_h": "702B"
+    },
+    {
+      "path": "reports/latest/STREAM_TASK_WATCHER_V1.md",
+      "size": 2524,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "reports/latest/VETO_SEARCH_V1.md",
+      "size": 3349,
+      "size_h": "3.3KB"
+    },
+    {
+      "path": "reports/latest/VETO_SEARCH_V2_FULL_KNN_GEOMETRY.md",
+      "size": 3275,
+      "size_h": "3.2KB"
+    },
+    {
+      "path": "reports/latest/WHY_TOKEN_DEEP_REPORT_math.md",
+      "size": 11822,
+      "size_h": "11.5KB"
+    },
+    {
+      "path": "reports/latest/WHY_TOKEN_DEEP_REPORT_python.md",
+      "size": 11788,
+      "size_h": "11.5KB"
+    },
+    {
+      "path": "reports/latest/WHY_TOKEN_DEEP_REPORT_text.md",
+      "size": 11859,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "reports/latest/WHY_TOKEN_REPORT.md",
+      "size": 2542,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "reports/latest/WIDE_VALIDATION_V7_REPORT.md",
+      "size": 1015,
+      "size_h": "1015B"
+    }
+  ],
+  "manifests": [
+    {
+      "path": "manifests/latest/all_head_questions_and_analysis.json",
+      "size": 84206,
+      "size_h": "82.2KB"
+    },
+    {
+      "path": "manifests/latest/all_head_supertrace_summary.json",
+      "size": 11009,
+      "size_h": "10.8KB"
+    },
+    {
+      "path": "manifests/latest/atlas_summary.json",
+      "size": 58537,
+      "size_h": "57.2KB"
+    },
+    {
+      "path": "manifests/latest/automatic_comparison_engine_v1.json",
+      "size": 19009,
+      "size_h": "18.6KB"
+    },
+    {
+      "path": "manifests/latest/automatic_comparison_engine_v2.json",
+      "size": 57179,
+      "size_h": "55.8KB"
+    },
+    {
+      "path": "manifests/latest/class_specific_all_head_gradients_v1.json",
+      "size": 1926,
+      "size_h": "1.9KB"
+    },
+    {
+      "path": "manifests/latest/confusion_monitor_v1.json",
+      "size": 18065,
+      "size_h": "17.6KB"
+    },
+    {
+      "path": "manifests/latest/confusion_monitor_v1_baseline.json",
+      "size": 22630,
+      "size_h": "22.1KB"
+    },
+    {
+      "path": "manifests/latest/control_confusion_atlas_v1.json",
+      "size": 4159,
+      "size_h": "4.1KB"
+    },
+    {
+      "path": "manifests/latest/deep_v8_final_summary.json",
+      "size": 49666,
+      "size_h": "48.5KB"
+    },
+    {
+      "path": "manifests/latest/deep_v8_math_summary.json",
+      "size": 42624,
+      "size_h": "41.6KB"
+    },
+    {
+      "path": "manifests/latest/deep_v8_python_summary.json",
+      "size": 42319,
+      "size_h": "41.3KB"
+    },
+    {
+      "path": "manifests/latest/deep_v8_text_summary.json",
+      "size": 42433,
+      "size_h": "41.4KB"
+    },
+    {
+      "path": "manifests/latest/dummy_particle_patch_controls_summary.json",
+      "size": 1959,
+      "size_h": "1.9KB"
+    },
+    {
+      "path": "manifests/latest/dummy_particle_probe.json",
+      "size": 1280,
+      "size_h": "1.2KB"
+    },
+    {
+      "path": "manifests/latest/edgeconv_inner_trace_v1.json",
+      "size": 569,
+      "size_h": "569B"
+    },
+    {
+      "path": "manifests/latest/edgeconv_inner_trace_v2.json",
+      "size": 308,
+      "size_h": "308B"
+    },
+    {
+      "path": "manifests/latest/enhanced_summary.json",
+      "size": 11896,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "manifests/latest/event_forecast_explainer_v1.json",
+      "size": 339,
+      "size_h": "339B"
+    },
+    {
+      "path": "manifests/latest/feature_ranker_v1.json",
+      "size": 40974,
+      "size_h": "40.0KB"
+    },
+    {
+      "path": "manifests/latest/final_summary.json",
+      "size": 241927,
+      "size_h": "236.3KB"
+    },
+    {
+      "path": "manifests/latest/full_head_question_catalog.json",
+      "size": 553508,
+      "size_h": "540.5KB"
+    },
+    {
+      "path": "manifests/latest/full_neuron_scan_v9_summary.json",
+      "size": 44269,
+      "size_h": "43.2KB"
+    },
+    {
+      "path": "manifests/latest/generation_trace_summary.json",
+      "size": 158981,
+      "size_h": "155.3KB"
+    },
+    {
+      "path": "manifests/latest/geometry_veto_patch_v1.json",
+      "size": 1151,
+      "size_h": "1.1KB"
+    },
+    {
+      "path": "manifests/latest/hard_hadron_geometry_probe_v1.json",
+      "size": 4142,
+      "size_h": "4.0KB"
+    },
+    {
+      "path": "manifests/latest/head_output_trace_v1.json",
+      "size": 104,
+      "size_h": "104B"
+    },
+    {
+      "path": "manifests/latest/hqql_tbl_confusion_physics_regime_v1.json",
+      "size": 245,
+      "size_h": "245B"
+    },
+    {
+      "path": "manifests/latest/internal_activation_contrast_v2.json",
+      "size": 612,
+      "size_h": "612B"
+    },
+    {
+      "path": "manifests/latest/internal_activation_contrast_v2_1.json",
+      "size": 9701,
+      "size_h": "9.5KB"
+    },
+    {
+      "path": "manifests/latest/jetclass_root_probe.json",
+      "size": 62627,
+      "size_h": "61.2KB"
+    },
+    {
+      "path": "manifests/latest/known_observable_residual_v1.json",
+      "size": 3670,
+      "size_h": "3.6KB"
+    },
+    {
+      "path": "manifests/latest/known_observable_residual_v2.json",
+      "size": 2248,
+      "size_h": "2.2KB"
+    },
+    {
+      "path": "manifests/latest/known_observable_residual_v2_1_behavior.json",
+      "size": 2067,
+      "size_h": "2.0KB"
+    },
+    {
+      "path": "manifests/latest/layer_code_alignment_v1.json",
+      "size": 3038,
+      "size_h": "3.0KB"
+    },
+    {
+      "path": "manifests/latest/layer_code_alignment_v2.json",
+      "size": 650,
+      "size_h": "650B"
+    },
+    {
+      "path": "manifests/latest/matrix_program_full_trace_v1.json",
+      "size": 172,
+      "size_h": "172B"
+    },
+    {
+      "path": "manifests/latest/matrix_program_full_trace_v2.json",
+      "size": 263,
+      "size_h": "263B"
+    },
+    {
+      "path": "manifests/latest/model_dims.json",
+      "size": 85,
+      "size_h": "85B"
+    },
+    {
+      "path": "manifests/latest/official_part_wrapped_ckpt_v9_summary.json",
+      "size": 18669,
+      "size_h": "18.2KB"
+    },
+    {
+      "path": "manifests/latest/official_weaver_pred_probe_v6.json",
+      "size": 16219,
+      "size_h": "15.8KB"
+    },
+    {
+      "path": "manifests/latest/official_weaver_pred_probe_v7_label_branch.json",
+      "size": 18113,
+      "size_h": "17.7KB"
+    },
+    {
+      "path": "manifests/latest/official_weaver_predict_v5_summary.json",
+      "size": 37,
+      "size_h": "37B"
+    },
+    {
+      "path": "manifests/latest/operation_logic_atlas_v1.json",
+      "size": 29954,
+      "size_h": "29.3KB"
+    },
+    {
+      "path": "manifests/latest/part_attention_clean_rank_v2.json",
+      "size": 254,
+      "size_h": "254B"
+    },
+    {
+      "path": "manifests/latest/part_attention_supertrace_v1.json",
+      "size": 210,
+      "size_h": "210B"
+    },
+    {
+      "path": "manifests/latest/part_attention_supertrace_v1_rerun.json",
+      "size": 212,
+      "size_h": "212B"
+    },
+    {
+      "path": "manifests/latest/part_bootstrap_probe_v1.json",
+      "size": 1706,
+      "size_h": "1.7KB"
+    },
+    {
+      "path": "manifests/latest/part_dataset_contract_audit_v1.json",
+      "size": 363,
+      "size_h": "363B"
+    },
+    {
+      "path": "manifests/latest/part_hqql_tbl_group_builder_v1.json",
+      "size": 241,
+      "size_h": "241B"
+    },
+    {
+      "path": "manifests/latest/part_inference_diagnostics_v1.json",
+      "size": 3151,
+      "size_h": "3.1KB"
+    },
+    {
+      "path": "manifests/latest/part_inference_v1.json",
+      "size": 1480,
+      "size_h": "1.4KB"
+    },
+    {
+      "path": "manifests/latest/part_model_load_report.json",
+      "size": 11276,
+      "size_h": "11.0KB"
+    },
+    {
+      "path": "manifests/latest/part_model_load_report_ParT_full_v2.json",
+      "size": 980,
+      "size_h": "980B"
+    },
+    {
+      "path": "manifests/latest/part_model_load_report_ParT_kin_v2.json",
+      "size": 978,
+      "size_h": "978B"
+    },
+    {
+      "path": "manifests/latest/part_model_load_report_ParT_kinpid_v2.json",
+      "size": 982,
+      "size_h": "982B"
+    },
+    {
+      "path": "manifests/latest/part_model_load_v2_all_summary.json",
+      "size": 667,
+      "size_h": "667B"
+    },
+    {
+      "path": "manifests/latest/part_sanity_contract.json",
+      "size": 2936,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "manifests/latest/part_weaver_contract_probe_v1_full_legacy_skip_batch.json",
+      "size": 3499,
+      "size_h": "3.4KB"
+    },
+    {
+      "path": "manifests/latest/part_weaver_contract_probe_v1_full_skip_batch.json",
+      "size": 3491,
+      "size_h": "3.4KB"
+    },
+    {
+      "path": "manifests/latest/part_weaver_output_analyzer_v1.json",
+      "size": 103,
+      "size_h": "103B"
+    },
+    {
+      "path": "manifests/latest/particle0_topk_controls_v1.json",
+      "size": 15192,
+      "size_h": "14.8KB"
+    },
+    {
+      "path": "manifests/latest/particle0_topk_controls_v2.json",
+      "size": 15192,
+      "size_h": "14.8KB"
+    },
+    {
+      "path": "manifests/latest/particle_accuracy_diagnostic_v4.json",
+      "size": 18891,
+      "size_h": "18.4KB"
+    },
+    {
+      "path": "manifests/latest/particle_order_control_v1.json",
+      "size": 4103,
+      "size_h": "4.0KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_discovery_atlas_v4_summary.json",
+      "size": 1430,
+      "size_h": "1.4KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_head_projection_composer_v2_summary.json",
+      "size": 13560,
+      "size_h": "13.2KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_hypothesis_atlas_summary.json",
+      "size": 9736,
+      "size_h": "9.5KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_patch_summary.json",
+      "size": 5191,
+      "size_h": "5.1KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_research_compass_v5_summary.json",
+      "size": 2548,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_research_synthesis_v6_summary.json",
+      "size": 4058,
+      "size_h": "4.0KB"
+    },
+    {
+      "path": "manifests/latest/particlenet_weight_projection_questions_v1_summary.json",
+      "size": 715,
+      "size_h": "715B"
+    },
+    {
+      "path": "manifests/latest/particlenet_why_class_summary.json",
+      "size": 23142,
+      "size_h": "22.6KB"
+    },
+    {
+      "path": "manifests/latest/phase1_hqql_tbl_stats_gate_v1.json",
+      "size": 245,
+      "size_h": "245B"
+    },
+    {
+      "path": "manifests/latest/phase2_hqql_tbl_physical_swaps_v1.json",
+      "size": 223,
+      "size_h": "223B"
+    },
+    {
+      "path": "manifests/latest/phase3_hqql_tbl_isolation_controls_v1.json",
+      "size": 290,
+      "size_h": "290B"
+    },
+    {
+      "path": "manifests/latest/pseudocode_operation_database_v1.json",
+      "size": 170,
+      "size_h": "170B"
+    },
+    {
+      "path": "manifests/latest/pseudocode_operation_database_v2.json",
+      "size": 113,
+      "size_h": "113B"
+    },
+    {
+      "path": "manifests/latest/pseudocode_operation_database_v3.json",
+      "size": 164,
+      "size_h": "164B"
+    },
+    {
+      "path": "manifests/latest/publish_manifest.json",
+      "size": 2607,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "manifests/latest/question_driven_stage_analyzer_v1.json",
+      "size": 144,
+      "size_h": "144B"
+    },
+    {
+      "path": "manifests/latest/real_particle_patch_balanced_summary.json",
+      "size": 9415,
+      "size_h": "9.2KB"
+    },
+    {
+      "path": "manifests/latest/real_particle_patch_summary.json",
+      "size": 7770,
+      "size_h": "7.6KB"
+    },
+    {
+      "path": "manifests/latest/real_particle_patch_v3_official_summary.json",
+      "size": 9467,
+      "size_h": "9.2KB"
+    },
+    {
+      "path": "manifests/latest/relation_signal_graph_v1.json",
+      "size": 32125,
+      "size_h": "31.4KB"
+    },
+    {
+      "path": "manifests/latest/research_dashboard_latest.json",
+      "size": 38984,
+      "size_h": "38.1KB"
+    },
+    {
+      "path": "manifests/latest/research_dynamics_v1.json",
+      "size": 15673,
+      "size_h": "15.3KB"
+    },
+    {
+      "path": "manifests/latest/research_evidence_graph_v1.json",
+      "size": 2908348,
+      "size_h": "2.8MB"
+    },
+    {
+      "path": "manifests/latest/research_stream_index_v1.json",
+      "size": 51241,
+      "size_h": "50.0KB"
+    },
+    {
+      "path": "manifests/latest/route_specific_patch_v1.json",
+      "size": 304,
+      "size_h": "304B"
+    },
+    {
+      "path": "manifests/latest/scope_comparability_guard_v1.json",
+      "size": 4435,
+      "size_h": "4.3KB"
+    },
+    {
+      "path": "manifests/latest/single_head_particle_trace_summary.json",
+      "size": 6162,
+      "size_h": "6.0KB"
+    },
+    {
+      "path": "manifests/latest/stream_feature_embeddings_v1.json",
+      "size": 682,
+      "size_h": "682B"
+    },
+    {
+      "path": "manifests/latest/stream_task_watcher_v1.json",
+      "size": 7347,
+      "size_h": "7.2KB"
+    },
+    {
+      "path": "manifests/latest/veto_search_v1.json",
+      "size": 12048,
+      "size_h": "11.8KB"
+    },
+    {
+      "path": "manifests/latest/veto_search_v2_full_knn_geometry.json",
+      "size": 10758,
+      "size_h": "10.5KB"
+    },
+    {
+      "path": "manifests/latest/wide_validation_v7_summary.json",
+      "size": 1641,
+      "size_h": "1.6KB"
+    }
+  ],
+  "tables": [
+    {
+      "path": "reports/latest/tables/all_head_gate_gradients.csv",
+      "size": 1938,
+      "size_h": "1.9KB"
+    },
+    {
+      "path": "reports/latest/tables/all_head_supertrace_class_summary.csv",
+      "size": 784,
+      "size_h": "784B"
+    },
+    {
+      "path": "reports/latest/tables/all_head_supertrace_events.csv",
+      "size": 18400,
+      "size_h": "18.0KB"
+    },
+    {
+      "path": "reports/latest/tables/all_head_supertrace_particles.csv",
+      "size": 735693,
+      "size_h": "718.5KB"
+    },
+    {
+      "path": "reports/latest/tables/all_heads_runtime_summary.csv",
+      "size": 487072,
+      "size_h": "475.7KB"
+    },
+    {
+      "path": "reports/latest/tables/all_heads_static_summary.csv",
+      "size": 830073,
+      "size_h": "810.6KB"
+    },
+    {
+      "path": "reports/latest/tables/all_layers_mlp_summary.csv",
+      "size": 11229,
+      "size_h": "11.0KB"
+    },
+    {
+      "path": "reports/latest/tables/automatic_comparison_rows.csv",
+      "size": 13497,
+      "size_h": "13.2KB"
+    },
+    {
+      "path": "reports/latest/tables/automatic_comparison_rows_v2.csv",
+      "size": 30677,
+      "size_h": "30.0KB"
+    },
+    {
+      "path": "reports/latest/tables/baselines_summary.csv",
+      "size": 21503,
+      "size_h": "21.0KB"
+    },
+    {
+      "path": "reports/latest/tables/class_specific_head_gradient_summary.csv",
+      "size": 565,
+      "size_h": "565B"
+    },
+    {
+      "path": "reports/latest/tables/class_specific_head_gradients.csv",
+      "size": 19522,
+      "size_h": "19.1KB"
+    },
+    {
+      "path": "reports/latest/tables/comparison_row_embeddings.csv",
+      "size": 2949,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "reports/latest/tables/confusion_monitor_v1_matrix.csv",
+      "size": 604,
+      "size_h": "604B"
+    },
+    {
+      "path": "reports/latest/tables/confusion_monitor_v1_pairs.csv",
+      "size": 12073,
+      "size_h": "11.8KB"
+    },
+    {
+      "path": "reports/latest/tables/control_confusion_by_class.csv",
+      "size": 15927,
+      "size_h": "15.6KB"
+    },
+    {
+      "path": "reports/latest/tables/control_confusion_summary.csv",
+      "size": 1619,
+      "size_h": "1.6KB"
+    },
+    {
+      "path": "reports/latest/tables/control_confusion_transitions.csv",
+      "size": 222855,
+      "size_h": "217.6KB"
+    },
+    {
+      "path": "reports/latest/tables/control_result_embeddings.csv",
+      "size": 8397,
+      "size_h": "8.2KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_math_generation_steps.csv",
+      "size": 229,
+      "size_h": "229B"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_math_mlp_neuron_groups.csv",
+      "size": 24090,
+      "size_h": "23.5KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_math_patch_attribution.csv",
+      "size": 36710,
+      "size_h": "35.8KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_python_generation_steps.csv",
+      "size": 236,
+      "size_h": "236B"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_python_mlp_neuron_groups.csv",
+      "size": 24102,
+      "size_h": "23.5KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_python_patch_attribution.csv",
+      "size": 36946,
+      "size_h": "36.1KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_text_generation_steps.csv",
+      "size": 226,
+      "size_h": "226B"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_text_mlp_neuron_groups.csv",
+      "size": 24082,
+      "size_h": "23.5KB"
+    },
+    {
+      "path": "reports/latest/tables/deep_v8_text_patch_attribution.csv",
+      "size": 36572,
+      "size_h": "35.7KB"
+    },
+    {
+      "path": "reports/latest/tables/discovery_particle_controls.csv",
+      "size": 877,
+      "size_h": "877B"
+    },
+    {
+      "path": "reports/latest/tables/discovery_route_knn_stats.csv",
+      "size": 5857,
+      "size_h": "5.7KB"
+    },
+    {
+      "path": "reports/latest/tables/dummy_particle_patch_controls.csv",
+      "size": 810,
+      "size_h": "810B"
+    },
+    {
+      "path": "reports/latest/tables/dynamics_head_ranks.csv",
+      "size": 116147,
+      "size_h": "113.4KB"
+    },
+    {
+      "path": "reports/latest/tables/dynamics_hypotheses.csv",
+      "size": 39482,
+      "size_h": "38.6KB"
+    },
+    {
+      "path": "reports/latest/tables/dynamics_particle_patterns.csv",
+      "size": 17846,
+      "size_h": "17.4KB"
+    },
+    {
+      "path": "reports/latest/tables/edgeconv_inner_trace_events.csv",
+      "size": 8737,
+      "size_h": "8.5KB"
+    },
+    {
+      "path": "reports/latest/tables/edgeconv_inner_trace_heads.csv",
+      "size": 2575,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "reports/latest/tables/edgeconv_inner_trace_v2_events.csv",
+      "size": 25257,
+      "size_h": "24.7KB"
+    },
+    {
+      "path": "reports/latest/tables/edgeconv_inner_trace_v2_heads.csv",
+      "size": 1364,
+      "size_h": "1.3KB"
+    },
+    {
+      "path": "reports/latest/tables/event_forecast_active_routes.csv",
+      "size": 70548,
+      "size_h": "68.9KB"
+    },
+    {
+      "path": "reports/latest/tables/event_forecast_explanations.csv",
+      "size": 9667,
+      "size_h": "9.4KB"
+    },
+    {
+      "path": "reports/latest/tables/evidence_edges.csv",
+      "size": 184834,
+      "size_h": "180.5KB"
+    },
+    {
+      "path": "reports/latest/tables/evidence_head_vectors.csv",
+      "size": 12011,
+      "size_h": "11.7KB"
+    },
+    {
+      "path": "reports/latest/tables/evidence_particle_vectors.csv",
+      "size": 394147,
+      "size_h": "384.9KB"
+    },
+    {
+      "path": "reports/latest/tables/feature_ranker_v1_bins.csv",
+      "size": 162679,
+      "size_h": "158.9KB"
+    },
+    {
+      "path": "reports/latest/tables/feature_ranker_v1_candidates.csv",
+      "size": 83832,
+      "size_h": "81.9KB"
+    },
+    {
+      "path": "reports/latest/tables/full_head_question_catalog.csv",
+      "size": 344637,
+      "size_h": "336.6KB"
+    },
+    {
+      "path": "reports/latest/tables/full_neuron_patch_groups.csv",
+      "size": 146492,
+      "size_h": "143.1KB"
+    },
+    {
+      "path": "reports/latest/tables/full_neuron_stable.csv",
+      "size": 1586592,
+      "size_h": "1.5MB"
+    },
+    {
+      "path": "reports/latest/tables/full_neuron_top_effects.csv",
+      "size": 2324664,
+      "size_h": "2.2MB"
+    },
+    {
+      "path": "reports/latest/tables/geometry_veto_patch_v1.csv",
+      "size": 7160,
+      "size_h": "7.0KB"
+    },
+    {
+      "path": "reports/latest/tables/geometry_veto_patch_v1_summary.csv",
+      "size": 479,
+      "size_h": "479B"
+    },
+    {
+      "path": "reports/latest/tables/hard_hadron_geometry_probe_v1_rows.csv",
+      "size": 37693,
+      "size_h": "36.8KB"
+    },
+    {
+      "path": "reports/latest/tables/hard_hadron_geometry_probe_v1_summary.csv",
+      "size": 1407,
+      "size_h": "1.4KB"
+    },
+    {
+      "path": "reports/latest/tables/head_output_top_events.csv",
+      "size": 8037,
+      "size_h": "7.8KB"
+    },
+    {
+      "path": "reports/latest/tables/head_output_trace.csv",
+      "size": 11886,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "reports/latest/tables/head_projection_question_map.csv",
+      "size": 31354,
+      "size_h": "30.6KB"
+    },
+    {
+      "path": "reports/latest/tables/hqql_tbl_confusion_physics_events.csv",
+      "size": 3952548,
+      "size_h": "3.8MB"
+    },
+    {
+      "path": "reports/latest/tables/hqql_tbl_confusion_physics_summary.csv",
+      "size": 2362,
+      "size_h": "2.3KB"
+    },
+    {
+      "path": "reports/latest/tables/hypothesis_examples.csv",
+      "size": 3815,
+      "size_h": "3.7KB"
+    },
+    {
+      "path": "reports/latest/tables/hypothesis_global_patches.csv",
+      "size": 3557,
+      "size_h": "3.5KB"
+    },
+    {
+      "path": "reports/latest/tables/hypothesis_per_class.csv",
+      "size": 27168,
+      "size_h": "26.5KB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_1_role_contrast.csv",
+      "size": 4706,
+      "size_h": "4.6KB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_1_role_summary.csv",
+      "size": 51776,
+      "size_h": "50.6KB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_1_top_particles_annotated.csv",
+      "size": 1432365,
+      "size_h": "1.4MB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_events.csv",
+      "size": 1138032,
+      "size_h": "1.1MB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_head_summary.csv",
+      "size": 11663,
+      "size_h": "11.4KB"
+    },
+    {
+      "path": "reports/latest/tables/internal_activation_contrast_v2_top_particles.csv",
+      "size": 1126838,
+      "size_h": "1.1MB"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_feature_importance.csv",
+      "size": 1917,
+      "size_h": "1.9KB"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_by_class.csv",
+      "size": 1189,
+      "size_h": "1.2KB"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_top_events.csv",
+      "size": 3909,
+      "size_h": "3.8KB"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_v2_1_behavior_bins.csv",
+      "size": 519,
+      "size_h": "519B"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_v2_1_behavior_importance.csv",
+      "size": 793,
+      "size_h": "793B"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_v2_feature_importance.csv",
+      "size": 971,
+      "size_h": "971B"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_v2_isolation_bins.csv",
+      "size": 464,
+      "size_h": "464B"
+    },
+    {
+      "path": "reports/latest/tables/known_observable_residual_v2_summary.csv",
+      "size": 873,
+      "size_h": "873B"
+    },
+    {
+      "path": "reports/latest/tables/layer_code_alignment.csv",
+      "size": 13445,
+      "size_h": "13.1KB"
+    },
+    {
+      "path": "reports/latest/tables/layer_code_alignment_v2.csv",
+      "size": 13730,
+      "size_h": "13.4KB"
+    },
+    {
+      "path": "reports/latest/tables/logit_patch_attribution.csv",
+      "size": 3352,
+      "size_h": "3.3KB"
+    },
+    {
+      "path": "reports/latest/tables/matrix_program_database_v1.csv",
+      "size": 15096,
+      "size_h": "14.7KB"
+    },
+    {
+      "path": "reports/latest/tables/matrix_program_database_v2.csv",
+      "size": 6226,
+      "size_h": "6.1KB"
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/build_automatic_comparison_engine_v1.py",
+      "size": 12207,
+      "size_h": "11.9KB"
+    },
+    {
+      "path": "tools/build_automatic_comparison_engine_v2.py",
+      "size": 15895,
+      "size_h": "15.5KB"
+    },
+    {
+      "path": "tools/build_layer_code_alignment_v1.py",
+      "size": 6197,
+      "size_h": "6.1KB"
+    },
+    {
+      "path": "tools/build_layer_code_alignment_v2.py",
+      "size": 5124,
+      "size_h": "5.0KB"
+    },
+    {
+      "path": "tools/build_operation_logic_atlas_v1.py",
+      "size": 9575,
+      "size_h": "9.4KB"
+    },
+    {
+      "path": "tools/build_pseudocode_operation_database_v1.py",
+      "size": 7490,
+      "size_h": "7.3KB"
+    },
+    {
+      "path": "tools/build_pseudocode_operation_database_v2.py",
+      "size": 6828,
+      "size_h": "6.7KB"
+    },
+    {
+      "path": "tools/build_pseudocode_operation_database_v3.py",
+      "size": 8862,
+      "size_h": "8.7KB"
+    },
+    {
+      "path": "tools/build_relation_signal_graph_v1.py",
+      "size": 14085,
+      "size_h": "13.8KB"
+    },
+    {
+      "path": "tools/build_research_dashboard_latest.py",
+      "size": 11859,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "tools/build_research_dynamics_v1.py",
+      "size": 9759,
+      "size_h": "9.5KB"
+    },
+    {
+      "path": "tools/build_research_evidence_graph_v1.py",
+      "size": 11900,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "tools/build_research_stream_index_v1.py",
+      "size": 12866,
+      "size_h": "12.6KB"
+    },
+    {
+      "path": "tools/build_scope_comparability_guard_v1.py",
+      "size": 8871,
+      "size_h": "8.7KB"
+    },
+    {
+      "path": "tools/build_stream_feature_embeddings_v1.py",
+      "size": 12327,
+      "size_h": "12.0KB"
+    },
+    {
+      "path": "tools/class_specific_all_head_gradients_v1.py",
+      "size": 5678,
+      "size_h": "5.5KB"
+    },
+    {
+      "path": "tools/confusion_monitor_v1.py",
+      "size": 8049,
+      "size_h": "7.9KB"
+    },
+    {
+      "path": "tools/control_confusion_atlas_v1.py",
+      "size": 8163,
+      "size_h": "8.0KB"
+    },
+    {
+      "path": "tools/edgeconv_inner_trace_v1.py",
+      "size": 7828,
+      "size_h": "7.6KB"
+    },
+    {
+      "path": "tools/edgeconv_inner_trace_v2.py",
+      "size": 8874,
+      "size_h": "8.7KB"
+    },
+    {
+      "path": "tools/event_forecast_explainer_v1.py",
+      "size": 8682,
+      "size_h": "8.5KB"
+    },
+    {
+      "path": "tools/export_all_head_questions_and_analysis_v1.py",
+      "size": 5545,
+      "size_h": "5.4KB"
+    },
+    {
+      "path": "tools/export_full_head_question_catalog_v1.py",
+      "size": 15184,
+      "size_h": "14.8KB"
+    },
+    {
+      "path": "tools/feature_ranker_v1.py",
+      "size": 11865,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "tools/fix_comparison_after_particle0_controls_v1.py",
+      "size": 12322,
+      "size_h": "12.0KB"
+    },
+    {
+      "path": "tools/geometry_veto_patch_v1.py",
+      "size": 13287,
+      "size_h": "13.0KB"
+    },
+    {
+      "path": "tools/hard_hadron_geometry_probe_v1.py",
+      "size": 6974,
+      "size_h": "6.8KB"
+    },
+    {
+      "path": "tools/head_output_trace_v1.py",
+      "size": 7032,
+      "size_h": "6.9KB"
+    },
+    {
+      "path": "tools/hqql_tbl_confusion_physics_regime_v1.py",
+      "size": 9989,
+      "size_h": "9.8KB"
+    },
+    {
+      "path": "tools/internal_activation_contrast_v1.py",
+      "size": 11139,
+      "size_h": "10.9KB"
+    },
+    {
+      "path": "tools/internal_activation_contrast_v2.py",
+      "size": 16436,
+      "size_h": "16.1KB"
+    },
+    {
+      "path": "tools/internal_activation_contrast_v2_1_roles.py",
+      "size": 10509,
+      "size_h": "10.3KB"
+    },
+    {
+      "path": "tools/jetclass_root_probe_v1.py",
+      "size": 3211,
+      "size_h": "3.1KB"
+    },
+    {
+      "path": "tools/known_observable_residual_v1.py",
+      "size": 12782,
+      "size_h": "12.5KB"
+    },
+    {
+      "path": "tools/known_observable_residual_v2.py",
+      "size": 9041,
+      "size_h": "8.8KB"
+    },
+    {
+      "path": "tools/known_observable_residual_v2_1_behavior.py",
+      "size": 6831,
+      "size_h": "6.7KB"
+    },
+    {
+      "path": "tools/matrix_program_full_trace_v1.py",
+      "size": 6706,
+      "size_h": "6.5KB"
+    },
+    {
+      "path": "tools/matrix_program_full_trace_v2.py",
+      "size": 13774,
+      "size_h": "13.5KB"
+    },
+    {
+      "path": "tools/matrix_program_full_trace_v3.py",
+      "size": 15431,
+      "size_h": "15.1KB"
+    },
+    {
+      "path": "tools/official_weaver_pred_probe_v6.py",
+      "size": 4414,
+      "size_h": "4.3KB"
+    },
+    {
+      "path": "tools/official_weaver_pred_probe_v7_label_branch.py",
+      "size": 7211,
+      "size_h": "7.0KB"
+    },
+    {
+      "path": "tools/part_attention_clean_rank_v2.py",
+      "size": 6404,
+      "size_h": "6.3KB"
+    },
+    {
+      "path": "tools/part_attention_supertrace_v1.py",
+      "size": 16186,
+      "size_h": "15.8KB"
+    },
+    {
+      "path": "tools/part_bootstrap_probe_v1.py",
+      "size": 4218,
+      "size_h": "4.1KB"
+    },
+    {
+      "path": "tools/part_dataset_contract_audit_v1.py",
+      "size": 4553,
+      "size_h": "4.4KB"
+    },
+    {
+      "path": "tools/part_hqql_tbl_group_builder_v1.py",
+      "size": 6465,
+      "size_h": "6.3KB"
+    },
+    {
+      "path": "tools/part_inference_diagnostics_v1.py",
+      "size": 8048,
+      "size_h": "7.9KB"
+    },
+    {
+      "path": "tools/part_inference_v1.py",
+      "size": 10931,
+      "size_h": "10.7KB"
+    },
+    {
+      "path": "tools/part_weaver_contract_probe_v1.py",
+      "size": 12603,
+      "size_h": "12.3KB"
+    },
+    {
+      "path": "tools/part_weaver_output_analyzer_v1.py",
+      "size": 5136,
+      "size_h": "5.0KB"
+    },
+    {
+      "path": "tools/particle0_topk_controls_v1.py",
+      "size": 13069,
+      "size_h": "12.8KB"
+    },
+    {
+      "path": "tools/particle0_topk_controls_v2.py",
+      "size": 12195,
+      "size_h": "11.9KB"
+    },
+    {
+      "path": "tools/particle_accuracy_diagnostic_v4.py",
+      "size": 3965,
+      "size_h": "3.9KB"
+    },
+    {
+      "path": "tools/particle_dummy_patch_controls_v2.py",
+      "size": 6401,
+      "size_h": "6.3KB"
+    },
+    {
+      "path": "tools/particle_load_part_model_v1.py",
+      "size": 3495,
+      "size_h": "3.4KB"
+    },
+    {
+      "path": "tools/particle_load_part_model_v2.py",
+      "size": 3530,
+      "size_h": "3.4KB"
+    },
+    {
+      "path": "tools/particle_model_probe_v1.py",
+      "size": 1588,
+      "size_h": "1.6KB"
+    },
+    {
+      "path": "tools/particle_order_control_v1.py",
+      "size": 8965,
+      "size_h": "8.8KB"
+    },
+    {
+      "path": "tools/particle_part_dummy_probe_v1.py",
+      "size": 3528,
+      "size_h": "3.4KB"
+    },
+    {
+      "path": "tools/particle_real_patch_controls_v1.py",
+      "size": 6968,
+      "size_h": "6.8KB"
+    },
+    {
+      "path": "tools/particle_real_patch_controls_v2_balanced.py",
+      "size": 5877,
+      "size_h": "5.7KB"
+    },
+    {
+      "path": "tools/particle_real_patch_controls_v3_official.py",
+      "size": 5000,
+      "size_h": "4.9KB"
+    },
+    {
+      "path": "tools/particlenet_all_head_supertrace_v1.py",
+      "size": 16671,
+      "size_h": "16.3KB"
+    },
+    {
+      "path": "tools/particlenet_discovery_atlas_v4.py",
+      "size": 12245,
+      "size_h": "12.0KB"
+    },
+    {
+      "path": "tools/particlenet_head_projection_composer_v2.py",
+      "size": 10288,
+      "size_h": "10.0KB"
+    },
+    {
+      "path": "tools/particlenet_hypothesis_atlas_v3.py",
+      "size": 12555,
+      "size_h": "12.3KB"
+    },
+    {
+      "path": "tools/particlenet_question_atlas_v1.py",
+      "size": 9556,
+      "size_h": "9.3KB"
+    },
+    {
+      "path": "tools/particlenet_real_patch_controls_v1.py",
+      "size": 8621,
+      "size_h": "8.4KB"
+    },
+    {
+      "path": "tools/particlenet_research_compass_v5.py",
+      "size": 15271,
+      "size_h": "14.9KB"
+    },
+    {
+      "path": "tools/particlenet_research_synthesis_v6.py",
+      "size": 11300,
+      "size_h": "11.0KB"
+    },
+    {
+      "path": "tools/particlenet_single_head_particle_trace_v1.py",
+      "size": 8912,
+      "size_h": "8.7KB"
+    },
+    {
+      "path": "tools/particlenet_weight_projection_question_lenses_v1.py",
+      "size": 12360,
+      "size_h": "12.1KB"
+    },
+    {
+      "path": "tools/particlenet_why_class_report_v2.py",
+      "size": 8145,
+      "size_h": "8.0KB"
+    },
+    {
+      "path": "tools/phase1_hqql_tbl_stats_gate_v1.py",
+      "size": 2568,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "tools/phase2_hqql_tbl_physical_swaps_v1.py",
+      "size": 12635,
+      "size_h": "12.3KB"
+    },
+    {
+      "path": "tools/phase3_hqql_tbl_isolation_controls_v1.py",
+      "size": 11372,
+      "size_h": "11.1KB"
+    },
+    {
+      "path": "tools/query_relation_signal_graph_v1.py",
+      "size": 2134,
+      "size_h": "2.1KB"
+    },
+    {
+      "path": "tools/query_research_stream_v1.py",
+      "size": 2975,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "tools/question_driven_stage_analyzer_v1.py",
+      "size": 8051,
+      "size_h": "7.9KB"
+    },
+    {
+      "path": "tools/qwen_attention_pseudocode_atlas_v1_runtime_gen_fixed.py",
+      "size": 54244,
+      "size_h": "53.0KB"
+    },
+    {
+      "path": "tools/qwen_attention_pseudocode_atlas_v2_full.py",
+      "size": 78203,
+      "size_h": "76.4KB"
+    },
+    {
+      "path": "tools/qwen_circuit_matrix_targets_v2_affine_basis.py",
+      "size": 46190,
+      "size_h": "45.1KB"
+    },
+    {
+      "path": "tools/qwen_deep_improvement_v8.py",
+      "size": 12686,
+      "size_h": "12.4KB"
+    },
+    {
+      "path": "tools/qwen_full_neuron_scan_v9.py",
+      "size": 9131,
+      "size_h": "8.9KB"
+    },
+    {
+      "path": "tools/qwen_multihead_differentiable_bank_v1_py312_fixed.py",
+      "size": 39395,
+      "size_h": "38.5KB"
+    },
+    {
+      "path": "tools/qwen_nonstandard_circuit_experiment_v1.py",
+      "size": 31464,
+      "size_h": "30.7KB"
+    },
+    {
+      "path": "tools/qwen_program_decompiler_v6_3_integrated_report(2).py",
+      "size": 226716,
+      "size_h": "221.4KB"
+    },
+    {
+      "path": "tools/qwen_program_decompiler_v6_scorehybrid(1).py",
+      "size": 192673,
+      "size_h": "188.2KB"
+    },
+    {
+      "path": "tools/qwen_pseudocode_controls_v3_head_dim_fixed.py",
+      "size": 36933,
+      "size_h": "36.1KB"
+    },
+    {
+      "path": "tools/qwen_pseudocode_controls_v4_full.py",
+      "size": 58219,
+      "size_h": "56.9KB"
+    },
+    {
+      "path": "tools/qwen_pseudocode_enhanced_reports_v6.py",
+      "size": 20607,
+      "size_h": "20.1KB"
+    },
+    {
+      "path": "tools/qwen_pseudocode_final_product_v5.py",
+      "size": 33024,
+      "size_h": "32.2KB"
+    },
+    {
+      "path": "tools/qwen_pseudocode_final_product_v5_no_na_fixed.py",
+      "size": 34517,
+      "size_h": "33.7KB"
+    },
+    {
+      "path": "tools/qwen_raw_weight_projection_lab_v1.py",
+      "size": 29193,
+      "size_h": "28.5KB"
+    },
+    {
+      "path": "tools/qwen_term_control_probe_v1.py",
+      "size": 14846,
+      "size_h": "14.5KB"
+    },
+    {
+      "path": "tools/qwen_two_head_operator_bank_probe_v1.py",
+      "size": 16726,
+      "size_h": "16.3KB"
+    },
+    {
+      "path": "tools/route_specific_patch_v1.py",
+      "size": 7901,
+      "size_h": "7.7KB"
+    },
+    {
+      "path": "tools/stream_task_watcher_v1.py",
+      "size": 11857,
+      "size_h": "11.6KB"
+    },
+    {
+      "path": "tools/veto_search_v1.py",
+      "size": 6370,
+      "size_h": "6.2KB"
+    },
+    {
+      "path": "tools/veto_search_v2_full_knn_geometry.py",
+      "size": 14035,
+      "size_h": "13.7KB"
+    },
+    {
+      "path": "tools/weaver_no_numba_cache_launcher_v1.py",
+      "size": 399,
+      "size_h": "399B"
+    },
+    {
+      "path": "tools/wrap_part_checkpoint_v9.py",
+      "size": 1658,
+      "size_h": "1.6KB"
+    }
+  ],
+  "configs": [
+    {
+      "path": "external/particle_transformer/data/JetClass/JetClass_full.yaml",
+      "size": 3007,
+      "size_h": "2.9KB"
+    },
+    {
+      "path": "external/particle_transformer/data/JetClass/JetClass_kin.yaml",
+      "size": 2607,
+      "size_h": "2.5KB"
+    },
+    {
+      "path": "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
+      "size": 2817,
+      "size_h": "2.8KB"
+    }
+  ]
+}
