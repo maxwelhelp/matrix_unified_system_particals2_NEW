@@ -1,1 +1,116 @@
-{"ok": false, "reason": "no_root_files", "glob": "reports/latest/part_weaver_predict_smoke_v3_*.root"}
+{
+  "ok": true,
+  "files": 10,
+  "summary": [
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_HToBB.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.66769
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_HToCC.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.61341
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_HToGG.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.69064
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_HToWW2Q1L.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.94536
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_HToWW4Q.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.80905
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_TTBar.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.91365
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_TTBarLep.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.95654
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_WToQQ.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.74142
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_ZJetsToNuNu.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.72447
+    },
+    {
+      "file": "reports/latest/part_weaver_predict_smoke_v3_ZToQQ.root",
+      "tree": "Events;1",
+      "branches_n": 31,
+      "branches_sample": "label_QCD;score_label_QCD;label_Hbb;score_label_Hbb;label_Hcc;score_label_Hcc;label_Hgg;score_label_Hgg;label_H4q;score_label_H4q;label_Hqql;score_label_Hqql;label_Zqq;score_label_Zqq;label_Wqq;score_label_Wqq;label_Tbqq;score_label_Tbqq;label_Tbl;score_label_Tbl;_label_;jet_pt;jet_eta;jet_phi;jet_energy;jet_nparticles;jet_sdmass;jet_tau1;jet_tau2;jet_tau3",
+      "label_branches_found": 10,
+      "score_branches_found": 10,
+      "score_prefix": "score_",
+      "n": 100000,
+      "accuracy": 0.60435
+    }
+  ]
+}

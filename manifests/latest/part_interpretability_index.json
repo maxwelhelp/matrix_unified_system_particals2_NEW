@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-06-19T23:56:32",
+  "created_at": "2026-06-20T00:07:11",
   "priority": [
     "reports/latest/PART_SANITY_CONTRACT.md",
     "reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md",
@@ -357,8 +357,8 @@
     },
     {
       "path": "reports/latest/PART_INTERPRETABILITY_INDEX.md",
-      "size": 25024,
-      "size_h": "24.4KB"
+      "size": 25206,
+      "size_h": "24.6KB"
     },
     {
       "path": "reports/latest/PART_MODEL_LOAD_REPORT.md",
@@ -392,8 +392,8 @@
     },
     {
       "path": "reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md",
-      "size": 186,
-      "size_h": "186B"
+      "size": 6786,
+      "size_h": "6.6KB"
     },
     {
       "path": "reports/latest/PART_WEAVER_PREDICT_GROUPED_V1.md",
@@ -804,8 +804,8 @@
     },
     {
       "path": "manifests/latest/part_interpretability_index.json",
-      "size": 48008,
-      "size_h": "46.9KB"
+      "size": 48377,
+      "size_h": "47.2KB"
     },
     {
       "path": "manifests/latest/part_model_load_report.json",
@@ -849,8 +849,8 @@
     },
     {
       "path": "manifests/latest/part_weaver_output_analyzer_v1.json",
-      "size": 103,
-      "size_h": "103B"
+      "size": 6735,
+      "size_h": "6.6KB"
     },
     {
       "path": "manifests/latest/particle0_topk_controls_v1.json",

@@ -1,6 +1,6 @@
 # PART_SANITY_CONTRACT
 
-- created_at: `2026-06-19T23:56:32`
+- created_at: `2026-06-20T00:07:08`
 - network: `external/particle_transformer/networks/example_ParticleTransformer.py`
 
 ## Mode contract

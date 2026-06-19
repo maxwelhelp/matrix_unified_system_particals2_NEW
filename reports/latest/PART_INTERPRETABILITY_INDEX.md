@@ -1,6 +1,6 @@
 # PART_INTERPRETABILITY_INDEX
 
-- created_at: `2026-06-19T23:56:32`
+- created_at: `2026-06-20T00:07:11`
 
 ## First files to inspect
 
@@ -92,14 +92,14 @@
 | `reports/latest/PART_HQQL_TBL_GROUP_BUILDER_V1.md` | 4.2KB |
 | `reports/latest/PART_INFERENCE_DIAGNOSTICS_V1.md` | 885B |
 | `reports/latest/PART_INFERENCE_V1.md` | 1.5KB |
-| `reports/latest/PART_INTERPRETABILITY_INDEX.md` | 24.4KB |
+| `reports/latest/PART_INTERPRETABILITY_INDEX.md` | 24.6KB |
 | `reports/latest/PART_MODEL_LOAD_REPORT.md` | 10.1KB |
 | `reports/latest/PART_MODEL_LOAD_REPORT_ParT_full_V2.md` | 410B |
 | `reports/latest/PART_MODEL_LOAD_REPORT_ParT_kin_V2.md` | 407B |
 | `reports/latest/PART_MODEL_LOAD_REPORT_ParT_kinpid_V2.md` | 414B |
 | `reports/latest/PART_MODEL_LOAD_V2_ALL_SUMMARY.md` | 322B |
 | `reports/latest/PART_SANITY_CONTRACT.md` | 1.7KB |
-| `reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md` | 186B |
+| `reports/latest/PART_WEAVER_OUTPUT_ANALYZER_V1.md` | 6.6KB |
 | `reports/latest/PART_WEAVER_PREDICT_GROUPED_V1.md` | 463B |
 | `reports/latest/PART_WEAVER_PREDICT_SMOKE_V3.md` | 437B |
 | `reports/latest/PHASE1_HQQL_TBL_STATS_GATE_V1.md` | 397B |
@@ -186,7 +186,7 @@
 | `manifests/latest/part_hqql_tbl_group_builder_v1.json` | 241B |
 | `manifests/latest/part_inference_diagnostics_v1.json` | 3.1KB |
 | `manifests/latest/part_inference_v1.json` | 1.4KB |
-| `manifests/latest/part_interpretability_index.json` | 46.9KB |
+| `manifests/latest/part_interpretability_index.json` | 47.2KB |
 | `manifests/latest/part_model_load_report.json` | 11.0KB |
 | `manifests/latest/part_model_load_report_ParT_full_v2.json` | 980B |
 | `manifests/latest/part_model_load_report_ParT_kin_v2.json` | 978B |
@@ -195,7 +195,7 @@
 | `manifests/latest/part_sanity_contract.json` | 2.9KB |
 | `manifests/latest/part_weaver_contract_probe_v1_full_legacy_skip_batch.json` | 3.4KB |
 | `manifests/latest/part_weaver_contract_probe_v1_full_skip_batch.json` | 3.4KB |
-| `manifests/latest/part_weaver_output_analyzer_v1.json` | 103B |
+| `manifests/latest/part_weaver_output_analyzer_v1.json` | 6.6KB |
 | `manifests/latest/particle0_topk_controls_v1.json` | 14.8KB |
 | `manifests/latest/particle0_topk_controls_v2.json` | 14.8KB |
 | `manifests/latest/particle_accuracy_diagnostic_v4.json` | 18.4KB |
