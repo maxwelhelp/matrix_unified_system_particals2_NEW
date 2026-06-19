@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "out_md": "reports/latest/KNOWN_OBSERVABLE_RESIDUAL_V2_1_BEHAVIOR.md",
+  "auc": 0.5907919400187441,
+  "acc": 0.929635761589404
+}

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "events": 14000,
+  "counts": {
+    "A_Hqql_correct": 25694,
+    "B_Hqql_to_Tbl": 4577,
+    "C_Tbl_correct": 14533,
+    "D_Tbl_to_Hqql": 6443
+  },
+  "pair_rows": 8960000,
+  "summary_rows": 2017
+}

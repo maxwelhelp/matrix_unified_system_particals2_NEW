@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "nodes": 47,
+  "edges": 89,
+  "alerts": 8,
+  "out_json": "manifests/latest/relation_signal_graph_v1.json"
+}

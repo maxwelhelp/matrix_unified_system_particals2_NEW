@@ -1,0 +1,229 @@
+{
+  "mode": "full",
+  "checkpoint": "external/particle_transformer/models/ParT_full.pt",
+  "data_config": "external/particle_transformer/data/JetClass/JetClass_full.yaml",
+  "network": "external/particle_transformer/networks/example_ParticleTransformer_legacy.py",
+  "weaver_input_names": [
+    "pf_points",
+    "pf_features",
+    "pf_vectors",
+    "pf_mask"
+  ],
+  "weaver_input_shapes": {
+    "pf_points": [
+      -1,
+      2,
+      128
+    ],
+    "pf_features": [
+      -1,
+      17,
+      128
+    ],
+    "pf_vectors": [
+      -1,
+      4,
+      128
+    ],
+    "pf_mask": [
+      -1,
+      1,
+      128
+    ]
+  },
+  "label_order": [
+    "label_QCD",
+    "label_Hbb",
+    "label_Hcc",
+    "label_Hgg",
+    "label_H4q",
+    "label_Hqql",
+    "label_Zqq",
+    "label_Wqq",
+    "label_Tbqq",
+    "label_Tbl"
+  ],
+  "model_info": {
+    "input_names": [
+      "pf_points",
+      "pf_features",
+      "pf_vectors",
+      "pf_mask"
+    ],
+    "input_shapes": {
+      "pf_points": [
+        1,
+        2,
+        128
+      ],
+      "pf_features": [
+        1,
+        17,
+        128
+      ],
+      "pf_vectors": [
+        1,
+        4,
+        128
+      ],
+      "pf_mask": [
+        1,
+        1,
+        128
+      ]
+    },
+    "output_names": [
+      "softmax"
+    ],
+    "dynamic_axes": {
+      "pf_points": {
+        "0": "N",
+        "2": "n_pf"
+      },
+      "pf_features": {
+        "0": "N",
+        "2": "n_pf"
+      },
+      "pf_vectors": {
+        "0": "N",
+        "2": "n_pf"
+      },
+      "pf_mask": {
+        "0": "N",
+        "2": "n_pf"
+      },
+      "softmax": {
+        "0": "N"
+      }
+    }
+  },
+  "strict_load_missing": [],
+  "strict_load_unexpected": [],
+  "parameter_count": 2143486,
+  "state_keys_n": 235,
+  "state_first_shapes": [
+    [
+      "mod.cls_token",
+      [
+        1,
+        1,
+        128
+      ]
+    ],
+    [
+      "mod.embed.input_bn.weight",
+      [
+        17
+      ]
+    ],
+    [
+      "mod.embed.input_bn.bias",
+      [
+        17
+      ]
+    ],
+    [
+      "mod.embed.input_bn.running_mean",
+      [
+        17
+      ]
+    ],
+    [
+      "mod.embed.input_bn.running_var",
+      [
+        17
+      ]
+    ],
+    [
+      "mod.embed.input_bn.num_batches_tracked",
+      []
+    ],
+    [
+      "mod.embed.embed.0.weight",
+      [
+        17
+      ]
+    ],
+    [
+      "mod.embed.embed.0.bias",
+      [
+        17
+      ]
+    ]
+  ],
+  "state_last_shapes": [
+    [
+      "mod.cls_blocks.1.post_fc_norm.weight",
+      [
+        512
+      ]
+    ],
+    [
+      "mod.cls_blocks.1.post_fc_norm.bias",
+      [
+        512
+      ]
+    ],
+    [
+      "mod.cls_blocks.1.fc2.weight",
+      [
+        128,
+        512
+      ]
+    ],
+    [
+      "mod.cls_blocks.1.fc2.bias",
+      [
+        128
+      ]
+    ],
+    [
+      "mod.norm.weight",
+      [
+        128
+      ]
+    ],
+    [
+      "mod.norm.bias",
+      [
+        128
+      ]
+    ],
+    [
+      "mod.fc.0.weight",
+      [
+        10,
+        128
+      ]
+    ],
+    [
+      "mod.fc.0.bias",
+      [
+        10
+      ]
+    ]
+  ],
+  "dummy_forward": true,
+  "logit_delta_norm_loaded_minus_random": 10.84472942352295,
+  "logits_random": {
+    "shape": [
+      1,
+      10
+    ],
+    "mean": 0.19954711198806763,
+    "std": 0.3455544412136078,
+    "min": -0.25427618622779846,
+    "max": 0.9627326726913452
+  },
+  "logits_loaded": {
+    "shape": [
+      1,
+      10
+    ],
+    "mean": -0.8649792671203613,
+    "std": 3.494253396987915,
+    "min": -7.575711250305176,
+    "max": 3.977470874786377
+  },
+  "loaded_argmax": 4
+}

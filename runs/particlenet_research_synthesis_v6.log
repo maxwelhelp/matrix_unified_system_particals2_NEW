@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "baseline": {
+    "n": 2560,
+    "acc": 0.7574219107627869,
+    "pred_counts": [
+      241,
+      243,
+      220,
+      280,
+      274,
+      255,
+      251,
+      270,
+      273,
+      253
+    ],
+    "true_counts": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ]
+  },
+  "n_edge_heads": 24,
+  "n_feature_class_rows": 130,
+  "n_route_rows": 30,
+  "n_particle_rows": 5,
+  "n_contrasts": 7,
+  "hypotheses": [
+    {
+      "id": "H2",
+      "title": "EdgeConv pseudo-head specialization",
+      "status": "CAUSAL_PATCHED",
+      "priority": "P0",
+      "score": 78,
+      "core_evidence": "Strong internal pseudo-head groups: L1:ch16:32, L2:ch224:256, L0:ch40:48, L1:ch112:128, L0:ch24:32.",
+      "risk": "Equal channel slicing may hide or split real functional groups.",
+      "next_test": "Add activation-cluster pseudo-heads and random channel-group controls."
+    },
+    {
+      "id": "H4",
+      "title": "Leading-particle core hypothesis",
+      "status": "CAUSAL_PATCHED",
+      "priority": "P0",
+      "score": 72,
+      "core_evidence": "top_pt ablation acc=0.4488 vs random=0.7250; gap=0.2762.",
+      "risk": "top_pt and top_energy highly overlap; need top-k sweep.",
+      "next_test": "Run k sweep k=1,2,4,8,16 and per-class particle ablation."
+    },
+    {
+      "id": "H1",
+      "title": "EdgeConv learned-neighborhood separator",
+      "status": "CAUSAL_PATCHED",
+      "priority": "P0",
+      "score": 34,
+      "core_evidence": "Best EdgeConv pseudo-head 1:ch16:32 drops acc 0.7574->0.4934; full EdgeConv layers also previously dropped accuracy near random.",
+      "risk": "Channel-head groups are fixed slices, not learned clusters yet.",
+      "next_test": "Cluster EdgeConv activations and patch learned clusters; run heldout stability."
+    },
+    {
+      "id": "H5",
+      "title": "Explicit feature-channel class codes",
+      "status": "CAUSAL_PATCHED",
+      "priority": "P1",
+      "score": 74,
+      "core_evidence": "label_H4q->part_pt_log, label_Hbb->part_logerel, label_Hcc->part_logerel, label_Hgg->part_deta, label_Hqql->part_pt_log, label_QCD->part_deta, label_Tbl->part_deta, label_Tbqq->part_deltaR",
+      "risk": "Zeroing feature channels may be out-of-distribution.",
+      "next_test": "Permutation/noise controls and class contrast reports."
+    },
+    {
+      "id": "H6",
+      "title": "Known-observable alignment",
+      "status": "OBSERVED",
+      "priority": "P1",
+      "score": 66,
+      "core_evidence": "Tbqq-vs-Tbl: route ΔR gap L1=0.0539, sdmass gap=54.6329, nparticles gap=22.1602.",
+      "risk": "May be explained by known mass/multiplicity only.",
+      "next_test": "Residual analysis after controlling for sdmass/nparticles/tau variables."
+    },
+    {
+      "id": "H3",
+      "title": "Wqq compact route vs Tbqq wide route",
+      "status": "OBSERVED",
+      "priority": "P1",
+      "score": 63,
+      "core_evidence": "Mean neighbor ΔR gap Tbqq-Wqq ≈ 0.1242 across route layers.",
+      "risk": "Route stats are descriptive; may be explained by mass/multiplicity.",
+      "next_test": "Causal route-group patch: compact vs wide edges; regress against jet mass and nparticles."
+    },
+    {
+      "id": "H7",
+      "title": "Error-route hypothesis",
+      "status": "TODO",
+      "priority": "P2",
+      "score": 35,
+      "core_evidence": "Not tested yet: wrong predictions may share route/feature pattern with predicted class.",
+      "risk": "Needs confusion-pair analysis.",
+      "next_test": "Build error atlas true->pred pairs with route stats and signed competing logits."
+    },
+    {
+      "id": "H8",
+      "title": "Transformer attention route hypothesis",
+      "status": "PAUSED",
+      "priority": "P2",
+      "score": 20,
+      "core_evidence": "ParT attention cannot be claimed until ParT accuracy is fixed.",
+      "risk": "Current ParT checkpoint invocation is invalid for claims.",
+      "next_test": "Find/train valid ParT checkpoint, then extract attention heads / pair bias."
+    }
+  ]
+}

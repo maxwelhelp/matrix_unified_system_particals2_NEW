@@ -1,0 +1,7 @@
+artifact,scope_class,scope_key,directly_comparable_to,not_directly_comparable_to,rule
+research_stream_events.jsonl,history_stream,run_index/snapshot,other stream snapshots with same schema,local control deltas,"use for trends/stability, not local causal deltas"
+research_stream_index_v1.json,latest_stream_summary,latest_run_index,latest relation/task summaries,control-run baseline unless linked as evidence type,use as current dashboard
+particle0_topk_controls_v2.json,control_run_local,same control batch baseline,baseline/random controls inside same run,global stream history numeric deltas,use for causal control evidence only inside run
+relation_signal_edges.csv,latest_relation_meta,latest stream relations,latest stream and task watcher,causal controls without explicit bridge,"prioritization signal, not causal proof"
+automatic_comparison_rows_v2.csv,comparison_meta,evidence bridge,mixed evidence only with explicit status/risk,raw numeric training without scope flags,safe bridge layer
+all_feature_embeddings.jsonl,mixed_embedding_pool,source field + id,same source/scope first,all rows as one homogeneous dataset,train with source/scope features or split by source

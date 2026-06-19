@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "events": 8098,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "Tbl_correct": 3929,
+    "Tbl_to_Hqql": 145
+  },
+  "k": 16,
+  "micro_batch": 32,
+  "knn_micro_batch": 64,
+  "missing": [],
+  "unexpected": []
+}

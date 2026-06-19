@@ -1,0 +1,210 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "layer": 1,
+  "group": "ch16:32",
+  "captured_output_shape": [
+    2560,
+    128,
+    128
+  ],
+  "n_events": 2560,
+  "baseline_acc": 0.7574219107627869,
+  "missing": [],
+  "unexpected": [],
+  "top_events": [
+    {
+      "event_idx": 2507,
+      "true": 6,
+      "true_label": "label_Zqq",
+      "pred": 6,
+      "pred_label": "label_Zqq",
+      "conf": 0.8236027359962463,
+      "pred_logit": 1.3155508041381836,
+      "head_max_particle_energy": 74.62555694580078,
+      "real_particles": 18,
+      "top_particle_indices": "[17, 12, 0, 14, 16, 15, 11, 9, 1, 7, 2, 3]"
+    },
+    {
+      "event_idx": 1616,
+      "true": 8,
+      "true_label": "label_Tbqq",
+      "pred": 8,
+      "pred_label": "label_Tbqq",
+      "conf": 0.9925463795661926,
+      "pred_logit": 0.9550610184669495,
+      "head_max_particle_energy": 72.34293365478516,
+      "real_particles": 55,
+      "top_particle_indices": "[54, 24, 50, 43, 27, 52, 9, 30, 37, 34, 45, 39]"
+    },
+    {
+      "event_idx": 1297,
+      "true": 9,
+      "true_label": "label_Tbl",
+      "pred": 9,
+      "pred_label": "label_Tbl",
+      "conf": 0.9999998807907104,
+      "pred_logit": 3.5387606620788574,
+      "head_max_particle_energy": 71.69532775878906,
+      "real_particles": 20,
+      "top_particle_indices": "[19, 17, 16, 10, 18, 12, 15, 4, 14, 7, 9, 3]"
+    },
+    {
+      "event_idx": 1549,
+      "true": 8,
+      "true_label": "label_Tbqq",
+      "pred": 8,
+      "pred_label": "label_Tbqq",
+      "conf": 0.82765132188797,
+      "pred_logit": 1.137129783630371,
+      "head_max_particle_energy": 70.53165435791016,
+      "real_particles": 50,
+      "top_particle_indices": "[49, 48, 44, 32, 38, 7, 19, 22, 16, 40, 12, 31]"
+    },
+    {
+      "event_idx": 1791,
+      "true": 8,
+      "true_label": "label_Tbqq",
+      "pred": 8,
+      "pred_label": "label_Tbqq",
+      "conf": 0.9044356346130371,
+      "pred_logit": 1.5157263278961182,
+      "head_max_particle_energy": 70.34109497070312,
+      "real_particles": 45,
+      "top_particle_indices": "[44, 39, 26, 27, 37, 16, 17, 18, 13, 0, 40, 42]"
+    },
+    {
+      "event_idx": 1601,
+      "true": 8,
+      "true_label": "label_Tbqq",
+      "pred": 0,
+      "pred_label": "label_QCD",
+      "conf": 0.39286649227142334,
+      "pred_logit": -2.502591609954834,
+      "head_max_particle_energy": 70.07672119140625,
+      "real_particles": 82,
+      "top_particle_indices": "[81, 60, 8, 41, 61, 77, 50, 39, 63, 66, 3, 74]"
+    },
+    {
+      "event_idx": 2053,
+      "true": 0,
+      "true_label": "label_QCD",
+      "pred": 0,
+      "pred_label": "label_QCD",
+      "conf": 0.5923488736152649,
+      "pred_logit": -0.38645926117897034,
+      "head_max_particle_energy": 69.52253723144531,
+      "real_particles": 54,
+      "top_particle_indices": "[44, 43, 19, 28, 40, 52, 4, 50, 25, 8, 47, 48]"
+    },
+    {
+      "event_idx": 709,
+      "true": 3,
+      "true_label": "label_Hgg",
+      "pred": 3,
+      "pred_label": "label_Hgg",
+      "conf": 0.2994091212749481,
+      "pred_logit": -0.28676849603652954,
+      "head_max_particle_energy": 68.98277282714844,
+      "real_particles": 42,
+      "top_particle_indices": "[41, 35, 32, 20, 39, 34, 1, 36, 0, 21, 28, 16]"
+    },
+    {
+      "event_idx": 401,
+      "true": 2,
+      "true_label": "label_Hcc",
+      "pred": 2,
+      "pred_label": "label_Hcc",
+      "conf": 0.8700016140937805,
+      "pred_logit": 0.9501180052757263,
+      "head_max_particle_energy": 68.77068328857422,
+      "real_particles": 40,
+      "top_particle_indices": "[39, 6, 27, 34, 23, 28, 22, 36, 12, 31, 35, 38]"
+    },
+    {
+      "event_idx": 1487,
+      "true": 9,
+      "true_label": "label_Tbl",
+      "pred": 9,
+      "pred_label": "label_Tbl",
+      "conf": 0.997191846370697,
+      "pred_logit": 4.514758110046387,
+      "head_max_particle_energy": 68.68572998046875,
+      "real_particles": 39,
+      "top_particle_indices": "[38, 37, 22, 11, 1, 35, 9, 33, 34, 10, 32, 31]"
+    }
+  ],
+  "class_summary": [
+    {
+      "pred_label": "label_QCD",
+      "n_pred": 241,
+      "head_event_score_mean": 39.09855651855469,
+      "head_event_score_p90": 47.68414306640625,
+      "acc_within_pred": 0.7427386045455933
+    },
+    {
+      "pred_label": "label_Hbb",
+      "n_pred": 243,
+      "head_event_score_mean": 38.17246627807617,
+      "head_event_score_p90": 44.66594314575195,
+      "acc_within_pred": 0.6831275224685669
+    },
+    {
+      "pred_label": "label_Hcc",
+      "n_pred": 220,
+      "head_event_score_mean": 38.0123405456543,
+      "head_event_score_p90": 46.54130554199219,
+      "acc_within_pred": 0.6772726774215698
+    },
+    {
+      "pred_label": "label_Hgg",
+      "n_pred": 280,
+      "head_event_score_mean": 36.255149841308594,
+      "head_event_score_p90": 42.10802459716797,
+      "acc_within_pred": 0.6321428418159485
+    },
+    {
+      "pred_label": "label_H4q",
+      "n_pred": 274,
+      "head_event_score_mean": 35.59914779663086,
+      "head_event_score_p90": 41.29991912841797,
+      "acc_within_pred": 0.7299270033836365
+    },
+    {
+      "pred_label": "label_Hqql",
+      "n_pred": 255,
+      "head_event_score_mean": 34.25352478027344,
+      "head_event_score_p90": 39.8266716003418,
+      "acc_within_pred": 0.960784375667572
+    },
+    {
+      "pred_label": "label_Zqq",
+      "n_pred": 251,
+      "head_event_score_mean": 37.13972091674805,
+      "head_event_score_p90": 44.54621887207031,
+      "acc_within_pred": 0.6215139627456665
+    },
+    {
+      "pred_label": "label_Wqq",
+      "n_pred": 270,
+      "head_event_score_mean": 36.02656936645508,
+      "head_event_score_p90": 41.785343170166016,
+      "acc_within_pred": 0.6925925612449646
+    },
+    {
+      "pred_label": "label_Tbqq",
+      "n_pred": 273,
+      "head_event_score_mean": 38.75522232055664,
+      "head_event_score_p90": 54.3849983215332,
+      "acc_within_pred": 0.8498168587684631
+    },
+    {
+      "pred_label": "label_Tbl",
+      "n_pred": 253,
+      "head_event_score_mean": 37.88166427612305,
+      "head_event_score_p90": 49.48307418823242,
+      "acc_within_pred": 0.9802371859550476
+    }
+  ]
+}

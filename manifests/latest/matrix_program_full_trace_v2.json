@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "A": 32,
+  "B": 11,
+  "C": 128,
+  "heads": 14,
+  "graphs": 171,
+  "source_exact_note": "exact immediate Conv input blocks only; full nonlinear composition impossible without symbolic EdgeConv decomposition",
+  "missing": [],
+  "unexpected": []
+}

@@ -1,0 +1,11 @@
+head_id,layer,channels,events,particle0_top_event_rate,leading_top_event_rate,knn_contains_particle0_rate,knn_contains_leading_rate,neighbor_top4_frac_mean,neighbor_top16_frac_mean,neighbor_deltaR_mean,route_pattern
+L2_ch224:256,2,224:256,8,1.0,1.0,0.875,0.875,0.0703125,0.140625,0.257350068539381,core particle + core-neighborhood route
+L2_ch128:160,2,128:160,8,1.0,1.0,1.0,1.0,0.0625,0.1171875,0.23958568274974823,core particle + core-neighborhood route
+L2_ch0:32,2,0:32,8,0.75,0.75,0.625,0.625,0.0703125,0.1640625,0.2635313468053937,core particle + core-neighborhood route
+L2_ch32:64,2,32:64,8,0.875,0.875,0.75,0.75,0.0703125,0.1328125,0.2887467984110117,core particle + core-neighborhood route
+L2_ch64:96,2,64:96,8,1.0,1.0,1.0,1.0,0.09375,0.1640625,0.19553364906460047,core particle + core-neighborhood route
+L2_ch160:192,2,160:192,8,0.875,0.875,0.625,0.625,0.0625,0.109375,0.25397422537207603,core particle + core-neighborhood route
+L1_ch0:16,1,0:16,8,0.125,0.125,0.125,0.125,0.0625,0.21875,0.036895203025778756,context/non-core route
+L2_ch192:224,2,192:224,8,0.375,0.375,0.25,0.25,0.0390625,0.140625,0.18207437032833695,context/non-core route
+L1_ch112:128,1,112:128,8,0.25,0.25,0.25,0.25,0.0625,0.1484375,0.1541849949862808,context/non-core route
+L0_ch40:48,0,40:48,8,0.0,0.0,0.25,0.25,0.0234375,0.1015625,1.693163201212883,context/non-core route

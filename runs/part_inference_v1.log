@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "n": 5120,
+  "accuracy": 0.10078125,
+  "Hqql_to_Tbl": 2,
+  "Tbl_to_Hqql": 8,
+  "out_md": "reports/latest/PART_INFERENCE_V1.md"
+}

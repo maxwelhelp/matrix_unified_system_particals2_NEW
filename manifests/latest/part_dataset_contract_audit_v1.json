@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "files_checked": 10,
+  "bad_files": 0,
+  "label_sums_sampled": {
+    "label_QCD": 2000.0,
+    "label_Hbb": 2000.0,
+    "label_Hcc": 2000.0,
+    "label_Hgg": 2000.0,
+    "label_H4q": 2000.0,
+    "label_Hqql": 2000.0,
+    "label_Zqq": 2000.0,
+    "label_Wqq": 2000.0,
+    "label_Tbqq": 2000.0,
+    "label_Tbl": 2000.0
+  },
+  "missing_counts": {}
+}

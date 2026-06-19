@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "events": 20,
+  "routes": 200,
+  "out_md": "reports/latest/EVENT_FORECAST_EXPLAINER_V1.md"
+}

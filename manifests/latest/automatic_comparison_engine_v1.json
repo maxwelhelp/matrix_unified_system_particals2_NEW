@@ -1,0 +1,125 @@
+{
+  "schema": "automatic_comparison_engine.v1",
+  "generated_at_utc": "2026-06-16T05:25:06.458502+00:00",
+  "comparisons": [
+    {
+      "comparison_id": "C1_STREAM_RELATION_VS_MISSING_CONTROL",
+      "claim": "particle0/core_high_pt relation supports AH1 core-anchor hypothesis",
+      "support_signal": "relation_signal=0.9474324892454034 support=151",
+      "contradiction_signal": "none yet; controls not run",
+      "missing_control": "particle0/top-k/random controls",
+      "risk": "could be sorting shortcut or normal leading-particle bias",
+      "recommended_next_experiment": "run particle0 removal / keep-only particle0 / top-k removal / same-count random controls",
+      "status": "CANDIDATE_STRONG_MISSING_CONTROL",
+      "priority": "P0",
+      "training_label": "particle0_topk_controls_required",
+      "evidence_json": "{\"src\": \"pattern:core_high_pt\", \"dst\": \"hypothesis:AH1\", \"relation_type\": \"pattern_supports_hypothesis\", \"support\": \"151\", \"strength_sum\": \"23.325594885197894\", \"max_strength\": \"5.027756214141846\", \"lift_like\": \"1.1643308178037886\", \"confidence\": \"MEDIUM\", \"risk\": \"may be leading-particle shortcut\", \"next_control\": \"remove particle0 / keep only particle0 / top-k controls\", \"evidence\": \"pattern:core_high_pt dominates top particle stream\", \"mean_strength\": \"0.15447413831256884\", \"relation_signal\": \"0.9474324892454034\"}"
+    },
+    {
+      "comparison_id": "C5_CLASS_SIGNATURE_VS_CLASS_SPECIFIC_GRADIENT",
+      "claim": "Hqql/Tbl signature is strong in stream but global gradients are not class-specific",
+      "support_signal": "watcher_score=0.9625 state=HIGH",
+      "contradiction_signal": "none yet; class-specific gradient missing",
+      "missing_control": "class-specific all-head gradients",
+      "risk": "global all-head gradient can hide class-specific roles",
+      "recommended_next_experiment": "run class-specific all-head gradients for Hqql/Tbl/Tbqq/Wqq/Zqq",
+      "status": "NEEDS_CLASS_SPECIFIC_TEST",
+      "priority": "P0",
+      "training_label": "class_specific_gradient_required",
+      "evidence_json": "{\"task_id\": \"T4_HQQL_TBL_SIGNATURE\", \"priority\": \"P0\", \"state\": \"HIGH\", \"score\": 0.9625, \"question\": \"Is the current stream dominated by Hqql/Tbl high-confidence events?\", \"next_action\": \"Run class-specific all-head gradients: Hqql, Tbl, Tbqq, Wqq, Zqq.\", \"features_json\": \"{\\\"top_particles\\\": 80, \\\"hqql_fraction\\\": 0.875, \\\"tbl_fraction\\\": 0.0875, \\\"hqql_tbl_fraction\\\": 0.9625}\"}"
+    },
+    {
+      "comparison_id": "C2_WIDE_PATTERN_VS_ROUTE_TRACE",
+      "claim": "wide particle pattern may be secondary context rather than noise",
+      "support_signal": "relation_signal=0.7525254963492034 support=20 dst=hypothesis:T6_WIDE_SECONDARY_CONTEXT",
+      "contradiction_signal": "none yet; route-neighbor trace missing",
+      "missing_control": "route-neighbor trace / causal route controls",
+      "risk": "wide relation can be class imbalance, loose fragments, or sorting artifact",
+      "recommended_next_experiment": "run route-neighbor trace for top all-head particles and wide non-particle0 particles",
+      "status": "NEEDS_ROUTE_TRACE",
+      "priority": "P0",
+      "training_label": "route_neighbor_trace_required",
+      "evidence_json": "{\"src\": \"pattern:wide\", \"dst\": \"hypothesis:T6_WIDE_SECONDARY_CONTEXT\", \"relation_type\": \"pattern_supports_hypothesis\", \"support\": \"20\", \"strength_sum\": \"12.52285536233481\", \"max_strength\": \"3.573733329772949\", \"lift_like\": \"5.000000000000001\", \"confidence\": \"MEDIUM\", \"risk\": \"needs KNN neighbor and causal route controls\", \"next_control\": \"route-neighbor trace\", \"evidence\": \"wide particles support label_Zqq\", \"mean_strength\": \"0.6261427681167404\", \"relation_signal\": \"0.7525254963492034\"}"
+    },
+    {
+      "comparison_id": "C3_PATCH_VS_GRADIENT_DIVERGENCE",
+      "claim": "some heads are jointly supportive by gradient but not individually important by patch",
+      "support_signal": "divergent_heads=12 top=[{'head_id': 'L1_ch112:128', 'gate_abs_grad': 0.8689268512214768, 'patch_acc_drop': 0.0, 'role': 'middle learned-neighborhood / route-composition head'}, {'head_id': 'L1_ch16:32', 'gate_abs_grad': 0.748019616522652, 'patch_acc_drop': 0.0, 'role': 'middle learned-neighborhood / route-composition head'}, {'head_id': 'L0_ch40:48', 'gate_abs_grad': 0.715566657370073, 'patch_acc_drop': 0.0, 'role': 'early feature/geometry/PID reader'}]",
+      "contradiction_signal": "no contradiction; this is method divergence",
+      "missing_control": "multi-head patch combinations / patch-rank-vs-gate-rank table",
+      "risk": "gradient support is local; patch may reveal redundancy or compensation",
+      "recommended_next_experiment": "build patch-rank vs gate-rank report and run multi-head patch combinations",
+      "status": "NEEDS_CLASS_SPECIFIC_TEST",
+      "priority": "P1",
+      "training_label": "patch_gradient_divergence_analysis",
+      "evidence_json": "{\"divergent_heads\": [{\"head_id\": \"L1_ch112:128\", \"gate_abs_grad\": 0.8689268512214768, \"patch_acc_drop\": 0.0, \"role\": \"middle learned-neighborhood / route-composition head\"}, {\"head_id\": \"L1_ch16:32\", \"gate_abs_grad\": 0.748019616522652, \"patch_acc_drop\": 0.0, \"role\": \"middle learned-neighborhood / route-composition head\"}, {\"head_id\": \"L0_ch40:48\", \"gate_abs_grad\": 0.715566657370073, \"patch_acc_drop\": 0.0, \"role\": \"early feature/geometry/PID reader\"}, {\"head_id\": \"L2_ch224:256\", \"gate_abs_grad\": 0.7083240525222217, \"patch_acc_drop\": 0.0, \"role\": \"late aggregation / class-evidence head\"}, {\"head_id\": \"L0_ch48:56\", \"gate_abs_grad\": 0.3768698421619773, \"patch_acc_drop\": 0.0, \"role\": \"early feature/geometry/PID reader\"}, {\"head_id\": \"L0_ch8:16\", \"gate_abs_grad\": 0.3576639466715291, \"patch_acc_drop\": 0.0, \"role\": \"early feature/geometry/PID reader\"}, {\"head_id\": \"L2_ch128:160\", \"gate_abs_grad\": 0.3421113716471157, \"patch_acc_drop\": 0.0, \"role\": \"late aggregation / class-evidence head\"}, {\"head_id\": \"L2_ch64:96\", \"gate_abs_grad\": 0.3056455652433215, \"patch_acc_drop\": 0.0, \"role\": \"late aggregation / class-evidence head\"}, {\"head_id\": \"L2_ch0:32\", \"gate_abs_grad\": 0.2610779497063049, \"patch_acc_drop\": 0.0, \"role\": \"late aggregation / class-evidence head\"}, {\"head_id\": \"L0_ch24:32\", \"gate_abs_grad\": 0.22714711990847689, \"patch_acc_drop\": 0.0, \"role\": \"early feature/geometry/PID reader\"}, {\"head_id\": \"L1_ch32:48\", \"gate_abs_grad\": 0.21075477813137686, \"patch_acc_drop\": 0.0, \"role\": \"middle learned-neighborhood / route-composition head\"}, {\"head_id\": \"L0_ch0:8\", \"gate_abs_grad\": 0.20418599925615105, \"patch_acc_drop\": 0.0, \"role\": \"early feature/geometry/PID reader\"}]}"
+    },
+    {
+      "comparison_id": "C6_NEGATIVE_GATES_VS_SUPPRESSIVE_ROLE",
+      "claim": "negative gate gradients may indicate suppressive heads",
+      "support_signal": "watcher_score=1.0 state=HIGH",
+      "contradiction_signal": "negative gradient can be local objective artifact",
+      "missing_control": "class-specific negative gradients / suppressive patch analysis",
+      "risk": "not causal until class-specific and patch tests agree",
+      "recommended_next_experiment": "add suppressive-head analysis and compare patch effects",
+      "status": "NEEDS_CLASS_SPECIFIC_TEST",
+      "priority": "P1",
+      "training_label": "negative_gate_suppressive_analysis",
+      "evidence_json": "{\"task_id\": \"T3_NEGATIVE_SUPPRESSIVE_GATES\", \"priority\": \"P1\", \"state\": \"HIGH\", \"score\": 1.0, \"question\": \"Are there heads that suppress the current class logit?\", \"next_action\": \"Add suppressive-head analysis and class-specific negative gate gradients.\", \"features_json\": \"{\\\"negative_gate_count\\\": 8, \\\"negative_heads\\\": [\\\"L0_ch0:8\\\", \\\"L1_ch64:80\\\", \\\"L1_ch80:96\\\", \\\"L2_ch32:64\\\", \\\"L2_ch96:128\\\", \\\"L2_ch160:192\\\", \\\"L0_ch56:64\\\", \\\"L1_ch0:16\\\"]}\"}"
+    },
+    {
+      "comparison_id": "C4_HEAD_RANK_STABILITY_VS_RUN_CHANGES",
+      "claim": "top all-head gates may be stable mechanism candidates",
+      "support_signal": "stability_score=0.9455 top_heads=['L1_ch112:128', 'L0_ch40:48', 'L2_ch224:256', 'L1_ch16:32', 'L0_ch48:56']",
+      "contradiction_signal": "unknown if snapshots are not distinct enough",
+      "missing_control": "more distinct snapshots / heldout files / controls",
+      "risk": "repeated same data can fake stability",
+      "recommended_next_experiment": "run heldout subsets and controls with HISTORY_COPY=1, then compare head ranks",
+      "status": "NEEDS_HELDOUT",
+      "priority": "P1",
+      "training_label": "heldout_stability_required",
+      "evidence_json": "{\"stable_score\": 0.9454545454545454, \"top_heads\": [{\"run_index\": \"0\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_040530.json\", \"generated_at_utc\": \"2026-06-16T04:05:30.121747+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"1\", \"head_id\": \"L1_ch112:128\", \"layer\": \"1\", \"channels\": \"ch112:128\", \"gate_grad\": \"0.8005718103609979\", \"gate_abs_grad\": \"0.8005718103609979\", \"patch_acc_drop\": \"0.0\", \"role\": \"middle learned-neighborhood / route-composition head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_H4q, label_Hgg\", \"delta_gate_abs_grad\": \"\", \"delta_rank\": \"\"}, {\"run_index\": \"0\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_040530.json\", \"generated_at_utc\": \"2026-06-16T04:05:30.121747+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"2\", \"head_id\": \"L0_ch40:48\", \"layer\": \"0\", \"channels\": \"ch40:48\", \"gate_grad\": \"0.6734583724290131\", \"gate_abs_grad\": \"0.6734583724290131\", \"patch_acc_drop\": \"0.0\", \"role\": \"early feature/geometry/PID reader\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hqql, label_Zqq, label_Wqq\", \"delta_gate_abs_grad\": \"\", \"delta_rank\": \"\"}, {\"run_index\": \"0\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_040530.json\", \"generated_at_utc\": \"2026-06-16T04:05:30.121747+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"3\", \"head_id\": \"L2_ch224:256\", \"layer\": \"2\", \"channels\": \"ch224:256\", \"gate_grad\": \"0.6716344718355686\", \"gate_abs_grad\": \"0.6716344718355686\", \"patch_acc_drop\": \"0.0\", \"role\": \"late aggregation / class-evidence head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_Wqq, label_Zqq\", \"delta_gate_abs_grad\": \"\", \"delta_rank\": \"\"}, {\"run_index\": \"0\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_040530.json\", \"generated_at_utc\": \"2026-06-16T04:05:30.121747+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"4\", \"head_id\": \"L1_ch16:32\", \"layer\": \"1\", \"channels\": \"ch16:32\", \"gate_grad\": \"0.6645292914472519\", \"gate_abs_grad\": \"0.6645292914472519\", \"patch_acc_drop\": \"0.0\", \"role\": \"middle learned-neighborhood / route-composition head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_Hcc, label_Zqq\", \"delta_gate_abs_grad\": \"\", \"delta_rank\": \"\"}, {\"run_index\": \"0\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_040530.json\", \"generated_at_utc\": \"2026-06-16T04:05:30.121747+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"5\", \"head_id\": \"L0_ch48:56\", \"layer\": \"0\", \"channels\": \"ch48:56\", \"gate_grad\": \"0.3620088746538386\", \"gate_abs_grad\": \"0.3620088746538386\", \"patch_acc_drop\": \"0.0\", \"role\": \"early feature/geometry/PID reader\", \"semantic_hint\": \"kinematic/energy, class-specific: label_H4q, label_Hcc, label_Hbb\", \"delta_gate_abs_grad\": \"\", \"delta_rank\": \"\"}, {\"run_index\": \"1\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_041017.json\", \"generated_at_utc\": \"2026-06-16T04:10:17.558878+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"1\", \"head_id\": \"L1_ch112:128\", \"layer\": \"1\", \"channels\": \"ch112:128\", \"gate_grad\": \"0.8005718103609979\", \"gate_abs_grad\": \"0.8005718103609979\", \"patch_acc_drop\": \"0.0\", \"role\": \"middle learned-neighborhood / route-composition head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_H4q, label_Hgg\", \"delta_gate_abs_grad\": \"0.0\", \"delta_rank\": \"0\"}, {\"run_index\": \"1\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_041017.json\", \"generated_at_utc\": \"2026-06-16T04:10:17.558878+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"2\", \"head_id\": \"L0_ch40:48\", \"layer\": \"0\", \"channels\": \"ch40:48\", \"gate_grad\": \"0.6734583724290131\", \"gate_abs_grad\": \"0.6734583724290131\", \"patch_acc_drop\": \"0.0\", \"role\": \"early feature/geometry/PID reader\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hqql, label_Zqq, label_Wqq\", \"delta_gate_abs_grad\": \"0.0\", \"delta_rank\": \"0\"}, {\"run_index\": \"1\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_041017.json\", \"generated_at_utc\": \"2026-06-16T04:10:17.558878+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"3\", \"head_id\": \"L2_ch224:256\", \"layer\": \"2\", \"channels\": \"ch224:256\", \"gate_grad\": \"0.6716344718355686\", \"gate_abs_grad\": \"0.6716344718355686\", \"patch_acc_drop\": \"0.0\", \"role\": \"late aggregation / class-evidence head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_Wqq, label_Zqq\", \"delta_gate_abs_grad\": \"0.0\", \"delta_rank\": \"0\"}, {\"run_index\": \"1\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_041017.json\", \"generated_at_utc\": \"2026-06-16T04:10:17.558878+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"4\", \"head_id\": \"L1_ch16:32\", \"layer\": \"1\", \"channels\": \"ch16:32\", \"gate_grad\": \"0.6645292914472519\", \"gate_abs_grad\": \"0.6645292914472519\", \"patch_acc_drop\": \"0.0\", \"role\": \"middle learned-neighborhood / route-composition head\", \"semantic_hint\": \"kinematic/energy, class-specific: label_Hbb, label_Hcc, label_Zqq\", \"delta_gate_abs_grad\": \"0.0\", \"delta_rank\": \"0\"}, {\"run_index\": \"1\", \"source_path\": \"manifests/history/research_evidence_graph_20260616_041017.json\", \"generated_at_utc\": \"2026-06-16T04:10:17.558878+00:00\", \"run_id\": \"run:all_head_supertrace:v1:latest\", \"head_rank\": \"5\", \"head_id\": \"L0_ch48:56\", \"layer\": \"0\", \"channels\": \"ch48:56\", \"gate_grad\": \"0.3620088746538386\", \"gate_abs_grad\": \"0.3620088746538386\", \"patch_acc_drop\": \"0.0\", \"role\": \"early feature/geometry/PID reader\", \"semantic_hint\": \"kinematic/energy, class-specific: label_H4q, label_Hcc, label_Hbb\", \"delta_gate_abs_grad\": \"0.0\", \"delta_rank\": \"0\"}]}"
+    }
+  ],
+  "top_p0": [
+    {
+      "comparison_id": "C1_STREAM_RELATION_VS_MISSING_CONTROL",
+      "claim": "particle0/core_high_pt relation supports AH1 core-anchor hypothesis",
+      "support_signal": "relation_signal=0.9474324892454034 support=151",
+      "contradiction_signal": "none yet; controls not run",
+      "missing_control": "particle0/top-k/random controls",
+      "risk": "could be sorting shortcut or normal leading-particle bias",
+      "recommended_next_experiment": "run particle0 removal / keep-only particle0 / top-k removal / same-count random controls",
+      "status": "CANDIDATE_STRONG_MISSING_CONTROL",
+      "priority": "P0",
+      "training_label": "particle0_topk_controls_required",
+      "evidence_json": "{\"src\": \"pattern:core_high_pt\", \"dst\": \"hypothesis:AH1\", \"relation_type\": \"pattern_supports_hypothesis\", \"support\": \"151\", \"strength_sum\": \"23.325594885197894\", \"max_strength\": \"5.027756214141846\", \"lift_like\": \"1.1643308178037886\", \"confidence\": \"MEDIUM\", \"risk\": \"may be leading-particle shortcut\", \"next_control\": \"remove particle0 / keep only particle0 / top-k controls\", \"evidence\": \"pattern:core_high_pt dominates top particle stream\", \"mean_strength\": \"0.15447413831256884\", \"relation_signal\": \"0.9474324892454034\"}"
+    },
+    {
+      "comparison_id": "C5_CLASS_SIGNATURE_VS_CLASS_SPECIFIC_GRADIENT",
+      "claim": "Hqql/Tbl signature is strong in stream but global gradients are not class-specific",
+      "support_signal": "watcher_score=0.9625 state=HIGH",
+      "contradiction_signal": "none yet; class-specific gradient missing",
+      "missing_control": "class-specific all-head gradients",
+      "risk": "global all-head gradient can hide class-specific roles",
+      "recommended_next_experiment": "run class-specific all-head gradients for Hqql/Tbl/Tbqq/Wqq/Zqq",
+      "status": "NEEDS_CLASS_SPECIFIC_TEST",
+      "priority": "P0",
+      "training_label": "class_specific_gradient_required",
+      "evidence_json": "{\"task_id\": \"T4_HQQL_TBL_SIGNATURE\", \"priority\": \"P0\", \"state\": \"HIGH\", \"score\": 0.9625, \"question\": \"Is the current stream dominated by Hqql/Tbl high-confidence events?\", \"next_action\": \"Run class-specific all-head gradients: Hqql, Tbl, Tbqq, Wqq, Zqq.\", \"features_json\": \"{\\\"top_particles\\\": 80, \\\"hqql_fraction\\\": 0.875, \\\"tbl_fraction\\\": 0.0875, \\\"hqql_tbl_fraction\\\": 0.9625}\"}"
+    },
+    {
+      "comparison_id": "C2_WIDE_PATTERN_VS_ROUTE_TRACE",
+      "claim": "wide particle pattern may be secondary context rather than noise",
+      "support_signal": "relation_signal=0.7525254963492034 support=20 dst=hypothesis:T6_WIDE_SECONDARY_CONTEXT",
+      "contradiction_signal": "none yet; route-neighbor trace missing",
+      "missing_control": "route-neighbor trace / causal route controls",
+      "risk": "wide relation can be class imbalance, loose fragments, or sorting artifact",
+      "recommended_next_experiment": "run route-neighbor trace for top all-head particles and wide non-particle0 particles",
+      "status": "NEEDS_ROUTE_TRACE",
+      "priority": "P0",
+      "training_label": "route_neighbor_trace_required",
+      "evidence_json": "{\"src\": \"pattern:wide\", \"dst\": \"hypothesis:T6_WIDE_SECONDARY_CONTEXT\", \"relation_type\": \"pattern_supports_hypothesis\", \"support\": \"20\", \"strength_sum\": \"12.52285536233481\", \"max_strength\": \"3.573733329772949\", \"lift_like\": \"5.000000000000001\", \"confidence\": \"MEDIUM\", \"risk\": \"needs KNN neighbor and causal route controls\", \"next_control\": \"route-neighbor trace\", \"evidence\": \"wide particles support label_Zqq\", \"mean_strength\": \"0.6261427681167404\", \"relation_signal\": \"0.7525254963492034\"}"
+    }
+  ]
+}

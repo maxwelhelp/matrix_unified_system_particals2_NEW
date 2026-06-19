@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "events": 3,
+  "rows": 48,
+  "heads": [
+    "L2_ch224:256",
+    "L2_ch128:160",
+    "L2_ch32:64",
+    "L2_ch0:32"
+  ],
+  "patch_modes": [
+    "remove_top_particle",
+    "remove_knn_neighbors",
+    "remove_top_plus_knn",
+    "random_same_count"
+  ],
+  "missing": [],
+  "unexpected": []
+}

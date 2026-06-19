@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "captured_modules": [
+    {
+      "module_path": "edge_convs.0",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 2, 128], [160, 13, 128]]",
+      "output_shape": "[160, 64, 128]"
+    },
+    {
+      "module_path": "edge_convs.1",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 64, 128], [160, 64, 128]]",
+      "output_shape": "[160, 128, 128]"
+    },
+    {
+      "module_path": "edge_convs.2",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 128, 128], [160, 128, 128]]",
+      "output_shape": "[160, 256, 128]"
+    }
+  ],
+  "rows": 24,
+  "missing": [],
+  "unexpected": []
+}

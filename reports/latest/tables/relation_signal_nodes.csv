@@ -1,0 +1,48 @@
+node_id,node_type,label,score,priority,state,question,layer,channels,role
+class:label_Hqql,class,label_Hqql,215.0,,,,,,
+pattern:charged,particle_pattern,charged,184.0,,,,,,
+pattern:core_high_pt,particle_pattern,core_high_pt,151.0,,,,,,
+pattern:particle0,particle_pattern,particle0,120.0,,,,,,
+pattern:other_particle,particle_pattern,other_particle,85.0,,,,,,
+class:label_Tbl,class,label_Tbl,39.0,,,,,,
+class:label_Zqq,class,label_Zqq,31.0,,,,,,
+pattern:wide,particle_pattern,wide,20.0,,,,,,
+class:label_QCD,class,label_QCD,12.0,,,,,,
+hypothesis:AH1,hypothesis,distributed core-anchor + secondary context,5.027756214141846,,,,,,
+hypothesis:T6_WIDE_SECONDARY_CONTEXT,hypothesis,wide secondary context,3.573733329772949,,,,,,
+class:label_Wqq,class,label_Wqq,3.0,,,,,,
+run:latest,run,latest run 14,1.0,,,,,,
+task:T1_PARTICLE0_SHORTCUT_OR_CORE_ANCHOR,task,T1_PARTICLE0_SHORTCUT_OR_CORE_ANCHOR,1.0,P0,HIGH,Is the all-head system over-dominated by particle0 / leading-core evidence?,,,
+task:T3_NEGATIVE_SUPPRESSIVE_GATES,task,T3_NEGATIVE_SUPPRESSIVE_GATES,1.0,P1,HIGH,Are there heads that suppress the current class logit?,,,
+task:T5_PATCH_VS_GRADIENT_DIVERGENCE,task,T5_PATCH_VS_GRADIENT_DIVERGENCE,1.0,P1,HIGH,"Which heads are patch-important but not gradient-important, or gradient-important but not patch-important?",,,
+hypothesis:AH3,hypothesis,single-head and all-head evidence differ,1.0,,,,,,
+task:T4_HQQL_TBL_SIGNATURE,task,T4_HQQL_TBL_SIGNATURE,0.9625,P0,HIGH,Is the current stream dominated by Hqql/Tbl high-confidence events?,,,
+hypothesis:AH2,hypothesis,Hqql/Tbl high-confidence signature,0.9625,,,,,,
+task:T2_HEAD_RANK_STABILITY,task,T2_HEAD_RANK_STABILITY,0.9571428571428572,P0,HIGH,Do the same heads stay important across snapshots?,,,
+head:L1_ch112:128,head,L1_ch112:128,0.8689268512214768,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch112:128,middle learned-neighborhood / route-composition head
+hypothesis:AH4,hypothesis,head-system mixture across layers,0.8689268512214768,,,,,,
+head:L1_ch16:32,head,L1_ch16:32,0.748019616522652,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch16:32,middle learned-neighborhood / route-composition head
+head:L0_ch40:48,head,L0_ch40:48,0.715566657370073,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch40:48,early feature/geometry/PID reader
+head:L2_ch224:256,head,L2_ch224:256,0.7083240525222217,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch224:256,late aggregation / class-evidence head
+head:L0_ch48:56,head,L0_ch48:56,0.3768698421619773,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch48:56,early feature/geometry/PID reader
+head:L0_ch8:16,head,L0_ch8:16,0.3576639466715291,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch8:16,early feature/geometry/PID reader
+head:L2_ch128:160,head,L2_ch128:160,0.3421113716471157,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch128:160,late aggregation / class-evidence head
+head:L2_ch64:96,head,L2_ch64:96,0.3056455652433215,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch64:96,late aggregation / class-evidence head
+head:L2_ch0:32,head,L2_ch0:32,0.2610779497063049,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch0:32,late aggregation / class-evidence head
+head:L0_ch24:32,head,L0_ch24:32,0.22714711990847689,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch24:32,early feature/geometry/PID reader
+head:L1_ch32:48,head,L1_ch32:48,0.21075477813137686,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch32:48,middle learned-neighborhood / route-composition head
+head:L0_ch0:8,head,L0_ch0:8,0.20418599925615105,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch0:8,early feature/geometry/PID reader
+hypothesis:NEGATIVE_GATES,hypothesis,negative/suppressive gates,0.20418599925615105,,,,,,
+head:L1_ch64:80,head,L1_ch64:80,0.183527687044989,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch64:80,middle learned-neighborhood / route-composition head
+head:L1_ch80:96,head,L1_ch80:96,0.16921844155003798,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch80:96,middle learned-neighborhood / route-composition head
+head:L1_ch48:64,head,L1_ch48:64,0.1365954355052964,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch48:64,middle learned-neighborhood / route-composition head
+head:L2_ch32:64,head,L2_ch32:64,0.13062319853925153,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch32:64,late aggregation / class-evidence head
+head:L0_ch32:40,head,L0_ch32:40,0.11246960707576363,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch32:40,early feature/geometry/PID reader
+head:L0_ch16:24,head,L0_ch16:24,0.08959298154077243,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch16:24,early feature/geometry/PID reader
+head:L2_ch96:128,head,L2_ch96:128,0.06664143828711544,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch96:128,late aggregation / class-evidence head
+task:T6_WIDE_SECONDARY_CONTEXT,task,T6_WIDE_SECONDARY_CONTEXT,0.06,P1,LOW,"Besides particle0/core, is there stable wide/secondary particle context?",,,
+head:L2_ch160:192,head,L2_ch160:192,0.04230899697795393,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch160:192,late aggregation / class-evidence head
+head:L2_ch192:224,head,L2_ch192:224,0.036883427306383984,,,Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?,2,ch192:224,late aggregation / class-evidence head
+head:L1_ch96:112,head,L1_ch96:112,0.02857979802283812,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch96:112,middle learned-neighborhood / route-composition head
+head:L0_ch56:64,head,L0_ch56:64,0.018621155667642587,,,Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?,0,ch56:64,early feature/geometry/PID reader
+head:L1_ch0:16,head,L1_ch0:16,0.014614771667402222,,,Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?,1,ch0:16,middle learned-neighborhood / route-composition head

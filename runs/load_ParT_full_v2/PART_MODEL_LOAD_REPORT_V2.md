@@ -1,0 +1,23 @@
+# Particle official ParT loader v2
+
+checkpoint=local_checkpoints/part/ParT_full.pt
+input_dim=17
+ok=True loaded_good=True logits_shape=[4, 10]
+
+## Load
+{
+  "checkpoint": "local_checkpoints/part/ParT_full.pt",
+  "loaded": true,
+  "missing": [],
+  "unexpected": [],
+  "error": null
+}
+
+## Adapter
+{
+  "n_blocks": 8,
+  "n_cls_blocks": 2,
+  "has_pair_embed": true,
+  "has_classifier": true,
+  "has_cls_token": true
+}

@@ -1,0 +1,988 @@
+{
+  "schema": "feature_ranker.v1",
+  "generated_at_utc": "2026-06-16T23:31:00.909186+00:00",
+  "signals_in": 12,
+  "candidates": 420,
+  "board": [
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 407.192382389475,
+      "reason": "feature=n_particles, effect=1.838, monotonic_ratio=50.009",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 99.9429766712983,
+      "reason": "feature=pred_conf, effect=-1.181, monotonic_ratio=19.093",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 58.93523353930326,
+      "reason": "feature=knn_pt_mean, effect=-1.073, monotonic_ratio=12.394",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 58.62180807870973,
+      "reason": "feature=knn_pt_sum, effect=-1.068, monotonic_ratio=12.394",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::p0_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 40.29597665411597,
+      "reason": "feature=p0_iso_pt_ratio, effect=0.653, monotonic_ratio=13.932",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::best_lepton_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 23.51599379393249,
+      "reason": "feature=best_lepton_pt, effect=-0.524, monotonic_ratio=10.137",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 16.542643627677407,
+      "reason": "feature=leading_pt_fraction, effect=-0.656, monotonic_ratio=5.694",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hgg::best_lepton_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 11.979756747257326,
+      "reason": "feature=best_lepton_iso_pt_ratio, effect=-0.547, monotonic_ratio=4.944",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 310.936077410212,
+      "reason": "feature=n_particles, effect=1.354, monotonic_ratio=51.145",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::p0_best_lepton_deltaR",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 167.67416907087755,
+      "reason": "feature=p0_best_lepton_deltaR, effect=1.072, monotonic_ratio=34.854",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 69.31792170989279,
+      "reason": "feature=leading_pt_fraction, effect=-0.768, monotonic_ratio=20.098",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::best_lepton_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 68.01631145284276,
+      "reason": "feature=best_lepton_pt, effect=-0.876, monotonic_ratio=17.292",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::best_lepton_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 45.30378699804143,
+      "reason": "feature=best_lepton_iso_pt_ratio, effect=-1.167, monotonic_ratio=8.646",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 30.13823374177077,
+      "reason": "feature=knn_pt_mean, effect=-0.703, monotonic_ratio=9.547",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 26.481438575783283,
+      "reason": "feature=knn_pt_sum, effect=-0.691, monotonic_ratio=8.542",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hgg::has_lepton",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 25.725623461322833,
+      "reason": "feature=has_lepton, effect=-1.072, monotonic_ratio=5.348",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 187.37800639154185,
+      "reason": "feature=pred_conf, effect=-1.573, monotonic_ratio=28.137",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 52.48092139242405,
+      "reason": "feature=leading_pt_fraction, effect=-1.028, monotonic_ratio=12.059",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::p0_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 37.86496072995399,
+      "reason": "feature=p0_iso_pt_ratio, effect=0.843, monotonic_ratio=10.615",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 36.75135254112661,
+      "reason": "feature=p0_pt, effect=-0.909, monotonic_ratio=9.547",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 36.75135254112661,
+      "reason": "feature=leading_pt, effect=-0.909, monotonic_ratio=9.547",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 36.75135254112661,
+      "reason": "feature=knn_pt_max, effect=-0.909, monotonic_ratio=9.547",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 28.68468892591183,
+      "reason": "feature=n_particles, effect=1.917, monotonic_ratio=3.533",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_QCD->label_Hgg::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_QCD->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 28.608596403485265,
+      "reason": "feature=knn_pt_mean, effect=-1.207, monotonic_ratio=5.599",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 166.38416823782399,
+      "reason": "feature=n_particles, effect=1.249, monotonic_ratio=28.986",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 48.70189558787259,
+      "reason": "feature=pred_conf, effect=-1.318, monotonic_ratio=8.039",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 12.72263976640848,
+      "reason": "feature=knn_pt_mean, effect=-0.603, monotonic_ratio=4.594",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 11.67487621509726,
+      "reason": "feature=knn_pt_sum, effect=-0.574, monotonic_ratio=4.429",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 11.673973910368415,
+      "reason": "feature=leading_pt_fraction, effect=-0.484, monotonic_ratio=5.248",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 8.77876258841385,
+      "reason": "feature=p0_pt, effect=-0.428, monotonic_ratio=4.466",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 8.77876258841385,
+      "reason": "feature=leading_pt, effect=-0.428, monotonic_ratio=4.466",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_H4q->label_Hgg::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_H4q->label_Hgg",
+      "status": "CANDIDATE",
+      "score": 8.77876258841385,
+      "reason": "feature=knn_pt_max, effect=-0.428, monotonic_ratio=4.466",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 108.49421341833666,
+      "reason": "feature=n_particles, effect=1.345, monotonic_ratio=18.402",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 32.57756134385634,
+      "reason": "feature=pred_conf, effect=-0.955, monotonic_ratio=7.788",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 28.227279577387552,
+      "reason": "feature=knn_pt_mean, effect=-0.916, monotonic_ratio=7.034",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 28.027832053563007,
+      "reason": "feature=knn_pt_sum, effect=-0.914, monotonic_ratio=7.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::p0_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 8.69566965167171,
+      "reason": "feature=p0_iso_pt_ratio, effect=0.537, monotonic_ratio=3.696",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 8.3504178400632,
+      "reason": "feature=p0_pt, effect=-0.531, monotonic_ratio=3.589",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 8.3504178400632,
+      "reason": "feature=leading_pt, effect=-0.531, monotonic_ratio=3.589",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_H4q::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_H4q",
+      "status": "CANDIDATE",
+      "score": 8.3504178400632,
+      "reason": "feature=knn_pt_max, effect=-0.531, monotonic_ratio=3.589",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 76.75964840399588,
+      "reason": "feature=pred_conf, effect=-1.015, monotonic_ratio=15.074",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::missing_pt_proxy",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 1.3833739421907574,
+      "reason": "feature=missing_pt_proxy, effect=-0.160, monotonic_ratio=1.727",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 1.2326562109275105,
+      "reason": "feature=n_particles, effect=0.174, monotonic_ratio=1.415",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::p0_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 1.1771720345605525,
+      "reason": "feature=p0_iso_pt_ratio, effect=0.161, monotonic_ratio=1.458",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 0.9147808169491458,
+      "reason": "feature=leading_pt_fraction, effect=0.122, monotonic_ratio=1.500",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::p0_is_electron",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 0.5174942611519907,
+      "reason": "feature=p0_is_electron, effect=-0.103, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::leading_is_electron",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 0.5174942611519907,
+      "reason": "feature=leading_is_electron, effect=-0.103, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Wqq->label_Zqq::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Wqq->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 0.4479622455979926,
+      "reason": "feature=p0_pt, effect=0.058, monotonic_ratio=1.542",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 34.670809015982286,
+      "reason": "feature=pred_conf, effect=-1.038, monotonic_ratio=8.542",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 8.404459822291678,
+      "reason": "feature=n_particles, effect=-0.289, monotonic_ratio=7.427",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::missing_pt_proxy",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 3.663373751346815,
+      "reason": "feature=missing_pt_proxy, effect=-0.287, monotonic_ratio=3.266",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::knn_charged_hadron_frac",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 2.929381158417932,
+      "reason": "feature=knn_charged_hadron_frac, effect=0.178, monotonic_ratio=4.209",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::p0_best_lepton_deltaR",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 2.669921391036905,
+      "reason": "feature=p0_best_lepton_deltaR, effect=0.324, monotonic_ratio=2.107",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::has_lepton",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 2.6046814009903185,
+      "reason": "feature=has_lepton, effect=-0.324, monotonic_ratio=2.056",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 1.9029465104157062,
+      "reason": "feature=leading_pt_fraction, effect=0.129, monotonic_ratio=3.781",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Zqq::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Zqq",
+      "status": "CANDIDATE",
+      "score": 1.8214598264763664,
+      "reason": "feature=knn_pt_mean, effect=0.133, monotonic_ratio=3.500",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 31.175504325357537,
+      "reason": "feature=pred_conf, effect=-1.029, monotonic_ratio=7.369",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 19.256823680351626,
+      "reason": "feature=n_particles, effect=-0.793, monotonic_ratio=5.910",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::p0_best_lepton_deltaR",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 12.001021748285433,
+      "reason": "feature=p0_best_lepton_deltaR, effect=-0.748, monotonic_ratio=3.903",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 4.095101839909392,
+      "reason": "feature=leading_pt_fraction, effect=0.367, monotonic_ratio=2.714",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::has_lepton",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 3.075267344604124,
+      "reason": "feature=has_lepton, effect=0.748, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::best_lepton_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 3.0190327112466617,
+      "reason": "feature=best_lepton_iso_pt_ratio, effect=0.734, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::best_lepton_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 2.4763085906645594,
+      "reason": "feature=best_lepton_pt, effect=0.602, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_Hbb::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 2.174468730442462,
+      "reason": "feature=p0_pt, effect=0.280, monotonic_ratio=1.889",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 24.28762316700027,
+      "reason": "feature=pred_conf, effect=-1.218, monotonic_ratio=4.111",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::best_lepton_iso_pt_ratio",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 11.268790653902679,
+      "reason": "feature=best_lepton_iso_pt_ratio, effect=-0.662, monotonic_ratio=3.509",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::best_lepton_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 6.8349056641613455,
+      "reason": "feature=best_lepton_pt, effect=-0.482, monotonic_ratio=2.924",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::p0_best_lepton_deltaR",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 5.195093977386982,
+      "reason": "feature=p0_best_lepton_deltaR, effect=0.489, monotonic_ratio=2.189",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::has_lepton",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 4.301466727710318,
+      "reason": "feature=has_lepton, effect=-0.489, monotonic_ratio=1.813",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 3.7769243296971693,
+      "reason": "feature=n_particles, effect=-0.216, monotonic_ratio=3.610",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::p0_lepton_aligned",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 2.8072284919123516,
+      "reason": "feature=p0_lepton_aligned, effect=-0.346, monotonic_ratio=1.674",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hbb->label_Hcc::p0_is_lepton",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hbb->label_Hcc",
+      "status": "CANDIDATE",
+      "score": 1.6417882307133767,
+      "reason": "feature=p0_is_lepton, effect=-0.338, monotonic_ratio=1.000",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 13.697061743181212,
+      "reason": "feature=n_particles, effect=-0.789, monotonic_ratio=3.686",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 5.34717369536535,
+      "reason": "feature=pred_conf, effect=-0.482, monotonic_ratio=2.357",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 4.167829108690628,
+      "reason": "feature=leading_pt_fraction, effect=0.360, monotonic_ratio=2.462",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::knn_charged_hadron_frac",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 3.315958456090208,
+      "reason": "feature=knn_charged_hadron_frac, effect=-0.288, monotonic_ratio=2.441",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 3.175694660156585,
+      "reason": "feature=p0_pt, effect=0.327, monotonic_ratio=2.061",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 3.175694660156585,
+      "reason": "feature=leading_pt, effect=0.327, monotonic_ratio=2.061",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 3.175694660156585,
+      "reason": "feature=knn_pt_max, effect=0.327, monotonic_ratio=2.061",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hgg->label_H4q::knn_neutral_hadron_frac",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hgg->label_H4q",
+      "status": "CANDIDATE",
+      "score": 2.278313971220076,
+      "reason": "feature=knn_neutral_hadron_frac, effect=0.216, monotonic_ratio=2.239",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 11.498613071449372,
+      "reason": "feature=pred_conf, effect=-0.728, monotonic_ratio=3.300",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 5.849174209262605,
+      "reason": "feature=knn_pt_sum, effect=-0.536, monotonic_ratio=2.278",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 5.847091347333865,
+      "reason": "feature=knn_pt_mean, effect=-0.536, monotonic_ratio=2.278",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 5.393270506503359,
+      "reason": "feature=n_particles, effect=0.551, monotonic_ratio=2.045",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 4.15456581349785,
+      "reason": "feature=p0_pt, effect=-0.354, monotonic_ratio=2.449",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 4.15456581349785,
+      "reason": "feature=leading_pt, effect=-0.354, monotonic_ratio=2.449",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 4.15456581349785,
+      "reason": "feature=knn_pt_max, effect=-0.354, monotonic_ratio=2.449",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Hcc->label_Hbb::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Hcc->label_Hbb",
+      "status": "CANDIDATE",
+      "score": 3.638992875698144,
+      "reason": "feature=leading_pt_fraction, effect=-0.356, monotonic_ratio=2.135",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::pred_conf",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 4.031664114830982,
+      "reason": "feature=pred_conf, effect=-0.294, monotonic_ratio=2.522",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::n_particles",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 3.0196016781775583,
+      "reason": "feature=n_particles, effect=-0.236, monotonic_ratio=2.357",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::knn_pt_mean",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 2.057504589639116,
+      "reason": "feature=knn_pt_mean, effect=0.190, monotonic_ratio=1.990",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::knn_pt_sum",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 2.0571104217224816,
+      "reason": "feature=knn_pt_sum, effect=0.190, monotonic_ratio=1.990",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::p0_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 1.4817548612433684,
+      "reason": "feature=p0_pt, effect=0.188, monotonic_ratio=1.447",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::leading_pt",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 1.4817548612433684,
+      "reason": "feature=leading_pt, effect=0.188, monotonic_ratio=1.447",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::knn_pt_max",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 1.4817548612433684,
+      "reason": "feature=knn_pt_max, effect=0.188, monotonic_ratio=1.447",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    },
+    {
+      "signal_id": "feature::label_Zqq->label_Wqq::leading_pt_fraction",
+      "source": "FEATURE_RANKER_V1",
+      "class_pair": "label_Zqq->label_Wqq",
+      "status": "CANDIDATE",
+      "score": 1.4425604797767968,
+      "reason": "feature=leading_pt_fraction, effect=0.178, monotonic_ratio=1.493",
+      "recommended_next_action": "run deep probe / patch if physics meaning is plausible",
+      "claim_level": 1
+    }
+  ],
+  "settings": {
+    "signals": "reports/latest/tables/signal_board_v1.csv",
+    "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+    "data_dir": "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced",
+    "mode": "kinpid",
+    "samples_per_file": 1024,
+    "max_files": 100,
+    "micro_batch": 64,
+    "knn_micro_batch": 128,
+    "max_pairs": 12,
+    "top_features_per_pair": 8,
+    "device": "cuda",
+    "out_md": "reports/latest/FEATURE_RANKER_V1.md",
+    "out_candidates": "reports/latest/tables/feature_ranker_v1_candidates.csv",
+    "out_bins": "reports/latest/tables/feature_ranker_v1_bins.csv",
+    "out_signal_board": "reports/latest/tables/signal_board_v1_feature_candidates.csv",
+    "out_json": "manifests/latest/feature_ranker_v1.json"
+  },
+  "model_missing": [],
+  "model_unexpected": []
+}

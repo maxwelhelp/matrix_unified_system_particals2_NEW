@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "missing": [],
+  "unexpected": [],
+  "baseline": {
+    "n": 2560,
+    "acc": 0.7574219107627869,
+    "pred_counts": [
+      241,
+      243,
+      220,
+      280,
+      274,
+      255,
+      251,
+      270,
+      273,
+      253
+    ],
+    "true_counts": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ]
+  },
+  "candidate_discovery_hypotheses": [
+    "Global: strongest causal components are edge_conv_zero[1:edge_conv], edge_conv_zero[0:edge_conv], features_zero[input:all_features], feature_group_zero[input:coords_last2], edge_conv_zero[2:edge_conv].",
+    "Feature hypothesis: most influential explicit channels/groups are coords_last2, kin_logs_0_4, pid_charge_5_10, part_deta, part_logptrel.",
+    "Particle-subset hypothesis: removing top_pt particles produces strongest top-8 particle control effect; compare against random_control before claiming physics.",
+    "Route layer 0: neighbor ΔR differs by class; lowest mean label_Wqq=0.1317, highest mean label_Tbqq=0.2550.",
+    "Route layer 1: neighbor ΔR differs by class; lowest mean label_Wqq=0.1572, highest mean label_Tbqq=0.2793.",
+    "Route layer 2: neighbor ΔR differs by class; lowest mean label_Wqq=0.1599, highest mean label_Tbqq=0.2873."
+  ],
+  "n_route_rows": 30,
+  "n_particle_rows": 5
+}

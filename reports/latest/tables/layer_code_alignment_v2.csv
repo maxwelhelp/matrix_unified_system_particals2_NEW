@@ -1,0 +1,121 @@
+head_id,layer,channels,source_file,source_lines,source_module,module_path,module_type,input_shape,output_shape,channel_slice,code_operation,semantic_pseudocode,alignment_confidence,remaining_gap
+L0_ch40:48,0,40:48,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 40:48, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch40:48
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch0:8,0,0:8,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 0:8, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch0:8
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch48:56,0,48:56,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 48:56, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch48:56
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch16:24,0,16:24,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 16:24, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch16:24
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch24:32,0,24:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 24:32, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch24:32
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch8:16,0,8:16,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 8:16, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch8:16
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch56:64,0,56:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 56:64, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch56:64
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L0_ch32:40,0,32:40,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.0,EdgeConvBlock,"[[160, 2, 128], [160, 13, 128]]","[160, 64, 128]","output[:, 32:40, :]",EdgeConvBlock 0 output: local particle-edge feature map,"# L0_ch32:40
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch16:32,1,16:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 16:32, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch16:32
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch32:48,1,32:48,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 32:48, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch32:48
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch112:128,1,112:128,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 112:128, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch112:128
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch0:16,1,0:16,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 0:16, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch0:16
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch96:112,1,96:112,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 96:112, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch96:112
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch64:80,1,64:80,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 64:80, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch64:80
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch80:96,1,80:96,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 80:96, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch80:96
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L1_ch48:64,1,48:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.1,EdgeConvBlock,"[[160, 64, 128], [160, 64, 128]]","[160, 128, 128]","output[:, 48:64, :]",EdgeConvBlock 1 output: neighborhood/context relay map,"# L1_ch48:64
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch128:160,2,128:160,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 128:160, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch128:160
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch224:256,2,224:256,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 224:256, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch224:256
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch0:32,2,0:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 0:32, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch0:32
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch64:96,2,64:96,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 64:96, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch64:96
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch160:192,2,160:192,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 160:192, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch160:192
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch32:64,2,32:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 32:64, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch32:64
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch192:224,2,192:224,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 192:224, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch192:224
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps
+L2_ch96:128,2,96:128,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,edge_convs.2,EdgeConvBlock,"[[160, 128, 128], [160, 128, 128]]","[160, 256, 128]","output[:, 96:128, :]",EdgeConvBlock 2 output: high-level class-evidence map before pooling,"# L2_ch96:128
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",HIGH_FOR_LAYER_OUTPUT,Need inner EdgeConv trace for knn/graph_feature/conv/aggregation substeps

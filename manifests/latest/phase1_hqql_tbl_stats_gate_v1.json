@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "status": "PASS",
+  "min_confused": 100,
+  "Hqql_to_Tbl": 154,
+  "Tbl_to_Hqql": 145,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "Tbl_correct": 3929,
+    "Tbl_to_Hqql": 145
+  },
+  "recommendations": []
+}

@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "rows": 268,
+  "focus_head": "L1_ch80:96",
+  "l2_head": "L2_ch128:160",
+  "summary": [
+    {
+      "group": "A_protected_highiso",
+      "particle_role": "hadron_neighbor",
+      "n": 44,
+      "mean_deltaR_to_best_lepton": 0.406993018463254,
+      "in_best_lepton_knn_rate": 0.06818181818181818,
+      "mean_best_lepton_knn_rank": 93.22727272727273,
+      "mean_particle_pt": 3.7869319597428497,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 35.65003091638739,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "A_protected_highiso",
+      "particle_role": "hard_hadron",
+      "n": 5,
+      "mean_deltaR_to_best_lepton": 0.19813086688518525,
+      "in_best_lepton_knn_rate": 0.2,
+      "mean_best_lepton_knn_rank": 82.2,
+      "mean_particle_pt": 18.058610820770262,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 27.40600166320801,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "A_protected_highiso",
+      "particle_role": "nearest_hadron_to_best_lepton",
+      "n": 1,
+      "mean_deltaR_to_best_lepton": 0.07841476798057556,
+      "in_best_lepton_knn_rate": 1.0,
+      "mean_best_lepton_knn_rank": 3.0,
+      "mean_particle_pt": 4.082335948944092,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 33.774986267089844,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "B_confused_highiso",
+      "particle_role": "hadron_neighbor",
+      "n": 14,
+      "mean_deltaR_to_best_lepton": 0.6909209005534649,
+      "in_best_lepton_knn_rate": 0.14285714285714285,
+      "mean_best_lepton_knn_rank": 86.14285714285714,
+      "mean_particle_pt": 4.600339663880212,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 41.97663852146694,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "B_confused_highiso",
+      "particle_role": "hard_hadron",
+      "n": 7,
+      "mean_deltaR_to_best_lepton": 0.2316103886280741,
+      "in_best_lepton_knn_rate": 0.14285714285714285,
+      "mean_best_lepton_knn_rank": 86.71428571428571,
+      "mean_particle_pt": 10.580045836312431,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 32.29794066292899,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "C_Tbl_correct",
+      "particle_role": "hadron_neighbor",
+      "n": 158,
+      "mean_deltaR_to_best_lepton": 0.6452954164411449,
+      "in_best_lepton_knn_rate": 0.0189873417721519,
+      "mean_best_lepton_knn_rank": 97.34810126582279,
+      "mean_particle_pt": 5.049879157090489,
+      "l2_same_particle_top3_rate": 0.0189873417721519,
+      "mean_l1_activation_norm": 40.81491361690473,
+      "mean_l2_activation_norm_if_top3": 0.02365392069273357
+    },
+    {
+      "group": "C_Tbl_correct",
+      "particle_role": "hard_hadron",
+      "n": 24,
+      "mean_deltaR_to_best_lepton": 0.3598030960808198,
+      "in_best_lepton_knn_rate": 0.0,
+      "mean_best_lepton_knn_rank": 99.0,
+      "mean_particle_pt": 25.2012016971906,
+      "l2_same_particle_top3_rate": 0.041666666666666664,
+      "mean_l1_activation_norm": 28.69043469429016,
+      "mean_l2_activation_norm_if_top3": 0.10969386498133342
+    },
+    {
+      "group": "C_Tbl_correct",
+      "particle_role": "hardest_hadron",
+      "n": 4,
+      "mean_deltaR_to_best_lepton": 0.25785948149859905,
+      "in_best_lepton_knn_rate": 0.0,
+      "mean_best_lepton_knn_rank": 99.0,
+      "mean_particle_pt": 54.89694356918335,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 31.85262966156006,
+      "mean_l2_activation_norm_if_top3": 0.0
+    },
+    {
+      "group": "C_Tbl_correct",
+      "particle_role": "nearest_hadron_to_best_lepton",
+      "n": 11,
+      "mean_deltaR_to_best_lepton": 0.19587177884849635,
+      "in_best_lepton_knn_rate": 0.8181818181818182,
+      "mean_best_lepton_knn_rank": 24.09090909090909,
+      "mean_particle_pt": 9.569652324373072,
+      "l2_same_particle_top3_rate": 0.0,
+      "mean_l1_activation_norm": 34.488046646118164,
+      "mean_l2_activation_norm_if_top3": 0.0
+    }
+  ]
+}

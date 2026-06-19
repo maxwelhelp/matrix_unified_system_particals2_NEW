@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "nodes": 2056,
+  "edges": 2270,
+  "heads": 24,
+  "particles": 1894,
+  "out_json": "manifests/latest/research_evidence_graph_v1.json"
+}

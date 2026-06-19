@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "config": {
+    "input_dim": 17,
+    "num_classes": 10,
+    "pair_input_dim": 4,
+    "use_pre_activation_pair": false,
+    "embed_dims": [
+      128,
+      512,
+      128
+    ],
+    "pair_embed_dims": [
+      64,
+      64,
+      64
+    ],
+    "num_heads": 8,
+    "num_layers": 8,
+    "num_cls_layers": 2,
+    "block_params": null,
+    "cls_block_params": {
+      "dropout": 0,
+      "attn_dropout": 0,
+      "activation_dropout": 0
+    },
+    "fc_params": [],
+    "activation": "gelu",
+    "trim": false,
+    "for_inference": false,
+    "use_amp": false
+  },
+  "load": {
+    "checkpoint": "local_checkpoints/part/ParT_full.pt",
+    "loaded": true,
+    "missing": [],
+    "unexpected": [],
+    "error": null
+  },
+  "logits_shape": [
+    4,
+    10
+  ],
+  "top1": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "adapter": {
+    "n_blocks": 8,
+    "n_cls_blocks": 2,
+    "has_pair_embed": true,
+    "has_classifier": true,
+    "has_cls_token": true
+  },
+  "loaded_good": true
+}

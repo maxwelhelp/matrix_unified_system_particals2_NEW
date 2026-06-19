@@ -1,0 +1,19 @@
+{
+  "schema": "stream_feature_embeddings.v1",
+  "generated_at_utc": "2026-06-16T18:19:09.352339+00:00",
+  "counts": {
+    "events": 6795,
+    "relations": 89,
+    "controls": 28,
+    "comparisons": 16,
+    "all": 6928
+  },
+  "files": {
+    "events": "reports/latest/tables/stream_event_embeddings.csv",
+    "relations": "reports/latest/tables/relation_edge_embeddings.csv",
+    "controls": "reports/latest/tables/control_result_embeddings.csv",
+    "comparisons": "reports/latest/tables/comparison_row_embeddings.csv",
+    "all_jsonl": "reports/latest/tables/all_feature_embeddings.jsonl"
+  },
+  "note": "Deterministic structured evidence embeddings, not LLM semantic embeddings."
+}

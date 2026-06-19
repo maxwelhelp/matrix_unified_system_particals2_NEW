@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "events": 40960,
+  "accuracy": 0.7682861089706421,
+  "signals": 36,
+  "out_md": "reports/latest/CONFUSION_MONITOR_V1.md"
+}

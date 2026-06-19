@@ -1,0 +1,241 @@
+head_id,layer,channels,stage_role,pre_layer_state,reads,core_operation_steps,writes,class_axis,particle_interpretation,physics_interpretation,pseudocode,supporting_evidence,global_gate_abs,top_class_abs_grad,confidence_level,remaining_risks,next_tests,code_module,code_slice,code_output_shape,output_activation_mean_abs,output_top_class,output_class_contrast,output_particle0_top_rate,output_leading_pt_match_rate,output_top_logit_corr_class,output_top_logit_corr,output_role,output_interpretation,refined_pseudocode
+L0_ch40:48,0,40:48,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L0_ch40:48
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')","class_grad:label_Wqq=1.1670, label_Zqq=0.9496, label_Hcc=0.9443 | global_gate_abs=0.7156 | relation_hits=2 | stream_hits=30 | class_grads=label_Wqq:1.1670, label_Zqq:0.9496, label_Hcc:0.9443, label_H4q:0.8881, label_QCD:0.6787",0.715566657370073,1.1669776737689972,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 40:48, :]","[160, 64, 128]",2.821807384490967,label_Tbqq,0.5538260142008467,0.16484375,0.16484375,label_Tbqq,0.12917451945076389,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.16, particle0 0.16","# L0_ch40:48: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.16"
+L0_ch32:40,0,32:40,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L0_ch32:40
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')","class_grad:label_QCD=0.2724, label_Hcc=0.2370, label_Zqq=0.1604 | global_gate_abs=0.1125 | relation_hits=2 | stream_hits=30 | class_grads=label_QCD:0.2724, label_Hcc:0.2370, label_Zqq:0.1604, label_Hqql:0.0554, label_Wqq:0.0495",0.11246960707576363,0.2724107075482607,LOW_NEEDS_MORE_EVIDENCE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 32:40, :]","[160, 64, 128]",1.3153489828109741,label_QCD,0.4784753057691784,0.11953125,0.11953125,label_Hqql,-0.3182668702367536,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.12, particle0 0.12","# L0_ch32:40: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_QCD; lead_match=0.12"
+L0_ch24:32,0,24:32,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch24:32
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_Wqq=0.7906, label_Hqql=0.3870, label_H4q=0.2608 | global_gate_abs=0.2271 | relation_hits=2 | stream_hits=30 | class_grads=label_Wqq:0.7906, label_Hqql:0.3870, label_H4q:0.2608, label_Tbl:0.2569, label_Hcc:0.2532",0.22714711990847689,0.7905941233038902,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 24:32, :]","[160, 64, 128]",1.334778070449829,label_QCD,0.3859445783827038,0.0796875,0.0796875,label_H4q,-0.12252529582934492,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.08, particle0 0.08","# L0_ch24:32: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_QCD; lead_match=0.08"
+L0_ch48:56,0,48:56,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch48:56
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_H4q=0.9793, label_QCD=0.8989, label_Tbl=0.8825 | global_gate_abs=0.3769 | relation_hits=2 | stream_hits=30 | class_grads=label_H4q:0.9793, label_QCD:0.8989, label_Tbl:0.8825, label_Hqql:0.4893, label_Hcc:0.4175",0.3768698421619773,0.979293055832386,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 48:56, :]","[160, 64, 128]",1.707543134689331,label_Tbqq,0.4500719176398382,0.04609375,0.04609375,label_Tbqq,0.19982427555319202,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.05, particle0 0.05","# L0_ch48:56: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.05"
+L0_ch16:24,0,16:24,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch16:24
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_H4q=0.9509, label_Tbl=0.3513, label_Hcc=0.3307 | global_gate_abs=0.0896 | relation_hits=2 | stream_hits=30 | class_grads=label_H4q:0.9509, label_Tbl:0.3513, label_Hcc:0.3307, label_Zqq:0.2983, label_Hqql:0.2765",0.08959298154077243,0.9508500173687935,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 16:24, :]","[160, 64, 128]",1.7898666858673096,label_Tbqq,1.013950082990858,0.01953125,0.01953125,label_Tbqq,0.22989370032368764,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.02, particle0 0.02","# L0_ch16:24: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.02"
+L0_ch8:16,0,8:16,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch8:16
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_Tbl=0.7731, label_Hcc=0.7574, label_Zqq=0.6469 | global_gate_abs=0.3577 | relation_hits=2 | stream_hits=30 | class_grads=label_Tbl:0.7731, label_Hcc:0.7574, label_Zqq:0.6469, label_Wqq:0.5422, label_Hqql:0.2834",0.3576639466715291,0.7731169201433659,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 8:16, :]","[160, 64, 128]",1.832708716392517,label_Tbqq,0.8413112428453235,0.0078125,0.0078125,label_Tbqq,0.2793715363385943,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.01, particle0 0.01","# L0_ch8:16: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.01"
+L0_ch0:8,0,0:8,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch0:8
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_H4q=1.1571, label_Hqql=0.5866, label_QCD=0.5120 | global_gate_abs=0.2042 | relation_hits=3 | stream_hits=30 | class_grads=label_H4q:1.1571, label_Hqql:0.5866, label_QCD:0.5120, label_Tbl:0.3306, label_Hcc:0.3104",0.20418599925615105,1.1570508629083633,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 0:8, :]","[160, 64, 128]",3.232450008392334,label_Tbqq,0.3261280589633522,0.003125,0.003125,label_Hqql,-0.2814148652878877,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00","# L0_ch0:8: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.00"
+L0_ch56:64,0,56:64,L0 early local reader,raw particles + KNN edge coordinates,"pt/energy, deltaR, PID/charge, neighbor edge differences",build KNN edge features -> detect local core/radial/PID pattern -> write local evidence,local particle-edge features for L1,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L0_ch56:64
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')","class_grad:label_Hqql=0.4484, label_H4q=0.3784, label_Zqq=0.2666 | global_gate_abs=0.0186 | relation_hits=3 | stream_hits=30 | class_grads=label_Hqql:0.4484, label_H4q:0.3784, label_Zqq:0.2666, label_Tbl:0.1801, label_Hcc:0.0961",0.018621155667642587,0.448392778635025,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.0,"output[:, 56:64, :]","[160, 64, 128]",2.4235427379608154,label_Tbqq,0.40656571918063733,0.003125,0.003125,label_Tbqq,0.25989459427868306,early local/context feature builder over non-leading neighbor particles,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00","# L0_ch56:64: L0 output-aware pseudocode
+for particle i:
+    nb = knn(i)
+    local = read_raw_edge_features(i, nb)
+    score = detect_local_pattern(local)
+    write_L0_channels(score)  # output role: early local/context feature builder over non-leading neighbor particles; top_class=label_Tbqq; lead_match=0.00"
+L1_ch0:16,1,0:16,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L1_ch0:16
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')","class_grad:label_H4q=0.5761, label_Zqq=0.2802, label_Hcc=0.2169 | global_gate_abs=0.0146 | relation_hits=3 | stream_hits=30 | class_grads=label_H4q:0.5761, label_Zqq:0.2802, label_Hcc:0.2169, label_Tbl:0.1700, label_Hqql:0.1143",0.014614771667402222,0.5760897062718868,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 0:16, :]","[160, 128, 128]",1.6410913467407227,label_Tbl,0.4483221901787653,0.3015625,0.3015625,label_H4q,-0.36818369632469883,middle relay mixing context with some core alignment,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.30, particle0 0.30","# L1_ch0:16: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle relay mixing context with some core alignment; particle0_top=0.30; top_class=label_Tbl"
+L1_ch112:128,1,112:128,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L1_ch112:128
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')","class_grad:label_Hcc=1.2414, label_H4q=0.9725, label_Wqq=0.9042 | global_gate_abs=0.8689 | relation_hits=2 | stream_hits=30 | class_grads=label_Hcc:1.2414, label_H4q:0.9725, label_Wqq:0.9042, label_Zqq:0.8062, label_Tbl:0.8018",0.8689268512214768,1.2413812056183815,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 112:128, :]","[160, 128, 128]",2.722505807876587,label_Tbl,0.17773781882392026,0.17265625,0.17265625,label_Wqq,-0.24621571714909868,middle context relay mostly away from literal leading particle,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.17, particle0 0.17","# L1_ch112:128: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.17; top_class=label_Tbl"
+L1_ch96:112,1,96:112,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L1_ch96:112
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')","class_grad:label_QCD=0.5720, label_Hcc=0.4957, label_Hqql=0.4296 | global_gate_abs=0.0286 | relation_hits=2 | stream_hits=30 | class_grads=label_QCD:0.5720, label_Hcc:0.4957, label_Hqql:0.4296, label_Zqq:0.2820, label_H4q:0.2214",0.02857979802283812,0.5719617307186127,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 96:112, :]","[160, 128, 128]",1.939636468887329,label_QCD,0.5805211597018776,0.12890625,0.12890625,label_H4q,-0.10612955743085024,middle context relay mostly away from literal leading particle,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.13, particle0 0.13","# L1_ch96:112: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.13; top_class=label_QCD"
+L1_ch48:64,1,48:64,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L1_ch48:64
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')","class_grad:label_Hcc=0.1854, label_Tbl=0.1819, label_QCD=0.0978 | global_gate_abs=0.1366 | relation_hits=2 | stream_hits=30 | class_grads=label_Hcc:0.1854, label_Tbl:0.1819, label_QCD:0.0978, label_Zqq:0.0743, label_Hqql:0.0677",0.1365954355052964,0.18537842063233256,LOW_NEEDS_MORE_EVIDENCE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 48:64, :]","[160, 128, 128]",1.9169467687606812,label_Tbqq,0.23005859057108546,0.096875,0.096875,label_Tbqq,0.24325648596661006,middle context relay mostly away from literal leading particle,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.10, particle0 0.10","# L1_ch48:64: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.10; top_class=label_Tbqq"
+L1_ch32:48,1,32:48,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L1_ch32:48
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')","class_grad:label_Tbl=1.3994, label_QCD=0.5415, label_Hqql=0.5251 | global_gate_abs=0.2108 | relation_hits=2 | stream_hits=30 | class_grads=label_Tbl:1.3994, label_QCD:0.5415, label_Hqql:0.5251, label_H4q:0.5031, label_Zqq:0.2462",0.21075477813137686,1.3993553072214127,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 32:48, :]","[160, 128, 128]",2.301065444946289,label_Tbqq,0.6439822779761419,0.065625,0.065625,label_Hqql,-0.2501352059950837,middle context relay mostly away from literal leading particle,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.07, particle0 0.07","# L1_ch32:48: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.07; top_class=label_Tbqq"
+L1_ch80:96,1,80:96,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L1_ch80:96
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')","class_grad:label_H4q=0.4375, label_Hqql=0.2887, label_Zqq=0.2790 | global_gate_abs=0.1692 | relation_hits=3 | stream_hits=30 | class_grads=label_H4q:0.4375, label_Hqql:0.2887, label_Zqq:0.2790, label_Wqq:0.2236, label_Hcc:0.1581",0.16921844155003798,0.43749425560235977,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 80:96, :]","[160, 128, 128]",2.47478985786438,label_Tbl,0.7204448382059736,0.04140625,0.04140625,label_Tbl,0.12076080995344686,middle context relay mostly away from literal leading particle,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.04, particle0 0.04","# L1_ch80:96: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.04; top_class=label_Tbl"
+L1_ch16:32,1,16:32,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L1_ch16:32
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')","class_grad:label_Wqq=1.6597, label_Zqq=1.0984, label_H4q=0.9520 | global_gate_abs=0.7480 | relation_hits=2 | stream_hits=30 | class_grads=label_Wqq:1.6597, label_Zqq:1.0984, label_H4q:0.9520, label_Hcc:0.8966, label_QCD:0.6487",0.748019616522652,1.659661129117012,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 16:32, :]","[160, 128, 128]",2.0420336723327637,label_QCD,0.16127056545681384,0.03828125,0.03828125,label_QCD,0.10701149429051597,middle context relay mostly away from literal leading particle,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.04, particle0 0.04","# L1_ch16:32: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.04; top_class=label_QCD"
+L1_ch64:80,1,64:80,L1 middle context relay,L0 local edge features already mixed,"L0 local features, top-k core, neighbor context, wide particles",read L0 evidence -> mix core with neighborhood/secondary context -> route class evidence,core+context vectors for L2,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L1_ch64:80
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')","class_grad:label_QCD=0.5339, label_Wqq=0.4825, label_Zqq=0.3464 | global_gate_abs=0.1835 | relation_hits=3 | stream_hits=30 | class_grads=label_QCD:0.5339, label_Wqq:0.4825, label_Zqq:0.3464, label_H4q:0.3362, label_Hqql:0.2216",0.183527687044989,0.5338942222297192,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.1,"output[:, 64:80, :]","[160, 128, 128]",2.4875636100769043,label_Tbqq,0.43320629331800653,0.0,0.0,label_Tbqq,0.27407475146604376,middle context relay mostly away from literal leading particle,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00","# L1_ch64:80: L1 output-aware pseudocode
+for particle/neighborhood i:
+    l0 = read_L0_local_features(i)
+    ctx = mix_neighbors_core_and_secondary(l0)
+    write_L1_context(ctx)  # output role: middle context relay mostly away from literal leading particle; particle0_top=0.00; top_class=label_Tbqq"
+L2_ch224:256,2,224:256,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L2_ch224:256
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)","class_grad:label_Wqq=1.1221, label_Zqq=1.0057, label_Hcc=0.7717 | global_gate_abs=0.7083 | relation_hits=2 | stream_hits=30 | class_grads=label_Wqq:1.1221, label_Zqq:1.0057, label_Hcc:0.7717, label_Tbl:0.6898, label_H4q:0.6133",0.7083240525222217,1.1220963969826698,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 224:256, :]","[160, 256, 128]",0.40953508019447327,label_Tbl,0.15845579985115263,0.71796875,0.71796875,label_Hgg,-0.6442390106757085,late readout strongly anchored on particle0/leading-pT core,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.72, particle0 0.72","# L2_ch224:256: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.72):
+        logits += project_core_readout(evidence)
+    # output role: late readout strongly anchored on particle0/leading-pT core; top_class=label_Tbl; corr=label_Hgg:-0.6442"
+L2_ch0:32,2,0:32,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L2_ch0:32
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)","class_grad:label_H4q=1.0545, label_Tbl=1.0411, label_Hqql=0.6474 | global_gate_abs=0.2611 | relation_hits=2 | stream_hits=30 | class_grads=label_H4q:1.0545, label_Tbl:1.0411, label_Hqql:0.6474, label_Hcc:0.3019, label_QCD:0.2690",0.2610779497063049,1.054504707455635,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 0:32, :]","[160, 256, 128]",0.25941628217697144,label_Hqql,0.047456983062956065,0.42265625,0.42265625,label_Hbb,-0.3351594045304305,late readout moderately core-aligned,"writes strongest output for label_Hqql; top activation particle matches leading-pT 0.42, particle0 0.42","# L2_ch0:32: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.42):
+        logits += project_core_readout(evidence)
+    # output role: late readout moderately core-aligned; top_class=label_Hqql; corr=label_Hbb:-0.3352"
+L2_ch128:160,2,128:160,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L2_ch128:160
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)","class_grad:label_Hqql=1.8701, label_Tbl=1.5447, label_Wqq=0.1695 | global_gate_abs=0.3421 | relation_hits=2 | stream_hits=30 | class_grads=label_Hqql:1.8701, label_Tbl:1.5447, label_Wqq:0.1695, label_Hcc:0.1494, label_QCD:0.1342",0.3421113716471157,1.8701085895299911,HIGH_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 128:160, :]","[160, 256, 128]",0.34997668862342834,label_Tbl,0.24908694542116588,0.38515625,0.38515625,label_Tbl,0.6627276453610621,late readout moderately core-aligned,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.39, particle0 0.39","# L2_ch128:160: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.39):
+        logits += project_core_readout(evidence)
+    # output role: late readout moderately core-aligned; top_class=label_Tbl; corr=label_Tbl:0.6627"
+L2_ch32:64,2,32:64,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L2_ch32:64
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)","class_grad:label_Tbl=0.4565, label_Hcc=0.3231, label_QCD=0.1790 | global_gate_abs=0.1306 | relation_hits=3 | stream_hits=30 | class_grads=label_Tbl:0.4565, label_Hcc:0.3231, label_QCD:0.1790, label_Wqq:0.1683, label_Zqq:0.1380",0.13062319853925153,0.45647553727030754,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 32:64, :]","[160, 256, 128]",0.4696109890937805,label_Tbl,0.17802997844086754,0.38125,0.38125,label_QCD,-0.5492946764630002,late readout moderately core-aligned,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.38, particle0 0.38","# L2_ch32:64: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.38):
+        logits += project_core_readout(evidence)
+    # output role: late readout moderately core-aligned; top_class=label_Tbl; corr=label_QCD:-0.5493"
+L2_ch192:224,2,192:224,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L2_ch192:224
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)","class_grad:label_Wqq=0.3293, label_Tbl=0.2347, label_Hcc=0.1566 | global_gate_abs=0.0369 | relation_hits=2 | stream_hits=30 | class_grads=label_Wqq:0.3293, label_Tbl:0.2347, label_Hcc:0.1566, label_Zqq:0.0772, label_H4q:0.0406",0.036883427306383984,0.3292715549468994,LOW_NEEDS_MORE_EVIDENCE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 192:224, :]","[160, 256, 128]",0.3913664221763611,label_Tbqq,0.06998352458079656,0.30546875,0.30546875,label_QCD,-0.3176586444673205,late readout moderately core-aligned,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.31, particle0 0.31","# L2_ch192:224: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.31):
+        logits += project_core_readout(evidence)
+    # output role: late readout moderately core-aligned; top_class=label_Tbqq; corr=label_QCD:-0.3177"
+L2_ch160:192,2,160:192,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L2_ch160:192
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)","class_grad:label_Hqql=0.4768, label_QCD=0.2924, label_H4q=0.2516 | global_gate_abs=0.0423 | relation_hits=3 | stream_hits=30 | class_grads=label_Hqql:0.4768, label_QCD:0.2924, label_H4q:0.2516, label_Zqq:0.1109, label_Hcc:0.1041",0.04230899697795393,0.47683658078312874,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 160:192, :]","[160, 256, 128]",0.236382395029068,label_Tbl,0.19782191659841272,0.24765625,0.24765625,label_Tbl,0.5800601881775377,late readout with distributed/non-core particle evidence,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.25, particle0 0.25","# L2_ch160:192: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.25):
+        logits += project_core_readout(evidence)
+    # output role: late readout with distributed/non-core particle evidence; top_class=label_Tbl; corr=label_Tbl:0.5801"
+L2_ch64:96,2,64:96,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,Hqql/Tbl core-confusion axis,core/top-k content with KNN/secondary context; not literal order index,Hqql/Tbl core-confusion axis; residual remains,"# L2_ch64:96
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)","class_grad:label_QCD=0.9095, label_Hqql=0.4053, label_Tbl=0.4048 | global_gate_abs=0.3056 | relation_hits=2 | stream_hits=30 | class_grads=label_QCD:0.9095, label_Hqql:0.4053, label_Tbl:0.4048, label_Wqq:0.3195, label_Zqq:0.2910",0.3056455652433215,0.9094665572047234,MEDIUM_CANDIDATE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 64:96, :]","[160, 256, 128]",0.32570886611938477,label_Tbl,0.08830818037192027,0.23359375,0.23359375,label_QCD,-0.5693232548271624,late readout with distributed/non-core particle evidence,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.23, particle0 0.23","# L2_ch64:96: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.23):
+        logits += project_core_readout(evidence)
+    # output role: late readout with distributed/non-core particle evidence; top_class=label_Tbl; corr=label_QCD:-0.5693"
+L2_ch96:128,2,96:128,L2 late readout,L1 context and class-route evidence already mixed,"L1 context, class-evidence summaries, core/secondary competition",read L1 context -> aggregate class evidence -> write classifier support/competition,class evidence and class-competition support,W/Z structured-prong axis,core/top-k content with KNN/secondary context; not literal order index,W/Z structured-prong axis; residual remains,"# L2_ch96:128
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)","class_grad:label_Tbl=0.2700, label_Hcc=0.1736, label_QCD=0.1453 | global_gate_abs=0.0666 | relation_hits=3 | stream_hits=30 | class_grads=label_Tbl:0.2700, label_Hcc:0.1736, label_QCD:0.1453, label_H4q:0.0713, label_Wqq:0.0673",0.06664143828711544,0.269960580393672,LOW_NEEDS_MORE_EVIDENCE,"semantic pseudocode; needs route trace, residual v2, heldout/cross-model",route-neighbor trace; head-pair synergy; per-file heldout; residual v2,edge_convs.2,"output[:, 96:128, :]","[160, 256, 128]",0.19051170349121094,label_Hbb,0.021035280492570668,0.209375,0.209375,label_Wqq,-0.17337600359870292,late readout with distributed/non-core particle evidence,"writes strongest output for label_Hbb; top activation particle matches leading-pT 0.21, particle0 0.21","# L2_ch96:128: L2 output-aware pseudocode
+for event:
+    ctx = collect_L1_context()
+    evidence = aggregate_class_evidence(ctx)
+    if top_particle_is_core_or_particle0(rate=0.21):
+        logits += project_core_readout(evidence)
+    # output role: late readout with distributed/non-core particle evidence; top_class=label_Hbb; corr=label_Wqq:-0.1734"

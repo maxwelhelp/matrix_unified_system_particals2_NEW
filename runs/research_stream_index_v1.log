@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "snapshots": 15,
+  "events": 6795,
+  "alerts": 2,
+  "out_json": "manifests/latest/research_stream_index_v1.json"
+}

@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "heads": 24,
+  "questions_per_head": 14,
+  "rows": 336,
+  "out_md": "reports/latest/FULL_HEAD_QUESTION_CATALOG.md"
+}

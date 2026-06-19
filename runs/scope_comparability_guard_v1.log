@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "status": "PASS_WITH_WARNINGS",
+  "checks": 5,
+  "out_json": "manifests/latest/scope_comparability_guard_v1.json"
+}

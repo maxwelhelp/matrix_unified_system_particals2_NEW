@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "repo_dir": "external/particle_transformer",
+  "exists": true,
+  "model_files": [
+    "networks/example_ParticleTransformer.py",
+    "networks/example_ParticleTransformer_finetune.py"
+  ],
+  "config_files": [
+    "data/JetClass/JetClass_full.yaml",
+    "data/JetClass/JetClass_kin.yaml",
+    "data/JetClass/JetClass_kinpid.yaml",
+    "data/QuarkGluon/qg_kin.yaml",
+    "data/QuarkGluon/qg_kinpid.yaml",
+    "data/QuarkGluon/qg_kinpidplus.yaml",
+    "data/TopLandscape/top_kin.yaml"
+  ],
+  "checkpoint_files": [
+    "models/ParT_full.pt",
+    "models/ParT_kin.pt",
+    "models/ParT_kinpid.pt",
+    "models/ParticleNet_full.pt",
+    "models/ParticleNet_kin.pt",
+    "models/ParticleNet_kinpid.pt"
+  ],
+  "imports": [
+    {
+      "module": "weaver",
+      "ok": true,
+      "file": "/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/__init__.py"
+    },
+    {
+      "module": "weaver.nn",
+      "ok": true,
+      "file": "/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/__init__.py"
+    },
+    {
+      "module": "weaver.nn.model",
+      "ok": true,
+      "file": "/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/__init__.py"
+    },
+    {
+      "module": "weaver.nn.model.ParticleTransformer",
+      "ok": true,
+      "file": "/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleTransformer.py"
+    },
+    {
+      "module": "weaver.nn.model.ParticleTransformer2023",
+      "ok": false,
+      "error": "ModuleNotFoundError(\"No module named 'weaver.nn.model.ParticleTransformer2023'\")"
+    }
+  ],
+  "next": "If imports fail, install ParT/weaver requirements or run from the ParT repo environment before writing attention trace."
+}

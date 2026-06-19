@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "events": 8098,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "Tbl_correct": 3929,
+    "Tbl_to_Hqql": 145
+  },
+  "micro_batch": 32,
+  "knn_micro_batch": 64,
+  "out_md": "reports/latest/HQQL_TBL_CONFUSION_PHYSICS_REGIME_V1.md"
+}
+{
+  "ok": true,
+  "status": "PASS",
+  "min_confused": 100,
+  "Hqql_to_Tbl": 154,
+  "Tbl_to_Hqql": 145,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "Tbl_correct": 3929,
+    "Tbl_to_Hqql": 145
+  },
+  "recommendations": []
+}

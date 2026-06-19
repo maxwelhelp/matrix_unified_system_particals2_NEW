@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "events_rows": 4104,
+  "particle_rows": 12312,
+  "paths": 432,
+  "note": "V1 postprocesses V2/V2.1 outputs. Run V2 with HEADS=all for all pseudo-heads."
+}

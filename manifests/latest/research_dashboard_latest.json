@@ -1,0 +1,764 @@
+{
+  "schema": "research_dashboard_latest.v1",
+  "generated_at_utc": "2026-06-16T02:13:51.776207+00:00",
+  "metadata": {
+    "repo": "maxwelhelp/matrix_unified_system_particals",
+    "model": "ParticleNet_kinpid.pt",
+    "mode": "kinpid",
+    "baseline": {
+      "n": 2560,
+      "acc": 0.7574219107627869,
+      "pred_counts": [
+        241,
+        243,
+        220,
+        280,
+        274,
+        255,
+        251,
+        270,
+        273,
+        253
+      ],
+      "true_counts": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    "baseline_source": "manifests/latest/particlenet_research_synthesis_v6_summary.json",
+    "valid_model": true
+  },
+  "executive_summary": [
+    "Validated ParticleNet baseline acc=0.7574 on current balanced subset.",
+    "Strongest current pseudo-head: L1_ch16:32 acc_drop=0.2641; role=middle learned-neighborhood / route-composition head.",
+    "Weight-projection scan found physical-feature, block-interaction, and class-contrast questions.",
+    "Current strongest research direction: triangulate weight projection + route/activation + causal patch for EdgeConv pseudo-heads."
+  ],
+  "top_hypotheses": [
+    {
+      "id": "H2",
+      "priority": "P0",
+      "status": "CAUSAL_PATCHED",
+      "score": 78.0,
+      "title": "EdgeConv pseudo-head specialization",
+      "evidence": "Strong internal pseudo-head groups: L1:ch16:32, L2:ch224:256, L0:ch40:48, L1:ch112:128, L0:ch24:32.",
+      "risk": "Equal channel slicing may hide or split real functional groups.",
+      "next_test": "Add activation-cluster pseudo-heads and random channel-group controls."
+    },
+    {
+      "id": "H4",
+      "priority": "P0",
+      "status": "CAUSAL_PATCHED",
+      "score": 72.0,
+      "title": "Leading-particle core hypothesis",
+      "evidence": "top_pt ablation acc=0.4488 vs random=0.7250; gap=0.2762.",
+      "risk": "top_pt and top_energy highly overlap; need top-k sweep.",
+      "next_test": "Run k sweep k=1,2,4,8,16 and per-class particle ablation."
+    },
+    {
+      "id": "H1",
+      "priority": "P0",
+      "status": "CAUSAL_PATCHED",
+      "score": 34.0,
+      "title": "EdgeConv learned-neighborhood separator",
+      "evidence": "Best EdgeConv pseudo-head 1:ch16:32 drops acc 0.7574->0.4934; full EdgeConv layers also previously dropped accuracy near random.",
+      "risk": "Channel-head groups are fixed slices, not learned clusters yet.",
+      "next_test": "Cluster EdgeConv activations and patch learned clusters; run heldout stability."
+    },
+    {
+      "id": "H5",
+      "priority": "P1",
+      "status": "CAUSAL_PATCHED",
+      "score": 74.0,
+      "title": "Explicit feature-channel class codes",
+      "evidence": "label_H4q->part_pt_log, label_Hbb->part_logerel, label_Hcc->part_logerel, label_Hgg->part_deta, label_Hqql->part_pt_log, label_QCD->part_deta, label_Tbl->part_deta, label_Tbqq->part_deltaR",
+      "risk": "Zeroing feature channels may be out-of-distribution.",
+      "next_test": "Permutation/noise controls and class contrast reports."
+    },
+    {
+      "id": "H6",
+      "priority": "P1",
+      "status": "OBSERVED",
+      "score": 66.0,
+      "title": "Known-observable alignment",
+      "evidence": "Tbqq-vs-Tbl: route ΔR gap L1=0.0539, sdmass gap=54.6329, nparticles gap=22.1602.",
+      "risk": "May be explained by known mass/multiplicity only.",
+      "next_test": "Residual analysis after controlling for sdmass/nparticles/tau variables."
+    },
+    {
+      "id": "H3",
+      "priority": "P1",
+      "status": "OBSERVED",
+      "score": 63.0,
+      "title": "Wqq compact route vs Tbqq wide route",
+      "evidence": "Mean neighbor ΔR gap Tbqq-Wqq ≈ 0.1242 across route layers.",
+      "risk": "Route stats are descriptive; may be explained by mass/multiplicity.",
+      "next_test": "Causal route-group patch: compact vs wide edges; regress against jet mass and nparticles."
+    },
+    {
+      "id": "H7",
+      "priority": "P2",
+      "status": "TODO",
+      "score": 35.0,
+      "title": "Error-route hypothesis",
+      "evidence": "Not tested yet: wrong predictions may share route/feature pattern with predicted class.",
+      "risk": "Needs confusion-pair analysis.",
+      "next_test": "Build error atlas true->pred pairs with route stats and signed competing logits."
+    },
+    {
+      "id": "H8",
+      "priority": "P2",
+      "status": "PAUSED",
+      "score": 20.0,
+      "title": "Transformer attention route hypothesis",
+      "evidence": "ParT attention cannot be claimed until ParT accuracy is fixed.",
+      "risk": "Current ParT checkpoint invocation is invalid for claims.",
+      "next_test": "Find/train valid ParT checkpoint, then extract attention heads / pair bias."
+    }
+  ],
+  "top_heads": [
+    {
+      "head_id": "L1_ch16:32",
+      "layer": "1",
+      "group": "ch16:32",
+      "acc_drop": 0.2640625238418579,
+      "patch_acc": 0.49335938692092896,
+      "delta_pred_logit": 9.114623069763184,
+      "role": "middle learned-neighborhood / route-composition head",
+      "question": "Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hbb, label_Hcc, label_Zqq",
+      "confidence": "HIGH causal, MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L1 ch16:32 | Weight lens: source/input blocks -> output ch16:32 | Route lens: compact/wide KNN route stats -> this pseudo-head | Class lens: strongest affected classes = label_Hbb, label_Hcc, label_Zqq",
+      "top_class_effects": "label_Hbb: drop=14.3446, acc=0.2578 || label_Hcc: drop=12.5046, acc=0.1875 || label_Zqq: drop=11.1146, acc=0.0898 || label_Wqq: drop=10.5074, acc=0.0430 || label_H4q: drop=10.0451, acc=0.5273",
+      "next_test": "Test route-width/leading-particle composite: compact/wide/top-pT routes -> L1 ch16:32 -> class contrast."
+    },
+    {
+      "head_id": "L0_ch24:32",
+      "layer": "0",
+      "group": "ch24:32",
+      "acc_drop": 0.1996093988418579,
+      "patch_acc": 0.557812511920929,
+      "delta_pred_logit": 2.3406918048858643,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hbb, label_Hcc, label_Hgg",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch24:32 | Weight lens: source/input blocks -> output ch24:32 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Hbb, label_Hcc, label_Hgg",
+      "top_class_effects": "label_Hbb: drop=3.6554, acc=0.5039 || label_Hcc: drop=3.5842, acc=0.2383 || label_Hgg: drop=3.3949, acc=0.4922 || label_Zqq: drop=3.3818, acc=0.1836 || label_H4q: drop=3.3739, acc=0.5859",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L0_ch0:8",
+      "layer": "0",
+      "group": "ch0:8",
+      "acc_drop": 0.16015625,
+      "patch_acc": 0.5972656607627869,
+      "delta_pred_logit": 0.8533021211624146,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Tbl, label_Hcc, label_Hbb",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch0:8 | Weight lens: source/input blocks -> output ch0:8 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Tbl, label_Hcc, label_Hbb",
+      "top_class_effects": "label_Tbl: drop=1.9491, acc=0.7734 || label_Hcc: drop=1.5474, acc=0.4453 || label_Hbb: drop=1.2686, acc=0.3984 || label_Zqq: drop=1.2602, acc=0.3477 || label_Wqq: drop=0.9157, acc=0.3438",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L0_ch40:48",
+      "layer": "0",
+      "group": "ch40:48",
+      "acc_drop": 0.1371093988418579,
+      "patch_acc": 0.620312511920929,
+      "delta_pred_logit": 3.815220832824707,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hqql, label_Zqq, label_Wqq",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch40:48 | Weight lens: source/input blocks -> output ch40:48 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Hqql, label_Zqq, label_Wqq",
+      "top_class_effects": "label_Hqql: drop=5.6707, acc=0.7539 || label_Zqq: drop=5.1546, acc=0.0781 || label_Wqq: drop=5.0696, acc=0.3984 || label_Hcc: drop=3.8231, acc=0.2930 || label_H4q: drop=3.7930, acc=0.6797",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L0_ch48:56",
+      "layer": "0",
+      "group": "ch48:56",
+      "acc_drop": 0.13593751192092896,
+      "patch_acc": 0.6214843988418579,
+      "delta_pred_logit": 1.3934763669967651,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_H4q, label_Hcc, label_Hbb",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch48:56 | Weight lens: source/input blocks -> output ch48:56 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_H4q, label_Hcc, label_Hbb",
+      "top_class_effects": "label_H4q: drop=2.0118, acc=0.4414 || label_Hcc: drop=1.7808, acc=0.3438 || label_Hbb: drop=1.6748, acc=0.3828 || label_Hgg: drop=1.5961, acc=0.8047 || label_Tbqq: drop=1.5847, acc=0.6914",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L0_ch8:16",
+      "layer": "0",
+      "group": "ch8:16",
+      "acc_drop": 0.134765625,
+      "patch_acc": 0.6226562857627869,
+      "delta_pred_logit": 1.6804306507110596,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Wqq, label_Hcc, label_Hbb",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch8:16 | Weight lens: source/input blocks -> output ch8:16 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Wqq, label_Hcc, label_Hbb",
+      "top_class_effects": "label_Wqq: drop=2.3991, acc=0.6211 || label_Hcc: drop=2.3409, acc=0.1602 || label_Hbb: drop=2.0909, acc=0.7188 || label_Zqq: drop=1.9289, acc=0.4258 || label_Hqql: drop=1.9026, acc=0.8945",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L0_ch16:24",
+      "layer": "0",
+      "group": "ch16:24",
+      "acc_drop": 0.12773442268371582,
+      "patch_acc": 0.629687488079071,
+      "delta_pred_logit": 1.0691368579864502,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Tbqq, label_Hgg, label_Zqq",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch16:24 | Weight lens: source/input blocks -> output ch16:24 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Tbqq, label_Hgg, label_Zqq",
+      "top_class_effects": "label_Tbqq: drop=1.8746, acc=0.7383 || label_Hgg: drop=1.8032, acc=0.2422 || label_Zqq: drop=1.3137, acc=0.3867 || label_Wqq: drop=1.3008, acc=0.7344 || label_Hcc: drop=1.2524, acc=0.3398",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L1_ch112:128",
+      "layer": "1",
+      "group": "ch112:128",
+      "acc_drop": 0.11562502384185791,
+      "patch_acc": 0.641796886920929,
+      "delta_pred_logit": 3.263317108154297,
+      "role": "middle learned-neighborhood / route-composition head",
+      "question": "Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hbb, label_H4q, label_Hgg",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L1 ch112:128 | Weight lens: source/input blocks -> output ch112:128 | Route lens: compact/wide KNN route stats -> this pseudo-head | Class lens: strongest affected classes = label_Hbb, label_H4q, label_Hgg",
+      "top_class_effects": "label_Hbb: drop=4.7396, acc=0.6328 || label_H4q: drop=4.6334, acc=0.6172 || label_Hgg: drop=4.5187, acc=0.6172 || label_Hcc: drop=4.3861, acc=0.3242 || label_Tbqq: drop=3.0648, acc=0.9336",
+      "next_test": "Test route-width/leading-particle composite: compact/wide/top-pT routes -> L1 ch112:128 -> class contrast."
+    },
+    {
+      "head_id": "L0_ch56:64",
+      "layer": "0",
+      "group": "ch56:64",
+      "acc_drop": 0.08515626192092896,
+      "patch_acc": 0.6722656488418579,
+      "delta_pred_logit": 0.610243558883667,
+      "role": "early feature/geometry/PID reader",
+      "question": "Does this pseudo-head convert raw particle features and local geometry into first-stage message evidence?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hqql, label_H4q, label_Hgg",
+      "confidence": "MEDIUM causal, LOW/MEDIUM semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L0 ch56:64 | Weight lens: source/input blocks -> output ch56:64 | Physical feature lens: raw kin/PID/geometry -> this pseudo-head | Class lens: strongest affected classes = label_Hqql, label_H4q, label_Hgg",
+      "top_class_effects": "label_Hqql: drop=1.0867, acc=0.8633 || label_H4q: drop=1.0004, acc=0.4219 || label_Hgg: drop=0.8431, acc=0.6562 || label_Wqq: drop=0.6603, acc=0.4570 || label_Zqq: drop=0.6129, acc=0.5977",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L2_ch0:32",
+      "layer": "2",
+      "group": "ch0:32",
+      "acc_drop": 0.07968753576278687,
+      "patch_acc": 0.677734375,
+      "delta_pred_logit": 0.8878049254417419,
+      "role": "late aggregation / class-evidence head",
+      "question": "Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?",
+      "semantic_hint": "kinematic/energy, class-specific: label_H4q, label_Hgg, label_Tbl",
+      "confidence": "LOW causal, exploratory semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L2 ch0:32 | Weight lens: source/input blocks -> output ch0:32 | Class direction lens: this pseudo-head -> classifier class/contrast direction | Class lens: strongest affected classes = label_H4q, label_Hgg, label_Tbl",
+      "top_class_effects": "label_H4q: drop=2.4325, acc=0.1680 || label_Hgg: drop=1.6845, acc=0.3906 || label_Tbl: drop=1.3911, acc=0.9766 || label_Hqql: drop=0.9546, acc=0.9375 || label_Hbb: drop=0.6631, acc=0.6250",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    },
+    {
+      "head_id": "L1_ch96:112",
+      "layer": "1",
+      "group": "ch96:112",
+      "acc_drop": 0.07343751192092896,
+      "patch_acc": 0.6839843988418579,
+      "delta_pred_logit": 0.8114314079284668,
+      "role": "middle learned-neighborhood / route-composition head",
+      "question": "Does this pseudo-head combine previous learned features into a class-separating particle-neighborhood answer?",
+      "semantic_hint": "kinematic/energy, class-specific: label_H4q, label_Hgg, label_Hqql",
+      "confidence": "LOW causal, exploratory semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L1 ch96:112 | Weight lens: source/input blocks -> output ch96:112 | Route lens: compact/wide KNN route stats -> this pseudo-head | Class lens: strongest affected classes = label_H4q, label_Hgg, label_Hqql",
+      "top_class_effects": "label_H4q: drop=1.5645, acc=0.7852 || label_Hgg: drop=1.3860, acc=0.5391 || label_Hqql: drop=1.1903, acc=0.8906 || label_Hcc: drop=1.1874, acc=0.2539 || label_Hbb: drop=0.8001, acc=0.8164",
+      "next_test": "Test route-width/leading-particle composite: compact/wide/top-pT routes -> L1 ch96:112 -> class contrast."
+    },
+    {
+      "head_id": "L2_ch224:256",
+      "layer": "2",
+      "group": "ch224:256",
+      "acc_drop": 0.06289064884185791,
+      "patch_acc": 0.694531261920929,
+      "delta_pred_logit": 4.763679027557373,
+      "role": "late aggregation / class-evidence head",
+      "question": "Does this pseudo-head aggregate higher-level particle-neighborhood evidence before the classifier?",
+      "semantic_hint": "kinematic/energy, class-specific: label_Hbb, label_Wqq, label_Zqq",
+      "confidence": "LOW causal, exploratory semantic",
+      "composite_lens": "Patch lens: zero EdgeConv L2 ch224:256 | Weight lens: source/input blocks -> output ch224:256 | Class direction lens: this pseudo-head -> classifier class/contrast direction | Class lens: strongest affected classes = label_Hbb, label_Wqq, label_Zqq",
+      "top_class_effects": "label_Hbb: drop=6.4418, acc=0.5938 || label_Wqq: drop=6.3631, acc=0.3633 || label_Zqq: drop=5.9527, acc=0.3516 || label_Hcc: drop=5.7249, acc=0.5195 || label_Tbl: drop=4.4718, acc=0.9805",
+      "next_test": "Activation-cluster this head and compare against random channel groups; then project its activation into class contrast directions."
+    }
+  ],
+  "weight_projection_questions": {
+    "physical_feature_projection": [
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.sc` read physical feature group `pid_charge_5_10`?",
+        "answer": "Feature group `pid_charge_5_10` carries 0.8060 of module weight energy.",
+        "score": 0.8059596851129435,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.sc` read physical feature group `kin_logs_0_4`?",
+        "answer": "Feature group `kin_logs_0_4` carries 0.5489 of module weight energy.",
+        "score": 0.5488853673366672,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.convs.0` read physical feature group `kin_logs_0_4`?",
+        "answer": "Feature group `kin_logs_0_4` carries 0.4291 of module weight energy.",
+        "score": 0.4290992990392958,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.convs.0` read physical feature group `pid_charge_5_10`?",
+        "answer": "Feature group `pid_charge_5_10` carries 0.4259 of module weight energy.",
+        "score": 0.42594267357192,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.sc` read physical feature group `part_isMuon`?",
+        "answer": "Feature group `part_isMuon` carries 0.4183 of module weight energy.",
+        "score": 0.41828317052677777,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.sc` read physical feature group `part_isElectron`?",
+        "answer": "Feature group `part_isElectron` carries 0.3618 of module weight energy.",
+        "score": 0.36181831556388466,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.convs.2",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.convs.2` read physical feature group `pid_charge_5_10`?",
+        "answer": "Feature group `pid_charge_5_10` carries 0.3337 of module weight energy.",
+        "score": 0.3337115981240152,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      },
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL2 physical feature projection",
+        "question": "Does module `edge_convs.0.sc` read physical feature group `part_isChargedHadron`?",
+        "answer": "Feature group `part_isChargedHadron` carries 0.3268 of module weight energy.",
+        "score": 0.32679598214733513,
+        "risk": "Only valid when flat source dimension aligns with physical feature channels.",
+        "next_lens": "Confirm with feature-channel causal patch and activation lens."
+      }
+    ],
+    "block_interaction": [
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL4 block interaction projection",
+        "question": "Does source slice 9:11 feed output pseudo-head 0:8?",
+        "answer": "Block 9:11->0:8 carries 0.3740 of module weight energy.",
+        "score": 0.3740072614512469,
+        "risk": "Block energy is structural, not causal alone.",
+        "next_lens": "Patch corresponding activation source/output group; compare random blocks."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL4 block interaction projection",
+        "question": "Does source slice 22:26 feed output pseudo-head 16:24?",
+        "answer": "Block 22:26->16:24 carries 0.3275 of module weight energy.",
+        "score": 0.3274712145356355,
+        "risk": "Block energy is structural, not causal alone.",
+        "next_lens": "Patch corresponding activation source/output group; compare random blocks."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL4 block interaction projection",
+        "question": "Does source slice 22:26 feed output pseudo-head 32:40?",
+        "answer": "Block 22:26->32:40 carries 0.3226 of module weight energy.",
+        "score": 0.3226340516729007,
+        "risk": "Block energy is structural, not causal alone.",
+        "next_lens": "Patch corresponding activation source/output group; compare random blocks."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL4 block interaction projection",
+        "question": "Does source slice 22:26 feed output pseudo-head 40:48?",
+        "answer": "Block 22:26->40:48 carries 0.2992 of module weight energy.",
+        "score": 0.29923837753959825,
+        "risk": "Block energy is structural, not causal alone.",
+        "next_lens": "Patch corresponding activation source/output group; compare random blocks."
+      }
+    ],
+    "class_contrast": [
+      {
+        "component": "fc.1",
+        "lens": "WL6 class contrast projection",
+        "question": "What hidden directions separate `label_Tbqq` from `label_Tbl`?",
+        "answer": "Contrast row label_Tbqq-label_Tbl has relative norm 0.3555.",
+        "score": 0.35552648323987934,
+        "risk": "Large contrast norm needs hidden activation alignment.",
+        "next_lens": "Project EdgeConv/FC activations onto this contrast direction."
+      },
+      {
+        "component": "fc.1",
+        "lens": "WL6 class contrast projection",
+        "question": "What hidden directions separate `label_H4q` from `label_Hqql`?",
+        "answer": "Contrast row label_H4q-label_Hqql has relative norm 0.3502.",
+        "score": 0.35015417232253304,
+        "risk": "Large contrast norm needs hidden activation alignment.",
+        "next_lens": "Project EdgeConv/FC activations onto this contrast direction."
+      }
+    ],
+    "output_pseudo_head": [
+      {
+        "component": "fc.1",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 8:10 behave like a strong internal question/head?",
+        "answer": "Output group 8:10 carries 0.5196 of module weight energy.",
+        "score": 0.5195762713917195,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "edge_convs.0.sc",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 0:8 behave like a strong internal question/head?",
+        "answer": "Output group 0:8 carries 0.4766 of module weight energy.",
+        "score": 0.47659323654363867,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "fc.1",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 3:5 behave like a strong internal question/head?",
+        "answer": "Output group 3:5 carries 0.4405 of module weight energy.",
+        "score": 0.4404526479471394,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "edge_convs.0.convs.1",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 8:16 behave like a strong internal question/head?",
+        "answer": "Output group 8:16 carries 0.4241 of module weight energy.",
+        "score": 0.42414910112838394,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 32:40 behave like a strong internal question/head?",
+        "answer": "Output group 32:40 carries 0.4167 of module weight energy.",
+        "score": 0.41671994583913247,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "edge_convs.0.convs.0",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 16:24 behave like a strong internal question/head?",
+        "answer": "Output group 16:24 carries 0.4144 of module weight energy.",
+        "score": 0.4144177118505413,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "fc.0.0",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 96:128 behave like a strong internal question/head?",
+        "answer": "Output group 96:128 carries 0.3915 of module weight energy.",
+        "score": 0.39145924122393116,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      },
+      {
+        "component": "fc.1",
+        "lens": "WL3 output pseudo-head projection",
+        "question": "Does output channel group 5:6 behave like a strong internal question/head?",
+        "answer": "Output group 5:6 carries 0.3914 of module weight energy.",
+        "score": 0.39136116846617114,
+        "risk": "High weight energy may not imply causal effect.",
+        "next_lens": "Patch this output group and compare to random channel groups."
+      }
+    ],
+    "weight_energy": [
+      {
+        "component": "edge_convs.2.convs.0",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.2.convs.0`?",
+        "answer": "Module has ||W||=701.4615 with shape (256, 256, 1, 1).",
+        "score": 701.4614868164062,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.2.convs.1",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.2.convs.1`?",
+        "answer": "Module has ||W||=633.9674 with shape (256, 256, 1, 1).",
+        "score": 633.9674072265625,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.2.sc",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.2.sc`?",
+        "answer": "Module has ||W||=520.6008 with shape (256, 128, 1).",
+        "score": 520.600830078125,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.2.convs.2",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.2.convs.2`?",
+        "answer": "Module has ||W||=510.1265 with shape (256, 256, 1, 1).",
+        "score": 510.12646484375,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.1.convs.0",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.1.convs.0`?",
+        "answer": "Module has ||W||=467.4026 with shape (128, 128, 1, 1).",
+        "score": 467.402587890625,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.1.convs.1",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.1.convs.1`?",
+        "answer": "Module has ||W||=434.7332 with shape (128, 128, 1, 1).",
+        "score": 434.7331848144531,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.1.convs.2",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.1.convs.2`?",
+        "answer": "Module has ||W||=394.8514 with shape (128, 128, 1, 1).",
+        "score": 394.8514099121094,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      },
+      {
+        "component": "edge_convs.1.sc",
+        "lens": "WL1 weight-energy",
+        "question": "How much raw weight energy is stored in module `edge_convs.1.sc`?",
+        "answer": "Module has ||W||=337.1957 with shape (128, 64, 1).",
+        "score": 337.1957092285156,
+        "risk": "Weight norm alone is not causal.",
+        "next_lens": "Compare with causal patch and activation evidence."
+      }
+    ]
+  },
+  "route_and_particle_findings": {
+    "route_width_by_layer": [
+      {
+        "layer": "0",
+        "compact_class": "label_Wqq",
+        "compact_dr_mean": 0.13172033429145813,
+        "wide_class": "label_Tbqq",
+        "wide_dr_mean": 0.2549628019332886,
+        "gap": 0.12324246764183044
+      },
+      {
+        "layer": "1",
+        "compact_class": "label_Wqq",
+        "compact_dr_mean": 0.1572454273700714,
+        "wide_class": "label_Tbqq",
+        "wide_dr_mean": 0.2792700231075287,
+        "gap": 0.12202459573745728
+      },
+      {
+        "layer": "2",
+        "compact_class": "label_Wqq",
+        "compact_dr_mean": 0.15988779067993164,
+        "wide_class": "label_Tbqq",
+        "wide_dr_mean": 0.2872910797595978,
+        "gap": 0.12740328907966614
+      }
+    ],
+    "particle_controls": [
+      {
+        "group": "top_pt",
+        "patch_acc": 0.4488281309604645,
+        "base_acc": 0.7574219107627869,
+        "delta_pred_logit": 5.623776912689209,
+        "top1_match": 0.5179687738418579,
+        "jaccard_with_top_pt": 1.0
+      },
+      {
+        "group": "top_energy",
+        "patch_acc": 0.44843751192092896,
+        "base_acc": 0.7574219107627869,
+        "delta_pred_logit": 5.60750150680542,
+        "top1_match": 0.5191406607627869,
+        "jaccard_with_top_pt": 0.9434760205072704
+      },
+      {
+        "group": "core_low_dr",
+        "patch_acc": 0.6949219107627869,
+        "base_acc": 0.7574219107627869,
+        "delta_pred_logit": 1.21626877784729,
+        "top1_match": 0.8578125238418579,
+        "jaccard_with_top_pt": 0.07494610424297923
+      },
+      {
+        "group": "wide_angle_high_dr",
+        "patch_acc": 0.6953125,
+        "base_acc": 0.7574219107627869,
+        "delta_pred_logit": 0.6982347369194031,
+        "top1_match": 0.852343738079071,
+        "jaccard_with_top_pt": 0.006085069444444444
+      },
+      {
+        "group": "random_control",
+        "patch_acc": 0.7250000238418579,
+        "base_acc": 0.7574219107627869,
+        "delta_pred_logit": 0.39707234501838684,
+        "top1_match": 0.893359363079071,
+        "jaccard_with_top_pt": 0.03280849358974359
+      }
+    ]
+  },
+  "class_feature_map": [
+    {
+      "class_label": "label_H4q",
+      "feature": "part_deta",
+      "pred_logit_drop": 4.6870951652526855,
+      "acc_drop": 0.23046875,
+      "patch_acc": 0.55078125
+    },
+    {
+      "class_label": "label_Hbb",
+      "feature": "part_logerel",
+      "pred_logit_drop": 6.051860332489014,
+      "acc_drop": 0.16796875,
+      "patch_acc": 0.48046875
+    },
+    {
+      "class_label": "label_Hcc",
+      "feature": "part_logerel",
+      "pred_logit_drop": 6.913928031921387,
+      "acc_drop": 0.5078125,
+      "patch_acc": 0.07421875
+    },
+    {
+      "class_label": "label_Hgg",
+      "feature": "part_deta",
+      "pred_logit_drop": 5.850365161895752,
+      "acc_drop": 0.6328125,
+      "patch_acc": 0.05859375
+    },
+    {
+      "class_label": "label_Hqql",
+      "feature": "part_pt_log",
+      "pred_logit_drop": 10.185689926147461,
+      "acc_drop": 0.890625,
+      "patch_acc": 0.06640625
+    },
+    {
+      "class_label": "label_QCD",
+      "feature": "part_deta",
+      "pred_logit_drop": 7.796854019165039,
+      "acc_drop": 0.08203125,
+      "patch_acc": 0.6171875
+    },
+    {
+      "class_label": "label_Tbl",
+      "feature": "part_deta",
+      "pred_logit_drop": 9.481603622436523,
+      "acc_drop": 0.19921875,
+      "patch_acc": 0.76953125
+    },
+    {
+      "class_label": "label_Tbqq",
+      "feature": "part_deltaR",
+      "pred_logit_drop": 6.456090450286865,
+      "acc_drop": 0.79296875,
+      "patch_acc": 0.11328125
+    },
+    {
+      "class_label": "label_Wqq",
+      "feature": "part_logptrel",
+      "pred_logit_drop": 10.227063179016113,
+      "acc_drop": 0.71875,
+      "patch_acc": 0.01171875
+    },
+    {
+      "class_label": "label_Zqq",
+      "feature": "part_logptrel",
+      "pred_logit_drop": 9.104516983032227,
+      "acc_drop": 0.609375,
+      "patch_acc": 0.0
+    }
+  ],
+  "question_map_sample": [],
+  "risks": [
+    "EdgeConv pseudo-heads are equal channel slices, not learned activation clusters yet.",
+    "Weight projections are not causal by themselves.",
+    "Route-width results are descriptive until route-group causal patch is implemented.",
+    "Need heldout stability across more ROOT files.",
+    "ParT attention claims are paused until a valid ParT checkpoint/invocation is found."
+  ],
+  "next_actions_ranked": [
+    "Run activation-cluster pseudo-head lens and compare against random channel groups.",
+    "Run route-group causal patch: compact/wide/top-pT/random neighbor routes.",
+    "Run top-k particle sweep k=1,2,4,8,16 with per-class effects.",
+    "Project pseudo-head activations into class contrast directions Wqq-vs-Zqq, Tbqq-vs-Tbl, Hbb-vs-Hcc/Hgg.",
+    "Build error-route atlas for wrong predictions true->pred.",
+    "Find/train valid ParT checkpoint before attention-head claims."
+  ],
+  "source_files": {
+    "main_md": "reports/latest/RESEARCH_DASHBOARD_LATEST.md",
+    "head_projection": "reports/latest/PARTICLENET_HEAD_PROJECTION_COMPOSER_V2.md",
+    "weight_projection": "reports/latest/PARTICLENET_WEIGHT_PROJECTION_QUESTIONS_V1.md",
+    "synthesis": "reports/latest/PARTICLENET_RESEARCH_SYNTHESIS_V6.md",
+    "question_atlas": "reports/latest/PARTICLENET_QUESTION_ATLAS_V1.md",
+    "tables": [
+      "reports/latest/tables/head_projection_question_map.csv",
+      "reports/latest/tables/weight_projection_questions.csv",
+      "reports/latest/tables/research_hypothesis_board.csv",
+      "reports/latest/tables/research_feature_channels_per_class.csv",
+      "reports/latest/tables/discovery_route_knn_stats.csv",
+      "reports/latest/tables/discovery_particle_controls.csv"
+    ]
+  }
+}

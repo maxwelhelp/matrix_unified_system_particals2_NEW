@@ -1,0 +1,10 @@
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToBB_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToCC_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToGG_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW2Q1L_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW4Q_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBar_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBarLep_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/WToQQ_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZToQQ_000.root

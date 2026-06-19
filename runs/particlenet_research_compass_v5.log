@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "baseline": {
+    "n": 2560,
+    "acc": 0.7574219107627869,
+    "pred_counts": [
+      241,
+      243,
+      220,
+      280,
+      274,
+      255,
+      251,
+      270,
+      273,
+      253
+    ],
+    "true_counts": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ]
+  },
+  "missing": [],
+  "unexpected": [],
+  "hypotheses": [
+    "EdgeConv pseudo-head hypothesis: strongest channel-head groups are L1:ch16:32, L2:ch224:256, L0:ch40:48, L1:ch112:128, L0:ch24:32. These groups should be traced as internal model heads.",
+    "Route-width hypothesis L0: label_Wqq has compact neighbor routing (0.1317), label_Tbqq has wide routing (0.2550).",
+    "Route-width hypothesis L1: label_Wqq has compact neighbor routing (0.1572), label_Tbqq has wide routing (0.2793).",
+    "Route-width hypothesis L2: label_Wqq has compact neighbor routing (0.1599), label_Tbqq has wide routing (0.2873).",
+    "Route-width hypothesis L0: label_Wqq has compact neighbor routing (0.1317), label_Tbqq has wide routing (0.2550).",
+    "Route-width hypothesis L1: label_Wqq has compact neighbor routing (0.1572), label_Tbqq has wide routing (0.2793).",
+    "Route-width hypothesis L2: label_Wqq has compact neighbor routing (0.1599), label_Tbqq has wide routing (0.2873).",
+    "label_Hbb: strongest explicit feature-channel candidate is part_logerel with logit_drop=6.05.",
+    "label_Hcc: strongest explicit feature-channel candidate is part_logerel with logit_drop=6.91.",
+    "label_Hgg: strongest explicit feature-channel candidate is part_deta with logit_drop=5.85.",
+    "label_Hqql: strongest explicit feature-channel candidate is part_pt_log with logit_drop=10.19.",
+    "label_QCD: strongest explicit feature-channel candidate is part_deta with logit_drop=7.80.",
+    "label_Tbl: strongest explicit feature-channel candidate is part_deta with logit_drop=9.48.",
+    "label_Tbqq: strongest explicit feature-channel candidate is part_deltaR with logit_drop=6.46.",
+    "label_Wqq: strongest explicit feature-channel candidate is part_logptrel with logit_drop=10.23.",
+    "label_Zqq: strongest explicit feature-channel candidate is part_logptrel with logit_drop=9.10.",
+    "Leading-particle control: top_pt ablation accuracy=0.449 vs random=0.725; leading particles are not interchangeable with random particles."
+  ],
+  "n_edge_heads": 24,
+  "n_feature_class_rows": 130,
+  "n_observable_rows": 10
+}

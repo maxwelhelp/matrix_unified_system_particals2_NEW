@@ -1,0 +1,11 @@
+file,expected,entries,missing,missing_count,dominant,onehot_rate,name_matches_label
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToBB_000.root,label_Hbb,100000,,0,label_Hbb,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToCC_000.root,label_Hcc,100000,,0,label_Hcc,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToGG_000.root,label_Hgg,100000,,0,label_Hgg,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW2Q1L_000.root,label_Hqql,100000,,0,label_Hqql,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW4Q_000.root,label_H4q,100000,,0,label_H4q,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBarLep_000.root,label_Tbl,100000,,0,label_Tbl,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBar_000.root,label_Tbqq,100000,,0,label_Tbqq,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/WToQQ_000.root,label_Wqq,100000,,0,label_Wqq,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root,label_QCD,100000,,0,label_QCD,1.0,1
+/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZToQQ_000.root,label_Zqq,100000,,0,label_Zqq,1.0,1

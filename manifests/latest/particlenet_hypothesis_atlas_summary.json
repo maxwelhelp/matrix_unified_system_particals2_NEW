@@ -1,0 +1,321 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "missing": [],
+  "unexpected": [],
+  "baseline": {
+    "n": 2560,
+    "acc": 0.7574219107627869,
+    "pred_counts": [
+      241,
+      243,
+      220,
+      280,
+      274,
+      255,
+      251,
+      270,
+      273,
+      253
+    ],
+    "true_counts": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ]
+  },
+  "top_global": [
+    {
+      "delta_pred_logit": 246.90663146972656,
+      "kl": 91.92713165283203,
+      "top1_match": 0.09882812947034836,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10000000149011612,
+      "patch": "edge_conv_zero",
+      "layer": 1,
+      "group": "edge_conv"
+    },
+    {
+      "delta_pred_logit": 237.104736328125,
+      "kl": 19.081390380859375,
+      "top1_match": 0.099609375,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10000000149011612,
+      "patch": "edge_conv_zero",
+      "layer": 0,
+      "group": "edge_conv"
+    },
+    {
+      "delta_pred_logit": 108.27176666259766,
+      "kl": 48.041805267333984,
+      "top1_match": 0.09531249850988388,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.09609375149011612,
+      "patch": "features_zero",
+      "layer": "input",
+      "group": "all_features"
+    },
+    {
+      "delta_pred_logit": 34.71605682373047,
+      "kl": 7.077067852020264,
+      "top1_match": 0.140625,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.14023438096046448,
+      "patch": "feature_group_zero",
+      "layer": "input",
+      "group": "coords_last2"
+    },
+    {
+      "delta_pred_logit": 21.8301944732666,
+      "kl": 4.633403301239014,
+      "top1_match": 0.09414062649011612,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10000000149011612,
+      "patch": "edge_conv_zero",
+      "layer": 2,
+      "group": "edge_conv"
+    },
+    {
+      "delta_pred_logit": 13.756254196166992,
+      "kl": 4.430899143218994,
+      "top1_match": 0.1640625,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.14414063096046448,
+      "patch": "feature_group_zero",
+      "layer": "input",
+      "group": "kin_logs_0_4"
+    },
+    {
+      "delta_pred_logit": 8.319487571716309,
+      "kl": 2.3566534519195557,
+      "top1_match": 0.24296875298023224,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.23554687201976776,
+      "patch": "mask_all_true",
+      "layer": "input",
+      "group": "mask"
+    },
+    {
+      "delta_pred_logit": 6.507436752319336,
+      "kl": 3.5734386444091797,
+      "top1_match": 0.103515625,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10468750447034836,
+      "patch": "feature_group_zero",
+      "layer": "input",
+      "group": "pid_charge_5_10"
+    },
+    {
+      "delta_pred_logit": 6.216141223907471,
+      "kl": 1.2076343297958374,
+      "top1_match": 0.5804687738418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.530468761920929,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_deta"
+    },
+    {
+      "delta_pred_logit": 6.004597187042236,
+      "kl": 1.6883299350738525,
+      "top1_match": 0.42109376192092896,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.3824218809604645,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_logptrel"
+    },
+    {
+      "delta_pred_logit": 5.623709678649902,
+      "kl": 2.1799569129943848,
+      "top1_match": 0.5179687738418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.4488281309604645,
+      "patch": "particle_topk_mask_zero",
+      "layer": "particles",
+      "group": "top_pt"
+    },
+    {
+      "delta_pred_logit": 5.623709678649902,
+      "kl": 2.1799569129943848,
+      "top1_match": 0.5179687738418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.4488281309604645,
+      "patch": "particle_topk_mask_zero",
+      "layer": "particles",
+      "group": "top_energy"
+    },
+    {
+      "delta_pred_logit": 5.623709678649902,
+      "kl": 2.1799569129943848,
+      "top1_match": 0.5179687738418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.4488281309604645,
+      "patch": "particle_topk_mask_zero",
+      "layer": "particles",
+      "group": "high_deltaR"
+    },
+    {
+      "delta_pred_logit": 4.7710041999816895,
+      "kl": 2.250980854034424,
+      "top1_match": 0.17070312798023224,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.16640625894069672,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_pt_log"
+    },
+    {
+      "delta_pred_logit": 4.553783416748047,
+      "kl": 1.043336272239685,
+      "top1_match": 0.598437488079071,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.5335937738418579,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_logerel"
+    },
+    {
+      "delta_pred_logit": 4.090832233428955,
+      "kl": 0.7598332762718201,
+      "top1_match": 0.6039062738418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.545703113079071,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_dphi"
+    },
+    {
+      "delta_pred_logit": 3.8996646404266357,
+      "kl": 0.9277925491333008,
+      "top1_match": 0.5855469107627869,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.526171863079071,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_deltaR"
+    },
+    {
+      "delta_pred_logit": 1.2280309200286865,
+      "kl": 0.3049076199531555,
+      "top1_match": 0.7718750238418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.6734375357627869,
+      "patch": "points_zero",
+      "layer": "input",
+      "group": "all_points"
+    },
+    {
+      "delta_pred_logit": 1.17721426486969,
+      "kl": 0.4938731789588928,
+      "top1_match": 0.6546875238418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.5859375,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_isChargedHadron"
+    },
+    {
+      "delta_pred_logit": 1.0152015686035156,
+      "kl": 0.4623482823371887,
+      "top1_match": 0.6761718988418579,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.6058593988418579,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_isPhoton"
+    },
+    {
+      "delta_pred_logit": 0.8952329158782959,
+      "kl": 1.7605549097061157,
+      "top1_match": 0.10664062947034836,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10000000149011612,
+      "patch": "fc_zero",
+      "layer": 0,
+      "group": "fc"
+    },
+    {
+      "delta_pred_logit": 0.8753885626792908,
+      "kl": 1.6415766477584839,
+      "top1_match": 0.09414062649011612,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.10000000149011612,
+      "patch": "fc_zero",
+      "layer": 1,
+      "group": "fc"
+    },
+    {
+      "delta_pred_logit": 0.8639990091323853,
+      "kl": 0.5697920918464661,
+      "top1_match": 0.884765625,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.65625,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_isMuon"
+    },
+    {
+      "delta_pred_logit": 0.8485292792320251,
+      "kl": 0.47152453660964966,
+      "top1_match": 0.671093761920929,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.606640636920929,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_charge"
+    },
+    {
+      "delta_pred_logit": 0.8315190076828003,
+      "kl": 0.5665729641914368,
+      "top1_match": 0.878125011920929,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.665234386920929,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_isElectron"
+    },
+    {
+      "delta_pred_logit": 0.6089600324630737,
+      "kl": 0.27302977442741394,
+      "top1_match": 0.782031238079071,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.6734375357627869,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_isNeutralHadron"
+    },
+    {
+      "delta_pred_logit": 0.33493709564208984,
+      "kl": 0.05317201092839241,
+      "top1_match": 0.892578125,
+      "base_acc": 0.7574219107627869,
+      "patch_acc": 0.731640636920929,
+      "patch": "feature_channel_zero",
+      "layer": "input",
+      "group": "part_e_log"
+    }
+  ],
+  "candidate_hypotheses": [
+    "label_H4q: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.781.",
+    "label_Hbb: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.648.",
+    "label_Hcc: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.582.",
+    "label_Hgg: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.691.",
+    "label_Hqql: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.957.",
+    "label_QCD: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.699.",
+    "label_Tbl: class decision is strongly dependent on `edge_conv_zero:0:edge_conv`; patch acc drop=0.969.",
+    "label_Tbqq: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.906.",
+    "label_Wqq: class decision is strongly dependent on `edge_conv_zero:0:edge_conv`; patch acc drop=0.730.",
+    "label_Zqq: class decision is strongly dependent on `edge_conv_zero:1:edge_conv`; patch acc drop=0.609.",
+    "Global mechanism: strongest causal components are edge_conv_zero[1:edge_conv], edge_conv_zero[0:edge_conv], features_zero[input:all_features]."
+  ],
+  "n_examples": 20
+}

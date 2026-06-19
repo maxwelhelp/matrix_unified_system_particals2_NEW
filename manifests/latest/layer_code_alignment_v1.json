@@ -1,0 +1,109 @@
+{
+  "ok": true,
+  "source_file": "/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py",
+  "source_lines": [
+    0,
+    332
+  ],
+  "captured_modules": [
+    {
+      "module_path": "edge_convs.0.convs.0",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 26, 128, 16]]",
+      "output_shape": "[160, 64, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.0.convs.1",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 64, 128, 16]]",
+      "output_shape": "[160, 64, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.0.convs.2",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 64, 128, 16]]",
+      "output_shape": "[160, 64, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.0.sc",
+      "module_type": "Conv1d",
+      "input_shape": "[[160, 13, 128]]",
+      "output_shape": "[160, 64, 128]"
+    },
+    {
+      "module_path": "edge_convs.0",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 2, 128], [160, 13, 128]]",
+      "output_shape": "[160, 64, 128]"
+    },
+    {
+      "module_path": "edge_convs.1.convs.0",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 128, 128, 16]]",
+      "output_shape": "[160, 128, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.1.convs.1",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 128, 128, 16]]",
+      "output_shape": "[160, 128, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.1.convs.2",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 128, 128, 16]]",
+      "output_shape": "[160, 128, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.1.sc",
+      "module_type": "Conv1d",
+      "input_shape": "[[160, 64, 128]]",
+      "output_shape": "[160, 128, 128]"
+    },
+    {
+      "module_path": "edge_convs.1",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 64, 128], [160, 64, 128]]",
+      "output_shape": "[160, 128, 128]"
+    },
+    {
+      "module_path": "edge_convs.2.convs.0",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 256, 128, 16]]",
+      "output_shape": "[160, 256, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.2.convs.1",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 256, 128, 16]]",
+      "output_shape": "[160, 256, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.2.convs.2",
+      "module_type": "Conv2d",
+      "input_shape": "[[160, 256, 128, 16]]",
+      "output_shape": "[160, 256, 128, 16]"
+    },
+    {
+      "module_path": "edge_convs.2.sc",
+      "module_type": "Conv1d",
+      "input_shape": "[[160, 128, 128]]",
+      "output_shape": "[160, 256, 128]"
+    },
+    {
+      "module_path": "edge_convs.2",
+      "module_type": "EdgeConvBlock",
+      "input_shape": "[[160, 128, 128], [160, 128, 128]]",
+      "output_shape": "[160, 256, 128]"
+    },
+    {
+      "module_path": "fc",
+      "module_type": "Sequential",
+      "input_shape": "[[160, 256]]",
+      "output_shape": "[160, 10]"
+    }
+  ],
+  "rows": 24,
+  "missing": [],
+  "unexpected": []
+}

@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "latest_run_index": 14,
+  "tasks": 6,
+  "top": [
+    {
+      "task_id": "T1_PARTICLE0_SHORTCUT_OR_CORE_ANCHOR",
+      "priority": "P0",
+      "state": "HIGH",
+      "score": 1.0,
+      "question": "Is the all-head system over-dominated by particle0 / leading-core evidence?",
+      "next_action": "Run particle0 removal / keep-only particle0 / top-k removal / same-count random controls.",
+      "features_json": "{\"top_particles\": 50, \"particle0_fraction_top50\": 1.0, \"core_high_pt_fraction_top50\": 1.0}"
+    },
+    {
+      "task_id": "T4_HQQL_TBL_SIGNATURE",
+      "priority": "P0",
+      "state": "HIGH",
+      "score": 0.9625,
+      "question": "Is the current stream dominated by Hqql/Tbl high-confidence events?",
+      "next_action": "Run class-specific all-head gradients: Hqql, Tbl, Tbqq, Wqq, Zqq.",
+      "features_json": "{\"top_particles\": 80, \"hqql_fraction\": 0.875, \"tbl_fraction\": 0.0875, \"hqql_tbl_fraction\": 0.9625}"
+    },
+    {
+      "task_id": "T2_HEAD_RANK_STABILITY",
+      "priority": "P0",
+      "state": "HIGH",
+      "score": 0.9571428571428572,
+      "question": "Do the same heads stay important across snapshots?",
+      "next_action": "Keep tracking; if unstable, split by class/sample size and run heldout stability.",
+      "features_json": "{\"top_heads\": [\"L1_ch112:128\", \"L1_ch16:32\", \"L0_ch40:48\", \"L2_ch224:256\", \"L0_ch48:56\"], \"mean_abs_delta_rank\": 0.21428571428571427}"
+    }
+  ]
+}

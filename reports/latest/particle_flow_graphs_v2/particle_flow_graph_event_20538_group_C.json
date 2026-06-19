@@ -1,0 +1,1001 @@
+{
+  "event_idx": 20538,
+  "group": "C",
+  "nodes": {
+    "particle:25:hadron_neighbor": {
+      "type": "particle",
+      "role": "hadron_neighbor",
+      "pid": "charged_hadron"
+    },
+    "head:L1_ch64:96": {
+      "type": "head"
+    },
+    "class:label_Hqql": {
+      "type": "class"
+    },
+    "head:L0_ch0:32": {
+      "type": "head"
+    },
+    "class:label_Tbl": {
+      "type": "class"
+    },
+    "head:L0_ch32:64": {
+      "type": "head"
+    },
+    "particle:16:hard_hadron": {
+      "type": "particle",
+      "role": "hard_hadron",
+      "pid": "charged_hadron"
+    },
+    "particle:21:hadron_neighbor": {
+      "type": "particle",
+      "role": "hadron_neighbor",
+      "pid": "charged_hadron"
+    },
+    "particle:24:hadron_neighbor": {
+      "type": "particle",
+      "role": "hadron_neighbor",
+      "pid": "charged_hadron"
+    },
+    "particle:13:hard_hadron": {
+      "type": "particle",
+      "role": "hard_hadron",
+      "pid": "neutral_hadron"
+    },
+    "head:L1_ch96:128": {
+      "type": "head"
+    },
+    "particle:0:particle0_best_lepton": {
+      "type": "particle",
+      "role": "particle0_best_lepton",
+      "pid": "electron"
+    },
+    "head:L1_ch0:32": {
+      "type": "head"
+    },
+    "particle:8:hard_hadron": {
+      "type": "particle",
+      "role": "hard_hadron",
+      "pid": "charged_hadron"
+    },
+    "head:L1_ch32:64": {
+      "type": "head"
+    },
+    "particle:12:hard_hadron": {
+      "type": "particle",
+      "role": "hard_hadron",
+      "pid": "neutral_hadron"
+    },
+    "head:L2_ch224:256": {
+      "type": "head"
+    },
+    "head:L2_ch160:192": {
+      "type": "head"
+    },
+    "particle:1:second_lepton": {
+      "type": "particle",
+      "role": "second_lepton",
+      "pid": "electron"
+    },
+    "head:L2_ch32:64": {
+      "type": "head"
+    },
+    "head:L2_ch192:224": {
+      "type": "head"
+    },
+    "head:L2_ch64:96": {
+      "type": "head"
+    },
+    "head:L2_ch128:160": {
+      "type": "head"
+    },
+    "head:L2_ch96:128": {
+      "type": "head"
+    },
+    "particle:2:hardest_hadron": {
+      "type": "particle",
+      "role": "hardest_hadron",
+      "pid": "charged_hadron"
+    },
+    "particle:14:photon_neighbor": {
+      "type": "particle",
+      "role": "photon_neighbor",
+      "pid": "photon"
+    },
+    "head:L2_ch0:32": {
+      "type": "head"
+    },
+    "particle:3:hard_hadron": {
+      "type": "particle",
+      "role": "hard_hadron",
+      "pid": "charged_hadron"
+    },
+    "particle:23:photon_neighbor": {
+      "type": "particle",
+      "role": "photon_neighbor",
+      "pid": "photon"
+    }
+  },
+  "edges": [
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch64:96",
+      "weight": 115.56098937988281
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": -9.030046463012695,
+      "flow_weight": -1043.5211034120584
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L0_ch0:32",
+      "weight": 57.436283111572266
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 12.787042617797852,
+      "flow_weight": 734.4401999555776
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L0_ch32:64",
+      "weight": 53.870941162109375
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -11.716646194458008,
+      "flow_weight": -631.1867577589001
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch64:96",
+      "weight": 50.9356803894043
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": -9.030046463012695,
+      "flow_weight": -459.9515605414854
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L1_ch64:96",
+      "weight": 48.0781135559082
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": -9.030046463012695,
+      "flow_weight": -434.1475992638516
+    },
+    {
+      "source": "particle:24:hadron_neighbor",
+      "target": "head:L0_ch0:32",
+      "weight": 29.141813278198242
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 12.787042617797852,
+      "flow_weight": 372.63760834822824
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L0_ch0:32",
+      "weight": 28.84354591369629
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 12.787042617797852,
+      "flow_weight": 368.8236508468435
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L0_ch32:64",
+      "weight": 31.1002140045166
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -11.716646194458008,
+      "flow_weight": -364.3902040628491
+    },
+    {
+      "source": "particle:13:hard_hadron",
+      "target": "head:L0_ch32:64",
+      "weight": 29.516563415527344
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -11.716646194458008,
+      "flow_weight": -345.8351304160169
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L0_ch0:32",
+      "weight": 57.436283111572266
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -5.422182083129883,
+      "flow_weight": -311.4299852091426
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch64:96",
+      "weight": 115.56098937988281
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Tbl",
+      "weight": -2.5480456352233887,
+      "flow_weight": -294.4546745915068
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L0_ch32:64",
+      "weight": 53.870941162109375
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": -3.133127212524414,
+      "flow_weight": -168.78451171930647
+    },
+    {
+      "source": "particle:24:hadron_neighbor",
+      "target": "head:L0_ch0:32",
+      "weight": 29.141813278198242
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -5.422182083129883,
+      "flow_weight": -158.01221782696302
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L0_ch0:32",
+      "weight": 28.84354591369629
+    },
+    {
+      "source": "head:L0_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -5.422182083129883,
+      "flow_weight": -156.39495786717816
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch96:128",
+      "weight": 44.07597351074219
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Tbl",
+      "weight": 3.21429181098938,
+      "flow_weight": 141.67304071696344
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L1_ch96:128",
+      "weight": 41.80430221557617
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Tbl",
+      "weight": 3.21429181098938,
+      "flow_weight": 134.37122627565168
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch64:96",
+      "weight": 50.9356803894043
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Tbl",
+      "weight": -2.5480456352233887,
+      "flow_weight": -129.78643809335517
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch0:32",
+      "weight": 68.04396057128906
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -1.8170461654663086,
+      "flow_weight": -123.63901763920148
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L1_ch64:96",
+      "weight": 48.0781135559082
+    },
+    {
+      "source": "head:L1_ch64:96",
+      "target": "class:label_Tbl",
+      "weight": -2.5480456352233887,
+      "flow_weight": -122.50522739590633
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L1_ch96:128",
+      "weight": 32.90885543823242
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Tbl",
+      "weight": 3.21429181098938,
+      "flow_weight": 105.7786645441438
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch0:32",
+      "weight": 68.04396057128906
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": -1.5520238876342773,
+      "flow_weight": -105.60585221588553
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L0_ch32:64",
+      "weight": 31.1002140045166
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": -3.133127212524414,
+      "flow_weight": -97.44092681288384
+    },
+    {
+      "source": "particle:13:hard_hadron",
+      "target": "head:L0_ch32:64",
+      "weight": 29.516563415527344
+    },
+    {
+      "source": "head:L0_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": -3.133127212524414,
+      "flow_weight": -92.47914805739128
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch0:32",
+      "weight": 50.375179290771484
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -1.8170461654663086,
+      "flow_weight": -91.53402636497412
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch32:64",
+      "weight": 45.13397216796875
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 1.9866374731063843,
+      "flow_weight": 89.66484041902731
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L1_ch0:32",
+      "weight": 43.7799072265625
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": -1.8170461654663086,
+      "flow_weight": -79.55011255049612
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch32:64",
+      "weight": 45.13397216796875
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -1.7616024017333984,
+      "flow_weight": -79.50811377086211
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch0:32",
+      "weight": 50.375179290771484
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": -1.5520238876342773,
+      "flow_weight": -78.1834816031369
+    },
+    {
+      "source": "particle:21:hadron_neighbor",
+      "target": "head:L1_ch0:32",
+      "weight": 43.7799072265625
+    },
+    {
+      "source": "head:L1_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": -1.5520238876342773,
+      "flow_weight": -67.94746181403752
+    },
+    {
+      "source": "particle:25:hadron_neighbor",
+      "target": "head:L1_ch96:128",
+      "weight": 44.07597351074219
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": 1.5302667617797852,
+      "flow_weight": 67.44799725657504
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L1_ch96:128",
+      "weight": 41.80430221557617
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": 1.5302667617797852,
+      "flow_weight": 63.97173417989325
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch32:64",
+      "weight": 31.539485931396484
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 1.9866374731063843,
+      "flow_weight": 62.65752463382387
+    },
+    {
+      "source": "particle:12:hard_hadron",
+      "target": "head:L1_ch32:64",
+      "weight": 31.426015853881836
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 1.9866374731063843,
+      "flow_weight": 62.43210072575698
+    },
+    {
+      "source": "particle:16:hard_hadron",
+      "target": "head:L1_ch32:64",
+      "weight": 31.539485931396484
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -1.7616024017333984,
+      "flow_weight": -55.56003416618478
+    },
+    {
+      "source": "particle:12:hard_hadron",
+      "target": "head:L1_ch32:64",
+      "weight": 31.426015853881836
+    },
+    {
+      "source": "head:L1_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -1.7616024017333984,
+      "flow_weight": -55.3601450051101
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L1_ch96:128",
+      "weight": 32.90885543823242
+    },
+    {
+      "source": "head:L1_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": 1.5302667617797852,
+      "flow_weight": 50.359327645343
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch224:256",
+      "weight": 5.983933448791504
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Hqql",
+      "weight": 7.473282814025879,
+      "flow_weight": 44.71962700312815
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch160:192",
+      "weight": 5.373254776000977
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Hqql",
+      "weight": -7.43527364730835,
+      "flow_weight": -39.95161963627379
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch224:256",
+      "weight": 5.983933448791504
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Tbl",
+      "weight": 4.338070392608643,
+      "flow_weight": 25.958724525542948
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch160:192",
+      "weight": 2.5439891815185547
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Hqql",
+      "weight": -7.43527364730835,
+      "flow_weight": -18.915255720382447
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch224:256",
+      "weight": 2.0541651248931885
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Hqql",
+      "weight": 7.473282814025879,
+      "flow_weight": 15.351356925035589
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch160:192",
+      "weight": 5.373254776000977
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Tbl",
+      "weight": -2.611060619354248,
+      "flow_weight": -14.029893943373281
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch32:64",
+      "weight": 6.427829742431641
+    },
+    {
+      "source": "head:L2_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 2.1563680171966553,
+      "flow_weight": 13.860766476565004
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch192:224",
+      "weight": 3.5353424549102783
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Hqql",
+      "weight": -3.796786308288574,
+      "flow_weight": -13.42293982791466
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L2_ch192:224",
+      "weight": 3.2895429134368896
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Hqql",
+      "weight": -3.796786308288574,
+      "flow_weight": -12.48969149426489
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch64:96",
+      "weight": 3.2706005573272705
+    },
+    {
+      "source": "head:L2_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": 3.4449644088745117,
+      "flow_weight": 11.267102515637589
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch128:160",
+      "weight": 6.729748249053955
+    },
+    {
+      "source": "head:L2_ch128:160",
+      "target": "class:label_Tbl",
+      "weight": 1.664060115814209,
+      "flow_weight": 11.198705650721195
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L2_ch96:128",
+      "weight": 3.1165690422058105
+    },
+    {
+      "source": "head:L2_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": -3.5053300857543945,
+      "flow_weight": -10.924603227974785
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch96:128",
+      "weight": 2.9794232845306396
+    },
+    {
+      "source": "head:L2_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": -3.5053300857543945,
+      "flow_weight": -10.443862077462427
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch224:256",
+      "weight": 2.0541651248931885
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Tbl",
+      "weight": 4.338070392608643,
+      "flow_weight": 8.911112909828375
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch192:224",
+      "weight": 2.1151485443115234
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Hqql",
+      "weight": -3.796786308288574,
+      "flow_weight": -8.0307670330385
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch224:256",
+      "weight": 1.001448154449463
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Hqql",
+      "weight": 7.473282814025879,
+      "flow_weight": 7.484105281785105
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch64:96",
+      "weight": 3.2706005573272705
+    },
+    {
+      "source": "head:L2_ch64:96",
+      "target": "class:label_Tbl",
+      "weight": 2.1398608684539795,
+      "flow_weight": 6.998630148968402
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch160:192",
+      "weight": 2.5439891815185547
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Tbl",
+      "weight": -2.611060619354248,
+      "flow_weight": -6.642509967926344
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch128:160",
+      "weight": 6.729748249053955
+    },
+    {
+      "source": "head:L2_ch128:160",
+      "target": "class:label_Hqql",
+      "weight": -0.9697380065917969,
+      "flow_weight": -6.526092651902218
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch32:64",
+      "weight": 2.9552602767944336
+    },
+    {
+      "source": "head:L2_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 2.1563680171966553,
+      "flow_weight": 6.372628743371251
+    },
+    {
+      "source": "particle:14:photon_neighbor",
+      "target": "head:L2_ch160:192",
+      "weight": 0.8288689851760864
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Hqql",
+      "weight": -7.43527364730835,
+      "flow_weight": -6.1628677225509705
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch32:64",
+      "weight": 6.427829742431641
+    },
+    {
+      "source": "head:L2_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -0.8459358215332031,
+      "flow_weight": -5.437531433839467
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch192:224",
+      "weight": 3.5353424549102783
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Tbl",
+      "weight": -1.3827393054962158,
+      "flow_weight": -4.888456970793925
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L2_ch192:224",
+      "weight": 3.2895429134368896
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Tbl",
+      "weight": -1.3827393054962158,
+      "flow_weight": -4.548580283525723
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch224:256",
+      "weight": 1.001448154449463
+    },
+    {
+      "source": "head:L2_ch224:256",
+      "target": "class:label_Tbl",
+      "weight": 4.338070392608643,
+      "flow_weight": 4.344352588549782
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L2_ch96:128",
+      "weight": 3.1165690422058105
+    },
+    {
+      "source": "head:L2_ch96:128",
+      "target": "class:label_Tbl",
+      "weight": -1.262559413909912,
+      "flow_weight": -3.9348535833371443
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch96:128",
+      "weight": 2.9794232845306396
+    },
+    {
+      "source": "head:L2_ch96:128",
+      "target": "class:label_Tbl",
+      "weight": -1.262559413909912,
+      "flow_weight": -3.7616989159065497
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch0:32",
+      "weight": 2.781079053878784
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": 1.253157615661621,
+      "flow_weight": 3.4851303961252142
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch0:32",
+      "weight": 2.781079053878784
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 1.2417364120483398,
+      "flow_weight": 3.453367125986233
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch128:160",
+      "weight": 1.8546828031539917
+    },
+    {
+      "source": "head:L2_ch128:160",
+      "target": "class:label_Tbl",
+      "weight": 1.664060115814209,
+      "flow_weight": 3.086303680215053
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch0:32",
+      "weight": 2.363420009613037
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": 1.253157615661621,
+      "flow_weight": 2.961737784053639
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch0:32",
+      "weight": 2.363420009613037
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 1.2417364120483398,
+      "flow_weight": 2.9347446829001456
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch192:224",
+      "weight": 2.1151485443115234
+    },
+    {
+      "source": "head:L2_ch192:224",
+      "target": "class:label_Tbl",
+      "weight": -1.3827393054962158,
+      "flow_weight": -2.924699029182648
+    },
+    {
+      "source": "particle:14:photon_neighbor",
+      "target": "head:L2_ch64:96",
+      "weight": 0.7749121189117432
+    },
+    {
+      "source": "head:L2_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": 3.4449644088745117,
+      "flow_weight": 2.6695446696564886
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch32:64",
+      "weight": 2.9552602767944336
+    },
+    {
+      "source": "head:L2_ch32:64",
+      "target": "class:label_Hqql",
+      "weight": -0.8459358215332031,
+      "flow_weight": -2.4999605300945404
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch0:32",
+      "weight": 1.8924094438552856
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Hqql",
+      "weight": 1.253157615661621,
+      "flow_weight": 2.371487306517224
+    },
+    {
+      "source": "particle:2:hardest_hadron",
+      "target": "head:L2_ch0:32",
+      "weight": 1.8924094438552856
+    },
+    {
+      "source": "head:L2_ch0:32",
+      "target": "class:label_Tbl",
+      "weight": 1.2417364120483398,
+      "flow_weight": 2.3498737129392566
+    },
+    {
+      "source": "particle:8:hard_hadron",
+      "target": "head:L2_ch128:160",
+      "weight": 1.3321856260299683
+    },
+    {
+      "source": "head:L2_ch128:160",
+      "target": "class:label_Tbl",
+      "weight": 1.664060115814209,
+      "flow_weight": 2.2168369671374535
+    },
+    {
+      "source": "particle:14:photon_neighbor",
+      "target": "head:L2_ch160:192",
+      "weight": 0.8288689851760864
+    },
+    {
+      "source": "head:L2_ch160:192",
+      "target": "class:label_Tbl",
+      "weight": -2.611060619354248,
+      "flow_weight": -2.1642271657973993
+    },
+    {
+      "source": "particle:3:hard_hadron",
+      "target": "head:L2_ch32:64",
+      "weight": 0.8701087832450867
+    },
+    {
+      "source": "head:L2_ch32:64",
+      "target": "class:label_Tbl",
+      "weight": 2.1563680171966553,
+      "flow_weight": 1.8762747516716018
+    },
+    {
+      "source": "particle:23:photon_neighbor",
+      "target": "head:L2_ch64:96",
+      "weight": 0.5334261655807495
+    },
+    {
+      "source": "head:L2_ch64:96",
+      "target": "class:label_Hqql",
+      "weight": 3.4449644088745117,
+      "flow_weight": 1.8376341551880842
+    },
+    {
+      "source": "particle:1:second_lepton",
+      "target": "head:L2_ch128:160",
+      "weight": 1.8546828031539917
+    },
+    {
+      "source": "head:L2_ch128:160",
+      "target": "class:label_Hqql",
+      "weight": -0.9697380065917969,
+      "flow_weight": -1.798556404390638
+    },
+    {
+      "source": "particle:0:particle0_best_lepton",
+      "target": "head:L2_ch96:128",
+      "weight": 0.5032035112380981
+    },
+    {
+      "source": "head:L2_ch96:128",
+      "target": "class:label_Hqql",
+      "weight": -3.5053300857543945,
+      "flow_weight": -1.763894407200155
+    },
+    {
+      "source": "particle:14:photon_neighbor",
+      "target": "head:L2_ch64:96",
+      "weight": 0.7749121189117432
+    },
+    {
+      "source": "head:L2_ch64:96",
+      "target": "class:label_Tbl",
+      "weight": 2.1398608684539795,
+      "flow_weight": 1.6582041197499962
+    }
+  ]
+}

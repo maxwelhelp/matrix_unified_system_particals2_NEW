@@ -1,0 +1,833 @@
+[2026-06-17 18:27:39,988] INFO: args:
+ - ('run_mode', ['test'])
+ - ('regression_mode', False)
+ - ('data_config', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('data_config_val', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('data_config_test', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('extra_selection_train', None)
+ - ('extra_selection_val', None)
+ - ('extra_selection_test', None)
+ - ('data_train', [])
+ - ('data_val', [])
+ - ('data_test', ['/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/HToBB_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/HToCC_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/HToGG_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/HToWW2Q1L_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/HToWW4Q_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/TTBar_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/TTBarLep_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/WToQQ_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root', '/home/maxwelhelp/Рабочий', 'стол/jetclass_tiny_balanced/ZToQQ_000.root'])
+ - ('data_fraction', 1)
+ - ('data_fraction_val', None)
+ - ('file_fraction', 1)
+ - ('fetch_by_files', False)
+ - ('fetch_step', 1.0)
+ - ('fetch_step_val', 1.0)
+ - ('data_split_num', 1)
+ - ('data_split_val', 1)
+ - ('in_memory', False)
+ - ('in_memory_val', False)
+ - ('train_val_split', 0.8)
+ - ('no_remake_weights', False)
+ - ('demo', False)
+ - ('lr_finder', None)
+ - ('tensorboard', None)
+ - ('tensorboard_custom_fn', None)
+ - ('custom_functions', None)
+ - ('network_config', 'external/particle_transformer/networks/example_ParticleTransformer.py')
+ - ('network_option', [])
+ - ('model_prefix', 'external/particle_transformer/models/ParT_kinpid.pt')
+ - ('load_model_weights', None)
+ - ('exclude_model_weights', None)
+ - ('freeze_model_weights', None)
+ - ('num_epochs', 20)
+ - ('steps_per_epoch', None)
+ - ('steps_per_epoch_val', None)
+ - ('samples_per_epoch', None)
+ - ('samples_per_epoch_val', None)
+ - ('optimizer', 'ranger')
+ - ('optimizer_option', [])
+ - ('lr_scheduler', 'flat+decay')
+ - ('warmup_steps', 0.25)
+ - ('load_epoch', None)
+ - ('start_lr', 0.005)
+ - ('batch_size', 64)
+ - ('batch_size_val', 64)
+ - ('batch_size_test', 64)
+ - ('use_amp', False)
+ - ('amp_dtype', 'bf16')
+ - ('compile', False)
+ - ('compiler_option', [])
+ - ('gpus', '0')
+ - ('predict_gpus', '0')
+ - ('num_workers', 1)
+ - ('prefetch_factor', None)
+ - ('predict', True)
+ - ('predict_output', 'reports/latest/part_official_weaver_predict_v1.root')
+ - ('export_onnx', None)
+ - ('onnx_opset', 15)
+ - ('io_test', False)
+ - ('copy_inputs', False)
+ - ('log', 'runs/part_official_weaver_predict_v1.log')
+ - ('print', False)
+ - ('profile', False)
+ - ('backend', None)
+ - ('cross_validation', None)
+ - ('auto_clean', False)
+ - ('local_rank', None)
+[2026-06-17 18:27:39,988] WARNING: The `--predict` flag is set. Overriding the `--run-mode` to `test`.
+[2026-06-17 18:27:40,017] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:27:40,017] INFO: [0;37mselection: None[0m
+[2026-06-17 18:27:40,017] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:27:40,017] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:27:40,017] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:27:40,017] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:27:40,018] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:27:40,018] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:27:40,018] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:27:40,018] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:27:40,018] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:27:40,029] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:27:40,029] INFO: [0;37mselection: None[0m
+[2026-06-17 18:27:40,029] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:27:40,029] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:27:40,029] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:27:40,030] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:27:40,030] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:27:40,030] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:27:40,030] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:27:40,030] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:27:40,030] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:27:40,032] INFO: Network options: {}
+[2026-06-17 18:27:40,032] INFO: Model config: {'input_dim': 13, 'num_classes': 10, 'pair_input_dim': 4, 'use_pre_activation_pair': False, 'embed_dims': [128, 512, 128], 'pair_embed_dims': [64, 64, 64], 'num_heads': 8, 'num_layers': 8, 'num_cls_layers': 2, 'block_params': None, 'cls_block_params': {'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0}, 'fc_params': [], 'activation': 'gelu', 'trim': True, 'for_inference': False}
+[2026-06-17 18:27:40,033] INFO: ParticleTransformer init-ed: {'self': ParticleTransformer(), 'input_dim': 13, 'num_classes': 10, 'pair_input_type': 'pp', 'pair_input_dim': 4, 'pair_extra_dim': 0, 'remove_self_pair': False, 'use_pre_activation_pair': False, 'use_conv_embed': False, 'embed_dims': [128, 512, 128], 'pair_embed_dims': [64, 64, 64], 'num_heads': 8, 'num_layers': 8, 'block_params': None, 'block_ids_with_attn_mask': None, 'include_global_token': False, 'num_cls_layers': 2, 'cls_block_params': {'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0}, 'fc_params': [], 'activation': 'gelu', 'version': 1, 'weight_init': 'moco', 'fix_init': True, 'trim': True, 'for_inference': False, 'for_segmentation': False, 'use_amp': False, 'compile_model': False, 'kwargs': {}, '__class__': <class 'weaver.nn.model.ParticleTransformer.ParticleTransformer'>}
+[2026-06-17 18:27:40,033] INFO: cfg_block: {'embed_dim': 128, 'num_heads': 8, 'ffn_ratio': 4, 'dropout': 0.1, 'attn_dropout': 0.1, 'activation_dropout': 0.1, 'activation': 'gelu', 'use_rmsnorm': False, 'use_bias': True, 'use_qk_norm': False, 'headwise_attn_output_gate': False, 'elementwise_attn_output_gate': False, 'layer_scale_init_values': None, 'drop_path_rate': 0.0, 'scale_attn_mask': False, 'scale_fc': True, 'scale_attn': True, 'scale_heads': True, 'scale_resids': True}
+[2026-06-17 18:27:40,033] INFO: cfg_cls_block: {'embed_dim': 128, 'num_heads': 8, 'ffn_ratio': 4, 'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0, 'activation': 'gelu', 'use_rmsnorm': False, 'use_bias': True, 'use_qk_norm': False, 'headwise_attn_output_gate': False, 'elementwise_attn_output_gate': False, 'layer_scale_init_values': None, 'drop_path_rate': 0.0, 'scale_attn_mask': False, 'scale_fc': True, 'scale_attn': True, 'scale_heads': True, 'scale_resids': True}
+[2026-06-17 18:27:40,033] INFO: block w/ attn_mask: [True, True, True, True, True, True, True, True]
+[2026-06-17 18:27:42,237] INFO: [0;37mWarning: module Identity is treated as a zero-op.[0m
+[2026-06-17 18:27:42,238] INFO: [0;37mWarning: module Embed is treated as a zero-op.[0m
+[2026-06-17 18:27:42,238] INFO: [0;37mWarning: module PairEmbed is treated as a zero-op.[0m
+[2026-06-17 18:27:42,238] INFO: [0;37mWarning: module Attention is treated as a zero-op.[0m
+[2026-06-17 18:27:42,238] INFO: [0;37mWarning: module Dropout is treated as a zero-op.[0m
+[2026-06-17 18:27:42,238] INFO: [0;37mWarning: module Block is treated as a zero-op.[0m
+[2026-06-17 18:27:42,240] INFO: [0;37mWarning: module SequenceTrimmer is treated as a zero-op.[0m
+[2026-06-17 18:27:42,240] INFO: [0;37mWarning: module ParticleTransformer is treated as a zero-op.[0m
+[2026-06-17 18:27:42,240] INFO: [0;37mWarning: module ParticleTransformerWrapper is treated as a zero-op.[0m
+[2026-06-17 18:27:42,704] INFO: [0;37mParticleTransformerWrapper(
+  |2.141 M, 99.931% Params, 251.475 MMac, 92.587% MACs|
+  (mod): ParticleTransformer(
+    |2.141 M, 99.931% Params, 251.475 MMac, 92.587% MACs|
+    (embed): Embed(
+      |0.135 M, 6.292% Params, 17.274 MMac, 6.360% MACs|
+      (input_bn): BatchNorm1d(13, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.001% Params, 3.328 KMac, 0.001% MACs|)
+      (conv_embed): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      (embed): Sequential(
+        |0.135 M, 6.291% Params, 17.27 MMac, 6.359% MACs|
+        (0): LayerNorm((13,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.001% Params, 1.664 KMac, 0.001% MACs|)
+        (1): Linear(in_features=13, out_features=128, bias=True, |0.002 M, 0.084% Params, 229.376 KMac, 0.084% MACs|)
+        (2): GELU(approximate='none', |0.0 M, 0.000% Params, 16.384 KMac, 0.006% MACs|)
+        (3): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (4): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 8.454 MMac, 3.113% MACs|)
+        (5): GELU(approximate='none', |0.0 M, 0.000% Params, 65.536 KMac, 0.024% MACs|)
+        (6): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 65.536 KMac, 0.024% MACs|)
+        (7): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 8.405 MMac, 3.095% MACs|)
+        (8): GELU(approximate='none', |0.0 M, 0.000% Params, 16.384 KMac, 0.006% MACs|)
+      )
+    )
+    (pair_embed): PairEmbed(
+      |0.01 M, 0.446% Params, 80.645 MMac, 29.691% MACs|
+      (embed): Sequential(
+        |0.01 M, 0.446% Params, 80.645 MMac, 29.691% MACs|
+        (0): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.000% Params, 66.048 KMac, 0.024% MACs|)
+        (1): Conv1d(4, 64, kernel_size=(1,), stride=(1,), |0.0 M, 0.015% Params, 2.642 MMac, 0.973% MACs|)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (3): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (4): Conv1d(64, 64, kernel_size=(1,), stride=(1,), |0.004 M, 0.194% Params, 34.345 MMac, 12.645% MACs|)
+        (5): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (6): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (7): Conv1d(64, 64, kernel_size=(1,), stride=(1,), |0.004 M, 0.194% Params, 34.345 MMac, 12.645% MACs|)
+        (8): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (9): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (10): Conv1d(64, 8, kernel_size=(1,), stride=(1,), |0.001 M, 0.024% Params, 4.293 MMac, 1.581% MACs|)
+        (11): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.001% Params, 132.096 KMac, 0.049% MACs|)
+        (12): GELU(approximate='none', |0.0 M, 0.000% Params, 66.048 KMac, 0.024% MACs|)
+      )
+    )
+    (blocks): ModuleList(
+      (0-7): 8 x Block(
+        |0.2 M, 9.312% Params, 19.153 MMac, 7.052% MACs|
+        (pre_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (attn): Attention(
+          |0.066 M, 3.082% Params, 2.114 MMac, 0.778% MACs|
+          (in_proj): Linear(in_features=128, out_features=384, bias=True, |0.05 M, 2.312% Params, 0.0 Mac, 0.000% MACs|)
+          (out_proj): Linear(in_features=128, out_features=128, bias=True, |0.017 M, 0.771% Params, 2.114 MMac, 0.778% MACs|)
+          (q_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+          (k_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        )
+        (post_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (dropout): Dropout(p=0.1, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (ls1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (pre_fc_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (fc1): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 8.454 MMac, 3.113% MACs|)
+        (act): GELU(approximate='none', |0.0 M, 0.000% Params, 65.536 KMac, 0.024% MACs|)
+        (act_dropout): Dropout(p=0.1, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (post_fc_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 65.536 KMac, 0.024% MACs|)
+        (fc2): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 8.405 MMac, 3.095% MACs|)
+        (ls2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      )
+    )
+    (cls_blocks): ModuleList(
+      (0-1): 2 x Block(
+        |0.2 M, 9.312% Params, 166.016 KMac, 0.061% MACs|
+        (pre_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.512 KMac, 0.006% MACs|)
+        (attn): Attention(
+          |0.066 M, 3.082% Params, 16.512 KMac, 0.006% MACs|
+          (in_proj): Linear(in_features=128, out_features=384, bias=True, |0.05 M, 2.312% Params, 0.0 Mac, 0.000% MACs|)
+          (out_proj): Linear(in_features=128, out_features=128, bias=True, |0.017 M, 0.771% Params, 16.512 KMac, 0.006% MACs|)
+          (q_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+          (k_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        )
+        (post_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+        (dropout): Dropout(p=0, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (ls1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (pre_fc_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+        (fc1): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 66.048 KMac, 0.024% MACs|)
+        (act): GELU(approximate='none', |0.0 M, 0.000% Params, 512.0 Mac, 0.000% MACs|)
+        (act_dropout): Dropout(p=0, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (post_fc_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 512.0 Mac, 0.000% MACs|)
+        (fc2): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 65.664 KMac, 0.024% MACs|)
+        (ls2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      )
+    )
+    (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+    (fc): Sequential(
+      |0.001 M, 0.060% Params, 1.29 KMac, 0.000% MACs|
+      (0): Linear(in_features=128, out_features=10, bias=True, |0.001 M, 0.060% Params, 1.29 KMac, 0.000% MACs|)
+    )
+    (trimmer): SequenceTrimmer(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+  )
+)[0m
+[2026-06-17 18:27:42,708] INFO: Computational complexity:       271.61 MMac
+[2026-06-17 18:27:42,709] INFO: Number of parameters:           2.14 M  
+[2026-06-17 18:27:42,855] INFO: Total FLOPs:                    669.39 M
+[2026-06-17 18:27:42,857] INFO: Using loss function CrossEntropyLoss() with options {}
+[2026-06-17 18:27:42,857] INFO: Running in classification mode
+[2026-06-17 18:27:42,945] INFO: Loading model external/particle_transformer/models/ParT_kinpid.pt for eval
+[2026-06-17 18:27:42,964] INFO: Running on test file group  with 0 files:
+...
+[2026-06-17 18:27:42,974] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:27:42,974] INFO: [0;37mselection: None[0m
+[2026-06-17 18:27:42,974] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:27:42,974] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:27:42,974] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:27:42,975] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:27:42,975] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:27:42,975] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:27:42,975] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:27:42,975] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:27:42,975] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:27:42,985] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:27:42,985] INFO: [0;37mselection: None[0m
+[2026-06-17 18:27:42,985] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:27:42,985] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:27:42,985] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:27:42,985] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:27:42,986] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:27:42,986] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:27:42,986] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:27:42,986] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:27:42,986] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:27:42,989] INFO: === Restarting DataIter test_, seed=None ===
+[2026-06-17 18:27:42,989] INFO: Restarted DataIter test_, load_range=(0, 1), file_list:
+{
+  "": []
+}
+[2026-06-17 18:54:03,485] INFO: args:
+ - ('run_mode', ['test'])
+ - ('regression_mode', False)
+ - ('data_config', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('data_config_val', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('data_config_test', 'external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
+ - ('extra_selection_train', None)
+ - ('extra_selection_val', None)
+ - ('extra_selection_test', None)
+ - ('data_train', [])
+ - ('data_val', [])
+ - ('data_test', ['/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToBB_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToCC_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToGG_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW2Q1L_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW4Q_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBar_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBarLep_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/WToQQ_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root', '/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZToQQ_000.root'])
+ - ('data_fraction', 1)
+ - ('data_fraction_val', None)
+ - ('file_fraction', 1)
+ - ('fetch_by_files', False)
+ - ('fetch_step', 1.0)
+ - ('fetch_step_val', 1.0)
+ - ('data_split_num', 1)
+ - ('data_split_val', 1)
+ - ('in_memory', False)
+ - ('in_memory_val', False)
+ - ('train_val_split', 0.8)
+ - ('no_remake_weights', False)
+ - ('demo', False)
+ - ('lr_finder', None)
+ - ('tensorboard', None)
+ - ('tensorboard_custom_fn', None)
+ - ('custom_functions', None)
+ - ('network_config', 'external/particle_transformer/networks/example_ParticleTransformer.py')
+ - ('network_option', [])
+ - ('model_prefix', 'external/particle_transformer/models/ParT_kinpid.pt')
+ - ('load_model_weights', None)
+ - ('exclude_model_weights', None)
+ - ('freeze_model_weights', None)
+ - ('num_epochs', 20)
+ - ('steps_per_epoch', None)
+ - ('steps_per_epoch_val', None)
+ - ('samples_per_epoch', None)
+ - ('samples_per_epoch_val', None)
+ - ('optimizer', 'ranger')
+ - ('optimizer_option', [])
+ - ('lr_scheduler', 'flat+decay')
+ - ('warmup_steps', 0.25)
+ - ('load_epoch', None)
+ - ('start_lr', 0.005)
+ - ('batch_size', 64)
+ - ('batch_size_val', 64)
+ - ('batch_size_test', 64)
+ - ('use_amp', False)
+ - ('amp_dtype', 'bf16')
+ - ('compile', False)
+ - ('compiler_option', [])
+ - ('gpus', '0')
+ - ('predict_gpus', '0')
+ - ('num_workers', 1)
+ - ('prefetch_factor', None)
+ - ('predict', True)
+ - ('predict_output', 'reports/latest/part_official_weaver_predict_v1.root')
+ - ('export_onnx', None)
+ - ('onnx_opset', 15)
+ - ('io_test', False)
+ - ('copy_inputs', False)
+ - ('log', 'runs/part_official_weaver_predict_v1.log')
+ - ('print', False)
+ - ('profile', False)
+ - ('backend', None)
+ - ('cross_validation', None)
+ - ('auto_clean', False)
+ - ('local_rank', None)
+[2026-06-17 18:54:03,486] WARNING: The `--predict` flag is set. Overriding the `--run-mode` to `test`.
+[2026-06-17 18:54:03,514] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:54:03,514] INFO: [0;37mselection: None[0m
+[2026-06-17 18:54:03,514] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:54:03,514] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:54:03,514] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:54:03,514] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:54:03,514] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:54:03,514] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:54:03,515] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:54:03,515] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:54:03,515] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:54:03,525] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:54:03,525] INFO: [0;37mselection: None[0m
+[2026-06-17 18:54:03,525] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:54:03,525] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:54:03,526] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:54:03,526] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:54:03,526] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:54:03,526] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:54:03,526] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:54:03,526] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:54:03,526] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:54:03,528] INFO: Network options: {}
+[2026-06-17 18:54:03,528] INFO: Model config: {'input_dim': 13, 'num_classes': 10, 'pair_input_dim': 4, 'use_pre_activation_pair': False, 'embed_dims': [128, 512, 128], 'pair_embed_dims': [64, 64, 64], 'num_heads': 8, 'num_layers': 8, 'num_cls_layers': 2, 'block_params': None, 'cls_block_params': {'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0}, 'fc_params': [], 'activation': 'gelu', 'trim': True, 'for_inference': False}
+[2026-06-17 18:54:03,528] INFO: ParticleTransformer init-ed: {'self': ParticleTransformer(), 'input_dim': 13, 'num_classes': 10, 'pair_input_type': 'pp', 'pair_input_dim': 4, 'pair_extra_dim': 0, 'remove_self_pair': False, 'use_pre_activation_pair': False, 'use_conv_embed': False, 'embed_dims': [128, 512, 128], 'pair_embed_dims': [64, 64, 64], 'num_heads': 8, 'num_layers': 8, 'block_params': None, 'block_ids_with_attn_mask': None, 'include_global_token': False, 'num_cls_layers': 2, 'cls_block_params': {'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0}, 'fc_params': [], 'activation': 'gelu', 'version': 1, 'weight_init': 'moco', 'fix_init': True, 'trim': True, 'for_inference': False, 'for_segmentation': False, 'use_amp': False, 'compile_model': False, 'kwargs': {}, '__class__': <class 'weaver.nn.model.ParticleTransformer.ParticleTransformer'>}
+[2026-06-17 18:54:03,529] INFO: cfg_block: {'embed_dim': 128, 'num_heads': 8, 'ffn_ratio': 4, 'dropout': 0.1, 'attn_dropout': 0.1, 'activation_dropout': 0.1, 'activation': 'gelu', 'use_rmsnorm': False, 'use_bias': True, 'use_qk_norm': False, 'headwise_attn_output_gate': False, 'elementwise_attn_output_gate': False, 'layer_scale_init_values': None, 'drop_path_rate': 0.0, 'scale_attn_mask': False, 'scale_fc': True, 'scale_attn': True, 'scale_heads': True, 'scale_resids': True}
+[2026-06-17 18:54:03,529] INFO: cfg_cls_block: {'embed_dim': 128, 'num_heads': 8, 'ffn_ratio': 4, 'dropout': 0, 'attn_dropout': 0, 'activation_dropout': 0, 'activation': 'gelu', 'use_rmsnorm': False, 'use_bias': True, 'use_qk_norm': False, 'headwise_attn_output_gate': False, 'elementwise_attn_output_gate': False, 'layer_scale_init_values': None, 'drop_path_rate': 0.0, 'scale_attn_mask': False, 'scale_fc': True, 'scale_attn': True, 'scale_heads': True, 'scale_resids': True}
+[2026-06-17 18:54:03,529] INFO: block w/ attn_mask: [True, True, True, True, True, True, True, True]
+[2026-06-17 18:54:05,878] INFO: [0;37mWarning: module Identity is treated as a zero-op.[0m
+[2026-06-17 18:54:05,879] INFO: [0;37mWarning: module Embed is treated as a zero-op.[0m
+[2026-06-17 18:54:05,879] INFO: [0;37mWarning: module PairEmbed is treated as a zero-op.[0m
+[2026-06-17 18:54:05,879] INFO: [0;37mWarning: module Attention is treated as a zero-op.[0m
+[2026-06-17 18:54:05,879] INFO: [0;37mWarning: module Dropout is treated as a zero-op.[0m
+[2026-06-17 18:54:05,880] INFO: [0;37mWarning: module Block is treated as a zero-op.[0m
+[2026-06-17 18:54:05,882] INFO: [0;37mWarning: module SequenceTrimmer is treated as a zero-op.[0m
+[2026-06-17 18:54:05,882] INFO: [0;37mWarning: module ParticleTransformer is treated as a zero-op.[0m
+[2026-06-17 18:54:05,882] INFO: [0;37mWarning: module ParticleTransformerWrapper is treated as a zero-op.[0m
+[2026-06-17 18:54:06,370] INFO: [0;37mParticleTransformerWrapper(
+  |2.141 M, 99.931% Params, 251.475 MMac, 92.587% MACs|
+  (mod): ParticleTransformer(
+    |2.141 M, 99.931% Params, 251.475 MMac, 92.587% MACs|
+    (embed): Embed(
+      |0.135 M, 6.292% Params, 17.274 MMac, 6.360% MACs|
+      (input_bn): BatchNorm1d(13, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.001% Params, 3.328 KMac, 0.001% MACs|)
+      (conv_embed): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      (embed): Sequential(
+        |0.135 M, 6.291% Params, 17.27 MMac, 6.359% MACs|
+        (0): LayerNorm((13,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.001% Params, 1.664 KMac, 0.001% MACs|)
+        (1): Linear(in_features=13, out_features=128, bias=True, |0.002 M, 0.084% Params, 229.376 KMac, 0.084% MACs|)
+        (2): GELU(approximate='none', |0.0 M, 0.000% Params, 16.384 KMac, 0.006% MACs|)
+        (3): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (4): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 8.454 MMac, 3.113% MACs|)
+        (5): GELU(approximate='none', |0.0 M, 0.000% Params, 65.536 KMac, 0.024% MACs|)
+        (6): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 65.536 KMac, 0.024% MACs|)
+        (7): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 8.405 MMac, 3.095% MACs|)
+        (8): GELU(approximate='none', |0.0 M, 0.000% Params, 16.384 KMac, 0.006% MACs|)
+      )
+    )
+    (pair_embed): PairEmbed(
+      |0.01 M, 0.446% Params, 80.645 MMac, 29.691% MACs|
+      (embed): Sequential(
+        |0.01 M, 0.446% Params, 80.645 MMac, 29.691% MACs|
+        (0): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.000% Params, 66.048 KMac, 0.024% MACs|)
+        (1): Conv1d(4, 64, kernel_size=(1,), stride=(1,), |0.0 M, 0.015% Params, 2.642 MMac, 0.973% MACs|)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (3): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (4): Conv1d(64, 64, kernel_size=(1,), stride=(1,), |0.004 M, 0.194% Params, 34.345 MMac, 12.645% MACs|)
+        (5): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (6): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (7): Conv1d(64, 64, kernel_size=(1,), stride=(1,), |0.004 M, 0.194% Params, 34.345 MMac, 12.645% MACs|)
+        (8): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.006% Params, 1.057 MMac, 0.389% MACs|)
+        (9): GELU(approximate='none', |0.0 M, 0.000% Params, 528.384 KMac, 0.195% MACs|)
+        (10): Conv1d(64, 8, kernel_size=(1,), stride=(1,), |0.001 M, 0.024% Params, 4.293 MMac, 1.581% MACs|)
+        (11): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True, |0.0 M, 0.001% Params, 132.096 KMac, 0.049% MACs|)
+        (12): GELU(approximate='none', |0.0 M, 0.000% Params, 66.048 KMac, 0.024% MACs|)
+      )
+    )
+    (blocks): ModuleList(
+      (0-7): 8 x Block(
+        |0.2 M, 9.312% Params, 19.153 MMac, 7.052% MACs|
+        (pre_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (attn): Attention(
+          |0.066 M, 3.082% Params, 2.114 MMac, 0.778% MACs|
+          (in_proj): Linear(in_features=128, out_features=384, bias=True, |0.05 M, 2.312% Params, 0.0 Mac, 0.000% MACs|)
+          (out_proj): Linear(in_features=128, out_features=128, bias=True, |0.017 M, 0.771% Params, 2.114 MMac, 0.778% MACs|)
+          (q_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+          (k_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        )
+        (post_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (dropout): Dropout(p=0.1, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (ls1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (pre_fc_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.384 KMac, 0.006% MACs|)
+        (fc1): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 8.454 MMac, 3.113% MACs|)
+        (act): GELU(approximate='none', |0.0 M, 0.000% Params, 65.536 KMac, 0.024% MACs|)
+        (act_dropout): Dropout(p=0.1, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (post_fc_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 65.536 KMac, 0.024% MACs|)
+        (fc2): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 8.405 MMac, 3.095% MACs|)
+        (ls2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      )
+    )
+    (cls_blocks): ModuleList(
+      (0-1): 2 x Block(
+        |0.2 M, 9.312% Params, 166.016 KMac, 0.061% MACs|
+        (pre_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 16.512 KMac, 0.006% MACs|)
+        (attn): Attention(
+          |0.066 M, 3.082% Params, 16.512 KMac, 0.006% MACs|
+          (in_proj): Linear(in_features=128, out_features=384, bias=True, |0.05 M, 2.312% Params, 0.0 Mac, 0.000% MACs|)
+          (out_proj): Linear(in_features=128, out_features=128, bias=True, |0.017 M, 0.771% Params, 16.512 KMac, 0.006% MACs|)
+          (q_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+          (k_norm): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        )
+        (post_attn_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+        (dropout): Dropout(p=0, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (ls1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path1): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (pre_fc_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+        (fc1): Linear(in_features=128, out_features=512, bias=True, |0.066 M, 3.082% Params, 66.048 KMac, 0.024% MACs|)
+        (act): GELU(approximate='none', |0.0 M, 0.000% Params, 512.0 Mac, 0.000% MACs|)
+        (act_dropout): Dropout(p=0, inplace=False, |0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (post_fc_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True, |0.001 M, 0.048% Params, 512.0 Mac, 0.000% MACs|)
+        (fc2): Linear(in_features=512, out_features=128, bias=True, |0.066 M, 3.064% Params, 65.664 KMac, 0.024% MACs|)
+        (ls2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+        (drop_path2): Identity(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+      )
+    )
+    (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True, |0.0 M, 0.012% Params, 128.0 Mac, 0.000% MACs|)
+    (fc): Sequential(
+      |0.001 M, 0.060% Params, 1.29 KMac, 0.000% MACs|
+      (0): Linear(in_features=128, out_features=10, bias=True, |0.001 M, 0.060% Params, 1.29 KMac, 0.000% MACs|)
+    )
+    (trimmer): SequenceTrimmer(|0.0 M, 0.000% Params, 0.0 Mac, 0.000% MACs|)
+  )
+)[0m
+[2026-06-17 18:54:06,375] INFO: Computational complexity:       271.61 MMac
+[2026-06-17 18:54:06,375] INFO: Number of parameters:           2.14 M  
+[2026-06-17 18:54:06,537] INFO: Total FLOPs:                    669.39 M
+[2026-06-17 18:54:06,539] INFO: Using loss function CrossEntropyLoss() with options {}
+[2026-06-17 18:54:06,539] INFO: Running in classification mode
+[2026-06-17 18:54:06,635] INFO: Loading model external/particle_transformer/models/ParT_kinpid.pt for eval
+[2026-06-17 18:54:06,657] INFO: Running on test file group  with 10 files:
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToBB_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToCC_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToGG_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW2Q1L_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW4Q_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBarLep_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBar_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/WToQQ_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root
+.../home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZToQQ_000.root
+[2026-06-17 18:54:06,668] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:54:06,668] INFO: [0;37mselection: None[0m
+[2026-06-17 18:54:06,668] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:54:06,668] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:54:06,668] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:54:06,669] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:54:06,669] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:54:06,669] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:54:06,669] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:54:06,669] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:54:06,669] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:54:06,681] INFO: [0;37mpreprocess config: {'method': 'manual', 'data_fraction': 0.5, 'params': None}[0m
+[2026-06-17 18:54:06,681] INFO: [0;37mselection: None[0m
+[2026-06-17 18:54:06,681] INFO: [0;37mtest_time_selection: None[0m
+[2026-06-17 18:54:06,681] INFO: [0;37mvar_funcs:
+ - ('part_mask', 'ak.ones_like(part_energy)')
+ - ('part_pt', 'np.hypot(part_px, part_py)')
+ - ('part_pt_log', 'np.log(part_pt)')
+ - ('part_e_log', 'np.log(part_energy)')
+ - ('part_logptrel', 'np.log(part_pt/jet_pt)')
+ - ('part_logerel', 'np.log(part_energy/jet_energy)')
+ - ('part_deltaR', 'np.hypot(part_deta, part_dphi)')
+ - ('_label_', 'np.argmax(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')
+ - ('_labelcheck_', 'np.sum(np.stack([ak.to_numpy(label_QCD),ak.to_numpy(label_Hbb),ak.to_numpy(label_Hcc),ak.to_numpy(label_Hgg),ak.to_numpy(label_H4q),ak.to_numpy(label_Hqql),ak.to_numpy(label_Zqq),ak.to_numpy(label_Wqq),ak.to_numpy(label_Tbqq),ak.to_numpy(label_Tbl)], axis=1), axis=1)')[0m
+[2026-06-17 18:54:06,681] INFO: [0;37minput_names: ('pf_points', 'pf_features', 'pf_vectors', 'pf_mask')[0m
+[2026-06-17 18:54:06,682] INFO: [0;37minput_dicts:
+ - ('pf_points', ['part_deta', 'part_dphi'])
+ - ('pf_features', ['part_pt_log', 'part_e_log', 'part_logptrel', 'part_logerel', 'part_deltaR', 'part_charge', 'part_isChargedHadron', 'part_isNeutralHadron', 'part_isPhoton', 'part_isElectron', 'part_isMuon', 'part_deta', 'part_dphi'])
+ - ('pf_vectors', ['part_px', 'part_py', 'part_pz', 'part_energy'])
+ - ('pf_mask', ['part_mask'])[0m
+[2026-06-17 18:54:06,682] INFO: [0;37minput_shapes:
+ - ('pf_points', (-1, 2, 128))
+ - ('pf_features', (-1, 13, 128))
+ - ('pf_vectors', (-1, 4, 128))
+ - ('pf_mask', (-1, 1, 128))[0m
+[2026-06-17 18:54:06,682] INFO: [0;37mpreprocess_params:
+ - ('part_deta', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_dphi', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pt_log', {'length': 128, 'pad_mode': 'wrap', 'center': 1.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_e_log', {'length': 128, 'pad_mode': 'wrap', 'center': 2.0, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logptrel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_logerel', {'length': 128, 'pad_mode': 'wrap', 'center': -4.7, 'scale': 0.7, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_deltaR', {'length': 128, 'pad_mode': 'wrap', 'center': 0.2, 'scale': 4.0, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_charge', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isChargedHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isNeutralHadron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isPhoton', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isElectron', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_isMuon', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_px', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_py', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_pz', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_energy', {'length': 128, 'pad_mode': 'wrap', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})
+ - ('part_mask', {'length': 128, 'pad_mode': 'constant', 'center': None, 'scale': 1, 'min': -5, 'max': 5, 'pad_value': 0})[0m
+[2026-06-17 18:54:06,682] INFO: [0;37mlabel_names: ('_label_',)[0m
+[2026-06-17 18:54:06,682] INFO: [0;37mobserver_names: ('jet_pt', 'jet_eta', 'jet_phi', 'jet_energy', 'jet_nparticles', 'jet_sdmass', 'jet_tau1', 'jet_tau2', 'jet_tau3', 'jet_tau4')[0m
+[2026-06-17 18:54:06,682] INFO: [0;37mmonitor_variables: ()[0m
+[2026-06-17 18:54:06,726] INFO: === Restarting DataIter test__worker0, seed=1173341207 ===
+[2026-06-17 18:54:06,727] INFO: Restarted DataIter test__worker0, load_range=(0, 1), file_list:
+{
+  "": [
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/HToBB_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/HToCC_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/HToGG_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/HToWW2Q1L_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/HToWW4Q_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/TTBarLep_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/TTBar_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/WToQQ_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/ZJetsToNuNu_000.root",
+    "/home/maxwelhelp/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/jetclass_tiny_balanced/ZToQQ_000.root"
+  ]
+}
+[2026-06-17 19:03:36,921] INFO: Processed 1000000 entries in total (avg. speed 1753.7 entries/s)
+[2026-06-17 19:03:36,921] INFO: Eval AvgLoss: 0.00000, AvgAcc: 0.10150
+[2026-06-17 19:03:36,921] INFO: Evaluation class distribution: 
+    [(np.int64(0), 100000), (np.int64(1), 100000), (np.int64(2), 100000), (np.int64(3), 100000), (np.int64(4), 100000), (np.int64(5), 100000), (np.int64(6), 100000), (np.int64(7), 100000), (np.int64(8), 100000), (np.int64(9), 100000)]
+[2026-06-17 19:03:54,687] INFO: Evaluation metrics: 
+    - roc_auc_score: 
+0.5149775985233335
+    - roc_auc_score_matrix: 
+[[0.         0.21665439 0.38658696 0.3631839  0.77753997 0.6424724
+  0.4714902  0.5132727  0.19366516 0.741745  ]
+ [0.         0.         0.46701813 0.50475377 0.6848118  0.27028948
+  0.40010518 0.09081253 0.7332704  0.356451  ]
+ [0.         0.         0.         0.30324748 0.6743149  0.48422635
+  0.5735015  0.12982671 0.699227   0.5522802 ]
+ [0.         0.         0.         0.         0.44804314 0.6180457
+  0.77665126 0.17290261 0.5582192  0.7519948 ]
+ [0.         0.         0.         0.         0.         0.820854
+  0.9049456  0.6669393  0.7390827  0.87163174]
+ [0.         0.         0.         0.         0.         0.
+  0.65985173 0.62434    0.5141394  0.51192904]
+ [0.         0.         0.         0.         0.         0.
+  0.         0.35293123 0.7528389  0.7285778 ]
+ [0.         0.         0.         0.         0.         0.
+  0.         0.         0.17353934 0.6758973 ]
+ [0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.61419207]
+ [0.         0.         0.         0.         0.         0.
+  0.         0.         0.         0.        ]]
+    - confusion_matrix: 
+[[3.7151e-01 2.6100e-03 2.9470e-02 2.6700e-03 1.4570e-02 2.0000e-04
+  5.6511e-01 8.1000e-03 4.5800e-03 1.1800e-03]
+ [8.0713e-01 2.7600e-03 9.8100e-03 1.1300e-03 1.1340e-02 8.0000e-04
+  1.3399e-01 2.7600e-02 2.0000e-04 5.2400e-03]
+ [7.6651e-01 2.8100e-03 8.8600e-03 6.5000e-04 8.0500e-03 1.9000e-04
+  1.7414e-01 3.7400e-02 9.0000e-05 1.3000e-03]
+ [8.1099e-01 3.5000e-04 2.9520e-02 1.1000e-04 3.8250e-02 2.0000e-05
+  1.1637e-01 3.9900e-03 3.0000e-04 1.0000e-04]
+ [8.1814e-01 4.0000e-04 3.0470e-02 4.6000e-04 3.9000e-02 1.0000e-05
+  1.0629e-01 5.0500e-03 6.0000e-05 1.2000e-04]
+ [3.9761e-01 3.3180e-02 8.0250e-02 2.5800e-03 1.0130e-02 4.2100e-03
+  4.5343e-01 1.1320e-02 4.8000e-04 6.8100e-03]
+ [3.6769e-01 7.1400e-03 5.2540e-02 1.0300e-03 5.3700e-03 2.6000e-04
+  5.5195e-01 9.2200e-03 4.6000e-04 4.3400e-03]
+ [2.9388e-01 1.1200e-02 7.3700e-02 1.6700e-03 4.9000e-03 5.0000e-05
+  6.0806e-01 4.2100e-03 6.6000e-04 1.6700e-03]
+ [9.7969e-01 1.2000e-04 6.5000e-04 5.0000e-05 3.5000e-03 4.0000e-05
+  1.1470e-02 4.3900e-03 1.0000e-05 8.0000e-05]
+ [5.1609e-01 9.4870e-02 8.8320e-02 2.5200e-03 2.4500e-03 1.8270e-02
+  2.0837e-01 3.6230e-02 4.7000e-04 3.2410e-02]]
+[2026-06-17 19:04:12,400] INFO: [1mTest metric 0.10150[0m
+[2026-06-17 19:04:13,170] INFO: [1mWritten output to reports/latest/part_official_weaver_predict_v1.root[0m

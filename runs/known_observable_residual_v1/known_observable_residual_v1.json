@@ -1,0 +1,136 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "n_events": 2560,
+  "train_n": 1792,
+  "test_n": 768,
+  "model_acc_test": 0.7708333333333334,
+  "model_acc_all": 0.757421875,
+  "known_observable_surrogate_acc": 0.3815104166666667,
+  "known_observable_agreement_with_model": 0.41015625,
+  "observable_label_acc": 0.4127604166666667,
+  "logit_r2_mean": 0.5675867575303339,
+  "logit_r2_min": 0.3018847239922827,
+  "logit_r2_max": 0.6940282366829218,
+  "residual_rel_mean": 0.3845167049044765,
+  "logit_mse": 11.0909102946264,
+  "status": "RESIDUAL_SIGNAL_REMAINS",
+  "n_features": 57,
+  "top_features": [
+    {
+      "feature": "feat4_ptw",
+      "coef_norm": 123.33468656935807
+    },
+    {
+      "feature": "pt_weighted_deltaR",
+      "coef_norm": 62.01087989862158
+    },
+    {
+      "feature": "pt_weighted_dR1",
+      "coef_norm": 62.01087989782794
+    },
+    {
+      "feature": "log_jet_energy",
+      "coef_norm": 28.520366774896367
+    },
+    {
+      "feature": "feat1_ptw",
+      "coef_norm": 27.410968060469592
+    },
+    {
+      "feature": "feat3_ptw",
+      "coef_norm": 26.167130376444245
+    },
+    {
+      "feature": "feat2_ptw",
+      "coef_norm": 22.445257832407822
+    },
+    {
+      "feature": "feat1_mean",
+      "coef_norm": 22.351716996037315
+    },
+    {
+      "feature": "feat0_ptw",
+      "coef_norm": 18.932066666336258
+    },
+    {
+      "feature": "feat3_mean",
+      "coef_norm": 17.2607352002511
+    },
+    {
+      "feature": "mean_deltaR",
+      "coef_norm": 13.087419237026149
+    },
+    {
+      "feature": "feat4_mean",
+      "coef_norm": 12.94487865206014
+    },
+    {
+      "feature": "pt_weighted_dR2",
+      "coef_norm": 12.078204515695552
+    },
+    {
+      "feature": "lead_pt_frac",
+      "coef_norm": 9.380312608515837
+    },
+    {
+      "feature": "lead_e_frac",
+      "coef_norm": 8.22120903291797
+    },
+    {
+      "feature": "log_jet_mass",
+      "coef_norm": 7.212143885782393
+    },
+    {
+      "feature": "pt2_concentration",
+      "coef_norm": 6.215506643030422
+    },
+    {
+      "feature": "log_nparticles",
+      "coef_norm": 5.795547396269179
+    },
+    {
+      "feature": "pt_weighted_dR3",
+      "coef_norm": 5.182740337519544
+    },
+    {
+      "feature": "log_jet_pt",
+      "coef_norm": 4.9099663434557375
+    },
+    {
+      "feature": "feat0_mean",
+      "coef_norm": 4.629973006069533
+    },
+    {
+      "feature": "feat2_mean",
+      "coef_norm": 4.494028965931633
+    },
+    {
+      "feature": "top16_pt_frac",
+      "coef_norm": 3.071761799000944
+    },
+    {
+      "feature": "top8_pt_frac",
+      "coef_norm": 2.8837321471903907
+    },
+    {
+      "feature": "charge_abs_sum",
+      "coef_norm": 2.628709602203044
+    }
+  ],
+  "missing": [],
+  "unexpected": [],
+  "files": [
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToBB_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToCC_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToGG_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW2Q1L_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/HToWW4Q_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBarLep_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/TTBar_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/WToQQ_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZJetsToNuNu_000.root",
+    "/home/maxwelhelp/Рабочий стол/jetclass_tiny_balanced/ZToQQ_000.root"
+  ]
+}

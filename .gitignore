@@ -1,0 +1,64 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Env/local
+.venv/
+venv/
+env/
+.env
+.env.*
+.DS_Store
+
+# Heavy ML weights/checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.pkl
+*.pickle
+
+# Heavy datasets / binary outputs
+*.root
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+*.arrow
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+
+# Local data / generated heavy outputs
+data/
+datasets/
+JetClassOfficial/
+external/particle_transformer/models/
+runs/**/*.pt
+runs/**/*.pth
+runs/**/*.root
+reports/**/*.root
+
+# Keep useful lightweight reports/configs
+!reports/**/*.md
+!reports/**/*.csv
+!reports/**/*.json
+!manifests/**/*.json
+!external/particle_transformer/data/**/*.yaml
+!external/particle_transformer/data/**/*.yml
+
+# Huge generated attention tables
+reports/latest/tables/part_attention_pair_flows*.csv
+reports/latest/tables/part_attention_path_summary*.csv
+reports/latest/tables/*flows*.csv
+reports/latest/tables/*trace*.csv

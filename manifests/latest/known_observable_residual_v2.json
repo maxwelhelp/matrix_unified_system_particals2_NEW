@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "n_events": 8098,
+  "train_correct_n": 5459,
+  "correct_test_n": 2340,
+  "confused_eval_n": 299,
+  "surrogate_v2_acc_correct_test": 0.6299145299145299,
+  "particlenet_acc_correct_test": 1.0,
+  "surrogate_v2_acc_confused_eval": 0.45484949832775917,
+  "particlenet_acc_confused_eval": 0.0,
+  "surrogate_agreement_confused_eval": 0.5451505016722408,
+  "top_features": [
+    {
+      "feature": "best_lepton_iso_pt_ratio",
+      "abs_weight": 0.3725101221475121
+    },
+    {
+      "feature": "particle0_knn_muon_frac",
+      "abs_weight": 0.3603405153990472
+    },
+    {
+      "feature": "particle0_knn_electron_frac",
+      "abs_weight": 0.3465406375914515
+    },
+    {
+      "feature": "particle0_knn_charged_hadron_frac",
+      "abs_weight": 0.30732040093626917
+    },
+    {
+      "feature": "best_lepton_pt",
+      "abs_weight": 0.25745865562118553
+    },
+    {
+      "feature": "has_lepton",
+      "abs_weight": 0.24107721728044754
+    },
+    {
+      "feature": "deltaR_p0_lepton",
+      "abs_weight": 0.23973576926018383
+    },
+    {
+      "feature": "deltaR_lead_lepton",
+      "abs_weight": 0.23973576926018383
+    },
+    {
+      "feature": "missing_pt_proxy",
+      "abs_weight": 0.17215956049219092
+    },
+    {
+      "feature": "particle0_knn_pt_sum",
+      "abs_weight": 0.16726324346594212
+    },
+    {
+      "feature": "particle0_knn_photon_frac",
+      "abs_weight": 0.15035290731498827
+    },
+    {
+      "feature": "confidence",
+      "abs_weight": 0.10617798058316291
+    },
+    {
+      "feature": "particle0_is_lepton",
+      "abs_weight": 0.09078045008023736
+    },
+    {
+      "feature": "leading_is_lepton",
+      "abs_weight": 0.09078045008023736
+    },
+    {
+      "feature": "particle0_is_muon",
+      "abs_weight": 0.07196403375554876
+    },
+    {
+      "feature": "particle0_pt",
+      "abs_weight": 0.06865733911316582
+    },
+    {
+      "feature": "leading_pt",
+      "abs_weight": 0.06865733911316582
+    },
+    {
+      "feature": "particle0_knn_neutral_hadron_frac",
+      "abs_weight": 0.02816080406643596
+    },
+    {
+      "feature": "particle0_charge",
+      "abs_weight": 0.02712367621315758
+    },
+    {
+      "feature": "particle0_is_electron",
+      "abs_weight": 0.007303960476332377
+    }
+  ]
+}

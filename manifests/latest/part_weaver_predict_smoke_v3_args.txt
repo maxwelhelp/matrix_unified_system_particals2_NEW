@@ -1,0 +1,10 @@
+HToBB:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/HToBB_120.root
+HToCC:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/HToCC_120.root
+HToGG:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/HToGG_120.root
+HToWW2Q1L:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/HToWW2Q1L_120.root
+HToWW4Q:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/HToWW4Q_120.root
+TTBar:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/TTBar_120.root
+TTBarLep:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/TTBarLep_120.root
+WToQQ:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/WToQQ_120.root
+ZToQQ:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/ZToQQ_120.root
+ZJetsToNuNu:/home/maxwelhelp/Рабочий стол/JetClassOfficial/val_5M/ZJetsToNuNu_120.root

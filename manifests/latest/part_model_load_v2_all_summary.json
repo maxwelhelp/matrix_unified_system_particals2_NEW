@@ -1,0 +1,26 @@
+[
+  {
+    "file": "manifests/latest/part_model_load_report_ParT_full_v2.json",
+    "checkpoint": "local_checkpoints/part/ParT_full.pt",
+    "loaded_good": true,
+    "missing": 0,
+    "unexpected": 0,
+    "error": null
+  },
+  {
+    "file": "manifests/latest/part_model_load_report_ParT_kin_v2.json",
+    "checkpoint": "local_checkpoints/part/ParT_kin.pt",
+    "loaded_good": true,
+    "missing": 0,
+    "unexpected": 0,
+    "error": null
+  },
+  {
+    "file": "manifests/latest/part_model_load_report_ParT_kinpid_v2.json",
+    "checkpoint": "local_checkpoints/part/ParT_kinpid.pt",
+    "loaded_good": true,
+    "missing": 0,
+    "unexpected": 0,
+    "error": null
+  }
+]

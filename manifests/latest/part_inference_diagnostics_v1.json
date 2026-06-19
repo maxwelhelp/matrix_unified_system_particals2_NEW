@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "n": 2560,
+  "build_info": {
+    "builder": "network.get_model",
+    "model_info": "{'input_names': ['pf_points', 'pf_features', 'pf_vectors', 'pf_mask'], 'input_shapes': {'pf_points': (1, 2, None), 'pf_features': (1, 13, None), 'pf_vectors': (1, 4, None), 'pf_mask': (1, 1, None)}, 'output_names': ['softmax'], 'dynamic_axes': {'pf_points': {0: 'N', 2: 'n_pf'}, 'pf_features': {0: 'N', 2: 'n_pf'}, 'pf_vectors': {0: 'N', 2: 'n_pf'}, 'pf_mask': {0: 'N', 2: 'n_pf'}, 'softmax': {0: 'N'}}}"
+  },
+  "load_info": {
+    "missing": [],
+    "unexpected": [],
+    "ckpt_keys": [
+      "mod.cls_token",
+      "mod.embed.input_bn.weight",
+      "mod.embed.input_bn.bias",
+      "mod.embed.input_bn.running_mean",
+      "mod.embed.input_bn.running_var",
+      "mod.embed.input_bn.num_batches_tracked",
+      "mod.embed.embed.0.weight",
+      "mod.embed.embed.0.bias",
+      "mod.embed.embed.1.weight",
+      "mod.embed.embed.1.bias",
+      "mod.embed.embed.3.weight",
+      "mod.embed.embed.3.bias",
+      "mod.embed.embed.4.weight",
+      "mod.embed.embed.4.bias",
+      "mod.embed.embed.6.weight",
+      "mod.embed.embed.6.bias",
+      "mod.embed.embed.7.weight",
+      "mod.embed.embed.7.bias",
+      "mod.pair_embed.embed.0.weight",
+      "mod.pair_embed.embed.0.bias"
+    ]
+  },
+  "executable_variants": [
+    "points_features_vectors_mask"
+  ],
+  "variant_errors": [
+    {
+      "variant": "features_vectors_mask",
+      "error": "TypeError(\"ParticleTransformerWrapper.forward() missing 1 required positional argument: 'mask'\")"
+    },
+    {
+      "variant": "features_points_vectors_mask",
+      "error": "RuntimeError('running_mean should contain 2 elements not 13')"
+    },
+    {
+      "variant": "points_vectors_features_mask",
+      "error": "RuntimeError('running_mean should contain 4 elements not 13')"
+    },
+    {
+      "variant": "points_features_mask",
+      "error": "TypeError(\"ParticleTransformerWrapper.forward() missing 1 required positional argument: 'mask'\")"
+    },
+    {
+      "variant": "features_mask",
+      "error": "TypeError(\"ParticleTransformerWrapper.forward() missing 2 required positional arguments: 'lorentz_vectors' and 'mask'\")"
+    }
+  ],
+  "rows": [
+    {
+      "variant": "points_features_vectors_mask",
+      "ok": true,
+      "accuracy": 0.10507812350988388,
+      "best_label_permutation_accuracy": 0.190234375,
+      "best_label_permutation_score": 487,
+      "best_true_to_pred_perm": "{\"label_QCD\": \"label_Hgg\", \"label_Hbb\": \"label_Wqq\", \"label_Hcc\": \"label_Tbqq\", \"label_Hgg\": \"label_Hcc\", \"label_H4q\": \"label_H4q\", \"label_Hqql\": \"label_Hqql\", \"label_Zqq\": \"label_Tbl\", \"label_Wqq\": \"label_Zqq\", \"label_Tbqq\": \"label_QCD\", \"label_Tbl\": \"label_Hbb\"}",
+      "pred_counts": "{\"label_QCD\": 1534, \"label_Hbb\": 45, \"label_Hcc\": 106, \"label_Hgg\": 3, \"label_H4q\": 41, \"label_Hqql\": 7, \"label_Zqq\": 771, \"label_Wqq\": 34, \"label_Tbqq\": 1, \"label_Tbl\": 18}"
+    }
+  ],
+  "diagnosis": "If all variants have ~0.10 accuracy and best permutation accuracy is also low, issue is input preprocessing/data mapping/config, not label order only."
+}

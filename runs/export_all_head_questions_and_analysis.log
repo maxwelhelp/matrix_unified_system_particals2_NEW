@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "n_heads": 24,
+  "out_md": "reports/latest/ALL_HEAD_QUESTIONS_AND_ANALYSIS.md",
+  "out_json": "manifests/latest/all_head_questions_and_analysis.json",
+  "strongest": "L1_ch16:32"
+}

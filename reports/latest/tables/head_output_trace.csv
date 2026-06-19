@@ -1,0 +1,121 @@
+head_id,layer,channels,output_shape,activation_mean_abs,activation_max_abs,sparsity_like,particle0_top_rate,top_activation_matches_leading_pt_rate,top_activation_class,class_activation_contrast,top_logit_corr_class,top_logit_corr,output_interpretation,semantic_axis,semantic_pseudocode
+L0_ch0:8,0,0:8,"[1280, 64, 128]",3.232450008392334,24.700241088867188,0.256204217672348,0.003125,0.003125,label_Tbqq,0.3261280589633522,label_Hqql,-0.2814148652878877,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00",Hqql/Tbl core-confusion axis,"# L0_ch0:8
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch40:48,0,40:48,"[1280, 64, 128]",2.821807384490967,53.7208251953125,0.07724685966968536,0.16484375,0.16484375,label_Tbqq,0.5538260142008467,label_Tbqq,0.12917451945076389,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.16, particle0 0.16",W/Z structured-prong axis,"# L0_ch40:48
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')"
+L0_ch56:64,0,56:64,"[1280, 64, 128]",2.4235427379608154,38.338497161865234,0.405038446187973,0.003125,0.003125,label_Tbqq,0.40656571918063733,label_Tbqq,0.25989459427868306,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00",Hqql/Tbl core-confusion axis,"# L0_ch56:64
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch8:16,0,8:16,"[1280, 64, 128]",1.832708716392517,44.30594253540039,0.16039352118968964,0.0078125,0.0078125,label_Tbqq,0.8413112428453235,label_Tbqq,0.2793715363385943,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.01, particle0 0.01",Hqql/Tbl core-confusion axis,"# L0_ch8:16
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch16:24,0,16:24,"[1280, 64, 128]",1.7898666858673096,49.306121826171875,0.27934569120407104,0.01953125,0.01953125,label_Tbqq,1.013950082990858,label_Tbqq,0.22989370032368764,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.02, particle0 0.02",Hqql/Tbl core-confusion axis,"# L0_ch16:24
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch48:56,0,48:56,"[1280, 64, 128]",1.707543134689331,36.53510665893555,0.21261902153491974,0.04609375,0.04609375,label_Tbqq,0.4500719176398382,label_Tbqq,0.19982427555319202,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.05, particle0 0.05",Hqql/Tbl core-confusion axis,"# L0_ch48:56
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch24:32,0,24:32,"[1280, 64, 128]",1.334778070449829,44.60326385498047,0.2410324066877365,0.0796875,0.0796875,label_QCD,0.3859445783827038,label_H4q,-0.12252529582934492,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.08, particle0 0.08",Hqql/Tbl core-confusion axis,"# L0_ch24:32
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')"
+L0_ch32:40,0,32:40,"[1280, 64, 128]",1.3153489828109741,32.560489654541016,0.15707167983055115,0.11953125,0.11953125,label_QCD,0.4784753057691784,label_Hqql,-0.3182668702367536,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.12, particle0 0.12",W/Z structured-prong axis,"# L0_ch32:40
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')"
+L1_ch112:128,1,112:128,"[1280, 128, 128]",2.722505807876587,60.30942916870117,0.21763458847999573,0.17265625,0.17265625,label_Tbl,0.17773781882392026,label_Wqq,-0.24621571714909868,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.17, particle0 0.17",W/Z structured-prong axis,"# L1_ch112:128
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')"
+L1_ch64:80,1,64:80,"[1280, 128, 128]",2.4875636100769043,68.20103454589844,0.34270134568214417,0.0,0.0,label_Tbqq,0.43320629331800653,label_Tbqq,0.27407475146604376,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.00, particle0 0.00",W/Z structured-prong axis,"# L1_ch64:80
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')"
+L1_ch80:96,1,80:96,"[1280, 128, 128]",2.47478985786438,155.6907196044922,0.2884952425956726,0.04140625,0.04140625,label_Tbl,0.7204448382059736,label_Tbl,0.12076080995344686,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.04, particle0 0.04",Hqql/Tbl core-confusion axis,"# L1_ch80:96
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')"
+L1_ch32:48,1,32:48,"[1280, 128, 128]",2.301065444946289,50.09317398071289,0.3470584750175476,0.065625,0.065625,label_Tbqq,0.6439822779761419,label_Hqql,-0.2501352059950837,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.07, particle0 0.07",Hqql/Tbl core-confusion axis,"# L1_ch32:48
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')"
+L1_ch16:32,1,16:32,"[1280, 128, 128]",2.0420336723327637,58.47165298461914,0.3128475248813629,0.03828125,0.03828125,label_QCD,0.16127056545681384,label_QCD,0.10701149429051597,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.04, particle0 0.04",W/Z structured-prong axis,"# L1_ch16:32
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')"
+L1_ch96:112,1,96:112,"[1280, 128, 128]",1.939636468887329,58.235496520996094,0.3668193817138672,0.12890625,0.12890625,label_QCD,0.5805211597018776,label_H4q,-0.10612955743085024,"writes strongest output for label_QCD; top activation particle matches leading-pT 0.13, particle0 0.13",W/Z structured-prong axis,"# L1_ch96:112
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')"
+L1_ch48:64,1,48:64,"[1280, 128, 128]",1.9169467687606812,38.613407135009766,0.2260139435529709,0.096875,0.096875,label_Tbqq,0.23005859057108546,label_Tbqq,0.24325648596661006,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.10, particle0 0.10",Hqql/Tbl core-confusion axis,"# L1_ch48:64
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')"
+L1_ch0:16,1,0:16,"[1280, 128, 128]",1.6410913467407227,52.47022247314453,0.3523368835449219,0.3015625,0.3015625,label_Tbl,0.4483221901787653,label_H4q,-0.36818369632469883,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.30, particle0 0.30",Hqql/Tbl core-confusion axis,"# L1_ch0:16
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')"
+L2_ch32:64,2,32:64,"[1280, 256, 128]",0.4696109890937805,8.612326622009277,0.5827621221542358,0.38125,0.38125,label_Tbl,0.17802997844086754,label_QCD,-0.5492946764630002,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.38, particle0 0.38",W/Z structured-prong axis,"# L2_ch32:64
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)"
+L2_ch224:256,2,224:256,"[1280, 256, 128]",0.40953508019447327,6.580334186553955,0.7121511697769165,0.71796875,0.71796875,label_Tbl,0.15845579985115263,label_Hgg,-0.6442390106757085,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.72, particle0 0.72",W/Z structured-prong axis,"# L2_ch224:256
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)"
+L2_ch192:224,2,192:224,"[1280, 256, 128]",0.3913664221763611,5.87950325012207,0.6269756555557251,0.30546875,0.30546875,label_Tbqq,0.06998352458079656,label_QCD,-0.3176586444673205,"writes strongest output for label_Tbqq; top activation particle matches leading-pT 0.31, particle0 0.31",W/Z structured-prong axis,"# L2_ch192:224
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)"
+L2_ch128:160,2,128:160,"[1280, 256, 128]",0.34997668862342834,7.920771598815918,0.7074756622314453,0.38515625,0.38515625,label_Tbl,0.24908694542116588,label_Tbl,0.6627276453610621,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.39, particle0 0.39",Hqql/Tbl core-confusion axis,"# L2_ch128:160
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)"
+L2_ch64:96,2,64:96,"[1280, 256, 128]",0.32570886611938477,8.641303062438965,0.537994384765625,0.23359375,0.23359375,label_Tbl,0.08830818037192027,label_QCD,-0.5693232548271624,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.23, particle0 0.23",Hqql/Tbl core-confusion axis,"# L2_ch64:96
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)"
+L2_ch0:32,2,0:32,"[1280, 256, 128]",0.25941628217697144,10.653794288635254,0.6232086420059204,0.42265625,0.42265625,label_Hqql,0.047456983062956065,label_Hbb,-0.3351594045304305,"writes strongest output for label_Hqql; top activation particle matches leading-pT 0.42, particle0 0.42",Hqql/Tbl core-confusion axis,"# L2_ch0:32
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)"
+L2_ch160:192,2,160:192,"[1280, 256, 128]",0.236382395029068,5.993448257446289,0.6486474871635437,0.24765625,0.24765625,label_Tbl,0.19782191659841272,label_Tbl,0.5800601881775377,"writes strongest output for label_Tbl; top activation particle matches leading-pT 0.25, particle0 0.25",Hqql/Tbl core-confusion axis,"# L2_ch160:192
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)"
+L2_ch96:128,2,96:128,"[1280, 256, 128]",0.19051170349121094,3.9679465293884277,0.7798229455947876,0.209375,0.209375,label_Hbb,0.021035280492570668,label_Wqq,-0.17337600359870292,"writes strongest output for label_Hbb; top activation particle matches leading-pT 0.21, particle0 0.21",W/Z structured-prong axis,"# L2_ch96:128
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)"

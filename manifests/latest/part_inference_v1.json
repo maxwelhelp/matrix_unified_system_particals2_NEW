@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "n": 5120,
+  "accuracy": 0.10078125,
+  "checkpoint": "external/particle_transformer/models/ParT_kinpid.pt",
+  "builder": {
+    "builder": "network.get_model",
+    "model_info": "{'input_names': ['pf_points', 'pf_features', 'pf_vectors', 'pf_mask'], 'input_shapes': {'pf_points': (1, 2, None), 'pf_features': (1, 13, None), 'pf_vectors': (1, 4, None), 'pf_mask': (1, 1, None)}, 'output_names': ['softmax'], 'dynamic_axes': {'pf_points': {0: 'N', 2: 'n_pf'}, 'pf_features': {0: 'N', 2: 'n_pf'}, 'pf_vectors': {0: 'N', 2: 'n_pf'}, 'pf_mask': {0: 'N', 2: 'n_pf'}, 'softmax': {0: 'N'}}}"
+  },
+  "load_info": {
+    "missing": [],
+    "unexpected": [],
+    "ckpt_keys": [
+      "mod.cls_token",
+      "mod.embed.input_bn.weight",
+      "mod.embed.input_bn.bias",
+      "mod.embed.input_bn.running_mean",
+      "mod.embed.input_bn.running_var",
+      "mod.embed.input_bn.num_batches_tracked",
+      "mod.embed.embed.0.weight",
+      "mod.embed.embed.0.bias",
+      "mod.embed.embed.1.weight",
+      "mod.embed.embed.1.bias",
+      "mod.embed.embed.3.weight",
+      "mod.embed.embed.3.bias",
+      "mod.embed.embed.4.weight",
+      "mod.embed.embed.4.bias",
+      "mod.embed.embed.6.weight",
+      "mod.embed.embed.6.bias",
+      "mod.embed.embed.7.weight",
+      "mod.embed.embed.7.bias",
+      "mod.pair_embed.embed.0.weight",
+      "mod.pair_embed.embed.0.bias"
+    ]
+  },
+  "forward_signature": "points,features,vectors,mask",
+  "Hqql_to_Tbl": 2,
+  "Tbl_to_Hqql": 8
+}

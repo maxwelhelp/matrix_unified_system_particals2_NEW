@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "snapshots": 15,
+  "has_real_dynamics": true,
+  "out_json": "manifests/latest/research_dynamics_v1.json"
+}

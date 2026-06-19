@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "rows": 24,
+  "residual_status": "RESIDUAL_SIGNAL_REMAINS",
+  "note": "route-aware pseudocode v3 merges pseudocode v2 + EdgeConv inner trace v1"
+}

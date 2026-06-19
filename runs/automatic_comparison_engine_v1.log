@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "comparisons": 6,
+  "p0": 3,
+  "out_json": "manifests/latest/automatic_comparison_engine_v1.json"
+}

@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "n_hqql": 4024,
+  "train_n": 2816,
+  "test_n": 1208,
+  "train_particlenet_hqql_to_tbl_rate": 0.0390625,
+  "test_particlenet_hqql_to_tbl_rate": 0.03642384105960265,
+  "behavior_surrogate_acc_test": 0.929635761589404,
+  "behavior_surrogate_auc_test": 0.5907919400187441,
+  "calibrated_threshold": 0.48379118802914717,
+  "top_features": [
+    {
+      "feature": "best_lepton_iso_pt_ratio",
+      "abs_weight": 0.3051612129272906
+    },
+    {
+      "feature": "missing_pt_proxy",
+      "abs_weight": 0.2581596783165035
+    },
+    {
+      "feature": "particle0_iso_pt_ratio",
+      "abs_weight": 0.1625038334316618
+    },
+    {
+      "feature": "leading_iso_pt_ratio",
+      "abs_weight": 0.1625038334316618
+    },
+    {
+      "feature": "deltaR_p0_lepton",
+      "abs_weight": 0.1449083678618472
+    },
+    {
+      "feature": "deltaR_lead_lepton",
+      "abs_weight": 0.1449083678618472
+    },
+    {
+      "feature": "particle0_knn_pt_sum",
+      "abs_weight": 0.13862068471556938
+    },
+    {
+      "feature": "particle0_is_lepton",
+      "abs_weight": 0.13528850016327115
+    },
+    {
+      "feature": "leading_is_lepton",
+      "abs_weight": 0.13528850016327115
+    },
+    {
+      "feature": "particle0_knn_charged_hadron_frac",
+      "abs_weight": 0.13159810989423504
+    },
+    {
+      "feature": "particle0_is_muon",
+      "abs_weight": 0.11614088931927719
+    },
+    {
+      "feature": "particle0_knn_photon_frac",
+      "abs_weight": 0.06998441523145456
+    },
+    {
+      "feature": "particle0_knn_neutral_hadron_frac",
+      "abs_weight": 0.06864822765930406
+    },
+    {
+      "feature": "particle0_knn_electron_frac",
+      "abs_weight": 0.045257219290323766
+    },
+    {
+      "feature": "particle0_charge",
+      "abs_weight": 0.03953764041374144
+    },
+    {
+      "feature": "particle0_pt",
+      "abs_weight": 0.019527041415439764
+    },
+    {
+      "feature": "particle0_is_electron",
+      "abs_weight": 0.014888542597517889
+    },
+    {
+      "feature": "particle0_knn_muon_frac",
+      "abs_weight": 0.004842044763204624
+    }
+  ]
+}

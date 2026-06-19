@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "bins": 5,
+  "patches_run": true,
+  "controls": 300,
+  "sweeps": 900,
+  "out_md": "reports/latest/PHASE3_HQQL_TBL_ISOLATION_CONTROLS_V1.md"
+}

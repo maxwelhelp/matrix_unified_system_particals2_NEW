@@ -1,0 +1,121 @@
+head_id,layer,channels,source_file,source_lines,source_module,source_function,module_path,module_type,input_shape,output_shape,code_operation,semantic_pseudocode,alignment_confidence,remaining_gap
+L0_ch40:48,0,40:48,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch40:48
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch0:8,0,0:8,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch0:8
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch48:56,0,48:56,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch48:56
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch16:24,0,16:24,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch16:24
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch24:32,0,24:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch24:32
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch8:16,0,8:16,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch8:16
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch56:64,0,56:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch56:64
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L0_ch32:40,0,32:40,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.0,Conv2d,"[[160, 26, 128, 16]]","[160, 64, 128, 16]",KNN edge construction + first EdgeConv local feature extraction,"# L0_ch32:40
+for particle i:
+    nb = knn(i)
+    local = read(pt_energy, deltaR, pid_charge, edge(i, nb))
+    write_local(local, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch16:32,1,16:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch16:32
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch32:48,1,32:48,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch32:48
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch112:128,1,112:128,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch112:128
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch0:16,1,0:16,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch0:16
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch96:112,1,96:112,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch96:112
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch64:80,1,64:80,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch64:80
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='W/Z structured-prong axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch80:96,1,80:96,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch80:96
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L1_ch48:64,1,48:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.1,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv neighborhood/context relay over L0 features,"# L1_ch48:64
+for neighborhood i:
+    local = read_L0(i)
+    context = mix(topk_core(i), neighbors(i), secondary_context(i))
+    write_context(context, axis='Hqql/Tbl core-confusion axis')",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch128:160,2,128:160,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch128:160
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch224:256,2,224:256,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch224:256
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch0:32,2,0:32,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch0:32
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch64:96,2,64:96,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch64:96
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch160:192,2,160:192,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch160:192
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='Hqql/Tbl core-confusion axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch32:64,2,32:64,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch32:64
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch192:224,2,192:224,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch192:224
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace
+L2_ch96:128,2,96:128,/home/maxwelhelp/main/lib/python3.12/site-packages/weaver/nn/model/ParticleNet.py,,weaver.nn.model.ParticleNet,ParticleNet/EdgeConv forward path,edge_convs.0.convs.2,Conv2d,"[[160, 64, 128, 16]]","[160, 64, 128, 16]",EdgeConv high-level aggregation before pooling/classifier,"# L2_ch96:128
+for event:
+    context = collect_L1_context()
+    evidence = aggregate(context, axis='W/Z structured-prong axis')
+    write_class_evidence(evidence)",MEDIUM,Need per-module inner hook for exact conv substep and route-neighbor trace

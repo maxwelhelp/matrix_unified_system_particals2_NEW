@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "rows": 750,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "Tbl_correct": 3929,
+    "Tbl_to_Hqql": 145
+  },
+  "max_targets": 150,
+  "patch_k": 8,
+  "missing": [],
+  "unexpected": []
+}

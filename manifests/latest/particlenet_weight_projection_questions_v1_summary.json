@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "checkpoint": "local_checkpoints/part/ParticleNet_kinpid.pt",
+  "mode": "kinpid",
+  "missing": [],
+  "unexpected": [],
+  "n_questions_total": 1341,
+  "n_questions_exported": 250,
+  "hypotheses": [
+    "Strong two-element projection questions were found: source/input slices feeding output pseudo-head groups. These should be compared with causal output-group patches.",
+    "Physical feature projection questions exist in early modules; check whether these align with feature-channel causal patches from v5.",
+    "Classifier contrast directions define class questions such as Wqq-vs-Zqq and Tbqq-vs-Tbl; next step is to project hidden activations/components into these contrast directions."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "comparisons": 16,
+  "p0": 10,
+  "out_json": "manifests/latest/automatic_comparison_engine_v2.json"
+}
+{
+  "ok": true,
+  "patched_C1": true,
+  "patched_C10": true,
+  "patched_C14": true,
+  "target_vs_random_drop_ratio": 13.312520946809409,
+  "order_max_random_flip": 0.0,
+  "residual_status": "RESIDUAL_SIGNAL_REMAINS",
+  "out_json": "manifests/latest/automatic_comparison_engine_v2.json"
+}

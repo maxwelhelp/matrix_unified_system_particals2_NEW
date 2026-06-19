@@ -1,0 +1,9 @@
+torch
+numpy
+pandas
+scikit-learn
+weaver-core>=0.4
+uproot
+awkward
+vector
+h5py

@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "heads": 10,
+  "events": 80,
+  "out_md": "reports/latest/EDGE_CONV_INNER_TRACE_V2.md"
+}

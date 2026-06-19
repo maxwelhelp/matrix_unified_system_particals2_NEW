@@ -1,0 +1,6 @@
+check,status,severity,meaning,allowed_comparison,forbidden_comparison
+control_is_local_not_global_stream_delta,PASS,HIGH,particle0/top-k controls are local causal controls against same-run baseline/random,remove_particle0 vs baseline/random_remove1 inside same control run,treat remove_particle0 acc_drop as a stream-history delta
+stream_history_available,PASS,MEDIUM,stream/dynamics track repeated snapshots,head rank stability / stream signal stability,causal claim from stream relation alone
+comparison_bridge_status,WARN,HIGH,comparison engine should bridge stream relation + local control with explicit remaining risks,stream suggested particle0; local control supports causality; still needs order/residual,claim discovery or global stream-wide causality without remaining controls
+embedding_pool_is_mixed,WARN,HIGH,feature embeddings contain mixed sources/scopes,train with source/scope splits and flags,train one model treating all embedding rows as homogeneous facts
+remaining_required_controls,WARN,HIGH,order/residual/class-specific/heldout are still required,"next tests: order control, residual, class gradients, heldout",physics discovery claim

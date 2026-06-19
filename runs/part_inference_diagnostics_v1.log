@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "n": 2560,
+  "rows": [
+    {
+      "variant": "points_features_vectors_mask",
+      "ok": true,
+      "accuracy": 0.10507812350988388,
+      "best_label_permutation_accuracy": 0.190234375,
+      "best_label_permutation_score": 487,
+      "best_true_to_pred_perm": "{\"label_QCD\": \"label_Hgg\", \"label_Hbb\": \"label_Wqq\", \"label_Hcc\": \"label_Tbqq\", \"label_Hgg\": \"label_Hcc\", \"label_H4q\": \"label_H4q\", \"label_Hqql\": \"label_Hqql\", \"label_Zqq\": \"label_Tbl\", \"label_Wqq\": \"label_Zqq\", \"label_Tbqq\": \"label_QCD\", \"label_Tbl\": \"label_Hbb\"}",
+      "pred_counts": "{\"label_QCD\": 1534, \"label_Hbb\": 45, \"label_Hcc\": 106, \"label_Hgg\": 3, \"label_H4q\": 41, \"label_Hqql\": 7, \"label_Zqq\": 771, \"label_Wqq\": 34, \"label_Tbqq\": 1, \"label_Tbl\": 18}"
+    }
+  ],
+  "out_md": "reports/latest/PART_INFERENCE_DIAGNOSTICS_V1.md"
+}

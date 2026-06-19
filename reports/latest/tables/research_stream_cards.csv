@@ -1,0 +1,6 @@
+card_id,title,value,priority,drilldown
+stream_state,Stream state,"15 snapshots, 6795 events",P0,manifests/latest/research_stream_index_v1.json
+top_head,Top current all-head gate,L1_ch112:128 rank 1 gate_abs=0.8689,P0,python tools/query_research_stream_v1.py --event-type HEAD_GATE --top 10
+top_particle,Top current particle evidence,event 3653 particle 0 label_Hqql score=5.1967,P0,python tools/query_research_stream_v1.py --event-type PARTICLE_TOP --top 20
+alert:particle0/core dominance,particle0/core dominance in top particle stream,run particle0 removal / top-k controls,P0,reports/latest/tables/research_stream_alerts.csv
+alert:negative/suppressive hea,negative/suppressive head gates exist,compare positive vs negative gates; add suppressive-head analysis,P1,reports/latest/tables/research_stream_alerts.csv

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "raw_rows": 8960000,
+  "used_rows": 7388753,
+  "dropped_pad": 1570481,
+  "dropped_cls": 766,
+  "rows": 1364,
+  "counts": {
+    "A_Hqql_correct": 5000,
+    "B_Hqql_to_Tbl": 2000,
+    "C_Tbl_correct": 5000,
+    "D_Tbl_to_Hqql": 2000
+  }
+}

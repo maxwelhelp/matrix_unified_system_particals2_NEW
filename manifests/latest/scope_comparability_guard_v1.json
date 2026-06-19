@@ -1,0 +1,104 @@
+{
+  "schema": "scope_comparability_guard.v1",
+  "generated_at_utc": "2026-06-16T18:19:11.861481+00:00",
+  "status": "PASS_WITH_WARNINGS",
+  "checks": [
+    {
+      "check": "control_is_local_not_global_stream_delta",
+      "status": "PASS",
+      "severity": "HIGH",
+      "meaning": "particle0/top-k controls are local causal controls against same-run baseline/random",
+      "allowed_comparison": "remove_particle0 vs baseline/random_remove1 inside same control run",
+      "forbidden_comparison": "treat remove_particle0 acc_drop as a stream-history delta"
+    },
+    {
+      "check": "stream_history_available",
+      "status": "PASS",
+      "severity": "MEDIUM",
+      "meaning": "stream/dynamics track repeated snapshots",
+      "allowed_comparison": "head rank stability / stream signal stability",
+      "forbidden_comparison": "causal claim from stream relation alone"
+    },
+    {
+      "check": "comparison_bridge_status",
+      "status": "WARN",
+      "severity": "HIGH",
+      "meaning": "comparison engine should bridge stream relation + local control with explicit remaining risks",
+      "allowed_comparison": "stream suggested particle0; local control supports causality; still needs order/residual",
+      "forbidden_comparison": "claim discovery or global stream-wide causality without remaining controls"
+    },
+    {
+      "check": "embedding_pool_is_mixed",
+      "status": "WARN",
+      "severity": "HIGH",
+      "meaning": "feature embeddings contain mixed sources/scopes",
+      "allowed_comparison": "train with source/scope splits and flags",
+      "forbidden_comparison": "train one model treating all embedding rows as homogeneous facts"
+    },
+    {
+      "check": "remaining_required_controls",
+      "status": "WARN",
+      "severity": "HIGH",
+      "meaning": "order/residual/class-specific/heldout are still required",
+      "allowed_comparison": "next tests: order control, residual, class gradients, heldout",
+      "forbidden_comparison": "physics discovery claim"
+    }
+  ],
+  "manifest": [
+    {
+      "artifact": "research_stream_events.jsonl",
+      "scope_class": "history_stream",
+      "scope_key": "run_index/snapshot",
+      "directly_comparable_to": "other stream snapshots with same schema",
+      "not_directly_comparable_to": "local control deltas",
+      "rule": "use for trends/stability, not local causal deltas"
+    },
+    {
+      "artifact": "research_stream_index_v1.json",
+      "scope_class": "latest_stream_summary",
+      "scope_key": "latest_run_index",
+      "directly_comparable_to": "latest relation/task summaries",
+      "not_directly_comparable_to": "control-run baseline unless linked as evidence type",
+      "rule": "use as current dashboard"
+    },
+    {
+      "artifact": "particle0_topk_controls_v2.json",
+      "scope_class": "control_run_local",
+      "scope_key": "same control batch baseline",
+      "directly_comparable_to": "baseline/random controls inside same run",
+      "not_directly_comparable_to": "global stream history numeric deltas",
+      "rule": "use for causal control evidence only inside run"
+    },
+    {
+      "artifact": "relation_signal_edges.csv",
+      "scope_class": "latest_relation_meta",
+      "scope_key": "latest stream relations",
+      "directly_comparable_to": "latest stream and task watcher",
+      "not_directly_comparable_to": "causal controls without explicit bridge",
+      "rule": "prioritization signal, not causal proof"
+    },
+    {
+      "artifact": "automatic_comparison_rows_v2.csv",
+      "scope_class": "comparison_meta",
+      "scope_key": "evidence bridge",
+      "directly_comparable_to": "mixed evidence only with explicit status/risk",
+      "not_directly_comparable_to": "raw numeric training without scope flags",
+      "rule": "safe bridge layer"
+    },
+    {
+      "artifact": "all_feature_embeddings.jsonl",
+      "scope_class": "mixed_embedding_pool",
+      "scope_key": "source field + id",
+      "directly_comparable_to": "same source/scope first",
+      "not_directly_comparable_to": "all rows as one homogeneous dataset",
+      "rule": "train with source/scope features or split by source"
+    }
+  ],
+  "counts": {
+    "stream_events": 6795,
+    "snapshots": 15,
+    "control_events": 2560,
+    "embedding_rows": 6928
+  },
+  "core_rule": "local control deltas are compared only to same-run baseline/random; stream history is used for stability/trends; comparison engine is the explicit bridge."
+}

@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "phase1_events": 8098,
+  "isolation_bins": 5,
+  "monotonic_adjacent_increases": 3,
+  "patches_run": true,
+  "control_rows": 300,
+  "sweep_rows": 900,
+  "groups": {
+    "Hqql_correct": 3870,
+    "Hqql_to_Tbl": 154,
+    "QCD": 4096
+  },
+  "missing": [],
+  "unexpected": []
+}

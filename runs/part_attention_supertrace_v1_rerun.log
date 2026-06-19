@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "events": 14000,
+  "pair_rows": 8960000,
+  "out_md": "reports/latest/PART_ATTENTION_SUPERTRACE_V1_RERUN_CLEAN_GROUPS.md"
+}
