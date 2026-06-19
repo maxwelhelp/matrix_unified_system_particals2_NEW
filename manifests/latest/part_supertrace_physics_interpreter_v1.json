@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "n_summary_rows": 1891,
+  "source_manifest": {
+    "ok": true,
+    "events": 1024,
+    "counts": {
+      "A_Hqql_correct": 94536,
+      "B_Hqql_to_Tbl": 3400,
+      "C_Tbl_correct": 95654,
+      "D_Tbl_to_Hqql": 3776
+    },
+    "pair_rows": 327680,
+    "summary_rows": 1891,
+    "data_config": "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
+    "checkpoint": "external/particle_transformer/models/ParT_kinpid.pt"
+  },
+  "trigger_tag_counts": {
+    "lepton_lepton_correlation": 12,
+    "lepton_photon_correlation": 3,
+    "pad_artifact_or_sparse_particle_pattern": 3,
+    "hadron_hadron_topology": 1,
+    "photon_hadron_topology": 2,
+    "hadron_reads_lepton": 3,
+    "lepton_reads_hadron": 1
+  },
+  "loss_tag_counts": {
+    "lepton_lepton_correlation": 15,
+    "pad_artifact_or_sparse_particle_pattern": 3,
+    "hadron_reads_lepton": 4,
+    "lepton_reads_hadron": 2,
+    "hadron_hadron_topology": 1
+  },
+  "anomaly_tag_counts": {
+    "lepton_lepton_correlation": 12,
+    "pad_artifact_or_sparse_particle_pattern": 3,
+    "lepton_reads_hadron": 2,
+    "hadron_reads_lepton": 5,
+    "lepton_photon_correlation": 2,
+    "hadron_hadron_topology": 1
+  },
+  "hypothesis": [
+    "B_Hqql_to_Tbl trigger is dominated by lepton-linked attention paths. The Hqql→Tbl confusion likely appears when the ParT representation routes semileptonic H→WW evidence into a top-leptonic-like lepton topology.",
+    "A_Hqql_correct protection also uses lepton-lepton paths, but in different heads/layers. This suggests the same particle roles are used with different routing semantics, not simply presence/absence of leptons.",
+    "Several top paths include pad. Treat pad-linked paths as a detector/sparsity or masking signal until verified by controls; they may still be meaningful because particle multiplicity is physical, but they require a mask-control test.",
+    "The highest trigger concentration is in late ParT blocks: mod.blocks.6.attn(9), mod.blocks.7.attn(4), mod.blocks.3.attn(4), mod.blocks.4.attn(3).",
+    "The highest Hqql-correct protection concentration is in: mod.blocks.5.attn(6), mod.blocks.7.attn(5), mod.blocks.2.attn(5), mod.blocks.6.attn(4)."
+  ]
+}
