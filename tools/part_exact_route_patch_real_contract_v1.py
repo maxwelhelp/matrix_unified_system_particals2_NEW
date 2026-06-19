@@ -94,17 +94,17 @@ class ExactRoutePatch:
         H = int(module.num_heads)
         if self.head < 0 or self.head >= H:
             return args, kwargs
-        patch = torch.zeros((B * H, T, S), device=q.device, dtype=q.dtype)
+        patch = torch.zeros((B, H, T, S), device=q.device, dtype=q.dtype)
         hits = 0
         for bi, meta in enumerate(self.metas):
             qpos = role_positions(meta, self.q_role, T, True)
             kpos = role_positions(meta, self.k_role, S, False)
             if not qpos or not kpos:
                 continue
-            patch[bi * H + self.head][:, :] += 0.0
+            patch[bi, self.head, :, :] += 0.0
             for qi in qpos:
                 for ki in kpos:
-                    patch[bi * H + self.head, qi, ki] -= self.strength
+                    patch[bi, self.head, qi, ki] -= self.strength
                     hits += 1
         if hits == 0:
             return args, kwargs
@@ -116,12 +116,19 @@ class ExactRoutePatch:
                 basef = torch.zeros_like(base, dtype=q.dtype).masked_fill(base, -self.strength)
             else:
                 basef = base.to(dtype=q.dtype)
+            # Weaver ParticleTransformer expects attn_mask as (B, H, T, S), not PyTorch MHA (B*H, T, S).
             if basef.ndim == 2:
-                basef = basef.unsqueeze(0)
-            if basef.ndim == 4:
-                basef = basef.reshape(-1, basef.shape[-2], basef.shape[-1])
-            if basef.shape[0] == 1 and patch.shape[0] > 1:
-                basef = basef.expand_as(patch)
+                basef = basef.view(1, 1, basef.shape[-2], basef.shape[-1]).expand(B, H, T, S)
+            elif basef.ndim == 3:
+                if basef.shape[0] == B * H:
+                    basef = basef.view(B, H, basef.shape[-2], basef.shape[-1])
+                elif basef.shape[0] == 1:
+                    basef = basef.view(1, 1, basef.shape[-2], basef.shape[-1]).expand(B, H, T, S)
+            elif basef.ndim == 4:
+                if basef.shape[0] == 1 and basef.shape[1] == 1:
+                    basef = basef.expand(B, H, T, S)
+                elif basef.shape[0] == B and basef.shape[1] == 1:
+                    basef = basef.expand(B, H, T, S)
             if basef.shape == patch.shape:
                 kwargs['attn_mask'] = basef + patch
             else:
