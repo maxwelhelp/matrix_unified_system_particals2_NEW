@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "summary_rows": 1891,
+  "pad_rows": 284,
+  "nonpad_rows": 1607,
+  "top_trigger_all_tags": {
+    "lepton_lepton": 12,
+    "lepton_photon": 3,
+    "pad": 3,
+    "hadron_hadron": 1,
+    "photon_other": 2,
+    "hadron_reads_lepton": 3,
+    "lepton_reads_hadron": 1
+  },
+  "top_trigger_nonpad_tags": {
+    "lepton_lepton": 14,
+    "lepton_photon": 3,
+    "hadron_hadron": 2,
+    "photon_other": 2,
+    "hadron_reads_lepton": 3,
+    "lepton_reads_hadron": 1
+  },
+  "conclusion": [
+    "PASS: after removing pad-linked paths, the Hqql->Tbl trigger remains lepton-dominated.",
+    "Pad paths are present but not dominant in top trigger paths."
+  ]
+}
