@@ -433,7 +433,7 @@ def main():
     ap.add_argument('--groups-csv', default='reports/latest/tables/part_hqql_tbl_groups_real_contract_v1.csv')
     ap.add_argument('--root-glob', default='reports/latest/part_weaver_predict_smoke_v3_*.root')
     ap.add_argument('--manifest', default='manifests/latest/part_weaver_predict_smoke_v3_args.txt')
-    ap.add_argument('--network-file', default='external/particle_transformer/networks/example_ParticleTransformer.py')
+    ap.add_argument('--network-file', default='external/particle_transformer/networks/example_ParticleTransformer_legacy.py')
     ap.add_argument('--data-config', default='external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
     ap.add_argument('--checkpoint', default='external/particle_transformer/models/ParT_kinpid.pt')
     ap.add_argument('--device', default='cuda' if torch.cuda.is_available() else 'cpu')

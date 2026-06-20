@@ -115,7 +115,7 @@ def main():
     ap.add_argument('--rules-json',default='manifests/latest/part_real_contract_pseudocode_compiler_v1.json')
     ap.add_argument('--data-config',default='external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
     ap.add_argument('--checkpoint',default='external/particle_transformer/models/ParT_kinpid.pt')
-    ap.add_argument('--network-file',default='external/particle_transformer/networks/example_ParticleTransformer.py')
+    ap.add_argument('--network-file',default='external/particle_transformer/networks/example_ParticleTransformer_legacy.py')
     ap.add_argument('--out-md',default='reports/latest/PART_ALL_HEAD_GATE_TRACE_REAL_CONTRACT_V1.md')
     ap.add_argument('--out-gates',default='reports/latest/tables/part_all_head_gate_gradients_real_contract_v1.csv')
     ap.add_argument('--out-join',default='reports/latest/tables/part_rule_gate_join_real_contract_v1.csv')

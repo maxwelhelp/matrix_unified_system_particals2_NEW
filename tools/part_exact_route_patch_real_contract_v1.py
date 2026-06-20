@@ -202,7 +202,7 @@ def main():
     ap.add_argument('--groups-csv', default='reports/latest/tables/part_hqql_tbl_groups_real_contract_v1.csv')
     ap.add_argument('--data-config', default='external/particle_transformer/data/JetClass/JetClass_kinpid.yaml')
     ap.add_argument('--checkpoint', default='external/particle_transformer/models/ParT_kinpid.pt')
-    ap.add_argument('--network-file', default='external/particle_transformer/networks/example_ParticleTransformer.py')
+    ap.add_argument('--network-file', default='external/particle_transformer/networks/example_ParticleTransformer_legacy.py')
     ap.add_argument('--manifest', default='manifests/latest/part_weaver_predict_smoke_v3_args.txt')
     ap.add_argument('--events-per-group', type=int, default=32)
     ap.add_argument('--micro-batch', type=int, default=8)

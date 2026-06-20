@@ -21,7 +21,7 @@ fi
 python tools/part_attention_supertrace_real_contract_v1.py \
   --data-config external/particle_transformer/data/JetClass/JetClass_kinpid.yaml \
   --checkpoint external/particle_transformer/models/ParT_kinpid.pt \
-  --network-file external/particle_transformer/networks/example_ParticleTransformer.py \
+  --network-file external/particle_transformer/networks/example_ParticleTransformer_legacy.py \
   --root-glob 'reports/latest/part_weaver_predict_smoke_v3_*.root' \
   --manifest "$MANIFEST" \
   --batch-size "${SUPERTRACE_BATCH_SIZE:-8}" \

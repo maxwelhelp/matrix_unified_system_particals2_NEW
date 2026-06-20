@@ -31,7 +31,7 @@ def main():
     rows = select_events(groups, 64)
 
     model, dc = load_model(
-        "external/particle_transformer/networks/example_ParticleTransformer.py",
+        "external/particle_transformer/networks/example_ParticleTransformer_legacy.py",
         "external/particle_transformer/models/ParT_kinpid.pt",
         "external/particle_transformer/data/JetClass/JetClass_kinpid.yaml",
         device,
