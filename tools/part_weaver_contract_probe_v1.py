@@ -135,7 +135,13 @@ def read_direct_batch(filepath, data_config, batch_size):
     particle_vars["part_isElectron"] = table["part_isElectron"]
     particle_vars["part_isMuon"] = table["part_isMuon"]
 
-    part_pt = np.hypot(ak.to_list(table["part_px"]), ak.to_list(table["part_py"]))
+    # Jagged particle arrays: compute pt per event, not as one rectangular numpy array.
+    px_list = ak.to_list(table["part_px"])
+    py_list = ak.to_list(table["part_py"])
+    part_pt = [
+        np.hypot(np.asarray(px, dtype=np.float32), np.asarray(py, dtype=np.float32))
+        for px, py in zip(px_list, py_list)
+    ]
     particle_vars["part_pt"] = ak.Array(part_pt)
     particle_vars["part_pt_log"] = ak.Array([np.log(np.asarray(x, dtype=np.float32)) for x in part_pt])
     particle_vars["part_e_log"] = ak.Array([np.log(np.asarray(x, dtype=np.float32)) for x in ak.to_list(table["part_energy"])])
