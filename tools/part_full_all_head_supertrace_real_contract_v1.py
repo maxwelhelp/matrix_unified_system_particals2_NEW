@@ -82,9 +82,18 @@ class HeadGateTracer:
                 self.gates[name] = torch.ones((len(ranges),), device=x.device, dtype=x.dtype, requires_grad=True)
                 self.meta[name] = {'ranges': ranges, 'num_heads': H, 'channels': C}
             gate = self.gates[name]
-            y = x.clone()
+            # No in-place slice writes: legacy MultiheadAttention returns views that autograd
+            # needs unchanged for backward. Build the gated tensor by concatenation instead.
+            parts = []
+            last = 0
             for idx, (_, a, b) in enumerate(ranges):
-                y[..., a:b] = y[..., a:b] * gate[idx]
+                if a > last:
+                    parts.append(x[..., last:a])
+                parts.append(x[..., a:b] * gate[idx])
+                last = b
+            if last < C:
+                parts.append(x[..., last:C])
+            y = torch.cat(parts, dim=-1)
             if isinstance(out, tuple):
                 return (y,) + out[1:]
             return y
