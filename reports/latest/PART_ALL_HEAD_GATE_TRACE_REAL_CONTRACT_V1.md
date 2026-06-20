@@ -16,84 +16,84 @@ This is a real differentiable all-head trace, but v1 gates attention module outp
 ## Top positive gates
 | module | head | channels | grad | abs |
 | --- | --- | --- | --- | --- |
-| mod.cls_blocks.0.attn | 6 | 96:112 | 1.56014e-01 | 1.56014e-01 |
-| mod.cls_blocks.0.attn | 2 | 32:48 | 8.99893e-02 | 8.99893e-02 |
-| mod.blocks.0.attn | 4 | 64:80 | 6.41254e-02 | 6.41254e-02 |
-| mod.blocks.3.attn | 5 | 80:96 | 3.99713e-02 | 3.99713e-02 |
-| mod.blocks.4.attn | 4 | 64:80 | 3.62452e-02 | 3.62452e-02 |
-| mod.blocks.5.attn | 4 | 64:80 | 3.28927e-02 | 3.28927e-02 |
-| mod.blocks.7.attn | 5 | 80:96 | 3.24707e-02 | 3.24707e-02 |
-| mod.blocks.1.attn | 6 | 96:112 | 2.98586e-02 | 2.98586e-02 |
-| mod.blocks.4.attn | 6 | 96:112 | 2.74751e-02 | 2.74751e-02 |
-| mod.blocks.4.attn | 5 | 80:96 | 2.52030e-02 | 2.52030e-02 |
-| mod.blocks.2.attn | 5 | 80:96 | 2.41127e-02 | 2.41127e-02 |
-| mod.blocks.3.attn | 4 | 64:80 | 2.19290e-02 | 2.19290e-02 |
-| mod.blocks.2.attn | 4 | 64:80 | 1.85251e-02 | 1.85251e-02 |
-| mod.blocks.6.attn | 0 | 0:16 | 1.81166e-02 | 1.81166e-02 |
-| mod.blocks.6.attn | 6 | 96:112 | 1.78371e-02 | 1.78371e-02 |
-| mod.blocks.7.attn | 0 | 0:16 | 1.43761e-02 | 1.43761e-02 |
-| mod.blocks.1.attn | 4 | 64:80 | 1.39264e-02 | 1.39264e-02 |
-| mod.blocks.0.attn | 6 | 96:112 | 1.36798e-02 | 1.36798e-02 |
-| mod.blocks.3.attn | 6 | 96:112 | 1.28666e-02 | 1.28666e-02 |
-| mod.blocks.6.attn | 4 | 64:80 | 1.28367e-02 | 1.28367e-02 |
+| mod.cls_blocks.0.attn | 7 | 112:128 | 6.90978e-01 | 6.90978e-01 |
+| mod.cls_blocks.0.attn | 4 | 64:80 | 5.45896e-01 | 5.45896e-01 |
+| mod.cls_blocks.1.attn | 6 | 96:112 | 2.67908e-01 | 2.67908e-01 |
+| mod.cls_blocks.0.attn | 1 | 16:32 | 1.38373e-01 | 1.38373e-01 |
+| mod.cls_blocks.0.attn | 6 | 96:112 | 1.32386e-01 | 1.32386e-01 |
+| mod.cls_blocks.0.attn | 2 | 32:48 | 7.71346e-02 | 7.71346e-02 |
+| mod.cls_blocks.0.attn | 5 | 80:96 | 7.65452e-02 | 7.65452e-02 |
+| mod.cls_blocks.1.attn | 4 | 64:80 | 5.51616e-02 | 5.51616e-02 |
+| mod.blocks.7.attn | 4 | 64:80 | 5.02711e-02 | 5.02711e-02 |
+| mod.blocks.5.attn | 6 | 96:112 | 4.74334e-02 | 4.74334e-02 |
+| mod.blocks.7.attn | 7 | 112:128 | 4.28187e-02 | 4.28187e-02 |
+| mod.blocks.6.attn | 4 | 64:80 | 3.75215e-02 | 3.75215e-02 |
+| mod.blocks.2.attn | 6 | 96:112 | 3.63143e-02 | 3.63143e-02 |
+| mod.cls_blocks.1.attn | 5 | 80:96 | 3.57685e-02 | 3.57685e-02 |
+| mod.blocks.6.attn | 0 | 0:16 | 3.43923e-02 | 3.43923e-02 |
+| mod.blocks.5.attn | 4 | 64:80 | 3.36596e-02 | 3.36596e-02 |
+| mod.blocks.5.attn | 0 | 0:16 | 3.17738e-02 | 3.17738e-02 |
+| mod.blocks.4.attn | 6 | 96:112 | 2.99267e-02 | 2.99267e-02 |
+| mod.blocks.1.attn | 0 | 0:16 | 2.94790e-02 | 2.94790e-02 |
+| mod.blocks.4.attn | 4 | 64:80 | 2.92817e-02 | 2.92817e-02 |
 
 ## Top negative gates
 | module | head | channels | grad | abs |
 | --- | --- | --- | --- | --- |
-| mod.cls_blocks.0.attn | 3 | 48:64 | -1.54685e-01 | 1.54685e-01 |
-| mod.cls_blocks.0.attn | 0 | 0:16 | -5.29767e-02 | 5.29767e-02 |
-| mod.cls_blocks.0.attn | 1 | 16:32 | -4.71361e-02 | 4.71361e-02 |
-| mod.blocks.0.attn | 2 | 32:48 | -4.43739e-02 | 4.43739e-02 |
-| mod.blocks.2.attn | 1 | 16:32 | -4.06106e-02 | 4.06106e-02 |
-| mod.blocks.1.attn | 2 | 32:48 | -3.32289e-02 | 3.32289e-02 |
-| mod.blocks.6.attn | 3 | 48:64 | -3.19600e-02 | 3.19600e-02 |
-| mod.blocks.3.attn | 2 | 32:48 | -2.97834e-02 | 2.97834e-02 |
-| mod.blocks.5.attn | 3 | 48:64 | -2.88464e-02 | 2.88464e-02 |
-| mod.blocks.2.attn | 2 | 32:48 | -2.73659e-02 | 2.73659e-02 |
-| mod.blocks.0.attn | 1 | 16:32 | -2.70505e-02 | 2.70505e-02 |
-| mod.blocks.7.attn | 1 | 16:32 | -2.66224e-02 | 2.66224e-02 |
-| mod.blocks.7.attn | 4 | 64:80 | -2.49522e-02 | 2.49522e-02 |
-| mod.blocks.4.attn | 0 | 0:16 | -2.45860e-02 | 2.45860e-02 |
-| mod.blocks.4.attn | 1 | 16:32 | -2.40504e-02 | 2.40504e-02 |
-| mod.blocks.4.attn | 2 | 32:48 | -2.32343e-02 | 2.32343e-02 |
-| mod.blocks.4.attn | 7 | 112:128 | -2.29315e-02 | 2.29315e-02 |
-| mod.blocks.3.attn | 1 | 16:32 | -2.04502e-02 | 2.04502e-02 |
-| mod.blocks.6.attn | 5 | 80:96 | -1.76990e-02 | 1.76990e-02 |
-| mod.blocks.3.attn | 3 | 48:64 | -1.70311e-02 | 1.70311e-02 |
+| mod.cls_blocks.0.attn | 3 | 48:64 | -1.62059e+00 | 1.62059e+00 |
+| mod.cls_blocks.1.attn | 3 | 48:64 | -3.15787e-01 | 3.15787e-01 |
+| mod.cls_blocks.1.attn | 2 | 32:48 | -6.45742e-02 | 6.45742e-02 |
+| mod.blocks.4.attn | 7 | 112:128 | -4.74474e-02 | 4.74474e-02 |
+| mod.blocks.5.attn | 1 | 16:32 | -4.24067e-02 | 4.24067e-02 |
+| mod.blocks.3.attn | 1 | 16:32 | -4.08628e-02 | 4.08628e-02 |
+| mod.cls_blocks.0.attn | 0 | 0:16 | -4.07242e-02 | 4.07242e-02 |
+| mod.blocks.0.attn | 1 | 16:32 | -3.86329e-02 | 3.86329e-02 |
+| mod.blocks.1.attn | 1 | 16:32 | -3.63581e-02 | 3.63581e-02 |
+| mod.blocks.6.attn | 1 | 16:32 | -3.56888e-02 | 3.56888e-02 |
+| mod.blocks.7.attn | 3 | 48:64 | -2.85647e-02 | 2.85647e-02 |
+| mod.blocks.5.attn | 2 | 32:48 | -2.79028e-02 | 2.79028e-02 |
+| mod.blocks.5.attn | 7 | 112:128 | -2.68885e-02 | 2.68885e-02 |
+| mod.blocks.2.attn | 1 | 16:32 | -2.65708e-02 | 2.65708e-02 |
+| mod.blocks.2.attn | 2 | 32:48 | -2.54062e-02 | 2.54062e-02 |
+| mod.blocks.5.attn | 5 | 80:96 | -2.33427e-02 | 2.33427e-02 |
+| mod.blocks.7.attn | 1 | 16:32 | -2.26236e-02 | 2.26236e-02 |
+| mod.blocks.1.attn | 7 | 112:128 | -2.16983e-02 | 2.16983e-02 |
+| mod.blocks.0.attn | 5 | 80:96 | -2.14141e-02 | 2.14141e-02 |
+| mod.blocks.4.attn | 2 | 32:48 | -2.08225e-02 | 2.08225e-02 |
 
 ## Top pseudocode rules with differentiable gate support
 | rule | module | head | route | type | rule_strength | gate_grad |
 | --- | --- | --- | --- | --- | --- | --- |
-| R013_B_to_Tbl | mod.blocks.3.attn | 5 | neutral_hadron<-muon | HADRON_READS_LEPTON_ROUTE | 0.7758 | 3.99713e-02 |
-| R011_anomaly | mod.blocks.3.attn | 5 | neutral_hadron<-muon | HADRON_READS_LEPTON_ROUTE | 0.60186 | 3.99713e-02 |
-| R004_B_to_Tbl | mod.blocks.4.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.95476 | 3.62452e-02 |
-| R010_B_to_Tbl | mod.blocks.4.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.81415 | 3.62452e-02 |
-| R002_anomaly | mod.blocks.4.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.91156 | 3.62452e-02 |
-| R006_B_to_Tbl | mod.blocks.5.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.84707 | 3.28927e-02 |
-| R007_anomaly | mod.blocks.5.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.71753 | 3.28927e-02 |
-| R005_B_to_Tbl | mod.blocks.7.attn | 5 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.91416 | 3.24707e-02 |
-| R003_A_protect | mod.blocks.7.attn | 5 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.97671 | 3.24707e-02 |
-| R007_A_protect | mod.blocks.7.attn | 5 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.88279 | 3.24707e-02 |
-| R012_B_to_Tbl | mod.blocks.3.attn | 2 | charged_hadron<-muon | HADRON_READS_LEPTON_ROUTE | 0.77901 | -2.97834e-02 |
-| R002_A_protect | mod.blocks.7.attn | 1 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.97833 | -2.66224e-02 |
-| R004_anomaly | mod.blocks.7.attn | 1 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.88499 | -2.66224e-02 |
-| R001_B_to_Tbl | mod.blocks.7.attn | 4 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.99492 | -2.49522e-02 |
-| R004_A_protect | mod.blocks.7.attn | 4 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.96647 | -2.49522e-02 |
-| R001_anomaly | mod.blocks.7.attn | 4 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.96368 | -2.49522e-02 |
-| R018_A_protect | mod.blocks.3.attn | 1 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.7618 | -2.04502e-02 |
-| R014_A_protect | mod.blocks.2.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.81026 | 1.85251e-02 |
-| R009_B_to_Tbl | mod.blocks.6.attn | 0 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.82479 | 1.81166e-02 |
-| R008_B_to_Tbl | mod.blocks.6.attn | 6 | neutral_hadron<-neutral_hadron | HADRON_HADRON_TOPOLOGY_ROUTE | 0.8375 | 1.78371e-02 |
-| R016_B_to_Tbl | mod.blocks.6.attn | 6 | muon<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.76327 | 1.78371e-02 |
-| R010_A_protect | mod.blocks.6.attn | 6 | electron<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.86733 | 1.78371e-02 |
-| R008_anomaly | mod.blocks.6.attn | 6 | electron<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.68285 | 1.78371e-02 |
-| R010_anomaly | mod.blocks.6.attn | 6 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.63324 | 1.78371e-02 |
-| R009_A_protect | mod.blocks.6.attn | 5 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.8719 | -1.76990e-02 |
-| R016_A_protect | mod.blocks.1.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.78356 | 1.39264e-02 |
-| R012_A_protect | mod.blocks.0.attn | 6 | muon<-charged_hadron | LEPTON_READS_HADRON_ROUTE | 0.84918 | 1.36798e-02 |
-| R002_B_to_Tbl | mod.blocks.6.attn | 4 | muon<-photon | LEPTON_PHOTON_ROUTE | 0.97246 | 1.28367e-02 |
-| R011_B_to_Tbl | mod.blocks.6.attn | 4 | photon<-charged_hadron | PHOTON_HADRON_ROUTE | 0.79398 | 1.28367e-02 |
-| R005_A_protect | mod.blocks.6.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.93515 | 1.28367e-02 |
+| R001_B_to_Tbl | mod.blocks.7.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.99983 | 5.02711e-02 |
+| R003_B_to_Tbl | mod.blocks.7.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.99689 | 5.02711e-02 |
+| R001_anomaly | mod.blocks.7.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.99966 | 5.02711e-02 |
+| R002_anomaly | mod.blocks.7.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.99379 | 5.02711e-02 |
+| R016_B_to_Tbl | mod.blocks.5.attn | 6 | muon<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.92837 | 4.74334e-02 |
+| R007_B_to_Tbl | mod.blocks.6.attn | 4 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.98895 | 3.75215e-02 |
+| R011_B_to_Tbl | mod.blocks.6.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.97966 | 3.75215e-02 |
+| R007_A_protect | mod.blocks.6.attn | 4 | neutral_hadron<-charged_hadron | HADRON_HADRON_TOPOLOGY_ROUTE | 0.97475 | 3.75215e-02 |
+| R008_A_protect | mod.blocks.6.attn | 4 | photon<-neutral_hadron | PHOTON_HADRON_ROUTE | 0.95746 | 3.75215e-02 |
+| R010_A_protect | mod.blocks.6.attn | 4 | photon<-charged_hadron | PHOTON_HADRON_ROUTE | 0.94236 | 3.75215e-02 |
+| R014_A_protect | mod.blocks.6.attn | 4 | charged_hadron<-neutral_hadron | HADRON_HADRON_TOPOLOGY_ROUTE | 0.90792 | 3.75215e-02 |
+| R002_B_to_Tbl | mod.blocks.6.attn | 0 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.99959 | 3.43923e-02 |
+| R009_B_to_Tbl | mod.blocks.6.attn | 0 | photon<-neutral_hadron | PHOTON_HADRON_ROUTE | 0.98736 | 3.43923e-02 |
+| R010_B_to_Tbl | mod.blocks.6.attn | 0 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.9866 | 3.43923e-02 |
+| R014_B_to_Tbl | mod.blocks.6.attn | 0 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.94817 | 3.43923e-02 |
+| R001_A_protect | mod.blocks.7.attn | 3 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.99912 | -2.85647e-02 |
+| R004_anomaly | mod.blocks.7.attn | 3 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.9273 | -2.85647e-02 |
+| R008_anomaly | mod.blocks.4.attn | 0 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.84365 | 2.81589e-02 |
+| R004_B_to_Tbl | mod.blocks.5.attn | 2 | electron<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.99519 | -2.79028e-02 |
+| R008_B_to_Tbl | mod.blocks.5.attn | 7 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.98828 | -2.68885e-02 |
+| R015_A_protect | mod.blocks.5.attn | 7 | photon<-neutral_hadron | PHOTON_HADRON_ROUTE | 0.89928 | -2.68885e-02 |
+| R018_A_protect | mod.blocks.2.attn | 1 | muon<-photon | LEPTON_PHOTON_ROUTE | 0.85991 | -2.65708e-02 |
+| R009_anomaly | mod.blocks.2.attn | 1 | muon<-photon | LEPTON_PHOTON_ROUTE | 0.8424 | -2.65708e-02 |
+| R009_A_protect | mod.blocks.5.attn | 5 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.95416 | -2.33427e-02 |
+| R006_B_to_Tbl | mod.blocks.7.attn | 6 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.99142 | -2.06408e-02 |
+| R003_anomaly | mod.blocks.7.attn | 6 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.98291 | -2.06408e-02 |
+| R003_A_protect | mod.blocks.6.attn | 5 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.98862 | -1.78863e-02 |
+| R002_A_protect | mod.blocks.2.attn | 3 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.99357 | 1.63883e-02 |
+| R011_A_protect | mod.blocks.3.attn | 2 | electron<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.94233 | -1.27831e-02 |
+| R016_A_protect | mod.blocks.3.attn | 2 | neutral_hadron<-muon | HADRON_READS_LEPTON_ROUTE | 0.89318 | -1.27831e-02 |
 
 ## Next
 

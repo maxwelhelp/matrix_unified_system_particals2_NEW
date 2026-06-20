@@ -2,9 +2,9 @@
 
 Pad-control check for real-contract ParT Hqql/Tbl supertrace. This removes all paths where query or key role is `pad`, then re-ranks the strongest trigger/protection/anomaly paths.
 
-- summary rows: **1891**
-- pad-linked rows: **284**
-- non-pad rows: **1607**
+- summary rows: **1845**
+- pad-linked rows: **334**
+- non-pad rows: **1511**
 
 ## Conclusion
 
@@ -14,93 +14,90 @@ Pad-control check for real-contract ParT Hqql/Tbl supertrace. This removes all p
 ## Top trigger tag counts before pad removal
 | tag | count |
 | --- | --- |
-| lepton_lepton | 12 |
-| lepton_photon | 3 |
-| pad | 3 |
-| hadron_reads_lepton | 3 |
-| photon_other | 2 |
+| lepton_lepton | 18 |
+| lepton_reads_hadron | 3 |
+| lepton_photon | 2 |
+| photon_other | 1 |
 | hadron_hadron | 1 |
-| lepton_reads_hadron | 1 |
 
 ## Top trigger tag counts after pad removal
 | tag | count |
 | --- | --- |
-| lepton_lepton | 14 |
-| lepton_photon | 3 |
-| hadron_reads_lepton | 3 |
-| hadron_hadron | 2 |
-| photon_other | 2 |
-| lepton_reads_hadron | 1 |
+| lepton_lepton | 18 |
+| lepton_reads_hadron | 3 |
+| lepton_photon | 2 |
+| photon_other | 1 |
+| hadron_hadron | 1 |
 
 ## Top non-pad B>A trigger paths
 | module | head | pair_role | tag | A | B | C | B-A |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| mod.blocks.7.attn | 4 | electron<-muon | lepton_lepton | 0.0 | 0.99492 | 0.99739 | 0.99492 |
-| mod.blocks.6.attn | 4 | muon<-photon | lepton_photon | 0.0 | 0.97246 | 0.74121 | 0.97246 |
-| mod.blocks.1.attn | 1 | muon<-muon | lepton_lepton | 0.0 | 0.95715 | 0.9439 | 0.95715 |
-| mod.blocks.4.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.95476 | 0.0 | 0.95476 |
-| mod.blocks.7.attn | 5 | electron<-electron | lepton_lepton | 0.0 | 0.91416 | 0.41317 | 0.91416 |
-| mod.blocks.5.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.84707 | 0.0 | 0.84707 |
-| mod.blocks.5.attn | 6 | photon<-muon | lepton_photon | 0.0 | 0.83968 | 0.95644 | 0.83968 |
-| mod.blocks.6.attn | 6 | neutral_hadron<-neutral_hadron | hadron_hadron | 0.0 | 0.8375 | 0.85019 | 0.8375 |
-| mod.blocks.6.attn | 0 | electron<-muon | lepton_lepton | 0.0 | 0.82479 | 0.78712 | 0.82479 |
-| mod.blocks.4.attn | 4 | muon<-muon | lepton_lepton | 0.0 | 0.81415 | 0.66542 | 0.81415 |
-| mod.blocks.6.attn | 4 | photon<-charged_hadron | photon_other | 0.0 | 0.79398 | 0.63594 | 0.79398 |
-| mod.blocks.3.attn | 2 | charged_hadron<-muon | hadron_reads_lepton | 0.0 | 0.77901 | 0.64003 | 0.77901 |
-| mod.blocks.3.attn | 5 | neutral_hadron<-muon | hadron_reads_lepton | 0.0 | 0.7758 | 0.0 | 0.7758 |
-| mod.blocks.5.attn | 7 | muon<-electron | lepton_lepton | 0.0 | 0.77521 | 0.84613 | 0.77521 |
-| mod.blocks.7.attn | 6 | neutral_hadron<-muon | hadron_reads_lepton | 0.0 | 0.77371 | 0.0 | 0.77371 |
-| mod.blocks.6.attn | 6 | muon<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.76327 | 0.0 | 0.76327 |
-| mod.blocks.6.attn | 2 | electron<-electron | lepton_lepton | 0.0 | 0.73291 | 0.64568 | 0.73291 |
-| mod.blocks.6.attn | 7 | electron<-photon | lepton_photon | 0.0 | 0.73072 | 0.7588 | 0.73072 |
-| mod.blocks.7.attn | 5 | muon<-muon | lepton_lepton | 0.0 | 0.70922 | 0.62363 | 0.70922 |
-| mod.blocks.4.attn | 3 | muon<-muon | lepton_lepton | 0.0 | 0.70908 | 0.54763 | 0.70908 |
+| mod.blocks.7.attn | 4 | muon<-muon | lepton_lepton | 0.0 | 0.99983 | 0.0 | 0.99983 |
+| mod.blocks.6.attn | 0 | electron<-electron | lepton_lepton | 0.0 | 0.99959 | 0.81136 | 0.99959 |
+| mod.blocks.7.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.99689 | 0.0 | 0.99689 |
+| mod.blocks.5.attn | 2 | electron<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.99519 | 0.8261 | 0.99519 |
+| mod.blocks.7.attn | 0 | electron<-electron | lepton_lepton | 0.0 | 0.99463 | 0.80795 | 0.99463 |
+| mod.blocks.7.attn | 6 | muon<-muon | lepton_lepton | 0.0 | 0.99142 | 0.0 | 0.99142 |
+| mod.blocks.6.attn | 4 | electron<-electron | lepton_lepton | 0.0 | 0.98895 | 0.93771 | 0.98895 |
+| mod.blocks.5.attn | 7 | muon<-muon | lepton_lepton | 0.0 | 0.98828 | 0.94345 | 0.98828 |
+| mod.blocks.6.attn | 0 | photon<-neutral_hadron | photon_other | 0.0 | 0.98736 | 0.27819 | 0.98736 |
+| mod.blocks.6.attn | 0 | muon<-electron | lepton_lepton | 0.0 | 0.9866 | 0.99476 | 0.9866 |
+| mod.blocks.6.attn | 4 | muon<-muon | lepton_lepton | 0.0 | 0.97966 | 0.98974 | 0.97966 |
+| mod.blocks.6.attn | 6 | electron<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.97259 | 0.94056 | 0.97259 |
+| mod.blocks.4.attn | 5 | muon<-muon | lepton_lepton | 0.0 | 0.95269 | 0.7399 | 0.95269 |
+| mod.blocks.6.attn | 0 | electron<-muon | lepton_lepton | 0.0 | 0.94817 | 0.83947 | 0.94817 |
+| mod.blocks.7.attn | 2 | electron<-electron | lepton_lepton | 0.0 | 0.94389 | 0.96697 | 0.94389 |
+| mod.blocks.5.attn | 6 | muon<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.92837 | 0.84282 | 0.92837 |
+| mod.blocks.6.attn | 6 | muon<-muon | lepton_lepton | 0.0 | 0.92758 | 0.0 | 0.92758 |
+| mod.blocks.6.attn | 6 | muon<-electron | lepton_lepton | 0.0 | 0.92455 | 0.0 | 0.92455 |
+| mod.blocks.6.attn | 1 | muon<-muon | lepton_lepton | 0.0 | 0.91991 | 0.81577 | 0.91991 |
+| mod.blocks.5.attn | 6 | muon<-photon | lepton_photon | 0.0 | 0.91873 | 0.78414 | 0.91873 |
 
 ## Top non-pad A>B protection paths
 | module | head | pair_role | tag | A | B | C | A-B |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| mod.blocks.5.attn | 1 | electron<-electron | lepton_lepton | 0.99932 | 0.0 | 0.91066 | 0.99932 |
-| mod.blocks.7.attn | 1 | muon<-muon | lepton_lepton | 0.97833 | 0.0 | 0.9046 | 0.97833 |
-| mod.blocks.7.attn | 5 | muon<-electron | lepton_lepton | 0.97671 | 0.0 | 0.0 | 0.97671 |
-| mod.blocks.7.attn | 4 | electron<-electron | lepton_lepton | 0.96647 | 0.0 | 0.99711 | 0.96647 |
-| mod.blocks.6.attn | 4 | muon<-muon | lepton_lepton | 0.93515 | 0.0 | 0.90974 | 0.93515 |
-| mod.blocks.5.attn | 5 | muon<-electron | lepton_lepton | 0.90792 | 0.0 | 0.0 | 0.90792 |
-| mod.blocks.7.attn | 5 | electron<-muon | lepton_lepton | 0.88279 | 0.0 | 0.0 | 0.88279 |
-| mod.blocks.5.attn | 6 | charged_hadron<-muon | hadron_reads_lepton | 0.87231 | 0.0 | 0.66925 | 0.87231 |
-| mod.blocks.6.attn | 5 | muon<-electron | lepton_lepton | 0.8719 | 0.0 | 0.62484 | 0.8719 |
-| mod.blocks.6.attn | 6 | electron<-neutral_hadron | lepton_reads_hadron | 0.86733 | 0.0 | 0.7873 | 0.86733 |
-| mod.blocks.5.attn | 6 | charged_hadron<-electron | hadron_reads_lepton | 0.85955 | 0.0 | 0.63717 | 0.85955 |
-| mod.blocks.0.attn | 6 | muon<-charged_hadron | lepton_reads_hadron | 0.84918 | 0.0 | 0.44765 | 0.84918 |
-| mod.blocks.2.attn | 3 | neutral_hadron<-electron | hadron_reads_lepton | 0.82581 | 0.0 | 0.60567 | 0.82581 |
-| mod.blocks.2.attn | 4 | muon<-electron | lepton_lepton | 0.81026 | 0.0 | 0.7175 | 0.81026 |
-| mod.blocks.2.attn | 0 | electron<-electron | lepton_lepton | 0.785 | 0.0 | 0.22663 | 0.785 |
-| mod.blocks.1.attn | 4 | muon<-muon | lepton_lepton | 0.78356 | 0.0 | 0.45438 | 0.78356 |
-| mod.blocks.5.attn | 1 | muon<-muon | lepton_lepton | 0.78001 | 0.0 | 0.92331 | 0.78001 |
-| mod.blocks.3.attn | 1 | electron<-electron | lepton_lepton | 0.99165 | 0.22985 | 0.53874 | 0.7618 |
-| mod.blocks.2.attn | 6 | neutral_hadron<-muon | hadron_reads_lepton | 0.75684 | 0.0 | 0.47358 | 0.75684 |
-| mod.blocks.2.attn | 5 | muon<-electron | lepton_lepton | 0.75429 | 0.0 | 0.0 | 0.75429 |
+| mod.blocks.7.attn | 3 | electron<-muon | lepton_lepton | 0.99912 | 0.0 | 0.92812 | 0.99912 |
+| mod.blocks.2.attn | 3 | muon<-muon | lepton_lepton | 0.99357 | 0.0 | 0.63682 | 0.99357 |
+| mod.blocks.6.attn | 5 | electron<-electron | lepton_lepton | 0.98862 | 0.0 | 0.0 | 0.98862 |
+| mod.blocks.6.attn | 6 | muon<-neutral_hadron | lepton_reads_hadron | 0.98815 | 0.0 | 0.0 | 0.98815 |
+| mod.blocks.3.attn | 5 | electron<-electron | lepton_lepton | 0.9877 | 0.0 | 0.59845 | 0.9877 |
+| mod.blocks.7.attn | 0 | electron<-muon | lepton_lepton | 0.9767 | 0.0 | 0.0 | 0.9767 |
+| mod.blocks.6.attn | 4 | neutral_hadron<-charged_hadron | hadron_hadron | 0.97475 | 0.0 | 0.57348 | 0.97475 |
+| mod.blocks.6.attn | 4 | photon<-neutral_hadron | photon_other | 0.95746 | 0.0 | 0.0 | 0.95746 |
+| mod.blocks.5.attn | 5 | electron<-electron | lepton_lepton | 0.95416 | 0.0 | 0.0 | 0.95416 |
+| mod.blocks.6.attn | 4 | photon<-charged_hadron | photon_other | 0.94236 | 0.0 | 0.66166 | 0.94236 |
+| mod.blocks.3.attn | 2 | electron<-neutral_hadron | lepton_reads_hadron | 0.94233 | 0.0 | 0.7996 | 0.94233 |
+| mod.blocks.3.attn | 0 | electron<-electron | lepton_lepton | 0.9396 | 0.0 | 0.9704 | 0.9396 |
+| mod.blocks.2.attn | 5 | electron<-electron | lepton_lepton | 0.91084 | 0.0 | 0.90462 | 0.91084 |
+| mod.blocks.6.attn | 4 | charged_hadron<-neutral_hadron | hadron_hadron | 0.90792 | 0.0 | 0.0 | 0.90792 |
+| mod.blocks.5.attn | 7 | photon<-neutral_hadron | photon_other | 0.89928 | 0.0 | 0.74939 | 0.89928 |
+| mod.blocks.3.attn | 2 | neutral_hadron<-muon | hadron_reads_lepton | 0.89318 | 0.0 | 0.57561 | 0.89318 |
+| mod.blocks.3.attn | 7 | electron<-charged_hadron | lepton_reads_hadron | 0.89187 | 0.0 | 0.55298 | 0.89187 |
+| mod.blocks.2.attn | 1 | muon<-photon | lepton_photon | 0.85991 | 0.0 | 0.97964 | 0.85991 |
+| mod.blocks.6.attn | 1 | muon<-photon | lepton_photon | 0.84336 | 0.0 | 0.88111 | 0.84336 |
+| mod.blocks.2.attn | 1 | electron<-photon | lepton_photon | 0.84336 | 0.0 | 0.0 | 0.84336 |
 
 ## Top non-pad anomaly paths
 | module | head | pair_role | tag | A | B | C | score |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| mod.blocks.7.attn | 4 | electron<-electron | lepton_lepton | 0.96647 | 0.0 | 0.99711 | 0.96368 |
-| mod.blocks.4.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.95476 | 0.0 | 0.91156 |
-| mod.blocks.5.attn | 1 | electron<-electron | lepton_lepton | 0.99932 | 0.0 | 0.91066 | 0.91004 |
-| mod.blocks.7.attn | 1 | muon<-muon | lepton_lepton | 0.97833 | 0.0 | 0.9046 | 0.88499 |
-| mod.blocks.6.attn | 4 | muon<-muon | lepton_lepton | 0.93515 | 0.0 | 0.90974 | 0.85074 |
-| mod.blocks.5.attn | 1 | muon<-muon | lepton_lepton | 0.78001 | 0.0 | 0.92331 | 0.72019 |
-| mod.blocks.5.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.84707 | 0.0 | 0.71753 |
-| mod.blocks.6.attn | 6 | electron<-neutral_hadron | lepton_reads_hadron | 0.86733 | 0.0 | 0.7873 | 0.68285 |
-| mod.blocks.5.attn | 7 | muon<-muon | lepton_lepton | 0.75266 | 0.0 | 0.88239 | 0.66414 |
-| mod.blocks.6.attn | 6 | muon<-muon | lepton_lepton | 0.66232 | 0.0 | 0.95609 | 0.63324 |
-| mod.blocks.3.attn | 5 | neutral_hadron<-muon | hadron_reads_lepton | 0.0 | 0.7758 | 0.0 | 0.60186 |
-| mod.blocks.7.attn | 6 | neutral_hadron<-muon | hadron_reads_lepton | 0.0 | 0.77371 | 0.0 | 0.59862 |
-| mod.blocks.5.attn | 6 | charged_hadron<-muon | hadron_reads_lepton | 0.87231 | 0.0 | 0.66925 | 0.58379 |
-| mod.blocks.6.attn | 6 | muon<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.76327 | 0.0 | 0.58258 |
-| mod.blocks.2.attn | 4 | muon<-electron | lepton_lepton | 0.81026 | 0.0 | 0.7175 | 0.58136 |
-| mod.blocks.5.attn | 6 | charged_hadron<-electron | hadron_reads_lepton | 0.85955 | 0.0 | 0.63717 | 0.54768 |
-| mod.blocks.6.attn | 5 | muon<-electron | lepton_lepton | 0.8719 | 0.0 | 0.62484 | 0.54479 |
-| mod.blocks.3.attn | 2 | electron<-electron | lepton_lepton | 0.71602 | 0.0 | 0.7411 | 0.53064 |
-| mod.blocks.0.attn | 7 | muon<-photon | lepton_photon | 0.63328 | 0.0 | 0.83712 | 0.53013 |
-| mod.blocks.2.attn | 3 | neutral_hadron<-electron | hadron_reads_lepton | 0.82581 | 0.0 | 0.60567 | 0.50017 |
+| mod.blocks.7.attn | 4 | muon<-muon | lepton_lepton | 0.0 | 0.99983 | 0.0 | 0.99966 |
+| mod.blocks.7.attn | 4 | muon<-electron | lepton_lepton | 0.0 | 0.99689 | 0.0 | 0.99379 |
+| mod.blocks.7.attn | 6 | muon<-muon | lepton_lepton | 0.0 | 0.99142 | 0.0 | 0.98291 |
+| mod.blocks.7.attn | 3 | electron<-muon | lepton_lepton | 0.99912 | 0.0 | 0.92812 | 0.9273 |
+| mod.blocks.3.attn | 0 | electron<-electron | lepton_lepton | 0.9396 | 0.0 | 0.9704 | 0.91179 |
+| mod.blocks.6.attn | 6 | muon<-muon | lepton_lepton | 0.0 | 0.92758 | 0.0 | 0.8604 |
+| mod.blocks.6.attn | 6 | muon<-electron | lepton_lepton | 0.0 | 0.92455 | 0.0 | 0.85479 |
+| mod.blocks.4.attn | 0 | muon<-electron | lepton_lepton | 0.0 | 0.91851 | 0.0 | 0.84365 |
+| mod.blocks.2.attn | 1 | muon<-photon | lepton_photon | 0.85991 | 0.0 | 0.97964 | 0.8424 |
+| mod.blocks.2.attn | 5 | electron<-electron | lepton_lepton | 0.91084 | 0.0 | 0.90462 | 0.82396 |
+| mod.blocks.3.attn | 2 | electron<-neutral_hadron | lepton_reads_hadron | 0.94233 | 0.0 | 0.7996 | 0.75348 |
+| mod.blocks.4.attn | 3 | electron<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.86759 | 0.0 | 0.75272 |
+| mod.blocks.6.attn | 1 | muon<-photon | lepton_photon | 0.84336 | 0.0 | 0.88111 | 0.7431 |
+| mod.blocks.6.attn | 6 | neutral_hadron<-muon | hadron_reads_lepton | 0.82598 | 0.0 | 0.8916 | 0.73645 |
+| mod.blocks.2.attn | 5 | electron<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.8478 | 0.0 | 0.71877 |
+| mod.blocks.6.attn | 0 | photon<-neutral_hadron | photon_other | 0.0 | 0.98736 | 0.27819 | 0.70021 |
+| mod.blocks.0.attn | 2 | muon<-electron | lepton_lepton | 0.0 | 0.82742 | 0.0 | 0.68462 |
+| mod.blocks.5.attn | 7 | photon<-neutral_hadron | photon_other | 0.89928 | 0.0 | 0.74939 | 0.67391 |
+| mod.blocks.3.attn | 5 | electron<-neutral_hadron | lepton_reads_hadron | 0.0 | 0.82035 | 0.0 | 0.67297 |
+| mod.blocks.6.attn | 2 | electron<-neutral_hadron | lepton_reads_hadron | 0.72718 | 0.0 | 0.87937 | 0.63947 |
 

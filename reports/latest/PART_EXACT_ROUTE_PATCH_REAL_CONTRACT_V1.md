@@ -18,14 +18,14 @@ Exact route patch over real-contract ParT attention. This suppresses one role-ro
 ## Top exact route effects
 | rule | module | head | route | type | gate_grad | B_delta_margin | B_delta_tbl_pred | A_delta_margin |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| R006_B_to_Tbl | mod.blocks.5.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.03289270959794521 | -4.42023e-03 | 0.00000e+00 | -1.76765e-05 |
-| R005_B_to_Tbl | mod.blocks.7.attn | 5 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.032470749341882765 | 1.96942e-03 | 0.00000e+00 | 2.14070e-04 |
-| R013_B_to_Tbl | mod.blocks.3.attn | 5 | neutral_hadron<-muon | HADRON_READS_LEPTON_ROUTE | 0.039971290389075875 | 6.86126e-04 | 0.00000e+00 | 4.34667e-05 |
-| R004_B_to_Tbl | mod.blocks.4.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.03624523666803725 | -3.09896e-04 | 0.00000e+00 | 1.33406e-03 |
-| R007_A_protect | mod.blocks.7.attn | 5 | electron<-muon | LEPTON_LEPTON_ROUTE | 0.032470749341882765 | -2.69748e-05 | 0.00000e+00 | -1.85259e-05 |
-| R010_B_to_Tbl | mod.blocks.4.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.03624523666803725 | -1.14292e-05 | 0.00000e+00 | 1.65638e-04 |
-| R002_A_protect | mod.blocks.7.attn | 1 | muon<-muon | LEPTON_LEPTON_ROUTE | -0.026622435136232525 | 8.75443e-08 | 0.00000e+00 | -2.71946e-07 |
-| R003_A_protect | mod.blocks.7.attn | 5 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.032470749341882765 | 5.58794e-08 | 0.00000e+00 | -2.80887e-06 |
+| R010_A_protect | mod.blocks.6.attn | 4 | photon<-charged_hadron | PHOTON_HADRON_ROUTE | 0.037521462407312356 | 8.93657e-03 | 0.00000e+00 | 3.14278e-02 |
+| R016_B_to_Tbl | mod.blocks.5.attn | 6 | muon<-neutral_hadron | LEPTON_READS_HADRON_ROUTE | 0.047433355925022624 | -6.10513e-03 | 0.00000e+00 | -1.75923e-04 |
+| R007_B_to_Tbl | mod.blocks.6.attn | 4 | electron<-electron | LEPTON_LEPTON_ROUTE | 0.037521462407312356 | 2.64497e-03 | 0.00000e+00 | -1.59532e-04 |
+| R007_A_protect | mod.blocks.6.attn | 4 | neutral_hadron<-charged_hadron | HADRON_HADRON_TOPOLOGY_ROUTE | 0.037521462407312356 | 2.58088e-03 | 0.00000e+00 | 2.87877e-03 |
+| R003_B_to_Tbl | mod.blocks.7.attn | 4 | muon<-electron | LEPTON_LEPTON_ROUTE | 0.05027113783580717 | -1.35691e-03 | 0.00000e+00 | 3.25441e-05 |
+| R008_A_protect | mod.blocks.6.attn | 4 | photon<-neutral_hadron | PHOTON_HADRON_ROUTE | 0.037521462407312356 | 9.72331e-04 | 0.00000e+00 | 4.70392e-03 |
+| R001_B_to_Tbl | mod.blocks.7.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.05027113783580717 | 2.91795e-04 | 0.00000e+00 | 1.49012e-07 |
+| R011_B_to_Tbl | mod.blocks.6.attn | 4 | muon<-muon | LEPTON_LEPTON_ROUTE | 0.037521462407312356 | -1.74880e-04 | 0.00000e+00 | -4.23789e-05 |
 
 ## Validity notes
 
