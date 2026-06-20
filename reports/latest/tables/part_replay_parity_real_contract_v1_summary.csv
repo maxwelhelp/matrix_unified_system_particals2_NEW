@@ -1,0 +1,5 @@
+group,n,root_direct_pred_match_rate,root_pred_counts,direct_pred_counts,mean_direct_tbl_minus_hqql
+A_Hqql_correct,64,0.0,{'label_Hqql': 64},"{'label_Zqq': 31, 'label_QCD': 29, 'label_Hcc': 2, 'label_Wqq': 1, 'label_Hbb': 1}",-0.9729981403797865
+B_Hqql_to_Tbl,64,0.0,{'label_Tbl': 64},"{'label_Zqq': 30, 'label_QCD': 22, 'label_Hcc': 6, 'label_H4q': 3, 'label_Hbb': 1, 'label_Wqq': 1, 'label_Hqql': 1}",-1.5208037802949548
+C_Tbl_correct,64,0.015625,{'label_Tbl': 64},"{'label_QCD': 33, 'label_Zqq': 16, 'label_Hbb': 10, 'label_Wqq': 3, 'label_Tbl': 1, 'label_Hgg': 1}",-1.4216988813132048
+D_Tbl_to_Hqql,64,0.03125,{'label_Hqql': 64},"{'label_QCD': 27, 'label_Hbb': 12, 'label_Zqq': 13, 'label_Hqql': 2, 'label_Tbl': 5, 'label_Hcc': 3, 'label_Wqq': 2}",-1.1174564519897103
