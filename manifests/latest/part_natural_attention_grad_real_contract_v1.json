@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "events": 128,
+  "events_per_group": 32,
+  "micro_batch": 4,
+  "roles": [
+    "CLS",
+    "electron",
+    "muon",
+    "charged_hadron",
+    "neutral_hadron",
+    "photon"
+  ],
+  "role_pairs": 36,
+  "objectives": [
+    "signed_hqql_tbl",
+    "B_tbl_minus_hqql"
+  ],
+  "rows": 0,
+  "summary_rows": 0,
+  "top": []
+}
