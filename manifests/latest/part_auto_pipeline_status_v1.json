@@ -1,0 +1,151 @@
+{
+  "ok": true,
+  "required": [
+    {
+      "stage": "direct_groups",
+      "path": "reports/latest/PART_DIRECT_REPLAY_GROUP_BUILDER_V1.md",
+      "exists": true,
+      "size": 1228
+    },
+    {
+      "stage": "natural_attention",
+      "path": "reports/latest/PART_NATURAL_ATTENTION_MANUAL_GRAD_REAL_CONTRACT_V1.md",
+      "exists": true,
+      "size": 7266
+    },
+    {
+      "stage": "value_write",
+      "path": "reports/latest/PART_VALUE_WRITE_GRAD_REAL_CONTRACT_V1.md",
+      "exists": true,
+      "size": 9224
+    },
+    {
+      "stage": "discovery",
+      "path": "reports/latest/PART_DISCOVERY_CANDIDATES_REAL_CONTRACT_V1.md",
+      "exists": true,
+      "size": 24921
+    },
+    {
+      "stage": "pair_validation",
+      "path": "reports/latest/PART_CANDIDATE_PAIR_VALIDATION_BALANCED_V1.md",
+      "exists": true,
+      "size": 4715
+    },
+    {
+      "stage": "final_mechanisms",
+      "path": "reports/latest/PART_MECHANISM_DISCOVERY_FINAL_V1.md",
+      "exists": true,
+      "size": 7218
+    },
+    {
+      "stage": "residual_v2",
+      "path": "reports/latest/PART_RESIDUAL_PATH_TRACE_REAL_CONTRACT_V2.md",
+      "exists": true,
+      "size": 17108
+    },
+    {
+      "stage": "classifier",
+      "path": "reports/latest/PART_CLASSIFIER_LOGIT_DECODER_REAL_CONTRACT_V1.md",
+      "exists": true,
+      "size": 15166
+    },
+    {
+      "stage": "program_graph",
+      "path": "reports/latest/PART_PROGRAM_GRAPH_EXPORT_V1.md",
+      "exists": true,
+      "size": 10506
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "natural_attention",
+      "path": "manifests/latest/part_natural_attention_manual_grad_real_contract_v1.json",
+      "ok": true,
+      "events": 128,
+      "rows": 10352,
+      "summary_rows": 4240,
+      "nodes": "",
+      "edges": "",
+      "candidates": "",
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "value_write",
+      "path": "manifests/latest/part_value_write_grad_real_contract_v1.json",
+      "ok": true,
+      "events": 128,
+      "rows": 10352,
+      "summary_rows": 4240,
+      "nodes": "",
+      "edges": "",
+      "candidates": "",
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "discovery",
+      "path": "manifests/latest/part_discovery_candidates_real_contract_v1.json",
+      "ok": true,
+      "events": "",
+      "rows": "",
+      "summary_rows": "",
+      "nodes": "",
+      "edges": "",
+      "candidates": 2176,
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "pair_validation",
+      "path": "manifests/latest/part_candidate_pair_validation_balanced_v1.json",
+      "ok": true,
+      "events": 128,
+      "rows": 24,
+      "summary_rows": 24,
+      "nodes": "",
+      "edges": "",
+      "candidates": "",
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "residual_v2",
+      "path": "manifests/latest/part_residual_path_trace_real_contract_v2.json",
+      "ok": true,
+      "events": 128,
+      "rows": 1600,
+      "summary_rows": 50,
+      "nodes": "",
+      "edges": "",
+      "candidates": "",
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "classifier",
+      "path": "manifests/latest/part_classifier_logit_decoder_real_contract_v1.json",
+      "ok": true,
+      "events": 128,
+      "rows": 640,
+      "summary_rows": 20,
+      "nodes": "",
+      "edges": "",
+      "candidates": "",
+      "validated_strong_rows": ""
+    },
+    {
+      "stage": "program_graph",
+      "path": "manifests/latest/part_program_graph_export_v1.json",
+      "ok": true,
+      "events": "",
+      "rows": "",
+      "summary_rows": "",
+      "nodes": 133,
+      "edges": 219,
+      "candidates": "",
+      "validated_strong_rows": ""
+    }
+  ],
+  "csv_counts": {
+    "program_graph_nodes": 133,
+    "program_graph_edges": 219,
+    "pair_validation_summary": 24,
+    "discovery_candidates": 2176
+  }
+}
