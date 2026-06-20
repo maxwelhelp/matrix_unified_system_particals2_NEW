@@ -1,0 +1,409 @@
+{
+  "ok": true,
+  "events": 128,
+  "rows": 1280,
+  "summary_rows": 40,
+  "role_rows": 200,
+  "top": [
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.0",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.24869169434532523,
+      "mean_abs_score": 0.4935618508607149,
+      "mean_delta_norm": 118.89843988418579,
+      "mean_grad_norm": 0.0011332997692079516
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.0",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.19741459371289238,
+      "mean_abs_score": 0.4680428891442716,
+      "mean_delta_norm": 93.22644329071045,
+      "mean_grad_norm": 0.0004099165216757683
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.7",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": 0.2267648580018431,
+      "mean_abs_score": 0.3092662733979523,
+      "mean_delta_norm": 308.38263416290283,
+      "mean_grad_norm": 0.00015319609678954293
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.7",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": 0.17954135131003568,
+      "mean_abs_score": 0.24992411956191063,
+      "mean_delta_norm": 261.58212661743164,
+      "mean_grad_norm": 5.99490462036556e-05
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.1",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.14842985253199004,
+      "mean_abs_score": 0.2795693255029619,
+      "mean_delta_norm": 119.97255516052246,
+      "mean_grad_norm": 0.0009828754955378827
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.1",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.14443933629081585,
+      "mean_abs_score": 0.27471746946685016,
+      "mean_delta_norm": 93.01513600349426,
+      "mean_grad_norm": 0.0003589425045902317
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.2",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.11967316921800375,
+      "mean_abs_score": 0.2105322724673897,
+      "mean_delta_norm": 100.71260404586792,
+      "mean_grad_norm": 0.0009086466452572495
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.0",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.036862731154542416,
+      "mean_abs_score": 0.45715723279863596,
+      "mean_delta_norm": 116.66338276863098,
+      "mean_grad_norm": 0.0012172575952718034
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.0",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.03686272943741642,
+      "mean_abs_score": 0.45715723745524883,
+      "mean_delta_norm": 110.33140897750854,
+      "mean_grad_norm": 0.0009748560523803462
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.2",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.09073038407950662,
+      "mean_abs_score": 0.19159081019461155,
+      "mean_delta_norm": 78.18733835220337,
+      "mean_grad_norm": 0.0003338323999741988
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.0",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": -0.033918721543159336,
+      "mean_abs_score": 0.38391005620360374,
+      "mean_delta_norm": 119.47048735618591,
+      "mean_grad_norm": 0.000876007616170682
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.7",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": 0.06496615582727827,
+      "mean_abs_score": 0.1976916769053787,
+      "mean_delta_norm": 283.9997887611389,
+      "mean_grad_norm": 0.00010792940713599819
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.7",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": 0.06496615044306964,
+      "mean_abs_score": 0.1976916752755642,
+      "mean_delta_norm": 297.3597044944763,
+      "mean_grad_norm": 0.0001317162168561481
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.3",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.05946455028606579,
+      "mean_abs_score": 0.19552900036796927,
+      "mean_delta_norm": 98.4504771232605,
+      "mean_grad_norm": 0.00080550500388199
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.6",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": 0.07143672416714253,
+      "mean_abs_score": 0.13590362039394677,
+      "mean_delta_norm": 190.1267147064209,
+      "mean_grad_norm": 0.00031973127534001833
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.6",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": 0.06486127607058734,
+      "mean_abs_score": 0.13108954892959446,
+      "mean_delta_norm": 147.15973281860352,
+      "mean_grad_norm": 0.00012347029769443907
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.1",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": -0.03448885399120627,
+      "mean_abs_score": 0.22332898201420903,
+      "mean_delta_norm": 120.02889227867126,
+      "mean_grad_norm": 0.0007597530739076319
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.7",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": 0.0397078838723246,
+      "mean_abs_score": 0.17808542167767882,
+      "mean_delta_norm": 305.89588737487793,
+      "mean_grad_norm": 0.00010806610885083501
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.1",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.011999962531263009,
+      "mean_abs_score": 0.24472062033601105,
+      "mean_delta_norm": 116.6645941734314,
+      "mean_grad_norm": 0.0010221937891401467
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.1",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.011999960464891046,
+      "mean_abs_score": 0.2447206163778901,
+      "mean_delta_norm": 110.47458100318909,
+      "mean_grad_norm": 0.0008180252539204957
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.4",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.0304440432228148,
+      "mean_abs_score": 0.15691109630279243,
+      "mean_delta_norm": 114.6987681388855,
+      "mean_grad_norm": 0.0006761219365216675
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.2",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.02420755903585814,
+      "mean_abs_score": 0.17822824441827834,
+      "mean_delta_norm": 93.7970290184021,
+      "mean_grad_norm": 0.0007284138750947022
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.2",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.02420755522325635,
+      "mean_abs_score": 0.178228247910738,
+      "mean_delta_norm": 99.48863244056702,
+      "mean_grad_norm": 0.0009056561511897598
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.4",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.028968096143216826,
+      "mean_abs_score": 0.1359026685822755,
+      "mean_delta_norm": 94.14542579650879,
+      "mean_grad_norm": 0.00024366673414988327
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.3",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.016057918895967305,
+      "mean_abs_score": 0.17428024881519377,
+      "mean_delta_norm": 93.73170590400696,
+      "mean_grad_norm": 0.0006181974436003657
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.3",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.016057913802796975,
+      "mean_abs_score": 0.17428025626577437,
+      "mean_delta_norm": 97.10102772712708,
+      "mean_grad_norm": 0.0007712189062658581
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.4",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.024872809532098472,
+      "mean_abs_score": 0.1382937680464238,
+      "mean_delta_norm": 112.91778707504272,
+      "mean_grad_norm": 0.0006314231086435029
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.4",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.024872806534403935,
+      "mean_abs_score": 0.13829375966452062,
+      "mean_delta_norm": 107.63268160820007,
+      "mean_grad_norm": 0.0005061390606897476
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.3",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.014333213242935017,
+      "mean_abs_score": 0.16904317471198738,
+      "mean_delta_norm": 86.83249473571777,
+      "mean_grad_norm": 0.00028749651482939953
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.2",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": -0.00875634473777609,
+      "mean_abs_score": 0.16981404973194003,
+      "mean_delta_norm": 101.52443027496338,
+      "mean_grad_norm": 0.0006977480461500818
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.4",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": 0.019010155694559216,
+      "mean_abs_score": 0.12511931802146137,
+      "mean_delta_norm": 115.42032313346863,
+      "mean_grad_norm": 0.0004997045625714236
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.3",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": 0.00416853059141431,
+      "mean_abs_score": 0.14785620919428766,
+      "mean_delta_norm": 99.05254006385803,
+      "mean_grad_norm": 0.0006044926494723768
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.6",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": 0.016824361868202686,
+      "mean_abs_score": 0.09636534098535776,
+      "mean_delta_norm": 186.84794759750366,
+      "mean_grad_norm": 0.00023705542798779788
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.5",
+      "analysis_group": "C_Tbl_correct",
+      "n": 32,
+      "mean_score": -0.006230642582522705,
+      "mean_abs_score": 0.1305148438550532,
+      "mean_delta_norm": 142.5991027355194,
+      "mean_grad_norm": 0.0005127146150698536
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.5",
+      "analysis_group": "A_Hqql_correct",
+      "n": 32,
+      "mean_score": -0.009320715180365369,
+      "mean_abs_score": 0.11044050543569028,
+      "mean_delta_norm": 112.6599473953247,
+      "mean_grad_norm": 0.00019188099940947723
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.5",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.005477254118886776,
+      "mean_abs_score": 0.10609827586449683,
+      "mean_delta_norm": 139.21954917907715,
+      "mean_grad_norm": 0.00046917571671656333
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.5",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": -0.005477252372656949,
+      "mean_abs_score": 0.10609827609732747,
+      "mean_delta_norm": 131.4600851535797,
+      "mean_grad_norm": 0.0003769123964048049
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.5",
+      "analysis_group": "D_Tbl_to_Hqql",
+      "n": 32,
+      "mean_score": -0.0074617632271838374,
+      "mean_abs_score": 0.09780975535977632,
+      "mean_delta_norm": 141.71279764175415,
+      "mean_grad_norm": 0.0003753943810806959
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.6",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": 0.0019129856591462158,
+      "mean_abs_score": 0.10706054489128292,
+      "mean_delta_norm": 172.77709197998047,
+      "mean_grad_norm": 0.00023165912625700003
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.6",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 32,
+      "mean_score": 0.0019129856082145125,
+      "mean_abs_score": 0.10706054442562163,
+      "mean_delta_norm": 182.9139108657837,
+      "mean_grad_norm": 0.0002852600478036038
+    }
+  ]
+}
