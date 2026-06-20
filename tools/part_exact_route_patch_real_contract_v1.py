@@ -78,6 +78,7 @@ def role_positions(meta, role, seq_len, is_query):
     return pos
 
 
+
 class ExactRoutePatch:
     def __init__(self, module_name, head, pair, metas, strength=40.0):
         self.module_name = module_name
@@ -89,34 +90,60 @@ class ExactRoutePatch:
 
     def pre_hook(self, module, args, kwargs):
         q, k, v = args[0], args[1], args[2]
-        B, T, _ = q.shape
-        S = k.shape[1]
         H = int(module.num_heads)
         if self.head < 0 or self.head >= H:
             return args, kwargs
-        patch = torch.zeros((B, H, T, S), device=q.device, dtype=q.dtype)
+
+        legacy = hasattr(module, 'in_proj_weight') and not hasattr(module, 'in_proj')
+
+        if legacy:
+            # nn.MultiheadAttention legacy: q/k are (T,B,C), attn_mask is (B*H,T,S).
+            T, B, _ = q.shape
+            S = k.shape[0]
+            patch = torch.zeros((B * H, T, S), device=q.device, dtype=q.dtype)
+        else:
+            # New Weaver attention: q/k are batch-first, attn_mask is usually (B,H,T,S).
+            B, T, _ = q.shape
+            S = k.shape[1]
+            patch = torch.zeros((B, H, T, S), device=q.device, dtype=q.dtype)
+
         hits = 0
         for bi, meta in enumerate(self.metas):
             qpos = role_positions(meta, self.q_role, T, True)
             kpos = role_positions(meta, self.k_role, S, False)
             if not qpos or not kpos:
                 continue
-            patch[bi, self.head, :, :] += 0.0
             for qi in qpos:
                 for ki in kpos:
-                    patch[bi, self.head, qi, ki] -= self.strength
+                    if legacy:
+                        patch[bi * H + self.head, qi, ki] -= self.strength
+                    else:
+                        patch[bi, self.head, qi, ki] -= self.strength
                     hits += 1
+
         if hits == 0:
             return args, kwargs
+
         base = kwargs.get('attn_mask', None)
         if base is None:
             kwargs['attn_mask'] = patch
+            return args, kwargs
+
+        if base.dtype == torch.bool:
+            basef = torch.zeros_like(base, dtype=q.dtype).masked_fill(base, -self.strength)
         else:
-            if base.dtype == torch.bool:
-                basef = torch.zeros_like(base, dtype=q.dtype).masked_fill(base, -self.strength)
+            basef = base.to(dtype=q.dtype)
+
+        if legacy:
+            if basef.ndim == 2:
+                basef = basef.view(1, basef.shape[-2], basef.shape[-1]).expand(B * H, T, S)
+            elif basef.ndim == 4:
+                basef = basef.reshape(B * H, basef.shape[-2], basef.shape[-1])
+            if basef.shape == patch.shape:
+                kwargs['attn_mask'] = basef + patch
             else:
-                basef = base.to(dtype=q.dtype)
-            # Weaver ParticleTransformer expects attn_mask as (B, H, T, S), not PyTorch MHA (B*H, T, S).
+                kwargs['attn_mask'] = base
+        else:
             if basef.ndim == 2:
                 basef = basef.view(1, 1, basef.shape[-2], basef.shape[-1]).expand(B, H, T, S)
             elif basef.ndim == 3:
@@ -132,8 +159,8 @@ class ExactRoutePatch:
             if basef.shape == patch.shape:
                 kwargs['attn_mask'] = basef + patch
             else:
-                # Shape mismatch fallback: do not patch instead of corrupting attention.
                 kwargs['attn_mask'] = base
+
         return args, kwargs
 
     def attach(self, model):

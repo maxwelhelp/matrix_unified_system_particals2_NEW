@@ -48,7 +48,7 @@ class OutputGateTrace:
         return fn
     def attach(self,model):
         for name,m in model.named_modules():
-            if hasattr(m,'num_heads') and hasattr(m,'in_proj') and hasattr(m,'head_dim'):
+            if hasattr(m,'num_heads') and hasattr(m,'head_dim') and (hasattr(m,'in_proj') or hasattr(m,'in_proj_weight')):
                 self.hooks.append(m.register_forward_hook(self.hook(name)))
     def close(self):
         for h in self.hooks: h.remove()

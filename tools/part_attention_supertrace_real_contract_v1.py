@@ -329,42 +329,90 @@ def load_model(network_file, checkpoint, data_config, device):
     return model, dc
 
 
+
 class AttentionTap:
     def __init__(self, topk=4):
         self.topk = topk
         self.records = []
         self.handles = []
+
+    def _project_attention(self, module, q, k, v, attn_mask, key_padding_mask):
+        nh = int(module.num_heads)
+        hd = int(module.head_dim)
+
+        # New Weaver attention: batch-first, module.in_proj, optional q_norm/k_norm.
+        if hasattr(module, 'in_proj'):
+            B, T, _ = q.shape
+            S = k.shape[1]
+            qq, kk, _ = F._in_projection_packed(q, k, v, module.in_proj.weight, module.in_proj.bias)
+            qq = qq.view(B, T, nh, hd)
+            kk = kk.view(B, S, nh, hd)
+            if hasattr(module, 'q_norm'):
+                qq = module.q_norm(qq)
+            if hasattr(module, 'k_norm'):
+                kk = module.k_norm(kk)
+            qq = qq.transpose(1, 2) * math.sqrt(1.0 / hd)
+            kk = kk.transpose(1, 2)
+
+        # Legacy PyTorch nn.MultiheadAttention: seq-first, in_proj_weight/in_proj_bias.
+        else:
+            T, B, _ = q.shape
+            S = k.shape[0]
+            qq, kk, _ = F._in_projection_packed(q, k, v, module.in_proj_weight, module.in_proj_bias)
+            qq = qq.contiguous().view(T, B, nh, hd).permute(1, 2, 0, 3) * math.sqrt(1.0 / hd)
+            kk = kk.contiguous().view(S, B, nh, hd).permute(1, 2, 0, 3)
+
+        w = qq @ kk.transpose(-2, -1)
+
+        if attn_mask is not None:
+            am = attn_mask
+            if am.dtype == torch.bool:
+                am = torch.zeros_like(am, dtype=w.dtype).masked_fill(am, float('-inf'))
+            else:
+                am = am.to(dtype=w.dtype)
+            if am.ndim == 2:
+                am = am.view(1, 1, am.shape[-2], am.shape[-1])
+            elif am.ndim == 3:
+                if am.shape[0] == B * nh:
+                    am = am.view(B, nh, am.shape[-2], am.shape[-1])
+                elif am.shape[0] == 1:
+                    am = am.view(1, 1, am.shape[-2], am.shape[-1])
+            elif am.ndim == 4:
+                pass
+            if am.shape[-2:] == (T, S):
+                w = w + am.to(device=w.device)
+
+        if key_padding_mask is not None:
+            w = w.masked_fill(key_padding_mask.view(B, 1, 1, S).bool(), float('-inf'))
+
+        a = torch.softmax(w, dim=-1).detach()
+        return a, B, T, S, nh
+
     def hook(self, name):
         def fn(module, args, kwargs):
             q, k, v = args[0], args[1], args[2]
             kpm = kwargs.get('key_padding_mask', None)
             am = kwargs.get('attn_mask', None)
-            b, t, _ = q.shape
-            s = k.shape[1]
-            nh = module.num_heads
-            hd = module.head_dim
-            qq, kk, _ = F._in_projection_packed(q, k, v, module.in_proj.weight, module.in_proj.bias)
-            qq = module.q_norm(qq.view(b, t, nh, hd)).transpose(1, 2) * math.sqrt(1.0 / hd)
-            kk = module.k_norm(kk.view(b, s, nh, hd)).transpose(1, 2)
-            w = qq @ kk.transpose(-2, -1)
-            if am is not None:
-                w = w + am
-            if kpm is not None:
-                w = w.masked_fill(kpm.view(b, 1, 1, s).bool(), float('-inf'))
-            a = torch.softmax(w, dim=-1).detach()
-            flat = a.reshape(b, nh, -1)
+            a, B, T, S, nh = self._project_attention(module, q, k, v, am, kpm)
+            flat = a.reshape(B, nh, -1)
             val, idx = torch.topk(flat, k=min(self.topk, flat.shape[-1]), dim=-1)
-            self.records.append({'name': name, 'tgt': t, 'src': s, 'val': val.cpu(), 'idx': idx.cpu()})
+            self.records.append({'name': name, 'tgt': T, 'src': S, 'val': val.cpu(), 'idx': idx.cpu()})
         return fn
+
     def attach(self, model):
         for name, m in model.named_modules():
-            if hasattr(m, 'in_proj') and hasattr(m, 'num_heads') and hasattr(m, 'head_dim'):
+            is_new = hasattr(m, 'in_proj') and hasattr(m, 'num_heads') and hasattr(m, 'head_dim')
+            is_legacy = hasattr(m, 'in_proj_weight') and hasattr(m, 'num_heads') and hasattr(m, 'head_dim')
+            if is_new or is_legacy:
                 self.handles.append(m.register_forward_pre_hook(self.hook(name), with_kwargs=True))
+
     def clear(self):
         self.records = []
+
     def close(self):
         for h in self.handles:
             h.remove()
+        self.handles = []
 
 
 def pair_dist(meta, q, k):
