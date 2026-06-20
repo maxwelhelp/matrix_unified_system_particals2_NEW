@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-import argparse, csv, json, re
+import argparse, csv, json, re, sys
 from pathlib import Path
 from collections import Counter, defaultdict
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 import numpy as np
 import uproot
@@ -17,9 +20,9 @@ SOURCE_LABEL_HINTS = {
     'HToWW2Q1L': 'label_Hqql',
     'ZToQQ': 'label_Zqq',
     'WToQQ': 'label_Wqq',
-    'TTBar': 'label_Tbqq',
-    'TTBarHad': 'label_Tbqq',
     'TTBarLep': 'label_Tbl',
+    'TTBarHad': 'label_Tbqq',
+    'TTBar': 'label_Tbqq',
 }
 
 
