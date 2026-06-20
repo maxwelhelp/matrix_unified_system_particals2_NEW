@@ -4,12 +4,16 @@ cd "$(git rev-parse --show-toplevel)"
 mkdir -p reports/latest/tables manifests/latest
 
 python - <<'PY'
-import csv
+import csv, os
 from pathlib import Path
+from collections import Counter
 
 def f(x):
     try: return float(x)
     except Exception: return 0.0
+
+per_diag = int(os.environ.get('PAIR_VAL_BALANCED_PER_DIAG', '8'))
+total = int(os.environ.get('PAIR_VAL_BALANCED_TOTAL', '32'))
 
 src = Path('reports/latest/tables/part_discovery_candidates_real_contract_v1.csv')
 out = Path('reports/latest/tables/part_discovery_candidates_balanced_v1.csv')
@@ -33,7 +37,7 @@ for diag in order:
         selected.append(r)
         seen.add(k)
         n += 1
-        if n >= int('${PAIR_VAL_BALANCED_PER_DIAG:-8}'):
+        if n >= per_diag:
             break
 # top-up with overall best if needed
 for r in sorted(rows, key=lambda r: f(r.get('evidence_score')), reverse=True):
@@ -42,18 +46,18 @@ for r in sorted(rows, key=lambda r: f(r.get('evidence_score')), reverse=True):
         continue
     selected.append(r)
     seen.add(k)
-    if len(selected) >= int('${PAIR_VAL_BALANCED_TOTAL:-32}'):
+    if len(selected) >= total:
         break
 fields = list(rows[0].keys()) if rows else []
 out.parent.mkdir(parents=True, exist_ok=True)
+selected = selected[:total]
 with out.open('w', newline='', encoding='utf-8') as fcsv:
     w = csv.DictWriter(fcsv, fieldnames=fields)
     w.writeheader()
-    for r in selected[:int('${PAIR_VAL_BALANCED_TOTAL:-32}')]:
+    for r in selected:
         w.writerow(r)
-print('balanced_candidates', len(selected[:int('${PAIR_VAL_BALANCED_TOTAL:-32}')]), '->', out)
-from collections import Counter
-print('diagnosis_counts', dict(Counter(r.get('diagnosis','') for r in selected[:int('${PAIR_VAL_BALANCED_TOTAL:-32}')])) )
+print('balanced_candidates', len(selected), '->', out)
+print('diagnosis_counts', dict(Counter(r.get('diagnosis','') for r in selected)))
 PY
 
 python tools/part_candidate_pair_validation_v1.py \
