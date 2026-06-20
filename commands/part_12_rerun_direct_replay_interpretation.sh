@@ -2,16 +2,16 @@
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 
-GROUPS="reports/latest/tables/part_hqql_tbl_groups_direct_replay_v1.csv"
+GROUPS_CSV="reports/latest/tables/part_hqql_tbl_groups_direct_replay_v1.csv"
 
-if [ ! -f "$GROUPS" ]; then
-  echo "ERROR: missing $GROUPS"
+if [ ! -f "$GROUPS_CSV_CSV" ]; then
+  echo "ERROR: missing $GROUPS_CSV"
   echo "Run: DIRECT_SCAN_LIMIT=20000 DIRECT_MAX_PER_GROUP=256 bash commands/part_11_build_direct_replay_groups.sh"
   exit 2
 fi
 
 python tools/part_attention_supertrace_real_contract_v1.py \
-  --groups-csv "$GROUPS" \
+  --groups-csv "$GROUPS_CSV_CSV" \
   --data-config external/particle_transformer/data/JetClass/JetClass_kinpid.yaml \
   --checkpoint external/particle_transformer/models/ParT_kinpid.pt \
   --network-file external/particle_transformer/networks/example_ParticleTransformer_legacy.py \
@@ -27,7 +27,7 @@ python tools/part_pad_control_v1.py
 python tools/part_real_contract_pseudocode_compiler_v1.py
 
 python tools/part_all_head_gate_trace_real_contract_v1.py \
-  --groups-csv "$GROUPS" \
+  --groups-csv "$GROUPS_CSV_CSV" \
   --data-config external/particle_transformer/data/JetClass/JetClass_kinpid.yaml \
   --checkpoint external/particle_transformer/models/ParT_kinpid.pt \
   --network-file external/particle_transformer/networks/example_ParticleTransformer_legacy.py \
@@ -35,7 +35,7 @@ python tools/part_all_head_gate_trace_real_contract_v1.py \
   --micro-batch "${GATE_MICRO_BATCH:-8}"
 
 python tools/part_exact_route_patch_real_contract_v1.py \
-  --groups-csv "$GROUPS" \
+  --groups-csv "$GROUPS_CSV_CSV" \
   --data-config external/particle_transformer/data/JetClass/JetClass_kinpid.yaml \
   --checkpoint external/particle_transformer/models/ParT_kinpid.pt \
   --network-file external/particle_transformer/networks/example_ParticleTransformer_legacy.py \
