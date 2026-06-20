@@ -1,0 +1,5 @@
+group,n,same_pred_rate,mean_score_l2,root_pred_counts,direct_pred_counts
+A_Hqql_correct,256,0.96875,0.07995828047090503,{'label_Hqql': 256},"{'label_Hqql': 248, 'label_Tbl': 5, 'label_Wqq': 1, 'label_Zqq': 1, 'label_H4q': 1}"
+B_Hqql_to_Tbl,256,0.0390625,1.3040144514961867,{'label_Tbl': 256},"{'label_Hqql': 239, 'label_Tbl': 10, 'label_Hbb': 3, 'label_Zqq': 1, 'label_Wqq': 2, 'label_Tbqq': 1}"
+C_Tbl_correct,256,0.9609375,0.07054514701361747,{'label_Tbl': 256},"{'label_Tbl': 246, 'label_Hqql': 8, 'label_QCD': 1, 'label_Hbb': 1}"
+D_Tbl_to_Hqql,256,0.0234375,1.3344048862927593,{'label_Hqql': 256},"{'label_Tbl': 246, 'label_QCD': 2, 'label_Hqql': 6, 'label_Wqq': 1, 'label_Hcc': 1}"

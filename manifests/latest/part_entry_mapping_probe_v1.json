@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "summary": [
+    {
+      "group": "A_Hqql_correct",
+      "n": 256,
+      "same_pred_rate": 0.96875,
+      "mean_score_l2": 0.07995828047090503,
+      "root_pred_counts": {
+        "label_Hqql": 256
+      },
+      "direct_pred_counts": {
+        "label_Hqql": 248,
+        "label_Tbl": 5,
+        "label_Wqq": 1,
+        "label_Zqq": 1,
+        "label_H4q": 1
+      }
+    },
+    {
+      "group": "B_Hqql_to_Tbl",
+      "n": 256,
+      "same_pred_rate": 0.0390625,
+      "mean_score_l2": 1.3040144514961867,
+      "root_pred_counts": {
+        "label_Tbl": 256
+      },
+      "direct_pred_counts": {
+        "label_Hqql": 239,
+        "label_Tbl": 10,
+        "label_Hbb": 3,
+        "label_Zqq": 1,
+        "label_Wqq": 2,
+        "label_Tbqq": 1
+      }
+    },
+    {
+      "group": "C_Tbl_correct",
+      "n": 256,
+      "same_pred_rate": 0.9609375,
+      "mean_score_l2": 0.07054514701361747,
+      "root_pred_counts": {
+        "label_Tbl": 256
+      },
+      "direct_pred_counts": {
+        "label_Tbl": 246,
+        "label_Hqql": 8,
+        "label_QCD": 1,
+        "label_Hbb": 1
+      }
+    },
+    {
+      "group": "D_Tbl_to_Hqql",
+      "n": 256,
+      "same_pred_rate": 0.0234375,
+      "mean_score_l2": 1.3344048862927593,
+      "root_pred_counts": {
+        "label_Hqql": 256
+      },
+      "direct_pred_counts": {
+        "label_Tbl": 246,
+        "label_QCD": 2,
+        "label_Hqql": 6,
+        "label_Wqq": 1,
+        "label_Hcc": 1
+      }
+    }
+  ]
+}
