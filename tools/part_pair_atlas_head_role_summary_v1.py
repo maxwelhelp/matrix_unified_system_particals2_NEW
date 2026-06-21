@@ -65,7 +65,6 @@ def parse_tag(path):
 
 
 def parse_attention_source(src):
-    # attention_pair:mod.cls_blocks.0.attn.h6|neutral_hadron<-neutral_hadron
     src = src.replace('attention_pair:', '')
     if '|' in src:
         head, pair = src.split('|', 1)
@@ -114,6 +113,10 @@ def acc_rows(acc, key_name):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--edges-glob', default='reports/latest/tables/part_pair_program_graph_rank*_edges_v1.csv')
+    ap.add_argument('--min-abs-pair-weight', type=float, default=1e-3,
+                    help='Ignore near-zero validated_pair_to_residual edges in head/role summaries.')
+    ap.add_argument('--min-abs-linear-weight', type=float, default=1e-6,
+                    help='Ignore near-zero classifier linear edges in classifier-dim summary.')
     ap.add_argument('--out-md', default='reports/latest/PART_PAIR_ATLAS_HEAD_ROLE_SUMMARY_V1.md')
     ap.add_argument('--out-json', default='manifests/latest/part_pair_atlas_head_role_summary_v1.json')
     ap.add_argument('--out-heads', default='reports/latest/tables/part_pair_atlas_heads_v1.csv')
@@ -129,6 +132,10 @@ def main():
     k_acc = defaultdict(lambda: {'n':0,'sum_weight':0.0,'sum_abs_weight':0.0,'sum_score':0.0,'pairs':set(),'labels':set()})
     dim_acc = defaultdict(lambda: {'n':0,'sum_weight':0.0,'sum_abs_weight':0.0,'sum_score':0.0,'pairs':set(),'labels':set()})
     pair_counts = Counter()
+    skipped_pair_edges = 0
+    kept_pair_edges = 0
+    skipped_linear_edges = 0
+    kept_linear_edges = 0
 
     edge_files = sorted(Path('.').glob(a.edges_glob))
     for ef in edge_files:
@@ -140,6 +147,10 @@ def main():
             w = f(r.get('weight'))
             score = f(r.get('score'))
             if kind == 'validated_pair_to_residual':
+                if abs(w) < a.min_abs_pair_weight:
+                    skipped_pair_edges += 1
+                    continue
+                kept_pair_edges += 1
                 head, role_pair, q, k = parse_attention_source(r.get('source',''))
                 if head:
                     add_acc(head_acc, head, tag, src_label, tgt_label, w, score)
@@ -150,6 +161,10 @@ def main():
                 if k:
                     add_acc(k_acc, k, tag, src_label, tgt_label, w, score)
             elif kind == 'linear_direction':
+                if abs(w) < a.min_abs_linear_weight:
+                    skipped_linear_edges += 1
+                    continue
+                kept_linear_edges += 1
                 dim = str(r.get('dim',''))
                 if dim:
                     add_acc(dim_acc, dim, tag, src_label, tgt_label, w, 0.0)
@@ -168,6 +183,12 @@ def main():
     obj = {
         'ok': True,
         'pair_graphs': len(edge_files),
+        'min_abs_pair_weight': a.min_abs_pair_weight,
+        'min_abs_linear_weight': a.min_abs_linear_weight,
+        'kept_pair_edges': kept_pair_edges,
+        'skipped_pair_edges': skipped_pair_edges,
+        'kept_linear_edges': kept_linear_edges,
+        'skipped_linear_edges': skipped_linear_edges,
         'heads': len(head_rows),
         'role_pairs': len(role_rows),
         'classifier_dims': len(dim_rows),
@@ -180,8 +201,11 @@ def main():
 
     md = []
     md.append('# PART_PAIR_ATLAS_HEAD_ROLE_SUMMARY_V1\n\n')
-    md.append('Aggregates generated pair program graphs into a head/role/classifier-dimension atlas. This is a model-level summary over pair-specific program graphs, not a new model run.\n\n')
+    md.append('Aggregates generated pair program graphs into a head/role/classifier-dimension atlas. This is a model-level summary over pair-specific program graphs, not a new model run. Near-zero pair edges are filtered so numerical no-op routes do not look universal.\n\n')
     md.append(f'- pair_graphs: **{len(edge_files)}**\n')
+    md.append(f'- min_abs_pair_weight: **{a.min_abs_pair_weight}**\n')
+    md.append(f'- kept_pair_edges: **{kept_pair_edges}**\n')
+    md.append(f'- skipped_pair_edges: **{skipped_pair_edges}**\n')
     md.append(f'- unique_heads: **{len(head_rows)}**\n')
     md.append(f'- unique_role_pairs: **{len(role_rows)}**\n')
     md.append(f'- unique_classifier_dims: **{len(dim_rows)}**\n\n')
@@ -196,13 +220,13 @@ def main():
     md.append('\n## Shared classifier dimensions\n')
     md.append(mdtab(['rank','dim','graphs','mean_abs_W','best_W','best_pair'], [[i+1,r['classifier_dim'],r['pair_graphs'],fmt(r['mean_abs_weight']),fmt(r['best_weight']),r['best_label_pair']] for i,r in enumerate(dim_rows[:30])]))
     md.append('\n## Interpretation\n\n')
-    md.append('- Heads with `graphs > 1` are reusable mechanisms across multiple class-pairs.\n')
-    md.append('- Role pairs with `graphs > 1` are repeated physical read routes.\n')
+    md.append('- Heads with `graphs > 1` and non-trivial edge weight are reusable mechanisms across multiple class-pairs.\n')
+    md.append('- Role pairs with `graphs > 1` are repeated physical read routes after filtering numerical no-op edges.\n')
     md.append('- Classifier dims with `graphs > 1` are shared logit axes reused by multiple pair decisions.\n')
     md.append('- Pair-specific rows with high `best_weight` are local mechanisms, not universal ones.\n')
     Path(a.out_md).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out_md).write_text(''.join(md), encoding='utf-8')
-    print(json.dumps({'ok': True, 'pair_graphs': len(edge_files), 'heads': len(head_rows), 'role_pairs': len(role_rows), 'out_md': a.out_md}, indent=2))
+    print(json.dumps({'ok': True, 'pair_graphs': len(edge_files), 'heads': len(head_rows), 'role_pairs': len(role_rows), 'kept_pair_edges': kept_pair_edges, 'skipped_pair_edges': skipped_pair_edges, 'out_md': a.out_md}, indent=2))
 
 if __name__ == '__main__':
     main()
