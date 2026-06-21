@@ -1,0 +1,12 @@
+role_pair,n_edges,pair_graphs,label_pairs,mean_weight,mean_abs_weight,mean_score,best_weight,best_pair_tag,best_label_pair
+neutral_hadron<-neutral_hadron,5,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.08990965336561203,0.31029539853334426,0.16212989222258328,-0.6431043818593025,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+CLS<-muon,8,2,label_Hcc->label_Hbb;label_Wqq->label_Zqq,0.027013706043362617,0.043613992631435394,-0.02017388492822647,0.11584767699241638,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+charged_hadron<-CLS,3,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,-3.0299027760823566e-07,3.0299027760823566e-07,1.8222878376642862e-07,-3.203749656677246e-07,rank001_Zqq_to_Wqq,label_Zqq->label_Wqq
+CLS<-CLS,3,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,-3.0299027760823566e-07,3.0299027760823566e-07,1.8222878376642862e-07,-3.203749656677246e-07,rank001_Zqq_to_Wqq,label_Zqq->label_Wqq
+neutral_hadron<-CLS,2,2,label_Hcc->label_Hbb;label_Wqq->label_Zqq,2.60770320892334e-08,2.942979335784912e-07,2.2491440176963806e-07,3.203749656677246e-07,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+neutral_hadron<-charged_hadron,2,1,label_Wqq->label_Zqq,-0.14145098999142647,0.5784446112811565,0.4395566061139107,-0.719895601272583,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+neutral_hadron<-photon,2,1,label_Wqq->label_Zqq,-0.0804096944630146,0.5474763624370098,0.40216774865984917,-0.6278860569000244,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+electron<-electron,2,1,label_Hcc->label_Hbb,-0.1942479033023119,0.2543842289596796,0.16186527721583843,-0.4486321322619915,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+charged_hadron<-muon,2,1,label_Wqq->label_Zqq,0.04595176875591278,0.05600915849208832,0.056009101681411266,0.1019609272480011,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+electron<-muon,6,1,label_Hcc->label_Hbb,0.018517422179381054,0.03703695038954417,0.0370368684331576,0.11323445290327072,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+photon<-CLS,2,1,label_Zqq->label_Wqq,-3.203749656677246e-07,3.203749656677246e-07,1.6763806343078613e-07,-3.203749656677246e-07,rank001_Zqq_to_Wqq,label_Zqq->label_Wqq

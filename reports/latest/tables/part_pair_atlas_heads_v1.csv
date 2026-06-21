@@ -1,0 +1,6 @@
+head_id,n_edges,pair_graphs,label_pairs,mean_weight,mean_abs_weight,mean_score,best_weight,best_pair_tag,best_label_pair
+mod.cls_blocks.0.attn.h4,16,3,label_Hcc->label_Hbb;label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.07867309520952404,0.25219359691254795,0.1733280491316691,-0.719895601272583,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+mod.cls_blocks.0.attn.h0,8,2,label_Hcc->label_Hbb;label_Wqq->label_Zqq,0.033780600875616074,0.04733593761920929,0.0025892085395753384,0.11584767699241638,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+mod.cls_blocks.0.attn.h1,4,1,label_Hcc->label_Hbb,0.0458553209900856,0.06737913191318512,0.03367308573797345,0.11323445290327072,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+mod.cls_blocks.0.attn.h6,5,1,label_Zqq->label_Wqq,-0.004599665105342865,0.055398578941822055,0.00891636349260807,-0.1499946489930153,rank001_Zqq_to_Wqq,label_Zqq->label_Wqq
+mod.cls_blocks.1.attn.h3,4,1,label_Hcc->label_Hbb,-0.008637093007564545,0.008736982941627502,0.004360580816864967,-0.017374075949192047,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
