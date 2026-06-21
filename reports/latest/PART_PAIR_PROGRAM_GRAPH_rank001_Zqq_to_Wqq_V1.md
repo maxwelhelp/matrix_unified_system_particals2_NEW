@@ -2,68 +2,67 @@
 
 Machine-readable program graph skeleton assembled from validated pair mechanisms, residual path v2, and classifier-logit decoder. This does not rerun the model; it joins existing evidence into nodes and edges.
 
-- nodes: **129**
-- edges: **205**
-- node_kinds: `{'objective': 1, 'classifier': 1, 'classifier_dim': 24, 'residual_particle': 8, 'residual_cls': 2, 'attention_pair': 8, 'residual_block': 10, 'residual_role': 65, 'classifier_activation_dim': 10}`
-- edge_kinds: `{'classifier_to_objective': 1, 'linear_direction': 24, 'residual_to_classifier': 50, 'validated_pair_to_residual': 10, 'role_to_residual': 80, 'classifier_dim_observed': 40}`
+- nodes: **132**
+- edges: **204**
+- node_kinds: `{'objective': 1, 'classifier': 1, 'classifier_dim': 24, 'residual_particle': 8, 'residual_cls': 2, 'attention_pair': 8, 'residual_block': 10, 'residual_role': 68, 'classifier_activation_dim': 10}`
+- edge_kinds: `{'classifier_to_objective': 1, 'linear_direction': 24, 'residual_to_classifier': 50, 'validated_pair_to_residual': 9, 'role_to_residual': 80, 'classifier_dim_observed': 40}`
 
 ## Top validated pair → residual edges
 | rank | source | target | weight/B_delta | B_flip | action | rules | score |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | attention_pair:mod.cls_blocks.0.attn.h4|charged_hadron<-charged_hadron | residual_block:mod.cls_blocks.0 | -1.3754 | 0.0000 | down | 0 | 0.9138 |
-| 2 | attention_pair:mod.cls_blocks.0.attn.h4|CLS<-charged_hadron | residual_block:mod.cls_blocks.0 | -1.3155 | 0.0000 | down | 0 | 0.6299 |
-| 3 | attention_pair:mod.cls_blocks.0.attn.h4|photon<-photon | residual_block:mod.cls_blocks.0 | -0.6371 | 0.0000 | down | 0 | 0.3711 |
-| 4 | attention_pair:mod.cls_blocks.0.attn.h4|photon<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.4505 | 0.0000 | up | 0 | 0.2616 |
-| 5 | attention_pair:mod.cls_blocks.0.attn.h4|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.3192 | 0.0000 | down | 0 | 0.2093 |
-| 6 | attention_pair:mod.cls_blocks.0.attn.h4|CLS<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.2110 | 0.0000 | down | 0 | 0.1483 |
-| 7 | attention_pair:mod.cls_blocks.0.attn.h6|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.0963 | 0.0000 | down | 0 | 0.0556 |
-| 8 | attention_pair:mod.cls_blocks.0.attn.h4|photon<-neutral_hadron | residual_block:mod.cls_blocks.0 | 0.0642 | 0.0000 | down | 0 | 0.0408 |
-| 9 | attention_pair:mod.cls_blocks.0.attn.h1|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.0365 | 0.0000 | down | 0 | 0.0329 |
-| 10 | attention_pair:mod.cls_blocks.0.attn.h1|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | 0.1211 | 0.0000 | up | 0 | -0.0640 |
+| 1 | attention_pair:mod.cls_blocks.0.attn.h6|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.1500 | 0.0000 | down | 0 | 0.0980 |
+| 2 | attention_pair:mod.cls_blocks.0.attn.h4|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | -0.2074 | 0.0000 | down | 0 | 0.0588 |
+| 3 | attention_pair:mod.cls_blocks.0.attn.h4|charged_hadron<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 4 | attention_pair:mod.cls_blocks.0.attn.h4|CLS<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 5 | attention_pair:mod.cls_blocks.0.attn.h4|photon<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 6 | attention_pair:mod.cls_blocks.0.attn.h6|charged_hadron<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 7 | attention_pair:mod.cls_blocks.0.attn.h6|CLS<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 8 | attention_pair:mod.cls_blocks.0.attn.h6|photon<-CLS | residual_block:mod.cls_blocks.0 | -3.204e-07 | 0.0000 | down | 0 | 1.676e-07 |
+| 9 | attention_pair:mod.cls_blocks.0.attn.h6|neutral_hadron<-neutral_hadron | residual_block:mod.cls_blocks.0 | 0.1270 | 0.0000 | up | 0 | -0.0535 |
 
 ## Top residual → classifier edges
 | rank | source | target | weight | objective | group |
 | --- | --- | --- | --- | --- | --- |
-| 1 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1531 | signed_hqql_tbl | C_Tbl_correct |
-| 2 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1498 | signed_hqql_tbl | C_Tbl_correct |
-| 3 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1181 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 4 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1181 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 5 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1181 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 6 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1181 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 7 | residual_particle:mod.blocks.4 | classifier:mod.fc | -0.1149 | signed_hqql_tbl | A_Hqql_correct |
-| 8 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.1010 | signed_hqql_tbl | C_Tbl_correct |
-| 9 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0960 | signed_hqql_tbl | A_Hqql_correct |
-| 10 | residual_particle:mod.blocks.3 | classifier:mod.fc | -0.0944 | signed_hqql_tbl | A_Hqql_correct |
-| 11 | residual_particle:mod.blocks.5 | classifier:mod.fc | -0.0926 | signed_hqql_tbl | A_Hqql_correct |
-| 12 | residual_particle:mod.blocks.2 | classifier:mod.fc | -0.0909 | signed_hqql_tbl | A_Hqql_correct |
-| 13 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0896 | signed_hqql_tbl | A_Hqql_correct |
-| 14 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0879 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 15 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.0810 | signed_hqql_tbl | A_Hqql_correct |
-| 16 | residual_particle:mod.blocks.4 | classifier:mod.fc | -0.0759 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 17 | residual_particle:mod.blocks.5 | classifier:mod.fc | -0.0707 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 18 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0689 | signed_hqql_tbl | A_Hqql_correct |
-| 19 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0520 | signed_hqql_tbl | C_Tbl_correct |
-| 20 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0511 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 21 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0511 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 22 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0507 | signed_hqql_tbl | C_Tbl_correct |
-| 23 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0477 | signed_hqql_tbl | C_Tbl_correct |
-| 24 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0474 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 25 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0474 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 26 | residual_particle:mod.blocks.3 | classifier:mod.fc | -0.0473 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 27 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0464 | signed_hqql_tbl | C_Tbl_correct |
-| 28 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.0463 | signed_hqql_tbl | A_Hqql_correct |
-| 29 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0430 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 30 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0430 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 31 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0357 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 32 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0357 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 33 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0346 | signed_hqql_tbl | C_Tbl_correct |
-| 34 | residual_particle:mod.blocks.2 | classifier:mod.fc | -0.0333 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 35 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0293 | signed_hqql_tbl | B_Hqql_to_Tbl |
-| 36 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0293 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
-| 37 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.0211 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 38 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0186 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 39 | residual_particle:mod.blocks.6 | classifier:mod.fc | -0.0150 | signed_hqql_tbl | D_Tbl_to_Hqql |
-| 40 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0146 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 1 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1460 | signed_hqql_tbl | C_Tbl_correct |
+| 2 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1438 | signed_hqql_tbl | C_Tbl_correct |
+| 3 | residual_particle:mod.blocks.4 | classifier:mod.fc | -0.1342 | signed_hqql_tbl | A_Hqql_correct |
+| 4 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.1282 | signed_hqql_tbl | A_Hqql_correct |
+| 5 | residual_particle:mod.blocks.2 | classifier:mod.fc | -0.1172 | signed_hqql_tbl | A_Hqql_correct |
+| 6 | residual_particle:mod.blocks.5 | classifier:mod.fc | -0.1070 | signed_hqql_tbl | A_Hqql_correct |
+| 7 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1036 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 8 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.1036 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 9 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1036 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 10 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.1036 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 11 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.1018 | signed_hqql_tbl | A_Hqql_correct |
+| 12 | residual_particle:mod.blocks.3 | classifier:mod.fc | -0.0995 | signed_hqql_tbl | A_Hqql_correct |
+| 13 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0992 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 14 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0980 | signed_hqql_tbl | C_Tbl_correct |
+| 15 | residual_particle:mod.blocks.4 | classifier:mod.fc | -0.0851 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 16 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.0844 | signed_hqql_tbl | A_Hqql_correct |
+| 17 | residual_particle:mod.blocks.5 | classifier:mod.fc | -0.0806 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 18 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0710 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 19 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0710 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 20 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0614 | signed_hqql_tbl | A_Hqql_correct |
+| 21 | residual_particle:mod.blocks.4 | classifier:mod.fc | 0.0586 | signed_hqql_tbl | C_Tbl_correct |
+| 22 | residual_particle:mod.blocks.3 | classifier:mod.fc | -0.0543 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 23 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0538 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 24 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0538 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 25 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0531 | signed_hqql_tbl | C_Tbl_correct |
+| 26 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0495 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 27 | residual_particle:mod.blocks.6 | classifier:mod.fc | 0.0495 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 28 | residual_cls:mod.cls_blocks.0 | classifier:mod.fc | 0.0451 | signed_hqql_tbl | A_Hqql_correct |
+| 29 | residual_particle:mod.blocks.5 | classifier:mod.fc | 0.0415 | signed_hqql_tbl | C_Tbl_correct |
+| 30 | residual_particle:mod.blocks.1 | classifier:mod.fc | -0.0364 | signed_hqql_tbl | C_Tbl_correct |
+| 31 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0326 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 32 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0326 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 33 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0325 | signed_hqql_tbl | C_Tbl_correct |
+| 34 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0297 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 35 | residual_particle:mod.blocks.7 | classifier:mod.fc | 0.0261 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 36 | residual_particle:mod.blocks.2 | classifier:mod.fc | 0.0242 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
+| 37 | residual_particle:mod.blocks.2 | classifier:mod.fc | 0.0242 | signed_hqql_tbl | B_Hqql_to_Tbl |
+| 38 | residual_particle:mod.blocks.2 | classifier:mod.fc | -0.0220 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 39 | residual_cls:mod.cls_blocks.1 | classifier:mod.fc | -0.0194 | signed_hqql_tbl | D_Tbl_to_Hqql |
+| 40 | residual_particle:mod.blocks.0 | classifier:mod.fc | -0.0182 | B_tbl_minus_hqql | B_Hqql_to_Tbl |
 
 ## Top classifier linear directions
 | rank | source | target | W_Tbl-Hqql | dim |

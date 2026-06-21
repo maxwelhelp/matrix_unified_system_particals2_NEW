@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "pairs": 3,
+  "rows": [
+    {
+      "rank": 1,
+      "tag": "rank001_Zqq_to_Wqq",
+      "src_label": "label_Zqq",
+      "tgt_label": "label_Wqq",
+      "nodes": 132,
+      "edges": 204,
+      "discovery_candidates": 2064,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h6",
+      "best_pair": "neutral_hadron<-neutral_hadron",
+      "best_diag": "B_Tbl_push_read_write",
+      "best_B_delta": -0.1499946489930153,
+      "best_B_flip": 0.0,
+      "best_score": 0.09804458916187286
+    },
+    {
+      "rank": 2,
+      "tag": "rank002_Wqq_to_Zqq",
+      "src_label": "label_Wqq",
+      "tgt_label": "label_Zqq",
+      "nodes": 124,
+      "edges": 208,
+      "discovery_candidates": 2048,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "neutral_hadron<-charged_hadron",
+      "best_diag": "B_Tbl_push_read_write",
+      "best_B_delta": -0.719895601272583,
+      "best_B_flip": 0.0,
+      "best_score": 0.5616069035604596
+    },
+    {
+      "rank": 3,
+      "tag": "rank003_Hcc_to_Hbb",
+      "src_label": "label_Hcc",
+      "tgt_label": "label_Hbb",
+      "nodes": 126,
+      "edges": 210,
+      "discovery_candidates": 2160,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "electron<-electron",
+      "best_diag": "B_Tbl_resist_or_protective_read_write",
+      "best_B_delta": -0.4486321322619915,
+      "best_B_flip": 0.0,
+      "best_score": 0.29078536853194237
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+rank,tag,src_label,tgt_label,nodes,edges,discovery_candidates,validation_rows,best_head,best_pair,best_diag,best_B_delta,best_B_flip,best_score
+1,rank001_Zqq_to_Wqq,label_Zqq,label_Wqq,132,204,2064,16,mod.cls_blocks.0.attn.h6,neutral_hadron<-neutral_hadron,B_Tbl_push_read_write,-0.1499946489930153,0.0,0.09804458916187286
+2,rank002_Wqq_to_Zqq,label_Wqq,label_Zqq,124,208,2048,16,mod.cls_blocks.0.attn.h4,neutral_hadron<-charged_hadron,B_Tbl_push_read_write,-0.719895601272583,0.0,0.5616069035604596
+3,rank003_Hcc_to_Hbb,label_Hcc,label_Hbb,126,210,2160,16,mod.cls_blocks.0.attn.h4,electron<-electron,B_Tbl_resist_or_protective_read_write,-0.4486321322619915,0.0,0.29078536853194237
