@@ -16,10 +16,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.30347848730161786,
-      "mean_abs_score": 1.0711792781949043,
-      "mean_delta_norm": 129.31702041625977,
-      "mean_grad_norm": 0.0024131607788149267
+      "mean_score": -0.15173922514077276,
+      "mean_abs_score": 0.535589536651969,
+      "mean_delta_norm": 114.45778226852417,
+      "mean_grad_norm": 0.0008235508194047725
     },
     {
       "objective": "signed_hqql_tbl",
@@ -27,10 +27,10 @@
       "kind": "cls",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.384569572750479,
-      "mean_abs_score": 0.384569572750479,
+      "mean_score": 0.19228479731827974,
+      "mean_abs_score": 0.19228479731827974,
       "mean_delta_norm": 39.052372455596924,
-      "mean_grad_norm": 0.07110113347880542
+      "mean_grad_norm": 0.03555056906770915
     },
     {
       "objective": "signed_hqql_tbl",
@@ -38,10 +38,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.334313259460032,
-      "mean_abs_score": 0.4976210966706276,
-      "mean_delta_norm": 308.48860931396484,
-      "mean_grad_norm": 0.00022772728425479727
+      "mean_score": 0.16715662833303213,
+      "mean_abs_score": 0.24881055112928152,
+      "mean_delta_norm": 286.77574920654297,
+      "mean_grad_norm": 7.806152916600695e-05
     },
     {
       "objective": "signed_hqql_tbl",
@@ -49,10 +49,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.31546461395919323,
-      "mean_abs_score": 0.44046682119369507,
-      "mean_delta_norm": 256.56438636779785,
-      "mean_grad_norm": 9.637331049816567e-05
+      "mean_score": 0.15773231768980622,
+      "mean_abs_score": 0.22023342084139585,
+      "mean_delta_norm": 256.56439113616943,
+      "mean_grad_norm": 4.85549530822027e-05
     },
     {
       "objective": "signed_hqql_tbl",
@@ -60,10 +60,10 @@
       "kind": "cls",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.3190057731117122,
-      "mean_abs_score": 0.3190057731117122,
-      "mean_delta_norm": 42.80849361419678,
-      "mean_grad_norm": 0.06722874729894102
+      "mean_score": 0.15950288996100426,
+      "mean_abs_score": 0.15950288996100426,
+      "mean_delta_norm": 42.80849313735962,
+      "mean_grad_norm": 0.033614374813623726
     },
     {
       "objective": "signed_hqql_tbl",
@@ -71,10 +71,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": -0.19988696230575442,
-      "mean_abs_score": 0.7827678769826889,
-      "mean_delta_norm": 132.38060522079468,
-      "mean_grad_norm": 0.002133703244908247
+      "mean_score": -0.09994351729983464,
+      "mean_abs_score": 0.3913839478045702,
+      "mean_delta_norm": 128.78327083587646,
+      "mean_grad_norm": 0.0009599203076504637
     },
     {
       "objective": "signed_hqql_tbl",
@@ -82,10 +82,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.18468967685475945,
-      "mean_abs_score": 0.8133473675698042,
-      "mean_delta_norm": 99.49515008926392,
-      "mean_grad_norm": 0.0008104261760308873
+      "mean_score": -0.09234486939385533,
+      "mean_abs_score": 0.40667368192225695,
+      "mean_delta_norm": 99.49514818191528,
+      "mean_grad_norm": 0.00040558060391049366
     },
     {
       "objective": "signed_hqql_tbl",
@@ -93,10 +93,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.21204700227826834,
-      "mean_abs_score": 0.6430150121450424,
-      "mean_delta_norm": 131.1053876876831,
-      "mean_grad_norm": 0.002144953454262577
+      "mean_score": -0.10602348728571087,
+      "mean_abs_score": 0.3215074809268117,
+      "mean_delta_norm": 114.24460029602051,
+      "mean_grad_norm": 0.000729755742213456
     },
     {
       "objective": "signed_hqql_tbl",
@@ -104,10 +104,10 @@
       "kind": "cls",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.28036524076014757,
-      "mean_abs_score": 0.28036524076014757,
-      "mean_delta_norm": 124.1126356124878,
-      "mean_grad_norm": 0.03301127685699612
+      "mean_score": -0.14018263830803335,
+      "mean_abs_score": 0.14018263830803335,
+      "mean_delta_norm": 124.11263370513916,
+      "mean_grad_norm": 0.016505638835951686
     },
     {
       "objective": "signed_hqql_tbl",
@@ -115,10 +115,10 @@
       "kind": "cls",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.2506459024734795,
-      "mean_abs_score": 0.2506459024734795,
-      "mean_delta_norm": 128.28209829330444,
-      "mean_grad_norm": 0.031210114946588874
+      "mean_score": -0.12532299140002578,
+      "mean_abs_score": 0.12532299140002578,
+      "mean_delta_norm": 128.28209924697876,
+      "mean_grad_norm": 0.01560505770612508
     },
     {
       "objective": "signed_hqql_tbl",
@@ -126,10 +126,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.1826355429366231,
-      "mean_abs_score": 0.5101120546460152,
-      "mean_delta_norm": 98.93589162826538,
-      "mean_grad_norm": 0.0007165948045440018
+      "mean_score": -0.09131778473965824,
+      "mean_abs_score": 0.2550560338422656,
+      "mean_delta_norm": 98.9358925819397,
+      "mean_grad_norm": 0.0003586649463613867
     },
     {
       "objective": "signed_hqql_tbl",
@@ -137,10 +137,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.1828403651015833,
-      "mean_abs_score": 0.4974241405725479,
-      "mean_delta_norm": 112.74697685241699,
-      "mean_grad_norm": 0.0020172383374301717
+      "mean_score": -0.09142016107216477,
+      "mean_abs_score": 0.24871206190437078,
+      "mean_delta_norm": 98.71446704864502,
+      "mean_grad_norm": 0.0006842357452114811
     },
     {
       "objective": "signed_hqql_tbl",
@@ -148,21 +148,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.14240037935087457,
-      "mean_abs_score": 0.4424680545926094,
-      "mean_delta_norm": 103.55014038085938,
-      "mean_grad_norm": 0.00170013279421255
-    },
-    {
-      "objective": "B_tbl_minus_hqql",
-      "module": "mod.blocks.0",
-      "kind": "particle",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": -0.03146827616728842,
-      "mean_abs_score": 0.8757400438189507,
-      "mean_delta_norm": 129.60108947753906,
-      "mean_grad_norm": 0.002105430445226375
+      "mean_score": -0.07120019997819327,
+      "mean_abs_score": 0.221234031021595,
+      "mean_delta_norm": 96.62193202972412,
+      "mean_grad_norm": 0.0005734278547606664
     },
     {
       "objective": "signed_hqql_tbl",
@@ -170,21 +159,21 @@
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.03146826941519976,
-      "mean_abs_score": 0.8757399991154671,
-      "mean_delta_norm": 123.34458827972412,
-      "mean_grad_norm": 0.0018671472753339913
+      "mean_score": -0.015734172658994794,
+      "mean_abs_score": 0.4378701262176037,
+      "mean_delta_norm": 103.66753721237183,
+      "mean_grad_norm": 0.00044152334339742083
     },
     {
-      "objective": "signed_hqql_tbl",
-      "module": "mod.blocks.7",
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.0",
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.1460947801824659,
-      "mean_abs_score": 0.35194752737879753,
-      "mean_delta_norm": 282.9436330795288,
-      "mean_grad_norm": 0.0001879842047856073
+      "mean_score": -0.015734186163172126,
+      "mean_abs_score": 0.4378699902445078,
+      "mean_delta_norm": 126.78733158111572,
+      "mean_grad_norm": 0.000968751290201908
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -192,10 +181,21 @@
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.14609476272016764,
-      "mean_abs_score": 0.35194752272218466,
-      "mean_delta_norm": 292.0854434967041,
-      "mean_grad_norm": 0.0002106042056766455
+      "mean_score": 0.0730473892763257,
+      "mean_abs_score": 0.17597376182675362,
+      "mean_delta_norm": 287.6275882720947,
+      "mean_grad_norm": 9.768194331627456e-05
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.blocks.7",
+      "kind": "particle",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": 0.07304736215155572,
+      "mean_abs_score": 0.1759737553074956,
+      "mean_delta_norm": 255.5023899078369,
+      "mean_grad_norm": 4.5084458633937174e-05
     },
     {
       "objective": "signed_hqql_tbl",
@@ -203,10 +203,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": -0.11572158709168434,
-      "mean_abs_score": 0.44909829180687666,
-      "mean_delta_norm": 132.6596441268921,
-      "mean_grad_norm": 0.0018798865203280002
+      "mean_score": -0.0578608209034428,
+      "mean_abs_score": 0.22454912960529327,
+      "mean_delta_norm": 128.6508264541626,
+      "mean_grad_norm": 0.0008483068122586701
     },
     {
       "objective": "signed_hqql_tbl",
@@ -214,10 +214,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.13093140005366877,
-      "mean_abs_score": 0.3630642471835017,
-      "mean_delta_norm": 317.42534255981445,
-      "mean_grad_norm": 0.0002315192205060157
+      "mean_score": 0.06546571350190789,
+      "mean_abs_score": 0.18153211567550898,
+      "mean_delta_norm": 311.2688465118408,
+      "mean_grad_norm": 0.0001050153405230958
     },
     {
       "objective": "signed_hqql_tbl",
@@ -225,10 +225,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.13716723024845123,
-      "mean_abs_score": 0.28268616180866957,
-      "mean_delta_norm": 154.48726272583008,
-      "mean_grad_norm": 0.0002155742113245651
+      "mean_score": 0.06858362210914493,
+      "mean_abs_score": 0.14134309673681855,
+      "mean_delta_norm": 154.4872646331787,
+      "mean_grad_norm": 0.00010815496261784574
     },
     {
       "objective": "signed_hqql_tbl",
@@ -236,10 +236,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.12831760698463768,
-      "mean_abs_score": 0.30730277206748724,
-      "mean_delta_norm": 203.8861198425293,
-      "mean_grad_norm": 0.0005677607732650358
+      "mean_score": 0.06415882345754653,
+      "mean_abs_score": 0.15365138463675976,
+      "mean_delta_norm": 179.45321369171143,
+      "mean_grad_norm": 0.00019196918401576113
     },
     {
       "objective": "signed_hqql_tbl",
@@ -247,10 +247,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.1184510332532227,
-      "mean_abs_score": 0.344982429407537,
-      "mean_delta_norm": 83.28901863098145,
-      "mean_grad_norm": 0.0006663324056717101
+      "mean_score": -0.059225507196970284,
+      "mean_abs_score": 0.17249120492488146,
+      "mean_delta_norm": 83.28902006149292,
+      "mean_grad_norm": 0.0003335337833050289
     },
     {
       "objective": "signed_hqql_tbl",
@@ -258,21 +258,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.09493978589307517,
-      "mean_abs_score": 0.32518172450363636,
-      "mean_delta_norm": 123.15587043762207,
-      "mean_grad_norm": 0.001345583368674852
-    },
-    {
-      "objective": "B_tbl_minus_hqql",
-      "module": "mod.blocks.1",
-      "kind": "particle",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": -0.03733959328383207,
-      "mean_abs_score": 0.4617552552372217,
-      "mean_delta_norm": 130.37831735610962,
-      "mean_grad_norm": 0.0018330202146898955
+      "mean_score": -0.04746991934371181,
+      "mean_abs_score": 0.16259087529033422,
+      "mean_delta_norm": 110.32467269897461,
+      "mean_grad_norm": 0.0004551506499410607
     },
     {
       "objective": "signed_hqql_tbl",
@@ -280,10 +269,21 @@
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.03733958158409223,
-      "mean_abs_score": 0.4617552328854799,
-      "mean_delta_norm": 123.16974210739136,
-      "mean_grad_norm": 0.0016309009915858041
+      "mean_score": -0.01866980385966599,
+      "mean_abs_score": 0.23087766021490097,
+      "mean_delta_norm": 102.24661064147949,
+      "mean_grad_norm": 0.00038472338746942114
+    },
+    {
+      "objective": "B_tbl_minus_hqql",
+      "module": "mod.blocks.1",
+      "kind": "particle",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": -0.018669802928343415,
+      "mean_abs_score": 0.23087760712951422,
+      "mean_delta_norm": 127.6842737197876,
+      "mean_grad_norm": 0.000843787427584175
     },
     {
       "objective": "signed_hqql_tbl",
@@ -291,10 +291,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": -0.06357975574792363,
-      "mean_abs_score": 0.34499932918697596,
-      "mean_delta_norm": 114.2162709236145,
-      "mean_grad_norm": 0.0017274161727982573
+      "mean_score": -0.03178989283333067,
+      "mean_abs_score": 0.17249967018142343,
+      "mean_delta_norm": 110.74532890319824,
+      "mean_grad_norm": 0.0007797298385412432
     },
     {
       "objective": "signed_hqql_tbl",
@@ -302,21 +302,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.09235774700937327,
-      "mean_abs_score": 0.21752444468438625,
-      "mean_delta_norm": 117.87907457351685,
-      "mean_grad_norm": 0.0003545144481904572
-    },
-    {
-      "objective": "signed_hqql_tbl",
-      "module": "mod.cls_blocks.0",
-      "kind": "cls",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": 0.11373972496949136,
-      "mean_abs_score": 0.11373972496949136,
-      "mean_delta_norm": 42.6180579662323,
-      "mean_grad_norm": 0.056916955625638366
+      "mean_score": -0.04617886352207279,
+      "mean_abs_score": 0.10876221768558025,
+      "mean_delta_norm": 117.87907600402832,
+      "mean_grad_norm": 0.0001776249391696183
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -324,10 +313,21 @@
       "kind": "cls",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.1137397091370076,
-      "mean_abs_score": 0.1137397091370076,
-      "mean_delta_norm": 42.61805772781372,
-      "mean_grad_norm": 0.056916956789791584
+      "mean_score": 0.05686985841020942,
+      "mean_abs_score": 0.05686985841020942,
+      "mean_delta_norm": 42.618058919906616,
+      "mean_grad_norm": 0.02845847769640386
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.cls_blocks.0",
+      "kind": "cls",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": 0.05686983489431441,
+      "mean_abs_score": 0.05686983489431441,
+      "mean_delta_norm": 42.61805820465088,
+      "mean_grad_norm": 0.028458477114327252
     },
     {
       "objective": "signed_hqql_tbl",
@@ -335,10 +335,10 @@
       "kind": "particle",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": -0.06594279030105099,
-      "mean_abs_score": 0.2950083389878273,
-      "mean_delta_norm": 88.81832885742188,
-      "mean_grad_norm": 0.0005655326986016007
+      "mean_score": -0.03297141275834292,
+      "mean_abs_score": 0.14750417415052652,
+      "mean_delta_norm": 88.81832790374756,
+      "mean_grad_norm": 0.00028313395341683645
     },
     {
       "objective": "signed_hqql_tbl",
@@ -346,10 +346,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.0740360253257677,
-      "mean_abs_score": 0.23018893133848906,
-      "mean_delta_norm": 206.32743644714355,
-      "mean_grad_norm": 0.0005474204790516524
+      "mean_score": 0.03701801097486168,
+      "mean_abs_score": 0.11509447544813156,
+      "mean_delta_norm": 200.23016166687012,
+      "mean_grad_norm": 0.00024810873128444655
     },
     {
       "objective": "signed_hqql_tbl",
@@ -357,21 +357,10 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": -0.07594582659658045,
-      "mean_abs_score": 0.20080652087926865,
-      "mean_delta_norm": 157.66390705108643,
-      "mean_grad_norm": 0.0009143349234363995
-    },
-    {
-      "objective": "signed_hqql_tbl",
-      "module": "mod.blocks.4",
-      "kind": "particle",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": -0.05536579224281013,
-      "mean_abs_score": 0.27880723867565393,
-      "mean_delta_norm": 115.1313419342041,
-      "mean_grad_norm": 0.0009726692478579935
+      "mean_score": -0.037972926162183285,
+      "mean_abs_score": 0.10040328418835998,
+      "mean_delta_norm": 152.899151802063,
+      "mean_grad_norm": 0.00041359514943906106
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -379,21 +368,21 @@
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.055365781765431166,
-      "mean_abs_score": 0.27880724892020226,
-      "mean_delta_norm": 120.93955278396606,
-      "mean_grad_norm": 0.0010948381313937716
+      "mean_score": -0.027682890533469617,
+      "mean_abs_score": 0.1394036328420043,
+      "mean_delta_norm": 118.80578470230103,
+      "mean_grad_norm": 0.0005064357610535808
     },
     {
       "objective": "signed_hqql_tbl",
-      "module": "mod.cls_blocks.1",
-      "kind": "cls",
+      "module": "mod.blocks.4",
+      "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.09990188106894493,
-      "mean_abs_score": 0.09990188106894493,
-      "mean_delta_norm": 139.89833164215088,
-      "mean_grad_norm": 0.029477983596734703
+      "mean_score": -0.027682889718562365,
+      "mean_abs_score": 0.13940363377332687,
+      "mean_delta_norm": 99.42038297653198,
+      "mean_grad_norm": 0.00023150192373577738
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -401,10 +390,21 @@
       "kind": "cls",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.09990185988135636,
-      "mean_abs_score": 0.09990185988135636,
-      "mean_delta_norm": 139.8983292579651,
-      "mean_grad_norm": 0.0294779846444726
+      "mean_score": -0.04995094327023253,
+      "mean_abs_score": 0.04995094327023253,
+      "mean_delta_norm": 139.898334980011,
+      "mean_grad_norm": 0.01473899174015969
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.cls_blocks.1",
+      "kind": "cls",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": -0.049950925749726593,
+      "mean_abs_score": 0.049950925749726593,
+      "mean_delta_norm": 139.89833068847656,
+      "mean_grad_norm": 0.014738991798367351
     },
     {
       "objective": "signed_hqql_tbl",
@@ -412,10 +412,10 @@
       "kind": "particle",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": -0.05560807837173343,
-      "mean_abs_score": 0.2677561519667506,
-      "mean_delta_norm": 155.55323886871338,
-      "mean_grad_norm": 0.0009828652837313712
+      "mean_score": -0.027804034121800214,
+      "mean_abs_score": 0.13387808529660106,
+      "mean_delta_norm": 136.8923749923706,
+      "mean_grad_norm": 0.000331272009134409
     },
     {
       "objective": "signed_hqql_tbl",
@@ -423,10 +423,10 @@
       "kind": "cls",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.08646655606571585,
-      "mean_abs_score": 0.09734230989124626,
-      "mean_delta_norm": 43.15249681472778,
-      "mean_grad_norm": 0.05700040119700134
+      "mean_score": 0.043233276112005115,
+      "mean_abs_score": 0.04867114871740341,
+      "mean_delta_norm": 43.152496099472046,
+      "mean_grad_norm": 0.028500201646238565
     },
     {
       "objective": "signed_hqql_tbl",
@@ -434,21 +434,21 @@
       "kind": "particle",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": -0.03366539429407567,
-      "mean_abs_score": 0.3041526563465595,
-      "mean_delta_norm": 103.77229976654053,
-      "mean_grad_norm": 0.0014909593228367157
+      "mean_score": -0.01683269819477573,
+      "mean_abs_score": 0.15207634447142482,
+      "mean_delta_norm": 101.8223009109497,
+      "mean_grad_norm": 0.0006731997509632492
     },
     {
-      "objective": "signed_hqql_tbl",
+      "objective": "B_tbl_minus_hqql",
       "module": "mod.blocks.3",
       "kind": "particle",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": -0.024776732723694295,
-      "mean_abs_score": 0.3204458449035883,
-      "mean_delta_norm": 97.93096494674683,
-      "mean_grad_norm": 0.0012396820129652042
+      "mean_score": -0.012388377101160586,
+      "mean_abs_score": 0.1602229392156005,
+      "mean_delta_norm": 99.57725381851196,
+      "mean_grad_norm": 0.0006435329360101605
     }
   ]
 }

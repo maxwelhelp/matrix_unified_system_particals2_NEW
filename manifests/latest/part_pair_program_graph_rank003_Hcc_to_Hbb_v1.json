@@ -2,6 +2,8 @@
   "ok": true,
   "nodes": 126,
   "edges": 210,
+  "src_label": "label_Hcc",
+  "tgt_label": "label_Hbb",
   "node_kinds": {
     "objective": 1,
     "classifier": 1,

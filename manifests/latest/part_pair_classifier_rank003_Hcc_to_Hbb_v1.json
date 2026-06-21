@@ -15,10 +15,10 @@
       "tensor": "output",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 1.1288797575980425,
-      "mean_abs_score": 1.4591651372611523,
-      "mean_act_norm": 14.573027908802032,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.564439881592989,
+      "mean_abs_score": 0.7295826263725758,
+      "mean_act_norm": 14.573028445243835,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -27,10 +27,10 @@
       "tensor": "output",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 1.1288797575980425,
-      "mean_abs_score": 1.4591651372611523,
-      "mean_act_norm": 14.573027908802032,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.564439881592989,
+      "mean_abs_score": 0.7295826263725758,
+      "mean_act_norm": 14.573028445243835,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -39,10 +39,10 @@
       "tensor": "input",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 1.0928090699017048,
-      "mean_abs_score": 1.5160119608044624,
-      "mean_act_norm": 5.536451742053032,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.5464045451954007,
+      "mean_abs_score": 0.7580059636384249,
+      "mean_act_norm": 5.536451935768127,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -51,10 +51,10 @@
       "tensor": "input",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 1.0928090699017048,
-      "mean_abs_score": 1.5160119608044624,
-      "mean_act_norm": 5.536451742053032,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.5464045451954007,
+      "mean_abs_score": 0.7580059636384249,
+      "mean_act_norm": 5.536451935768127,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -63,10 +63,10 @@
       "tensor": "input",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 1.01222924888134,
-      "mean_abs_score": 1.5842485502362251,
-      "mean_act_norm": 5.339250519871712,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.5061146377120167,
+      "mean_abs_score": 0.7921242974698544,
+      "mean_act_norm": 5.33925062417984,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -75,10 +75,10 @@
       "tensor": "input",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 1.01222924888134,
-      "mean_abs_score": 1.5842485502362251,
-      "mean_act_norm": 5.339250519871712,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.5061146377120167,
+      "mean_abs_score": 0.7921242974698544,
+      "mean_act_norm": 5.33925062417984,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -87,10 +87,10 @@
       "tensor": "output",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.9761586170643568,
-      "mean_abs_score": 1.732493907213211,
-      "mean_act_norm": 12.669180482625961,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.48807934299111366,
+      "mean_abs_score": 0.8662469424307346,
+      "mean_act_norm": 12.669180512428284,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -99,10 +99,10 @@
       "tensor": "output",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.9761586170643568,
-      "mean_abs_score": 1.732493907213211,
-      "mean_act_norm": 12.669180482625961,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.48807934299111366,
+      "mean_abs_score": 0.8662469424307346,
+      "mean_act_norm": 12.669180512428284,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -111,10 +111,10 @@
       "tensor": "output",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.3812517002224922,
-      "mean_abs_score": 1.2239067107439041,
-      "mean_act_norm": 12.728797256946564,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.19062587432563305,
+      "mean_abs_score": 0.6119533460587263,
+      "mean_act_norm": 12.728796660900116,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -123,34 +123,10 @@
       "tensor": "output",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.3812517002224922,
-      "mean_abs_score": 1.2239067107439041,
-      "mean_act_norm": 12.728797256946564,
-      "mean_grad_norm": 0.3535533845424652
-    },
-    {
-      "objective": "signed_hqql_tbl",
-      "module": "mod.fc.0",
-      "module_type": "Linear",
-      "tensor": "output",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": 0.3217378817498684,
-      "mean_abs_score": 1.4717743694782257,
-      "mean_act_norm": 12.817458808422089,
-      "mean_grad_norm": 0.3535533845424652
-    },
-    {
-      "objective": "signed_hqql_tbl",
-      "module": "mod.fc",
-      "module_type": "Sequential",
-      "tensor": "output",
-      "analysis_group": "B_Hqql_to_Tbl",
-      "n": 16,
-      "mean_score": 0.3217378817498684,
-      "mean_abs_score": 1.4717743694782257,
-      "mean_act_norm": 12.817458808422089,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.19062587432563305,
+      "mean_abs_score": 0.6119533460587263,
+      "mean_act_norm": 12.728796660900116,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -159,10 +135,10 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.321737814694643,
-      "mean_abs_score": 1.4717743620276451,
-      "mean_act_norm": 12.817458748817444,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.16086891200393438,
+      "mean_abs_score": 0.7358871307224035,
+      "mean_act_norm": 12.817458629608154,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -171,34 +147,34 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.321737814694643,
-      "mean_abs_score": 1.4717743620276451,
-      "mean_act_norm": 12.817458748817444,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.16086891200393438,
+      "mean_abs_score": 0.7358871307224035,
+      "mean_act_norm": 12.817458629608154,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
       "module": "mod.fc.0",
       "module_type": "Linear",
-      "tensor": "input",
+      "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.3578085647895932,
-      "mean_abs_score": 0.9408338330686092,
-      "mean_act_norm": 4.497281968593597,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.16086887195706367,
+      "mean_abs_score": 0.7358871214091778,
+      "mean_act_norm": 12.817458629608154,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
       "module": "mod.fc",
       "module_type": "Sequential",
-      "tensor": "input",
+      "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.3578085647895932,
-      "mean_abs_score": 0.9408338330686092,
-      "mean_act_norm": 4.497281968593597,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.16086887195706367,
+      "mean_abs_score": 0.7358871214091778,
+      "mean_act_norm": 12.817458629608154,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -207,10 +183,10 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.357808506116271,
-      "mean_abs_score": 0.9408337846398354,
-      "mean_act_norm": 4.497281938791275,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.1789042556192726,
+      "mean_abs_score": 0.470416909083724,
+      "mean_act_norm": 4.497281804680824,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -219,10 +195,34 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.357808506116271,
-      "mean_abs_score": 0.9408337846398354,
-      "mean_act_norm": 4.497281938791275,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.1789042556192726,
+      "mean_abs_score": 0.470416909083724,
+      "mean_act_norm": 4.497281804680824,
+      "mean_grad_norm": 0.23431745171546936
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.fc.0",
+      "module_type": "Linear",
+      "tensor": "input",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": 0.17890421650372446,
+      "mean_abs_score": 0.47041689045727253,
+      "mean_act_norm": 4.497281864285469,
+      "mean_grad_norm": 0.23431745171546936
+    },
+    {
+      "objective": "signed_hqql_tbl",
+      "module": "mod.fc",
+      "module_type": "Sequential",
+      "tensor": "input",
+      "analysis_group": "B_Hqql_to_Tbl",
+      "n": 16,
+      "mean_score": 0.17890421650372446,
+      "mean_abs_score": 0.47041689045727253,
+      "mean_act_norm": 4.497281864285469,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -231,10 +231,10 @@
       "tensor": "input",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.34518107445910573,
-      "mean_abs_score": 0.948480885475874,
-      "mean_act_norm": 4.197077706456184,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.17259055492468178,
+      "mean_abs_score": 0.4742404203861952,
+      "mean_act_norm": 4.197077572345734,
+      "mean_grad_norm": 0.23431745171546936
     },
     {
       "objective": "signed_hqql_tbl",
@@ -243,10 +243,10 @@
       "tensor": "input",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.34518107445910573,
-      "mean_abs_score": 0.948480885475874,
-      "mean_act_norm": 4.197077706456184,
-      "mean_grad_norm": 0.4686349034309387
+      "mean_score": 0.17259055492468178,
+      "mean_abs_score": 0.4742404203861952,
+      "mean_act_norm": 4.197077572345734,
+      "mean_grad_norm": 0.23431745171546936
     }
   ]
 }

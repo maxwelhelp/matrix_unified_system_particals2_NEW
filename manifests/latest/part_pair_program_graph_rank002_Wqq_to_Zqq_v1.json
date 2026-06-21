@@ -2,6 +2,8 @@
   "ok": true,
   "nodes": 124,
   "edges": 208,
+  "src_label": "label_Wqq",
+  "tgt_label": "label_Zqq",
   "node_kinds": {
     "objective": 1,
     "classifier": 1,

@@ -15,10 +15,10 @@
       "tensor": "output",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.5794029915705323,
-      "mean_abs_score": 1.3552824817597866,
-      "mean_act_norm": 12.244611203670502,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.28970151487737894,
+      "mean_abs_score": 0.6776411980390549,
+      "mean_act_norm": 12.244611382484436,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -27,10 +27,10 @@
       "tensor": "output",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.5794029915705323,
-      "mean_abs_score": 1.3552824817597866,
-      "mean_act_norm": 12.244611203670502,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.28970151487737894,
+      "mean_abs_score": 0.6776411980390549,
+      "mean_act_norm": 12.244611382484436,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -39,10 +39,10 @@
       "tensor": "output",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.3369264341890812,
-      "mean_abs_score": 1.867300320416689,
-      "mean_act_norm": 11.585621118545532,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.16846323013305664,
+      "mean_abs_score": 0.9336501695215702,
+      "mean_act_norm": 11.585621297359467,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -51,10 +51,10 @@
       "tensor": "output",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.3369264341890812,
-      "mean_abs_score": 1.867300320416689,
-      "mean_act_norm": 11.585621118545532,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.16846323013305664,
+      "mean_abs_score": 0.9336501695215702,
+      "mean_act_norm": 11.585621297359467,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -63,10 +63,10 @@
       "tensor": "input",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.5114797684364021,
-      "mean_abs_score": 0.8502294979989529,
-      "mean_act_norm": 4.286255389451981,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.25573989283293486,
+      "mean_abs_score": 0.42511471454054117,
+      "mean_act_norm": 4.286255344748497,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -75,10 +75,10 @@
       "tensor": "input",
       "analysis_group": "A_Hqql_correct",
       "n": 16,
-      "mean_score": 0.5114797684364021,
-      "mean_abs_score": 0.8502294979989529,
-      "mean_act_norm": 4.286255389451981,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.25573989283293486,
+      "mean_abs_score": 0.42511471454054117,
+      "mean_act_norm": 4.286255344748497,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -87,10 +87,10 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.20995314605534077,
-      "mean_abs_score": 1.8772570192813873,
-      "mean_act_norm": 12.13842648267746,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.10497656743973494,
+      "mean_abs_score": 0.9386284798383713,
+      "mean_act_norm": 12.138426423072815,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -99,10 +99,10 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.20995314605534077,
-      "mean_abs_score": 1.8772570192813873,
-      "mean_act_norm": 12.13842648267746,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.10497656743973494,
+      "mean_abs_score": 0.9386284798383713,
+      "mean_act_norm": 12.138426423072815,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -111,10 +111,10 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.20995312742888927,
-      "mean_abs_score": 1.8772570118308067,
-      "mean_act_norm": 12.138426721096039,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.10497652739286423,
+      "mean_abs_score": 0.9386284612119198,
+      "mean_act_norm": 12.138426423072815,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -123,10 +123,10 @@
       "tensor": "output",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.20995312742888927,
-      "mean_abs_score": 1.8772570118308067,
-      "mean_act_norm": 12.138426721096039,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.10497652739286423,
+      "mean_abs_score": 0.9386284612119198,
+      "mean_act_norm": 12.138426423072815,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -135,10 +135,10 @@
       "tensor": "input",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.40484968200325966,
-      "mean_abs_score": 0.7444808594882488,
-      "mean_act_norm": 4.21588359773159,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.20242484658956528,
+      "mean_abs_score": 0.372240437194705,
+      "mean_act_norm": 4.215883553028107,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -147,10 +147,10 @@
       "tensor": "input",
       "analysis_group": "C_Tbl_correct",
       "n": 16,
-      "mean_score": 0.40484968200325966,
-      "mean_abs_score": 0.7444808594882488,
-      "mean_act_norm": 4.21588359773159,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.20242484658956528,
+      "mean_abs_score": 0.372240437194705,
+      "mean_act_norm": 4.215883553028107,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -159,10 +159,10 @@
       "tensor": "output",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.2604910172522068,
-      "mean_abs_score": 1.4243565276265144,
-      "mean_act_norm": 11.651811122894287,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.13024552259594202,
+      "mean_abs_score": 0.7121782302856445,
+      "mean_act_norm": 11.651810765266418,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -171,10 +171,10 @@
       "tensor": "output",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.2604910172522068,
-      "mean_abs_score": 1.4243565276265144,
-      "mean_act_norm": 11.651811122894287,
-      "mean_grad_norm": 0.3535533845424652
+      "mean_score": 0.13024552259594202,
+      "mean_abs_score": 0.7121782302856445,
+      "mean_act_norm": 11.651810765266418,
+      "mean_grad_norm": 0.1767766922712326
     },
     {
       "objective": "signed_hqql_tbl",
@@ -183,10 +183,10 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.27787634218111634,
-      "mean_abs_score": 0.7122120559215546,
+      "mean_score": 0.13893817132338881,
+      "mean_abs_score": 0.35610603727400303,
       "mean_act_norm": 4.513766348361969,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -195,10 +195,10 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.27787634218111634,
-      "mean_abs_score": 0.7122120559215546,
+      "mean_score": 0.13893817132338881,
+      "mean_abs_score": 0.35610603727400303,
       "mean_act_norm": 4.513766348361969,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -207,10 +207,10 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.27787633100524545,
-      "mean_abs_score": 0.7122120372951031,
-      "mean_act_norm": 4.513766452670097,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.13893812033347785,
+      "mean_abs_score": 0.35610600374639034,
+      "mean_act_norm": 4.513766393065453,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "B_tbl_minus_hqql",
@@ -219,10 +219,10 @@
       "tensor": "input",
       "analysis_group": "B_Hqql_to_Tbl",
       "n": 16,
-      "mean_score": 0.27787633100524545,
-      "mean_abs_score": 0.7122120372951031,
-      "mean_act_norm": 4.513766452670097,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.13893812033347785,
+      "mean_abs_score": 0.35610600374639034,
+      "mean_act_norm": 4.513766393065453,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -231,10 +231,10 @@
       "tensor": "input",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.19256777223199606,
-      "mean_abs_score": 0.563374312594533,
-      "mean_act_norm": 3.875085175037384,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.09628389740828425,
+      "mean_abs_score": 0.2816871711984277,
+      "mean_act_norm": 3.8750851154327393,
+      "mean_grad_norm": 0.2914668023586273
     },
     {
       "objective": "signed_hqql_tbl",
@@ -243,10 +243,10 @@
       "tensor": "input",
       "analysis_group": "D_Tbl_to_Hqql",
       "n": 16,
-      "mean_score": 0.19256777223199606,
-      "mean_abs_score": 0.563374312594533,
-      "mean_act_norm": 3.875085175037384,
-      "mean_grad_norm": 0.5829336047172546
+      "mean_score": 0.09628389740828425,
+      "mean_abs_score": 0.2816871711984277,
+      "mean_act_norm": 3.8750851154327393,
+      "mean_grad_norm": 0.2914668023586273
     }
   ]
 }
