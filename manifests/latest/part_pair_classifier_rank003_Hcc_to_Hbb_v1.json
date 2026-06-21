@@ -5,6 +5,8 @@
   "summary_rows": 20,
   "dim_rows": 268,
   "linear_rows": 40,
+  "src_label": "label_Hcc",
+  "tgt_label": "label_Hbb",
   "top": [
     {
       "objective": "signed_hqql_tbl",

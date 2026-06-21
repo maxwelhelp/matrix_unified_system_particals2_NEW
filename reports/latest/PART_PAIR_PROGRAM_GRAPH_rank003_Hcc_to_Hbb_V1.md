@@ -73,30 +73,30 @@ Machine-readable program graph skeleton assembled from validated pair mechanisms
 ## Top classifier linear directions
 | rank | source | target | W_Tbl-Hqql | dim |
 | --- | --- | --- | --- | --- |
-| 1 | classifier_dim:fc_dim_54 | classifier:mod.fc | -1.6964 | 54 |
-| 2 | classifier_dim:fc_dim_76 | classifier:mod.fc | 1.4146 | 76 |
-| 3 | classifier_dim:fc_dim_18 | classifier:mod.fc | -1.2686 | 18 |
-| 4 | classifier_dim:fc_dim_103 | classifier:mod.fc | 1.2515 | 103 |
-| 5 | classifier_dim:fc_dim_121 | classifier:mod.fc | 0.9775 | 121 |
-| 6 | classifier_dim:fc_dim_96 | classifier:mod.fc | -0.7730 | 96 |
-| 7 | classifier_dim:fc_dim_58 | classifier:mod.fc | 0.5745 | 58 |
-| 8 | classifier_dim:fc_dim_23 | classifier:mod.fc | 0.5696 | 23 |
-| 9 | classifier_dim:fc_dim_45 | classifier:mod.fc | -0.4822 | 45 |
-| 10 | classifier_dim:fc_dim_57 | classifier:mod.fc | 0.4719 | 57 |
-| 11 | classifier_dim:fc_dim_10 | classifier:mod.fc | -0.3489 | 10 |
-| 12 | classifier_dim:fc_dim_8 | classifier:mod.fc | 0.2327 | 8 |
-| 13 | classifier_dim:fc_dim_2 | classifier:mod.fc | 0.2039 | 2 |
-| 14 | classifier_dim:fc_dim_91 | classifier:mod.fc | 0.1842 | 91 |
-| 15 | classifier_dim:fc_dim_34 | classifier:mod.fc | -0.1708 | 34 |
-| 16 | classifier_dim:fc_dim_79 | classifier:mod.fc | -0.1077 | 79 |
-| 17 | classifier_dim:fc_dim_6 | classifier:mod.fc | 0.0887 | 6 |
-| 18 | classifier_dim:fc_dim_66 | classifier:mod.fc | 0.0838 | 66 |
-| 19 | classifier_dim:fc_dim_3 | classifier:mod.fc | 0.0658 | 3 |
-| 20 | classifier_dim:fc_dim_80 | classifier:mod.fc | -0.0510 | 80 |
-| 21 | classifier_dim:fc_dim_110 | classifier:mod.fc | -0.0399 | 110 |
-| 22 | classifier_dim:fc_dim_123 | classifier:mod.fc | 0.0129 | 123 |
-| 23 | classifier_dim:fc_dim_124 | classifier:mod.fc | 0.0039 | 124 |
-| 24 | classifier_dim:fc_dim_82 | classifier:mod.fc | 0.0031 | 82 |
+| 1 | classifier_dim:fc_dim_103 | classifier:mod.fc | 0.0000 | 103 |
+| 2 | classifier_dim:fc_dim_8 | classifier:mod.fc | 0.0000 | 8 |
+| 3 | classifier_dim:fc_dim_121 | classifier:mod.fc | 0.0000 | 121 |
+| 4 | classifier_dim:fc_dim_45 | classifier:mod.fc | 0.0000 | 45 |
+| 5 | classifier_dim:fc_dim_76 | classifier:mod.fc | 0.0000 | 76 |
+| 6 | classifier_dim:fc_dim_57 | classifier:mod.fc | 0.0000 | 57 |
+| 7 | classifier_dim:fc_dim_58 | classifier:mod.fc | 0.0000 | 58 |
+| 8 | classifier_dim:fc_dim_23 | classifier:mod.fc | 0.0000 | 23 |
+| 9 | classifier_dim:fc_dim_3 | classifier:mod.fc | 0.0000 | 3 |
+| 10 | classifier_dim:fc_dim_18 | classifier:mod.fc | 0.0000 | 18 |
+| 11 | classifier_dim:fc_dim_54 | classifier:mod.fc | 0.0000 | 54 |
+| 12 | classifier_dim:fc_dim_34 | classifier:mod.fc | 0.0000 | 34 |
+| 13 | classifier_dim:fc_dim_82 | classifier:mod.fc | 0.0000 | 82 |
+| 14 | classifier_dim:fc_dim_79 | classifier:mod.fc | 0.0000 | 79 |
+| 15 | classifier_dim:fc_dim_124 | classifier:mod.fc | 0.0000 | 124 |
+| 16 | classifier_dim:fc_dim_123 | classifier:mod.fc | 0.0000 | 123 |
+| 17 | classifier_dim:fc_dim_10 | classifier:mod.fc | 0.0000 | 10 |
+| 18 | classifier_dim:fc_dim_66 | classifier:mod.fc | 0.0000 | 66 |
+| 19 | classifier_dim:fc_dim_2 | classifier:mod.fc | 0.0000 | 2 |
+| 20 | classifier_dim:fc_dim_96 | classifier:mod.fc | 0.0000 | 96 |
+| 21 | classifier_dim:fc_dim_91 | classifier:mod.fc | 0.0000 | 91 |
+| 22 | classifier_dim:fc_dim_80 | classifier:mod.fc | 0.0000 | 80 |
+| 23 | classifier_dim:fc_dim_110 | classifier:mod.fc | 0.0000 | 110 |
+| 24 | classifier_dim:fc_dim_6 | classifier:mod.fc | 0.0000 | 6 |
 
 ## Graph formula
 
