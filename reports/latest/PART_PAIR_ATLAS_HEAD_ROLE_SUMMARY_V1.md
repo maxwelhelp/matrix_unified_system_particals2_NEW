@@ -1,54 +1,51 @@
 # PART_PAIR_ATLAS_HEAD_ROLE_SUMMARY_V1
 
-Aggregates generated pair program graphs into a head/role/classifier-dimension atlas. This is a model-level summary over pair-specific program graphs, not a new model run.
+Aggregates generated pair program graphs into a head/role/classifier-dimension atlas. This is a model-level summary over pair-specific program graphs, not a new model run. Near-zero pair edges are filtered so numerical no-op routes do not look universal.
 
 - pair_graphs: **3**
+- min_abs_pair_weight: **0.001**
+- kept_pair_edges: **25**
+- skipped_pair_edges: **12**
 - unique_heads: **5**
-- unique_role_pairs: **11**
+- unique_role_pairs: **7**
 - unique_classifier_dims: **24**
 
 ## Universal / repeated heads
 | rank | head | graphs | edges | mean_abs | best_weight | best_pair |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | mod.cls_blocks.0.attn.h4 | 3 | 16 | 0.2522 | -0.7199 | label_Wqq->label_Zqq |
+| 1 | mod.cls_blocks.0.attn.h4 | 3 | 9 | 0.4483 | -0.7199 | label_Wqq->label_Zqq |
 | 2 | mod.cls_blocks.0.attn.h0 | 2 | 8 | 0.0473 | 0.1158 | label_Wqq->label_Zqq |
-| 3 | mod.cls_blocks.0.attn.h1 | 1 | 4 | 0.0674 | 0.1132 | label_Hcc->label_Hbb |
-| 4 | mod.cls_blocks.0.attn.h6 | 1 | 5 | 0.0554 | -0.1500 | label_Zqq->label_Wqq |
-| 5 | mod.cls_blocks.1.attn.h3 | 1 | 4 | 0.0087 | -0.0174 | label_Hcc->label_Hbb |
+| 3 | mod.cls_blocks.0.attn.h6 | 1 | 2 | 0.1385 | -0.1500 | label_Zqq->label_Wqq |
+| 4 | mod.cls_blocks.0.attn.h1 | 1 | 4 | 0.0674 | 0.1132 | label_Hcc->label_Hbb |
+| 5 | mod.cls_blocks.1.attn.h3 | 1 | 2 | 0.0174 | -0.0174 | label_Hcc->label_Hbb |
 
 ## Repeated causal role pairs
 | rank | role_pair | graphs | edges | mean_abs | best_weight | best_pair |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | neutral_hadron<-neutral_hadron | 2 | 5 | 0.3103 | -0.6431 | label_Wqq->label_Zqq |
-| 2 | CLS<-muon | 2 | 8 | 0.0436 | 0.1158 | label_Wqq->label_Zqq |
-| 3 | charged_hadron<-CLS | 2 | 3 | 3.030e-07 | -3.204e-07 | label_Zqq->label_Wqq |
-| 4 | CLS<-CLS | 2 | 3 | 3.030e-07 | -3.204e-07 | label_Zqq->label_Wqq |
-| 5 | neutral_hadron<-CLS | 2 | 2 | 2.943e-07 | 3.204e-07 | label_Hcc->label_Hbb |
-| 6 | neutral_hadron<-charged_hadron | 1 | 2 | 0.5784 | -0.7199 | label_Wqq->label_Zqq |
-| 7 | neutral_hadron<-photon | 1 | 2 | 0.5475 | -0.6279 | label_Wqq->label_Zqq |
-| 8 | electron<-electron | 1 | 2 | 0.2544 | -0.4486 | label_Hcc->label_Hbb |
-| 9 | charged_hadron<-muon | 1 | 2 | 0.0560 | 0.1020 | label_Wqq->label_Zqq |
-| 10 | electron<-muon | 1 | 6 | 0.0370 | 0.1132 | label_Hcc->label_Hbb |
-| 11 | photon<-CLS | 1 | 2 | 3.204e-07 | -3.204e-07 | label_Zqq->label_Wqq |
+| 2 | CLS<-muon | 2 | 7 | 0.0498 | 0.1158 | label_Wqq->label_Zqq |
+| 3 | neutral_hadron<-charged_hadron | 1 | 2 | 0.5784 | -0.7199 | label_Wqq->label_Zqq |
+| 4 | neutral_hadron<-photon | 1 | 2 | 0.5475 | -0.6279 | label_Wqq->label_Zqq |
+| 5 | electron<-electron | 1 | 2 | 0.2544 | -0.4486 | label_Hcc->label_Hbb |
+| 6 | charged_hadron<-muon | 1 | 2 | 0.0560 | 0.1020 | label_Wqq->label_Zqq |
+| 7 | electron<-muon | 1 | 5 | 0.0444 | 0.1132 | label_Hcc->label_Hbb |
 
 ## Query roles
 | rank | query_role | graphs | edges | mean_abs | best_weight | best_pair |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | neutral_hadron | 3 | 11 | 0.3458 | -0.7199 | label_Wqq->label_Zqq |
-| 2 | CLS | 3 | 11 | 0.0317 | 0.1158 | label_Wqq->label_Zqq |
-| 3 | charged_hadron | 2 | 5 | 0.0224 | 0.1020 | label_Wqq->label_Zqq |
-| 4 | electron | 1 | 8 | 0.0914 | -0.4486 | label_Hcc->label_Hbb |
-| 5 | photon | 1 | 2 | 3.204e-07 | -3.204e-07 | label_Zqq->label_Wqq |
+| 1 | neutral_hadron | 2 | 9 | 0.4226 | -0.7199 | label_Wqq->label_Zqq |
+| 2 | CLS | 2 | 7 | 0.0498 | 0.1158 | label_Wqq->label_Zqq |
+| 3 | electron | 1 | 7 | 0.1044 | -0.4486 | label_Hcc->label_Hbb |
+| 4 | charged_hadron | 1 | 2 | 0.0560 | 0.1020 | label_Wqq->label_Zqq |
 
 ## Key roles
 | rank | key_role | graphs | edges | mean_abs | best_weight | best_pair |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | CLS | 3 | 10 | 3.047e-07 | -3.204e-07 | label_Zqq->label_Wqq |
-| 2 | neutral_hadron | 2 | 5 | 0.3103 | -0.6431 | label_Wqq->label_Zqq |
-| 3 | muon | 2 | 16 | 0.0427 | 0.1158 | label_Wqq->label_Zqq |
-| 4 | charged_hadron | 1 | 2 | 0.5784 | -0.7199 | label_Wqq->label_Zqq |
-| 5 | photon | 1 | 2 | 0.5475 | -0.6279 | label_Wqq->label_Zqq |
-| 6 | electron | 1 | 2 | 0.2544 | -0.4486 | label_Hcc->label_Hbb |
+| 1 | neutral_hadron | 2 | 5 | 0.3103 | -0.6431 | label_Wqq->label_Zqq |
+| 2 | muon | 2 | 14 | 0.0488 | 0.1158 | label_Wqq->label_Zqq |
+| 3 | charged_hadron | 1 | 2 | 0.5784 | -0.7199 | label_Wqq->label_Zqq |
+| 4 | photon | 1 | 2 | 0.5475 | -0.6279 | label_Wqq->label_Zqq |
+| 5 | electron | 1 | 2 | 0.2544 | -0.4486 | label_Hcc->label_Hbb |
 
 ## Shared classifier dimensions
 | rank | dim | graphs | mean_abs_W | best_W | best_pair |
@@ -80,7 +77,7 @@ Aggregates generated pair program graphs into a head/role/classifier-dimension a
 
 ## Interpretation
 
-- Heads with `graphs > 1` are reusable mechanisms across multiple class-pairs.
-- Role pairs with `graphs > 1` are repeated physical read routes.
+- Heads with `graphs > 1` and non-trivial edge weight are reusable mechanisms across multiple class-pairs.
+- Role pairs with `graphs > 1` are repeated physical read routes after filtering numerical no-op edges.
 - Classifier dims with `graphs > 1` are shared logit axes reused by multiple pair decisions.
 - Pair-specific rows with high `best_weight` are local mechanisms, not universal ones.

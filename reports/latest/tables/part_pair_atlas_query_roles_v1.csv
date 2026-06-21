@@ -1,6 +1,5 @@
 query_role,n_edges,pair_graphs,label_pairs,mean_weight,mean_abs_weight,mean_score,best_weight,best_pair_tag,best_label_pair
-neutral_hadron,11,3,label_Hcc->label_Hbb;label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.08120632578026164,0.34575632079081103,0.22673623822629452,-0.719895601272583,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
-CLS,11,3,label_Hcc->label_Hbb;label_Wqq->label_Zqq;label_Zqq->label_Wqq,0.01964624903418801,0.031719350002028725,-0.014671866612678225,0.11584767699241638,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
-charged_hadron,5,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,0.018380525708198547,0.022403845191001893,0.022403750009834765,0.1019609272480011,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
-electron,8,1,label_Hcc->label_Hbb,-0.034673909191042185,0.09137377003207803,0.06824397062882781,-0.4486321322619915,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
-photon,2,1,label_Zqq->label_Wqq,-3.203749656677246e-07,3.203749656677246e-07,1.6763806343078613e-07,-3.203749656677246e-07,rank001_Zqq_to_Wqq,label_Zqq->label_Wqq
+neutral_hadron,9,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.09925218174854915,0.4225909933447838,0.2771220189622707,-0.719895601272583,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+CLS,7,2,label_Hcc->label_Hbb;label_Wqq->label_Zqq,0.03085853691611971,0.049830293016774316,-0.020575429978115217,0.11584767699241638,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+electron,7,1,label_Hcc->label_Hbb,-0.03964159478034292,0.1044128957603659,0.07797885100756373,-0.4486321322619915,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+charged_hadron,2,1,label_Wqq->label_Zqq,0.04595176875591278,0.05600915849208832,0.056009101681411266,0.1019609272480011,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq

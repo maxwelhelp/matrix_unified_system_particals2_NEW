@@ -1,18 +1,24 @@
 {
   "ok": true,
   "pair_graphs": 3,
+  "min_abs_pair_weight": 0.001,
+  "min_abs_linear_weight": 1e-06,
+  "kept_pair_edges": 25,
+  "skipped_pair_edges": 12,
+  "kept_linear_edges": 72,
+  "skipped_linear_edges": 0,
   "heads": 5,
-  "role_pairs": 11,
+  "role_pairs": 7,
   "classifier_dims": 24,
   "top_heads": [
     {
       "head_id": "mod.cls_blocks.0.attn.h4",
-      "n_edges": 16,
+      "n_edges": 9,
       "pair_graphs": 3,
       "label_pairs": "label_Hcc->label_Hbb;label_Wqq->label_Zqq;label_Zqq->label_Wqq",
-      "mean_weight": -0.07867309520952404,
-      "mean_abs_weight": 0.25219359691254795,
-      "mean_score": 0.1733280491316691,
+      "mean_weight": -0.1398631197710832,
+      "mean_abs_weight": 0.4483439404931333,
+      "mean_score": 0.3081386011714737,
       "best_weight": -0.719895601272583,
       "best_pair_tag": "rank002_Wqq_to_Zqq",
       "best_label_pair": "label_Wqq->label_Zqq"
@@ -30,6 +36,18 @@
       "best_label_pair": "label_Wqq->label_Zqq"
     },
     {
+      "head_id": "mod.cls_blocks.0.attn.h6",
+      "n_edges": 2,
+      "pair_graphs": 1,
+      "label_pairs": "label_Zqq->label_Wqq",
+      "mean_weight": -0.011498682200908661,
+      "mean_abs_weight": 0.13849596679210663,
+      "mean_score": 0.02229065727442503,
+      "best_weight": -0.1499946489930153,
+      "best_pair_tag": "rank001_Zqq_to_Wqq",
+      "best_label_pair": "label_Zqq->label_Wqq"
+    },
+    {
       "head_id": "mod.cls_blocks.0.attn.h1",
       "n_edges": 4,
       "pair_graphs": 1,
@@ -42,25 +60,13 @@
       "best_label_pair": "label_Hcc->label_Hbb"
     },
     {
-      "head_id": "mod.cls_blocks.0.attn.h6",
-      "n_edges": 5,
-      "pair_graphs": 1,
-      "label_pairs": "label_Zqq->label_Wqq",
-      "mean_weight": -0.004599665105342865,
-      "mean_abs_weight": 0.055398578941822055,
-      "mean_score": 0.00891636349260807,
-      "best_weight": -0.1499946489930153,
-      "best_pair_tag": "rank001_Zqq_to_Wqq",
-      "best_label_pair": "label_Zqq->label_Wqq"
-    },
-    {
       "head_id": "mod.cls_blocks.1.attn.h3",
-      "n_edges": 4,
+      "n_edges": 2,
       "pair_graphs": 1,
       "label_pairs": "label_Hcc->label_Hbb",
-      "mean_weight": -0.008637093007564545,
-      "mean_abs_weight": 0.008736982941627502,
-      "mean_score": 0.004360580816864967,
+      "mean_weight": -0.017374075949192047,
+      "mean_abs_weight": 0.017374075949192047,
+      "mean_score": 0.01735279243439436,
       "best_weight": -0.017374075949192047,
       "best_pair_tag": "rank003_Hcc_to_Hbb",
       "best_label_pair": "label_Hcc->label_Hbb"
@@ -81,51 +87,15 @@
     },
     {
       "role_pair": "CLS<-muon",
-      "n_edges": 8,
+      "n_edges": 7,
       "pair_graphs": 2,
       "label_pairs": "label_Hcc->label_Hbb;label_Wqq->label_Zqq",
-      "mean_weight": 0.027013706043362617,
-      "mean_abs_weight": 0.043613992631435394,
-      "mean_score": -0.02017388492822647,
+      "mean_weight": 0.03085853691611971,
+      "mean_abs_weight": 0.049830293016774316,
+      "mean_score": -0.020575429978115217,
       "best_weight": 0.11584767699241638,
       "best_pair_tag": "rank002_Wqq_to_Zqq",
       "best_label_pair": "label_Wqq->label_Zqq"
-    },
-    {
-      "role_pair": "charged_hadron<-CLS",
-      "n_edges": 3,
-      "pair_graphs": 2,
-      "label_pairs": "label_Wqq->label_Zqq;label_Zqq->label_Wqq",
-      "mean_weight": -3.0299027760823566e-07,
-      "mean_abs_weight": 3.0299027760823566e-07,
-      "mean_score": 1.8222878376642862e-07,
-      "best_weight": -3.203749656677246e-07,
-      "best_pair_tag": "rank001_Zqq_to_Wqq",
-      "best_label_pair": "label_Zqq->label_Wqq"
-    },
-    {
-      "role_pair": "CLS<-CLS",
-      "n_edges": 3,
-      "pair_graphs": 2,
-      "label_pairs": "label_Wqq->label_Zqq;label_Zqq->label_Wqq",
-      "mean_weight": -3.0299027760823566e-07,
-      "mean_abs_weight": 3.0299027760823566e-07,
-      "mean_score": 1.8222878376642862e-07,
-      "best_weight": -3.203749656677246e-07,
-      "best_pair_tag": "rank001_Zqq_to_Wqq",
-      "best_label_pair": "label_Zqq->label_Wqq"
-    },
-    {
-      "role_pair": "neutral_hadron<-CLS",
-      "n_edges": 2,
-      "pair_graphs": 2,
-      "label_pairs": "label_Hcc->label_Hbb;label_Wqq->label_Zqq",
-      "mean_weight": 2.60770320892334e-08,
-      "mean_abs_weight": 2.942979335784912e-07,
-      "mean_score": 2.2491440176963806e-07,
-      "best_weight": 3.203749656677246e-07,
-      "best_pair_tag": "rank003_Hcc_to_Hbb",
-      "best_label_pair": "label_Hcc->label_Hbb"
     },
     {
       "role_pair": "neutral_hadron<-charged_hadron",
@@ -177,27 +147,15 @@
     },
     {
       "role_pair": "electron<-muon",
-      "n_edges": 6,
+      "n_edges": 5,
       "pair_graphs": 1,
       "label_pairs": "label_Hcc->label_Hbb",
-      "mean_weight": 0.018517422179381054,
-      "mean_abs_weight": 0.03703695038954417,
-      "mean_score": 0.0370368684331576,
+      "mean_weight": 0.022200928628444673,
+      "mean_abs_weight": 0.04442436248064041,
+      "mean_score": 0.044424280524253845,
       "best_weight": 0.11323445290327072,
       "best_pair_tag": "rank003_Hcc_to_Hbb",
       "best_label_pair": "label_Hcc->label_Hbb"
-    },
-    {
-      "role_pair": "photon<-CLS",
-      "n_edges": 2,
-      "pair_graphs": 1,
-      "label_pairs": "label_Zqq->label_Wqq",
-      "mean_weight": -3.203749656677246e-07,
-      "mean_abs_weight": 3.203749656677246e-07,
-      "mean_score": 1.6763806343078613e-07,
-      "best_weight": -3.203749656677246e-07,
-      "best_pair_tag": "rank001_Zqq_to_Wqq",
-      "best_label_pair": "label_Zqq->label_Wqq"
     }
   ],
   "top_classifier_dims": [
