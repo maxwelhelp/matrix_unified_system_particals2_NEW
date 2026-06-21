@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "pairs": 3,
+  "pairs": 8,
   "rows": [
     {
       "rank": 1,
@@ -49,6 +49,86 @@
       "best_B_delta": -0.4486321322619915,
       "best_B_flip": 0.0,
       "best_score": 0.29078536853194237
+    },
+    {
+      "rank": 4,
+      "tag": "rank004_Hbb_to_Hcc",
+      "src_label": "label_Hbb",
+      "tgt_label": "label_Hcc",
+      "nodes": 132,
+      "edges": 203,
+      "discovery_candidates": 2160,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "charged_hadron<-CLS",
+      "best_diag": "B_Tbl_push_read_write",
+      "best_B_delta": 7.450580596923828e-08,
+      "best_B_flip": 0.0,
+      "best_score": -4.0978193283081055e-08
+    },
+    {
+      "rank": 5,
+      "tag": "rank005_Hgg_to_H4q",
+      "src_label": "label_Hgg",
+      "tgt_label": "label_H4q",
+      "nodes": 133,
+      "edges": 203,
+      "discovery_candidates": 1840,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "neutral_hadron<-neutral_hadron",
+      "best_diag": "weak_or_distributed",
+      "best_B_delta": -0.11461062729358673,
+      "best_B_flip": 0.0,
+      "best_score": 0.028203124180436134
+    },
+    {
+      "rank": 6,
+      "tag": "rank006_Hbb_to_Hgg",
+      "src_label": "label_Hbb",
+      "tgt_label": "label_Hgg",
+      "nodes": 124,
+      "edges": 203,
+      "discovery_candidates": 2144,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "charged_hadron<-CLS",
+      "best_diag": "B_Tbl_resist_or_protective_read_write",
+      "best_B_delta": 4.470348358154297e-08,
+      "best_B_flip": 0.0,
+      "best_score": -9.685754776000977e-08
+    },
+    {
+      "rank": 7,
+      "tag": "rank007_Hcc_to_Hgg",
+      "src_label": "label_Hcc",
+      "tgt_label": "label_Hgg",
+      "nodes": 131,
+      "edges": 207,
+      "discovery_candidates": 2064,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h6",
+      "best_pair": "neutral_hadron<-neutral_hadron",
+      "best_diag": "B_Tbl_resist_or_protective_read_write",
+      "best_B_delta": -0.9907349310815334,
+      "best_B_flip": 0.0,
+      "best_score": 0.7395841404795647
+    },
+    {
+      "rank": 8,
+      "tag": "rank008_H4q_to_Hgg",
+      "src_label": "label_H4q",
+      "tgt_label": "label_Hgg",
+      "nodes": 125,
+      "edges": 205,
+      "discovery_candidates": 1840,
+      "validation_rows": 16,
+      "best_head": "mod.cls_blocks.0.attn.h4",
+      "best_pair": "neutral_hadron<-neutral_hadron",
+      "best_diag": "weak_or_distributed",
+      "best_B_delta": -0.3684707907959819,
+      "best_B_flip": 0.0,
+      "best_score": 0.2332379398867488
     }
   ]
 }

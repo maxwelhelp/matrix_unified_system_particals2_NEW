@@ -2,3 +2,8 @@ rank,tag,src_label,tgt_label,nodes,edges,discovery_candidates,validation_rows,be
 1,rank001_Zqq_to_Wqq,label_Zqq,label_Wqq,132,204,2064,16,mod.cls_blocks.0.attn.h6,neutral_hadron<-neutral_hadron,B_Tbl_push_read_write,-0.1499946489930153,0.0,0.09804458916187286
 2,rank002_Wqq_to_Zqq,label_Wqq,label_Zqq,124,208,2048,16,mod.cls_blocks.0.attn.h4,neutral_hadron<-charged_hadron,B_Tbl_push_read_write,-0.719895601272583,0.0,0.5616069035604596
 3,rank003_Hcc_to_Hbb,label_Hcc,label_Hbb,126,210,2160,16,mod.cls_blocks.0.attn.h4,electron<-electron,B_Tbl_resist_or_protective_read_write,-0.4486321322619915,0.0,0.29078536853194237
+4,rank004_Hbb_to_Hcc,label_Hbb,label_Hcc,132,203,2160,16,mod.cls_blocks.0.attn.h4,charged_hadron<-CLS,B_Tbl_push_read_write,7.450580596923828e-08,0.0,-4.0978193283081055e-08
+5,rank005_Hgg_to_H4q,label_Hgg,label_H4q,133,203,1840,16,mod.cls_blocks.0.attn.h4,neutral_hadron<-neutral_hadron,weak_or_distributed,-0.11461062729358673,0.0,0.028203124180436134
+6,rank006_Hbb_to_Hgg,label_Hbb,label_Hgg,124,203,2144,16,mod.cls_blocks.0.attn.h4,charged_hadron<-CLS,B_Tbl_resist_or_protective_read_write,4.470348358154297e-08,0.0,-9.685754776000977e-08
+7,rank007_Hcc_to_Hgg,label_Hcc,label_Hgg,131,207,2064,16,mod.cls_blocks.0.attn.h6,neutral_hadron<-neutral_hadron,B_Tbl_resist_or_protective_read_write,-0.9907349310815334,0.0,0.7395841404795647
+8,rank008_H4q_to_Hgg,label_H4q,label_Hgg,125,205,1840,16,mod.cls_blocks.0.attn.h4,neutral_hadron<-neutral_hadron,weak_or_distributed,-0.3684707907959819,0.0,0.2332379398867488

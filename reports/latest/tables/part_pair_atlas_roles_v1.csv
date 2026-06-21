@@ -1,8 +1,11 @@
 role_pair,n_edges,pair_graphs,label_pairs,mean_weight,mean_abs_weight,mean_score,best_weight,best_pair_tag,best_label_pair
-neutral_hadron<-neutral_hadron,5,2,label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.08990965336561203,0.31029539853334426,0.16212989222258328,-0.6431043818593025,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
+neutral_hadron<-neutral_hadron,12,5,label_H4q->label_Hgg;label_Hcc->label_Hgg;label_Hgg->label_H4q;label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.1809997259794424,0.34589485816347104,0.21755623072385788,-0.9907349310815334,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
 CLS<-muon,7,2,label_Hcc->label_Hbb;label_Wqq->label_Zqq,0.03085853691611971,0.049830293016774316,-0.020575429978115217,0.11584767699241638,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
 neutral_hadron<-charged_hadron,2,1,label_Wqq->label_Zqq,-0.14145098999142647,0.5784446112811565,0.4395566061139107,-0.719895601272583,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
 neutral_hadron<-photon,2,1,label_Wqq->label_Zqq,-0.0804096944630146,0.5474763624370098,0.40216774865984917,-0.6278860569000244,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
 electron<-electron,2,1,label_Hcc->label_Hbb,-0.1942479033023119,0.2543842289596796,0.16186527721583843,-0.4486321322619915,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+CLS<-electron,2,1,label_Hcc->label_Hgg,0.13462191820144653,0.15363721549510956,0.12445300072431564,0.2882591336965561,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
+charged_hadron<-electron,2,1,label_Hcc->label_Hgg,0.08362196385860443,0.0986705869436264,0.07128899544477463,0.18229255080223083,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
 charged_hadron<-muon,2,1,label_Wqq->label_Zqq,0.04595176875591278,0.05600915849208832,0.056009101681411266,0.1019609272480011,rank002_Wqq_to_Zqq,label_Wqq->label_Zqq
 electron<-muon,5,1,label_Hcc->label_Hbb,0.022200928628444673,0.04442436248064041,0.044424280524253845,0.11323445290327072,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+neutral_hadron<-electron,2,1,label_H4q->label_Hgg,0.023763451725244522,0.02870408073067665,0.027620594948530197,0.05246753245592117,rank008_H4q_to_Hgg,label_H4q->label_Hgg
