@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "src_label": "label_Hbb",
+  "tgt_label": "label_H4q",
+  "in_csv": "reports/latest/tables/part_pair_groups_rank019_Hbb_to_H4q_v1.csv",
+  "out_csv": "reports/latest/tables/part_pair_as_hqql_tbl_rank019_Hbb_to_H4q_v1.csv",
+  "counts": {
+    "A_Hqql_correct": 256,
+    "B_Hqql_to_Tbl": 256,
+    "C_Tbl_correct": 256,
+    "D_Tbl_to_Hqql": 256
+  },
+  "network_file": "external/particle_transformer/networks/example_ParticleTransformer_pair_adapter.py"
+}

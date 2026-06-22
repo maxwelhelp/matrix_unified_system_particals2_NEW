@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "atlas_rank": 11,
+  "src_label": "label_Hgg",
+  "tgt_label": "label_Hcc",
+  "src_group": "HToGG",
+  "tgt_group": "HToCC",
+  "out_csv": "reports/latest/tables/part_pair_groups_rank011_Hgg_to_Hcc_v1.csv",
+  "scan_limit": 20000,
+  "max_per_group": 256,
+  "counts": {
+    "A_src_correct": 256,
+    "B_src_to_tgt": 256,
+    "C_tgt_correct": 256,
+    "D_tgt_to_src": 256
+  },
+  "scanned": {
+    "HToGG": 20000,
+    "HToCC": 3584
+  },
+  "pred_counts": {
+    "HToGG": {
+      "label_Hgg": 14851,
+      "label_QCD": 772,
+      "label_Wqq": 143,
+      "label_H4q": 1605,
+      "label_Hbb": 969,
+      "label_Hcc": 993,
+      "label_Tbqq": 221,
+      "label_Zqq": 430,
+      "label_Tbl": 6,
+      "label_Hqql": 10
+    },
+    "HToCC": {
+      "label_Hcc": 2517,
+      "label_Hbb": 284,
+      "label_H4q": 167,
+      "label_Hgg": 259,
+      "label_Zqq": 164,
+      "label_QCD": 64,
+      "label_Wqq": 47,
+      "label_Tbqq": 74,
+      "label_Hqql": 5,
+      "label_Tbl": 3
+    }
+  }
+}

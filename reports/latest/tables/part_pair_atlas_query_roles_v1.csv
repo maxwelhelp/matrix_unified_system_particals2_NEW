@@ -1,5 +1,7 @@
 query_role,n_edges,pair_graphs,label_pairs,mean_weight,mean_abs_weight,mean_score,best_weight,best_pair_tag,best_label_pair
-neutral_hadron,18,5,label_H4q->label_Hgg;label_Hcc->label_Hgg;label_Hgg->label_H4q;label_Wqq->label_Zqq;label_Zqq->label_Wqq,-0.14267728762287232,0.3588882448255188,0.24163137045171526,-0.9907349310815334,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
-CLS,9,3,label_Hcc->label_Hbb;label_Hcc->label_Hgg;label_Wqq->label_Zqq,0.05391706609063678,0.07289849801195993,0.011653110177980529,0.2882591336965561,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
-charged_hadron,4,2,label_Hcc->label_Hgg;label_Wqq->label_Zqq,0.0647868663072586,0.07733987271785736,0.06364904856309295,0.18229255080223083,rank007_Hcc_to_Hgg,label_Hcc->label_Hgg
-electron,7,1,label_Hcc->label_Hbb,-0.03964159478034292,0.1044128957603659,0.07797885100756373,-0.4486321322619915,rank003_Hcc_to_Hbb,label_Hcc->label_Hbb
+neutral_hadron,41,14,label_H4q->label_Hcc;label_H4q->label_Hgg;label_Hbb->label_H4q;label_Hbb->label_Zqq;label_Hcc->label_H4q;label_Hcc->label_Hgg;label_Hcc->label_Zqq;label_Hgg->label_H4q;label_Hgg->label_Hbb;label_Tbqq->label_H4q;label_Wqq->label_Zqq;label_Zqq->label_Hbb;label_Zqq->label_Hcc;label_Zqq->label_Wqq,-0.130326782307792,0.355215163378999,0.235525549889156,-2.565229047089815,rank013_Hbb_to_Zqq,label_Hbb->label_Zqq
+CLS,16,6,label_Hbb->label_Zqq;label_Hcc->label_Hbb;label_Hcc->label_Hgg;label_Tbl->label_Hqql;label_Tbqq->label_H4q;label_Wqq->label_Zqq,-0.19359097792766988,0.3457517789211124,0.18160494093899615,-2.455647584050894,rank013_Hbb_to_Zqq,label_Hbb->label_Zqq
+electron,12,4,label_Hbb->label_Zqq;label_Hcc->label_Hbb;label_Hcc->label_Zqq;label_Tbl->label_Hqql,-0.08987051031241815,0.2176936830704411,0.09643507737200707,-0.9290017783641815,rank014_Tbl_to_Hqql,label_Tbl->label_Hqql
+photon,12,3,label_Hqql->label_Tbl;label_Zqq->label_Hbb;label_Zqq->label_Hcc,0.12704181795318922,0.30601397591332596,0.2139654914693286,0.7533208690583706,rank018_Zqq_to_Hcc,label_Zqq->label_Hcc
+charged_hadron,6,3,label_Hcc->label_Hgg;label_Wqq->label_Zqq;label_Zqq->label_Hbb,0.12032128994663556,0.1766970343887806,0.12568405627583465,0.6068014949560165,rank017_Zqq_to_Hbb,label_Zqq->label_Hbb
+muon,4,2,label_Hqql->label_Tbl;label_Tbl->label_Hqql,-0.1508141327649355,0.9620157722383738,0.5710097756236792,-1.407922014594078,rank015_Hqql_to_Tbl,label_Hqql->label_Tbl

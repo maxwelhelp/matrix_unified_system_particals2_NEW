@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "atlas_rank": 13,
+  "src_label": "label_Hbb",
+  "tgt_label": "label_Zqq",
+  "src_group": "HToBB",
+  "tgt_group": "ZToQQ",
+  "out_csv": "reports/latest/tables/part_pair_groups_rank013_Hbb_to_Zqq_v1.csv",
+  "scan_limit": 20000,
+  "max_per_group": 256,
+  "counts": {
+    "A_src_correct": 256,
+    "B_src_to_tgt": 256,
+    "C_tgt_correct": 256,
+    "D_tgt_to_src": 256
+  },
+  "scanned": {
+    "HToBB": 20000,
+    "ZToQQ": 9344
+  },
+  "pred_counts": {
+    "HToBB": {
+      "label_Hcc": 1888,
+      "label_Tbqq": 376,
+      "label_Hbb": 14361,
+      "label_Hgg": 1668,
+      "label_Hqql": 43,
+      "label_Zqq": 851,
+      "label_Wqq": 117,
+      "label_QCD": 296,
+      "label_H4q": 381,
+      "label_Tbl": 19
+    },
+    "ZToQQ": {
+      "label_Zqq": 5860,
+      "label_Wqq": 1902,
+      "label_QCD": 470,
+      "label_H4q": 196,
+      "label_Tbqq": 126,
+      "label_Hgg": 200,
+      "label_Hcc": 291,
+      "label_Hbb": 257,
+      "label_Hqql": 37,
+      "label_Tbl": 5
+    }
+  }
+}

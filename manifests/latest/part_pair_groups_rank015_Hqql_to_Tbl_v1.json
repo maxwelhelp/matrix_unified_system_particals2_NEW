@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "atlas_rank": 15,
+  "src_label": "label_Hqql",
+  "tgt_label": "label_Tbl",
+  "src_group": "HToWW2Q1L",
+  "tgt_group": "TTBarLep",
+  "out_csv": "reports/latest/tables/part_pair_groups_rank015_Hqql_to_Tbl_v1.csv",
+  "scan_limit": 20000,
+  "max_per_group": 256,
+  "counts": {
+    "A_src_correct": 256,
+    "B_src_to_tgt": 256,
+    "C_tgt_correct": 256,
+    "D_tgt_to_src": 256
+  },
+  "scanned": {
+    "HToWW2Q1L": 20000,
+    "TTBarLep": 7744
+  },
+  "pred_counts": {
+    "HToWW2Q1L": {
+      "label_Hqql": 19037,
+      "label_Hbb": 61,
+      "label_Zqq": 81,
+      "label_Tbl": 611,
+      "label_QCD": 21,
+      "label_Wqq": 99,
+      "label_Hcc": 41,
+      "label_Tbqq": 27,
+      "label_H4q": 22
+    },
+    "TTBarLep": {
+      "label_Tbl": 7435,
+      "label_Hqql": 256,
+      "label_Wqq": 5,
+      "label_Hbb": 19,
+      "label_QCD": 15,
+      "label_Tbqq": 5,
+      "label_Zqq": 5,
+      "label_Hcc": 4
+    }
+  }
+}
