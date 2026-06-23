@@ -1,0 +1,16 @@
+candidate_module,module_type,params_count,contains_linear_children,covered_by_linear_decoder,produces_attn_mask_or_pair_bias,producer_exact_closed,evidence,fail_reason
+mod.pair_embed,PairEmbed,9568,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed,Sequential,9568,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.0,BatchNorm1d,8,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.1,Conv1d,320,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.2,BatchNorm1d,128,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.3,GELU,0,False,False,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.4,Conv1d,4160,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.5,BatchNorm1d,128,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.6,GELU,0,False,False,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.7,Conv1d,4160,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.8,BatchNorm1d,128,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.9,GELU,0,False,False,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.10,Conv1d,520,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.11,BatchNorm1d,16,False,True,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask
+mod.pair_embed.embed.12,GELU,0,False,False,False,False,name_candidate_only,producer_output_not_linked_to_captured_attn_mask

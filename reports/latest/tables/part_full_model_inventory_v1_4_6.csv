@@ -1,0 +1,156 @@
+module_name,module_type,classify,children_count,direct_params_count,params_count,buffers_count,possible_pair_bias_module,decoder_kind,covered,reason_if_uncovered,direct_param_shapes
+<root>,ParticleTransformerWrapper,CONTAINER,1,0,2142958,0,False,,,not_captured_or_root,{}
+mod,ParticleTransformer,CONTAINER,7,128,2142958,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""cls_token"": ""1x1x128""}"
+mod.trimmer,SequenceTrimmer,STATELESS_LEAF,0,0,0,1,False,STRUCTURAL_EXACT,True,,{}
+mod.embed,Embed,CONTAINER,2,0,134836,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.embed.input_bn,BatchNorm1d,BATCHNORM,0,26,26,27,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""13"", ""bias"": ""13""}"
+mod.embed.embed,Sequential,CONTAINER,9,0,134810,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.embed.embed.0,LayerNorm,LAYERNORM,0,26,26,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""13"", ""bias"": ""13""}"
+mod.embed.embed.1,Linear,LINEAR,0,1792,1792,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x13"", ""bias"": ""128""}"
+mod.embed.embed.2,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.embed.embed.3,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.embed.embed.4,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.embed.embed.5,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.embed.embed.6,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.embed.embed.7,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.embed.embed.8,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.pair_embed,PairEmbed,CONTAINER,1,0,9568,0,True,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.pair_embed.embed,Sequential,CONTAINER,13,0,9568,0,True,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.pair_embed.embed.0,BatchNorm1d,BATCHNORM,0,8,8,9,True,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""4"", ""bias"": ""4""}"
+mod.pair_embed.embed.1,Conv1d,PARAMETERIZED_LEAF_UNKNOWN,0,320,320,0,True,EXACT_CONSTANT_CONVOLUTION,True,,"{""weight"": ""64x4x1"", ""bias"": ""64""}"
+mod.pair_embed.embed.2,BatchNorm1d,BATCHNORM,0,128,128,129,True,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""64"", ""bias"": ""64""}"
+mod.pair_embed.embed.3,GELU,ACTIVATION,0,0,0,0,True,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.pair_embed.embed.4,Conv1d,PARAMETERIZED_LEAF_UNKNOWN,0,4160,4160,0,True,EXACT_CONSTANT_CONVOLUTION,True,,"{""weight"": ""64x64x1"", ""bias"": ""64""}"
+mod.pair_embed.embed.5,BatchNorm1d,BATCHNORM,0,128,128,129,True,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""64"", ""bias"": ""64""}"
+mod.pair_embed.embed.6,GELU,ACTIVATION,0,0,0,0,True,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.pair_embed.embed.7,Conv1d,PARAMETERIZED_LEAF_UNKNOWN,0,4160,4160,0,True,EXACT_CONSTANT_CONVOLUTION,True,,"{""weight"": ""64x64x1"", ""bias"": ""64""}"
+mod.pair_embed.embed.8,BatchNorm1d,BATCHNORM,0,128,128,129,True,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""64"", ""bias"": ""64""}"
+mod.pair_embed.embed.9,GELU,ACTIVATION,0,0,0,0,True,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.pair_embed.embed.10,Conv1d,PARAMETERIZED_LEAF_UNKNOWN,0,520,520,0,True,EXACT_CONSTANT_CONVOLUTION,True,,"{""weight"": ""8x64x1"", ""bias"": ""8""}"
+mod.pair_embed.embed.11,BatchNorm1d,BATCHNORM,0,16,16,17,True,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""8"", ""bias"": ""8""}"
+mod.pair_embed.embed.12,GELU,ACTIVATION,0,0,0,0,True,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks,ModuleList,CONTAINER,8,0,1597504,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.blocks.0,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.0.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.0.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.0.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.0.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.0.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.0.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.0.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.0.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.0.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.0.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.0.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.1,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.1.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.1.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.1.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.1.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.1.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.1.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.1.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.1.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.1.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.1.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.1.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.2,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.2.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.2.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.2.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.2.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.2.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.2.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.2.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.2.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.2.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.2.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.2.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.3,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.3.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.3.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.3.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.3.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.3.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.3.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.3.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.3.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.3.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.3.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.3.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.4,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.4.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.4.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.4.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.4.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.4.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.4.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.4.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.4.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.4.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.4.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.4.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.5,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.5.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.5.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.5.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.5.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.5.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.5.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.5.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.5.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.5.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.5.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.5.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.6,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.6.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.6.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.6.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.6.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.6.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.6.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.6.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.6.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.6.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.6.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.6.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.blocks.7,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.blocks.7.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.7.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.blocks.7.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.blocks.7.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.7.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.7.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.blocks.7.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.blocks.7.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.blocks.7.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.blocks.7.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.blocks.7.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.cls_blocks,ModuleList,CONTAINER,2,0,399376,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.cls_blocks.0,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.cls_blocks.0.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.0.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.cls_blocks.0.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.cls_blocks.0.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.0.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.cls_blocks.0.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.0.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.cls_blocks.0.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.cls_blocks.0.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.cls_blocks.0.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.cls_blocks.0.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.cls_blocks.1,Block,CONTAINER,10,136,199688,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,direct_parameters_covered_but_container_graph_not_replayed,"{""c_attn"": ""8"", ""w_resid"": ""128""}"
+mod.cls_blocks.1.pre_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.1.attn,MultiheadAttention,MULTIHEAD_ATTENTION,1,49536,66048,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""in_proj_weight"": ""384x128"", ""in_proj_bias"": ""384""}"
+mod.cls_blocks.1.attn.out_proj,NonDynamicallyQuantizableLinear,LINEAR,0,16512,16512,0,False,EXACT_CONSTANT_MATRIX,True,covered_by_parameter_coverage_parent_decoder,"{""weight"": ""128x128"", ""bias"": ""128""}"
+mod.cls_blocks.1.post_attn_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.1.dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.cls_blocks.1.pre_fc_norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.cls_blocks.1.fc1,Linear,LINEAR,0,66048,66048,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""512x128"", ""bias"": ""512""}"
+mod.cls_blocks.1.act,GELU,ACTIVATION,0,0,0,0,False,EXACT_ELEMENTWISE_FORMULA,True,,{}
+mod.cls_blocks.1.act_dropout,Dropout,STRUCTURAL_LEAF,0,0,0,0,False,STRUCTURAL_EXACT,True,,{}
+mod.cls_blocks.1.post_fc_norm,LayerNorm,LAYERNORM,0,1024,1024,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""512"", ""bias"": ""512""}"
+mod.cls_blocks.1.fc2,Linear,LINEAR,0,65664,65664,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""128x512"", ""bias"": ""128""}"
+mod.norm,LayerNorm,LAYERNORM,0,256,256,0,False,EXACT_DYNAMIC_OPERATOR,True,,"{""weight"": ""128"", ""bias"": ""128""}"
+mod.fc,Sequential,CONTAINER,1,0,1290,0,False,STRUCTURAL_NOT_EXPLICITLY_TRACED,False,container_or_python_forward_not_replayed,{}
+mod.fc.0,Linear,LINEAR,0,1290,1290,0,False,EXACT_CONSTANT_MATRIX,True,,"{""weight"": ""10x128"", ""bias"": ""10""}"

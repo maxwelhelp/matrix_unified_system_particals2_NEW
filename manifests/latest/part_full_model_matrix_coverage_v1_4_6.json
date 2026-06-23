@@ -1,0 +1,178 @@
+{
+  "version": "1.4.6",
+  "run_ok": true,
+  "ok": false,
+  "local_exact_ok": false,
+  "status": "FULL_FORWARD_NOT_CLOSED",
+  "accept_tol": 1e-05,
+  "modules_total": 155,
+  "modules_covered": 126,
+  "uncovered_parameterized": 0,
+  "structural_not_traced": 8,
+  "rejected_modules": 0,
+  "attention_heads": 80,
+  "accepted_attention_heads": 80,
+  "rejected_heads": 0,
+  "linear_modules": 24,
+  "accepted_linear_modules": 24,
+  "dynamic_modules": 77,
+  "accepted_dynamic_modules": 77,
+  "final_logits_rel": null,
+  "final_reason": "generic decoded Python graph replay not implemented; structural containers/control flow not claimed",
+  "decoder_kind_counts": {
+    "STRUCTURAL_NOT_EXPLICITLY_TRACED": 8,
+    "UNCOVERED": 21,
+    "STRUCTURAL_EXACT": 21,
+    "EXACT_DYNAMIC_OPERATOR": 60,
+    "EXACT_CONSTANT_MATRIX": 24,
+    "EXACT_ELEMENTWISE_FORMULA": 17,
+    "EXACT_CONSTANT_CONVOLUTION": 4
+  },
+  "primitive_fit_summary": {
+    "total": 188,
+    "strong": 7,
+    "partial": 5,
+    "weak": 176,
+    "target_mined_used": 162
+  },
+  "shared_primitives": {
+    "count": 0,
+    "accepted": 0,
+    "info": {
+      "candidates": 486,
+      "clusters": 0,
+      "shape_groups": {
+        "64x64": 6,
+        "128x128": 480
+      },
+      "skipped_shape_groups": {},
+      "skipped_records": 0,
+      "heldout_gate": "real_base_plus_shared_decode_gain_grouped_by_shape",
+      "gain_threshold": 0.02,
+      "decode_gain_threshold": 0.01
+    }
+  },
+  "meta_diagnostics": {
+    "meta_keys": [
+      "analysis_group",
+      "builder",
+      "deta",
+      "dphi",
+      "entry_idx",
+      "margin_Hqql_minus_Tbl",
+      "margin_Tbl_minus_Hqql",
+      "n_real",
+      "pred_label",
+      "pt",
+      "roles",
+      "score_Hqql",
+      "score_Tbl",
+      "source_group",
+      "source_root",
+      "true_label"
+    ],
+    "pt_nonzero_frac": 0.2158203125,
+    "charge_nonzero_frac": 0.0,
+    "unique_roles": [
+      "charged_hadron",
+      "electron",
+      "muon",
+      "neutral_hadron",
+      "pad",
+      "photon"
+    ],
+    "role_counts": {
+      "electron": 9,
+      "charged_hadron": 98,
+      "photon": 97,
+      "pad": 803,
+      "neutral_hadron": 16,
+      "muon": 1
+    },
+    "n_meta": 8
+  },
+  "all_head_tensor_paths": [
+    {
+      "module_name": "mod.blocks.0.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_0_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.1.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_1_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.2.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_2_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.3.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_3_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.4.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_4_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.5.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_5_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.6.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_6_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.blocks.7.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_blocks_7_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.cls_blocks.0.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_cls_blocks_0_attn_all_heads.pt"
+    },
+    {
+      "module_name": "mod.cls_blocks.1.attn",
+      "tensor_path": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6/attention/mod_cls_blocks_1_attn_all_heads.pt"
+    }
+  ],
+  "matrix_coverage_status": "FULL_MODEL_MATRIX_COVERAGE_CLOSED",
+  "full_forward_status": "FULL_FORWARD_NOT_CLOSED",
+  "ok_full_forward_closed": false,
+  "stage1_ok": true,
+  "all_named_parameters_covered": true,
+  "uncovered_named_parameters": 0,
+  "expected_attention_heads": 80,
+  "all_attention_heads_covered": true,
+  "all_linear_modules_covered": true,
+  "embedding_modules": 0,
+  "accepted_embedding_modules": 0,
+  "all_embedding_modules_covered": true,
+  "conv1d_modules": 4,
+  "accepted_conv1d_modules": 4,
+  "all_conv1d_modules_covered": true,
+  "all_norm_modules_covered": true,
+  "all_activation_modules_covered": true,
+  "pair_bias_exact_producer_closed": false,
+  "root_output_shape": "8x10",
+  "model_training_flag_after_eval": false,
+  "outputs": {
+    "md": "reports/latest/PART_FULL_MODEL_MATRIX_COVERAGE_V1_4_6.md",
+    "json": "manifests/latest/part_full_model_matrix_coverage_v1_4_6.json",
+    "inventory": "reports/latest/tables/part_full_model_inventory_v1_4_6.csv",
+    "inventory_json": "manifests/latest/part_full_model_inventory_v1_4_6.json",
+    "parameters": "reports/latest/tables/part_full_model_parameters_v1_4_6.csv",
+    "modules": "reports/latest/tables/part_full_model_modules_v1_4_6.csv",
+    "attention_heads": "reports/latest/tables/part_full_model_attention_heads_v1_4_6.csv",
+    "linear": "reports/latest/tables/part_full_model_linear_v1_4_6.csv",
+    "dynamic_ops": "reports/latest/tables/part_full_model_dynamic_ops_v1_4_6.csv",
+    "primitive_fits": "reports/latest/tables/part_full_model_primitive_fits_v1_4_6.csv",
+    "shared_primitives": "reports/latest/tables/part_full_model_shared_primitives_v1_4_6.csv",
+    "uncovered": "reports/latest/tables/part_full_model_uncovered_v1_4_6.csv",
+    "pair_bias_candidates": "reports/latest/tables/part_full_model_pair_bias_candidates_v1_4_6.csv",
+    "acceptance": "reports/latest/tables/part_full_model_acceptance_v1_4_6.csv",
+    "flow_sketch": "reports/latest/tables/part_full_model_flow_sketch_v1_4_6.csv",
+    "parameter_coverage": "reports/latest/tables/part_full_model_parameter_coverage_v1_4_6.csv",
+    "matrix_coverage": "reports/latest/tables/part_full_model_matrix_coverage_v1_4_6.csv",
+    "layer_matrix_atlas": "reports/latest/tables/part_full_model_layer_matrix_atlas_v1_4_6.csv",
+    "pair_bias_producer_audit": "reports/latest/tables/part_pair_bias_producer_audit_v1_4_6.csv",
+    "tensor_dir": "artifacts/latest/part_full_model_matrix_coverage_v1_4_6"
+  }
+}

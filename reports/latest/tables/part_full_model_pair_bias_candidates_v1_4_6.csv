@@ -1,0 +1,31 @@
+module_name,module_type,direct_params_count,params_count,is_linear,is_mha,decoder_hint,decoded_kind,exact_producer_status,note
+mod.pair_embed,PairEmbed,0,9568,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed,Sequential,0,9568,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.0,BatchNorm1d,8,8,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.1,Conv1d,320,320,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.2,BatchNorm1d,128,128,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.3,GELU,0,0,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.4,Conv1d,4160,4160,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.5,BatchNorm1d,128,128,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.6,GELU,0,0,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.7,Conv1d,4160,4160,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.8,BatchNorm1d,128,128,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.9,GELU,0,0,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.10,Conv1d,520,520,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.11,BatchNorm1d,16,16,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed.embed.12,GELU,0,0,False,False,decoded as Linear submodule if Linear; otherwise inspect children/forward,,,
+mod.pair_embed,PairEmbed,0,9568,False,False,,STRUCTURAL_NOT_EXPLICITLY_TRACED,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed,Sequential,0,9568,False,False,,STRUCTURAL_NOT_EXPLICITLY_TRACED,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.0,BatchNorm1d,8,8,False,False,,EXACT_DYNAMIC_OPERATOR,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.1,Conv1d,320,320,False,False,,EXACT_CONSTANT_CONVOLUTION,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.2,BatchNorm1d,128,128,False,False,,EXACT_DYNAMIC_OPERATOR,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.3,GELU,0,0,False,False,,EXACT_ELEMENTWISE_FORMULA,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.4,Conv1d,4160,4160,False,False,,EXACT_CONSTANT_CONVOLUTION,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.5,BatchNorm1d,128,128,False,False,,EXACT_DYNAMIC_OPERATOR,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.6,GELU,0,0,False,False,,EXACT_ELEMENTWISE_FORMULA,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.7,Conv1d,4160,4160,False,False,,EXACT_CONSTANT_CONVOLUTION,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.8,BatchNorm1d,128,128,False,False,,EXACT_DYNAMIC_OPERATOR,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.9,GELU,0,0,False,False,,EXACT_ELEMENTWISE_FORMULA,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.10,Conv1d,520,520,False,False,,EXACT_CONSTANT_CONVOLUTION,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.11,BatchNorm1d,16,16,False,False,,EXACT_DYNAMIC_OPERATOR,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
+mod.pair_embed.embed.12,GELU,0,0,False,False,,EXACT_ELEMENTWISE_FORMULA,CANDIDATE_ONLY,Candidate only unless exact_producer_status is EXACT_CHAIN_CANDIDATE and captured attn_mask linkage is verified.
