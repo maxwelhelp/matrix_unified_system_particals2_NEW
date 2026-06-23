@@ -1,0 +1,11 @@
+module_name,call_index,attn_mask_source,attn_mask_dtype,key_padding_mask_source,key_padding_mask_dtype,pair_bias_norm,pair_bias_producer,pair_bias_rel_to_producer,key_padding_mask_present,pair_bias_replay_status,accepted,fail_reason
+mod.blocks.0.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.1.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.2.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.3.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.4.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.5.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.6.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.blocks.7.attn,0,kwargs,torch.float32,kwargs,torch.bool,20843.025390625,mod.pair_embed[0],0.0,True,CLOSED,True,
+mod.cls_blocks.0.attn,0,none,none,kwargs,torch.bool,0.0,,,True,CLOSED_OR_NO_PAIR_BIAS,True,
+mod.cls_blocks.1.attn,0,none,none,kwargs,torch.bool,0.0,,,True,CLOSED_OR_NO_PAIR_BIAS,True,
